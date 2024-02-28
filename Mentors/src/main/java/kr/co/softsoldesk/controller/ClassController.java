@@ -19,6 +19,19 @@ public class ClassController {
       return "class/class_home_center_home";
    }
    
+   @GetMapping("/class_home_center_test")
+   public String class_home_center_test() {
+      return "class/class_home_center_test";
+   }
+   @GetMapping("/QnAlist")
+   public String QnAlist() {
+      return "class/QnAlist";
+   }
+   @GetMapping("/Notification")
+   public String Notification() {
+      return "class/Notification";
+   }
+   
    @GetMapping("/class_video")
    public String class_video() {
       return "class/class_video";
@@ -29,9 +42,6 @@ public class ClassController {
       return "class/class_test";
    }
    
-   @GetMapping("/class_home_center_test")
-   public String class_home_center_test() {
-      return "class/class_home_center_test";
-   }
+
 
 }
