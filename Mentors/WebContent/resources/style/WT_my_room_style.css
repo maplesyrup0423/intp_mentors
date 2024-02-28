@@ -1,0 +1,144 @@
+.all div {
+	display: inline-block;
+}
+
+.all {
+	width: 100%;
+	text-align: center;
+}
+
+.all2 {
+	display: block;
+	/* border: 2px solid rgb(195, 190, 190);*/
+	width: 80%;
+	margin: auto;
+	padding: 5px;
+}
+
+.title_div {
+	width: 100%;
+}
+
+.Tbox_all {
+	width: 1200px;
+	text-align: left;
+}
+
+.Tbox {
+	width: 150px;
+	height: 90px;
+	line-height: 90px;
+	/* 
+        [ine-height]
+        텍스트 세로 정렬을 부모 높이에 맞춤
+         height 값과 동일 해야함!!!!!!
+         heigh 수정시 같이 수정할 것!!
+        */
+	text-align: center;
+	border-radius: 5px;
+}
+/*
+		Tbox_1 ,Tbox_2 오른쪽으로 바꾸기 
+		*/
+.Tbox_1 {
+	margin-left: 30px;
+	background-color: rgb(0,69,126,50%) ;
+}
+
+.Tbox_2 {
+	background-color:  rgb( 255,205,25,50%);
+}
+
+.select_div {
+	width: 100%;
+	position: relative;
+}
+
+.div_sum {
+	position: absolute;
+	left: 30px;
+}
+
+.span_num {
+	color: #00457E;
+	font-weight: bold;
+}
+
+.WT_select {
+	position: absolute;
+	right: 30px
+}
+
+.WT {
+	width: 90%;
+	margin-bottom:5px;
+	margin-top:5px;
+	display: block;
+	height: 120px;
+	border: 1px solid #00457E;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.WT:hover {
+	border-color: #00457E;
+	box-shadow: 3px 3px 15px rgb(0,69,126, 0.2);
+}
+
+.classbtn_div {
+	float: right;
+}
+
+.WT .WT_left {
+	width: 80%;
+}
+
+.WT_left td{
+	padding: 5px;
+}
+.colorbox_pos{
+padding-right: 230px !important;
+}
+
+.WT .WT_schol_type {
+	border: 1px solid  rgb(0,69,126) ;
+	background-color:  rgb(0,69,126,50%) ;
+	border-radius: 5px;
+	text-align: center;
+	width: 100px;
+}
+
+.WT .WT_category {
+	border: 1px solid rgb( 255,205,25);
+	margin-left: 5px;
+	background-color: rgb( 255,205,25,50%);
+	border-radius: 5px;
+	text-align: center;
+	width: 100px;
+}
+
+.WT .WT_name {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.WT .time_span {
+	color: gray;
+}
+
+.WT .classbtn_div {
+	height: 100%;
+}
+
+.WT .classbtn {
+	height: 100%;
+	color: white;
+	border: 1px solid #00457E;
+	background-color: #00457E;
+	border-radius: 20px;
+	font-size: 15px;
+}
+
+#WT_area {
+	width: 100%;
+}

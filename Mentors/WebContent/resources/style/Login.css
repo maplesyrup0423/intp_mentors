@@ -1,0 +1,98 @@
+body {
+	height : 900px;
+}
+
+
+div.container { /*전체 영역*/
+	width : 1280px;
+	max-height : 1600px;
+	margin : 30px auto;
+	border : none;
+	padding-bottom : 30px;
+	border-radius : 20px;
+	box-shadow: 0 2px 24px 0 rgb(58, 59, 69, 15%) !important;
+	background-color : white;
+}
+
+div.log_in_letter{ /*맨 위 제일 큰 로그인 글자*/
+	padding : 30px 0px 0px 20px;
+	font-size : 50px;
+	font-weight : bold;
+	color : black;
+	text-align: center;
+}
+
+/*ID와 PW입력이 담긴 상자 공간 여백*/
+.body { 
+	margin-top : 70px;
+	margin-bottom : 40px;
+}
+
+.input_id {
+	width : 500px;
+	height : 70px;
+	display : flex;
+	align-items : center;
+	margin : auto;
+}
+
+.input_pw {
+	width : 500px;
+	height : 70px;
+	display : flex;
+	align-items : center;
+	margin : 20px auto;
+}
+
+	/*footer 하단 하이퍼링크 설정*/
+a { 
+	text-decoration-line: none;
+	color : gray;
+}
+
+a:hover {
+	text-decoration-line: underline;
+}
+
+input[type=text], input[type=password] {
+	border : none;
+	width : 500px;
+	height : 60px;
+	border-radius : 7px;
+	padding-left : 10px;
+	font-size : 15px;
+	box-shadow : 0px 1px 5px 0px rgb(0,69,126, 20%);
+}
+
+input[type=text]:focus, input[type=password]:focus{
+	box-shadow : 0px 1px 5px 0px rgb(0,69,126, 70%);
+	outline : none;
+	transition: 0.3s;
+}
+
+input[type=submit] {
+	width : 500px;
+	height : 50px;
+	border-radius : 7px;
+	font-size : 25px;
+	color : white;
+	background-color : #00457E;
+	border-width : 0px 0px 1px;
+	border : 1px solid gray;
+	box-shadow : 0px 1px 5px rgb(0, 69, 126, 60%);
+}
+
+input[type=submit]:hover {
+	font-size : 26px;
+	cursor: pointer;
+}
+
+input[type=submit]:focus {
+	font-size : 24px;
+}
+
+footer {
+	padding : 20px;
+	text-align : center;
+}
+

@@ -1,0 +1,131 @@
+/* 박스 크기 설정 */
+div.container { 
+	width : 1280px;
+	height : 500px;
+	margin : auto;
+	border : none;
+	padding-bottom : 30px;
+	border-radius : 8px;
+	box-shadow: 0 2px 24px 0 rgb(58, 59, 69, 15%) !important;
+	text-align : center;
+}
+
+/* 간판 공간 */
+div.find_id_space {
+	margin : auto;
+	width : 300px;
+	height : 90px;
+}
+
+div.find_id_title {
+	width : 300px;
+	height : 90px;
+	font-size : 40px;
+	font-weight : bold;
+	color : black;
+	margin: 30px auto;
+	text-align: center;
+	padding-top : 30px;
+}
+
+div.change_find_info {
+	margin-top : 30px;
+	text-align : center;
+}
+
+input[name="find_id_button"] {
+	width : 300px;
+	height : 50px;
+	background-color : transparent;
+	border : none;
+	border-bottom : 3px solid rgb(0,69,126);
+	font-size : 20px;
+}
+
+input[name="find_password_button"] {
+	width : 300px;
+	height : 50px;
+	background-color : transparent;
+	border : none;
+	border-bottom : 3px solid transparent;
+	font-size : 20px;
+}
+
+input[name="find_id_button"]:hover {
+	color : rgb(0,69,126);
+	cursor : pointer;
+}
+
+input[name="find_password_button"]:hover {
+	color : rgb(0,69,126);
+	cursor : pointer;
+	border-bottom : 3px solid rgb(0,69,126);
+}
+
+input[name="find_id_button"]:focus {
+	border-bottom : 3px solid rgb(0,69,126);
+}
+
+input[name="find_password_button"]:focus {
+	border-bottom : 3px solid rgb(0,69,126);
+}
+
+/*성명과 전화번호 작성하는 상자 공간 여백*/
+.body { 
+	width : 800px;
+	height : 180px;
+	margin : 30px auto;
+}
+
+input[type=text] {
+	width : 600px;
+	height : 60px;
+	border : none;
+	border-radius : 7px;
+	font-size : 15px;
+	margin : 15px auto;
+	padding-left : 10px;
+	box-shadow : 0px 0px 5px 0px rgb(0,69,126, 20%);
+}
+
+input[type=text]:focus{
+	box-shadow : 0px 0px 5px 0px rgb(0,69,126, 70%);
+	outline : none;
+	transition: 0.3s;
+}
+
+input[type=submit] {
+	width : 300px;
+	height : 50px;
+	font-size : 25px;
+	color : white;
+	background-color : #00457E;
+	border : none;
+	box-shadow : 0px 1px 5px 0px rgb(0,69,126, 20%);
+	border-radius : 8px;
+}
+
+input[type=submit]:hover {
+	font-size : 26px;
+}
+
+input[type=submit]:focus {
+	font-size : 24px;
+}
+
+input.cancel {
+	width : 300px;
+	height : 50px;
+	font-size : 25px;
+	background-color : white;
+	border: 1px solid black;
+	border-radius : 8px;
+}
+
+input.cancel:hover {
+	font-size : 26px;
+}
+
+input.cancel:focus {
+	font-size : 24px;
+}

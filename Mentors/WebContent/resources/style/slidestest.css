@@ -1,0 +1,199 @@
+.C-main {
+	margin: auto;
+	text-align: center;
+	width: 1280px;
+}
+
+.C-eventList {
+	position: absolute;
+	margin: auto;
+	width: 1280px;
+	height: 400px;
+	overflow: hidden;
+	border-radius: 120px 10px 120px 10px;
+	box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important
+}
+
+.C-mianimg{
+    position: relative;
+    z-index: 1;
+	width: 1000px;
+	height: 400px;
+}
+
+.C-mianimg button{
+    position: absolute;
+    z-index: 5;
+    top: 95%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: transparent;
+    border: none;
+}
+
+.C-mianimg button::before{
+    font-family: 'xeicon';
+    color: white;
+    font-size: 20px;
+}
+
+.C-mianimg button.slick-prev{
+    font-size: 5px;
+    color: transparent;
+    left: 750px;
+}
+
+.C-mianimg button.slick-prev::before{
+    content: "\e93b";
+}
+
+.C-mianimg button.slick-next{
+    font-size: 0;
+    color: transparent;
+    right: 200px;
+}
+
+.C-mianimg button.slick-next::before{
+    content: "\e93e";
+}
+
+.login-circle {
+	position: absolute;
+	z-index: 2 !important;
+	margin-left: 835px;
+	width: 450px;
+	height: 400px;
+    margin-top: -400px;
+	border-radius: 150px 10px 120px 10px;
+	background-color: white;
+}
+
+.circle-login {
+	margin-top: 120px;
+}
+
+.blue_btn {
+	height: 40px;
+	width: 260px;
+	color: white;
+	border: 1px solid #00457E;
+	background-color: #00457E;
+	border-radius: 20px;
+	font-size: 15px;
+	margin: 2px;
+}
+
+/* ================================= */
+
+.C-table {
+	/* position: relative; */
+	padding-top: 550px;
+}
+
+.C-contentTable {
+	width: 1280px;
+}
+
+.C-list_div {
+	width: 640px;
+}
+
+.contentlist td {
+	padding: 15px;
+}
+
+a {
+	text-decoration-line: none;
+}
+
+.bestlist {
+	font-size: 30px;
+}
+
+.best_book {
+	/* float: left; */
+	width: 390px;
+	font-size: 15px;
+	text-align: center;
+}
+
+.best_book img {
+	display: block;
+	width: 150px;
+}
+
+.newlist {
+	font-size: 30px;
+}
+
+.new_book {
+	width: 390px;
+	font-size: 15px;
+	text-align: center;
+}
+
+.new_book img {
+	display: block;
+	width: 150px;
+}
+
+.besttext {
+	text-align: center;
+}
+
+/* ================================= */
+
+.C-classlist {
+	text-align: center;
+	width: 1280px;
+	/* margin-left: auto;
+	margin-right: auto; */
+}
+
+.list-img{
+    margin-left: 13.5px;
+}
+
+.list-img img {
+	width: 400px;
+}
+
+.C-classlist button{
+    position: absolute;
+    z-index: 5;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: transparent;
+    border: none;
+}
+
+.C-classlist button::before{
+    font-family: 'xeicon';
+    color: white;
+    font-size: 30px;
+}
+
+.C-classlist button.slick-prev{
+    font-size: 5px;
+    color: transparent;
+    left: 5px;
+}
+
+.C-classlist button.slick-prev::before{
+    content: "\e93b";
+}
+
+.C-classlist button.slick-next{
+    font-size: 0;
+    color: transparent;
+    right: 5px;
+}
+
+.C-classlist button.slick-next::before{
+    content: "\e93e";
+}

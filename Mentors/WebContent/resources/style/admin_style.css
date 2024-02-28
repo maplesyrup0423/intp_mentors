@@ -1,0 +1,107 @@
+.all_view{
+	padding: 15px;
+}
+
+.list_tb{
+	border-collapse: collapse;
+    width: 900px;
+    margin: 1rem auto;
+    background-color: white;
+}
+
+.list_tb th, .list_tb td{
+	padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.list_tb th{
+	background-color: #00457E;
+    color: #fff;
+}
+
+
+.div_card {
+    /*position: relative;
+    display: flex;
+    flex-direction: column;*/
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #e3e6f0;
+    border-radius: .35rem;
+    margin-top: 15px;
+}
+
+.div_shadow {
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important
+}
+.div_card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    background-color: #fff;
+}
+
+
+
+.div_card-header:first-child {
+    border-radius: calc(0.35rem - 1px) calc(0.35rem - 1px) 0 0;
+}
+.div_card-header {
+    padding: 0.20rem 1.0rem;
+    margin-bottom: 0;
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+    font-size:20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+.text-primary {
+	text-align: center;
+    color: #00457E !important;
+}
+
+
+.qna_select{
+	margin-bottom: 15px;
+}
+
+.searchbar{
+	position: relative;
+	width: 400px;
+}
+.searchbar_text {
+	height: 40px;
+	width: 100%;
+	background: #fafafa;
+	margin: auto;
+	font-size: 16px;
+}
+.search_btn {
+	position: absolute;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	top: 8px;
+	right: 2px;
+	margin: 0;
+}
+
+
+.bottom_move_btn{
+	text-align: center;
+}
+
+.m_btn{
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+	cursor: pointer;
+}

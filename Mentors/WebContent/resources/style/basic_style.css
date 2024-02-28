@@ -1,0 +1,76 @@
+/*-----------------파란버튼----------------------------*/
+.blue_btn {
+	height: 40px;
+	width: 80px;
+	color: white;
+	border: 1px solid #00457E;
+	background-color: #00457E;
+	border-radius: 20px;
+	font-size: 15px;
+}
+/*-----------------테이블----------------------------*/
+.GS_table {
+	border-collapse: collapse;
+	width: 800px;
+	margin: 1rem auto;
+	border: 1px solid #000;
+	background-color: white;
+}
+
+/* 테이블 행 */
+.GS_table th, .GS_table td {
+	padding: 8px;
+	text-align: left;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+
+.GS_table th {
+	background-color: #00457E;
+	color: #fff;
+}
+/*-----------------제목/내용 상자---------------------------*/
+.div_card {
+	/*position: relative;
+	display: flex;
+	flex-direction: column;*/
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid #e3e6f0;
+	border-radius: .35rem;
+	margin-top: 15px;
+}
+
+.div_shadow {
+	box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important
+}
+
+.div_card-body {
+	flex: 1 1 auto;
+	min-height: 1px;
+	padding: 1.25rem
+}
+
+.div_card-header:first-child {
+	border-radius: calc(0.35rem - 1px) calc(0.35rem - 1px) 0 0;
+}
+
+.div_card-header {
+	padding: 0.20rem 1.0rem;
+	margin-bottom: 0;
+	background-color: #f8f9fc;
+	border-bottom: 1px solid #e3e6f0;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+    font-size:20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+.text-primary {
+    color: #00457E !important;
+}
+/*--------------------------------------------*/

@@ -1,0 +1,280 @@
+.all {
+	margin: auto;
+	/* padding: 50px;
+    padding: 50px 350px 50px 350px;*/
+	width: 1280px;	
+}
+
+.pay_teacher {
+    width: 840px;
+	margin-top: 40px;
+	padding-left: 50px;
+	text-align: left;
+
+}
+
+.pay_teacher_table{
+    width: 600px;
+}
+
+.pay_teacher_table tr td{
+    padding: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    height: 40px;
+    font-size: 12pt;
+}
+
+
+.pay_teacher_table th{
+    padding-bottom: 5px;
+    width: 170px;
+    font-size: 14pt;
+}
+
+
+
+
+
+
+
+
+
+
+table tr{
+    border-spacing: 100px;
+}
+
+
+
+.pay_info {
+    width: 840px;
+	padding-left: 50px;
+	text-align: left;
+    margin-top: 70px;    
+}
+
+.pay_info_table {
+    border-spacing: 0 20px;
+    width: 820px;
+}
+
+.pay_info_table tr td{
+    padding-top: 30px;
+    border-top: 1px solid rgb(211, 211, 211);
+}
+
+.pay_info_table_thumb{
+    width: 240px;
+    height: 150px;
+    border: 1px solid black;
+}
+
+.pay_info_table_title{
+    text-align: left;
+    font-size: 15pt;
+    font-weight: 700;
+}
+
+.pay_info_table_term{
+    margin-top: 15px;
+    font-size: 12pt;
+}
+
+.pay_info_table_price{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-left: 1px solid rgb(211, 211, 211);
+    text-align: right;
+    font-size: 14pt;
+    font-weight: 600;
+}
+
+
+
+
+.line {
+	border-top: 3px solid black;
+}
+
+
+th, td {
+	
+	padding: 15px;
+}
+
+#date {
+	width: 150px;
+	height: 25px;
+}
+
+.pay_title {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.pay_buttons button {
+	border: none;
+	background-color: transparent;
+}
+
+.button_table {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.button_table td {
+	border: 2px solid black;
+}
+
+.pay_buttons button:hover {
+	cursor: pointer;
+}
+
+footer {
+  background: #fff;
+  height: 10px;
+}
+
+.float {
+	position: fixed;
+	right: 15%;	
+	top: 330px;	
+	margin-top: 15px;	
+	text-align: center;
+	width: 350px;
+	height: 510px;
+	
+	background-color: #fff;
+}
+
+
+.float.on {
+  position: absolute;
+  top: 850px;
+  bottom: 250px;
+}
+
+
+
+
+.float_table {
+	width: 350px;
+	height: 300px;
+	border: 1px solid rgb(211, 211, 211);
+    border-collapse: collapse;
+    
+}
+
+.float_table tr {
+	height: 50px;
+}
+
+.float_table tr td {
+    /**border-top: 1px solid rgb(211, 211, 211);**/
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.float_table_title{
+    text-align: left;
+    font-size: 20pt;
+    height: 60px;
+    /**background-color: #00457E;**/
+}
+
+.float_table_class td {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 150px;
+}
+
+.float_table_class td {
+	text-align: left;
+	border: none;
+}
+
+.float_table_class_title {
+    font-size: 12pt;
+	font-weight: 700;
+	/**background-color: #00457e67;**/
+}
+
+td.float_table_class_pay {
+	text-align: right;
+}
+
+.total {
+	text-align: right;
+	font-size: 20px;
+	font-weight: 700;
+	color: #002b4e;
+    height: 60px;
+}
+
+.agree {
+	text-align: left;
+    font-size: 10pt;
+}
+
+#agreeCheck{
+    text-align: center;
+}
+
+.agree_file {
+	text-align: center;
+}
+
+.pay_button_box {
+	text-align: center;
+}
+
+button {
+	width: 150px;
+	height: 40px;
+	background-color: #00457e;
+	border: none;
+	border-radius: 5px;
+	color: aliceblue;
+}
+
+td .pay_confirm:hover {
+	cursor: pointer;
+}
+
+/*------------------------WT_payment_success----------------------------------*/
+.success_top {
+	width: 100%;
+	height: 400px;
+	background-color: #288ae5;
+	color: #fff;
+	text-align: center;
+	line-height: 100px;
+}
+
+#check {
+	width: 100px;
+	margin-top: 100px;
+	margin-bottom: -50px;
+}
+
+.check_message {
+	font-size: 18pt;
+}
+
+.success_bottom {
+	text-align: center;
+}
+
+.main_button {
+	margin-top: 50px;
+	width: 150px;
+	height: 50px;
+	border-radius: 20px;
+	border-color: #00457E;
+	background-color: #00457E;
+	color: aliceblue;
+	font-size: 12pt;
+}

@@ -1,0 +1,136 @@
+/* 마이페이지 틀 */
+table.main_table {
+	width: 1280px;
+	height: 400px;
+	border: 1px solid black;
+	border-radius: 8px;
+}
+
+/* 결제내역 테이블 가장자리 설정 */
+table.payment_table {
+	border: 1px solid #FFCD19;
+	border-radius: 8px;
+}
+
+div.payment_div {
+	padding-top: 50px;
+	height: 100px;
+}
+
+div.div_payment {
+	width: 800px;
+	height: 150px;
+	padding: 4px;
+	margin: auto;
+}
+
+div h2.category_payment {
+	width: 200px;
+	height: 50px;
+	border-radius: 8px;
+	border-top: 2px dashed black;
+	border-bottom: 2px dashed black;
+	text-align: center;
+	line-height: 50px;
+	margin: auto;
+}
+
+/* 결제내역 테이블 각 너비 설정 */
+th.payment_date {
+	width: 100px;
+}
+
+th.payment_datails {
+	width: 400px;
+}
+
+th.payment_amount {
+	width: 100px;
+}
+
+th.payment_status {
+	width: 100px;
+}
+
+/* 부제목들 */
+.category {
+	width: 220px;
+	height: 50px;
+	border-radius: 8px;
+	border-left : 3px solid black;
+	border-right : 3px solid black;
+	margin: 50px auto 50px;
+	font-size : 25px;
+	font-weight: 700;
+	font-family: 나눔고딕;
+	letter-spacing : 2px;
+	display: flex; /* Flexbox 사용 */
+    align-items: center; /* 수직 가운데 정렬 */
+    justify-content: center;
+}
+
+/* 테이블 공간 간격 0 */
+.personal_info_table, .account_info_table, .work_in_table {
+	border-spacing: 0px;
+	margin: auto;
+}
+
+.td_left {
+	width: 150px;
+	height: 40px;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-spacing: 0px;
+	background-color : rgb(0,69,126, 70%);
+	color: white;
+	text-align: center;
+}
+
+.td_right {
+	width: 300px;
+	height: 40px;
+	border-spacing: 0px;
+	border: 1px solid black;
+	opacity: 0.7;
+	color: black;
+	padding-left: 7px;
+}
+
+td input[type=button].change_password {
+	width: 120px;
+	height: 30px;
+	background-color: #FFCD19;
+}
+
+/* 하단 버튼 */
+.mypage_button table {
+	width : 1280px;
+}
+
+
+input.change_account {
+	width: 100px;
+	height: 25px;
+	margin-top: 50px;
+}
+
+input.delete_account {
+	width: 100px;
+	height: 25px;
+	margin-top: 50px;
+}
+
+/* 버튼 효과 */
+td input[type=button] {
+	background-color: #FFCD19;
+}
+
+td input[type=button]:hover {
+	background-color: #e8bb1a;
+}
+
+td input[type=button]:focus {
+	background-color: #e8bb1a;
+	box-shadow: 2px 2px 2px 0px gray inset;
+}
+

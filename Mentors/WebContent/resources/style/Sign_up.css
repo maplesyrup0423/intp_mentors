@@ -1,0 +1,211 @@
+div.container {
+	
+	width : 1280px;
+	max-height: 1600px;
+	margin : auto;
+	margin-top : 30px;
+	border : 1px solid gray;
+	border-radius : 8px;
+	padding-bottom : 30px;
+	box-shadow : 4px 4px 5px 0px gray;
+	background-color : white;
+}
+
+/*간판글자*/
+div.sign {
+	width : 100%;
+	padding-top : 30px;
+	font-size : 50px;
+	font-weight : bold;
+	color : black;
+	text-align: center;
+}
+
+/*정보입력란 일괄 크기 설정*/
+.body {
+	width : 60%;
+	margin : auto; 
+}
+
+/*닉네임 중복 확인 버튼*/
+p button{
+	position : absolute;
+	right : 20px;
+	border-radius : 30px;
+	background-color : rgb(0,69,126, 80%); 
+	transform : translateY(20%);
+	width : 130px;
+	height : 40px;
+	font-size : 17px;
+	font-weight : bold;	
+	color : white;
+}
+
+p button:focus, p button:hover{
+	cursor : pointer;
+}
+
+/*카테고리 묶음 글자 영역&글씨*/
+.letter_personal_information, .letter_create_account, .letter_work_in_information{ 
+	width : 100%;
+	height : 40px;
+	background-color : #00457E;
+	color : white;
+	font-weight: bold;
+	font-size : 23px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	padding-top : 5px;
+	text-align : center;
+}
+
+/*카테고리 묶음 글자 영역 설정*/
+div.personal_information, .create_account, .work_in_information {
+	border : 2px solid #00457E;
+	padding : 10px;
+	margin-bottom : 30px;
+}
+
+div.school_type {
+	border : 1px solid rgb(168, 168, 168);
+	width : 100%;
+	height : 50px;
+	margin-top : 5px;
+	margin-bottom : 5px;
+	display: flex;
+	align-items: center;
+}
+
+/*성별 선택 콤보 박스*/
+div.gender_choice select{
+	width : 100%;
+	height : 50px;
+	border : none;
+	font-size : 20px;
+	color : gray;
+	border : 1px solid rgb(168, 168, 168);
+	margin-top : 5px;
+	margin-bottom : 5px;
+}	
+
+/*비밀번호 재확인 문구 설정*/
+div.password_check_message{
+	width : 100%;
+	height : 25px;
+	font-size :17px;
+	color : orangered;
+	margin-top : 3px;
+	margin-bottom : 0px;
+	padding-bottom : 0px;
+}
+
+/* 아이디 중복 확인 문구 설정 */
+.id_check_message{
+	width : 100%;
+	height : 25px;
+	font-size :17px;
+	color : orangered;
+	margin-top : 3px;
+	margin-bottom : 0px;
+	padding-bottom : 0px;
+}
+
+/*닉네임 중복 확인 문구 설정*/
+.nickname_check_message{
+	width : 100%;
+	height : 25px;
+	font-size :17px;
+	color : orangered;
+	margin-top : 3px;
+	margin-bottom : 0px;
+	padding-bottom : 0px;
+}
+
+/*input 박스 속 라벨 애니메이션*/
+p {
+	display : flex;
+	position: relative;
+	width: 100%;
+	height: 60px;
+	margin : 5px 0 0 5px;
+}
+
+/*input 박스 정보 입력하는 공간*/
+p input {
+	box-sizing: border-box;
+	padding: 10px 0 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	outline: none;
+	font-size: 17px
+}
+
+/*input 박스 예제 적힌 라벨*/
+p label {
+	position: absolute;
+	left: -1%;
+	bottom: 0;	
+	width: 100%;
+	height: 100%;
+	border : 1px solid rgb(168, 168, 168);
+	text-align: left;
+	color : gray;
+	pointer-events: none;
+}
+
+/*입력 공간 공간은 형성하되 0으로 형성, 값을 입력하면 공간이 생긺*/
+p label:after { 
+	content: "";
+	position: absolute;
+	left: -1;
+	bottom: 0px;
+	width: 0px;
+	height: 100%;
+	border-bottom: 2px solid darkgray;
+	transition: all .3s ease;
+}
+
+/*input 박스 안 올라가는 글자에 절대적인 위치를 주고 0.5초에 걸쳐 아래의 설정으로 움직여진다*/
+p label span {
+	position: absolute;
+	left: 0;
+	bottom: 8px;
+	transition: all 0.5s ease;
+}
+
+/*input 박스를 포커스 하거나 값이 입력 되어 있으면 변화하는 글자에 주는 효과*/
+p input:focus+label span, p input:valid+label span {
+	transform: translateY(-200%);
+	font-size: 12px;
+	color: #5fa8d3;
+}
+
+/*input 박스를 포커스 하거나 값이 입력 되어 있으면 입력 공간에 주는 효과 */
+p input:focus+label::after, p input:valid+label::after {
+	width: 100%;
+	transform: translateX(0);
+}
+
+/*---------------------------------------------------*/
+
+input[type="submit"] {
+	width: 200px;
+	height: 60px;
+	border-radius: 30px;
+	background-color: #00457E;
+	transition: background-color 0.3s ease;
+	font-size: 25px;
+	font-weight: bold;
+	color : white;
+	margin-top : 20px;
+	margin-bottom : 20px;
+}
+
+input[type="submit"]:hover {
+	font-size : 26px;
+}
+
+input[type="submit"]:focus {
+	font-size : 24px;
+}

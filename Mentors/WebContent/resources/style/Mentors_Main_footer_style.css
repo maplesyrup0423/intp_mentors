@@ -1,0 +1,48 @@
+.footer{
+    margin: auto;
+    width: 1280px;
+    height: 250px;
+    border-top: 1px;
+    background-color: #666362;
+    color: white;
+    padding: 20px;
+}
+
+.fa-square-phone{
+    margin-right: 10px;
+}
+
+.telnum{
+    float: right;
+    font-size: 16pt;
+    
+}
+
+#log{
+    margin-bottom: 8px;
+}
+
+a{
+    text-decoration-line: none;
+}
+
+.f_top{
+    font-size: large;
+    margin: 5px;
+}
+
+.f_right{
+    margin-top: 35px;
+    float: right;
+}
+
+.f_right img{
+    width: 180px;
+    height: 50px;
+
+}
+
+.f_left{
+    margin-top: 150px;
+    float: left;
+}

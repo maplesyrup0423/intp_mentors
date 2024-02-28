@@ -1,0 +1,149 @@
+.all{
+    margin: auto;
+    width: 1280px;
+    padding-top: 50px;
+    text-align: left;
+    /*padding: 50px 350px 50px 350px;*/
+}
+
+.line{
+    border-top: 2px solid black;
+    margin-bottom: 25px;
+}
+
+.red{
+    color:  #FF5345;
+}
+
+.warning{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.cart_center_top{
+	margin-left: 10px;
+	margin-top: 20px;
+	padding-top: 20px;
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+.cen{
+    text-align: center;
+}
+
+.paybox{
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.WT_pay{
+    margin-top: 30px;
+    padding-top: 20px;
+    width: 1280px;
+    height: 250px;
+    border-top: 1px solid rgb(196, 193, 193);
+}
+
+.WT_pay>div{
+    float: left;
+}
+
+.cart_info{
+    width: 450px;
+    height: 200px;
+    margin-right: 50px;
+    margin-top: 20px;
+    border-right: 1px solid rgb(212, 212, 212);
+}
+
+.cart_title{
+    text-align: left;
+    font-size: 20pt;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-right: 30px;
+}
+
+.cart_a{
+    font-size: 14pt;
+    text-align: left;
+}
+
+.a_title{
+    display: inline-block;
+    width: 160px;
+    height: 30px;
+}
+
+.a_con{
+    opacity: 60%;
+}
+
+.cart_thum{
+    margin: 20px;
+    width: 300px;
+    height: 200px;
+    line-height: 250px;
+    border: 2px solid black;
+    margin-right: 50px;
+}
+
+.cart_payment{
+    margin: 20px;
+    padding: 50px;
+    width: 100px;
+    height: 100px;
+    text-align: right;
+    border-right: 1px solid rgb(212, 212, 212);
+}
+
+.cart_pay{
+	margin-top: 30px;
+    font-size: 18pt;
+    font-weight: 550;
+    margin-bottom: 10px;
+}
+
+.cart_buttons{
+	margin-top: 30px;
+}
+
+.cart_del{
+    width: 95px;
+    height: 40px;
+    margin-top: 30px;
+    border: none;
+    background-color: #00457e;
+    color: aliceblue;
+    font-size: 12pt;
+    border-radius: 8px;
+    margin-left: 30px;
+}
+
+
+.WT_total{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.WT_total>div{
+    font-size: 22pt;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.WT_total button{
+    width: 120px;
+    height: 50px;
+    border: none;
+    background-color: #004572;
+    color: aliceblue;
+    font-size: 12pt;
+    border-radius: 8px;
+}
+
+button:hover{
+    cursor: pointer;
+}
