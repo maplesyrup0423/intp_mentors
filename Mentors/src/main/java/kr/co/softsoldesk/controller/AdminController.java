@@ -16,9 +16,29 @@ public class AdminController {
       return "admin/admin_home";
    }
    
+   @GetMapping("/admin_wt")
+   public String admin_wt() {
+      return "admin/admin_wt";
+   }
+
+   @GetMapping("/admin_qna")
+   public String admin_qna() {
+      return "admin/admin_qna";
+   }
+   @GetMapping("/admin_noti")
+   public String admin_noti() {
+      return "admin/admin_noti";
+   }
+   @GetMapping("/admin_pay")
+   public String admin_pay() {
+      return "admin/admin_pay";
+   }
+   @GetMapping("/admin_user")
+   public String admin_user() {
+      return "admin/admin_user";
+   }
    @GetMapping("/admin_event")
    public String admin_event() {
       return "admin/admin_event";
    }
-
 }

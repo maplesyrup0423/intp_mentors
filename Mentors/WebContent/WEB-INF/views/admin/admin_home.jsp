@@ -17,7 +17,7 @@
 		<tr>
 			<td width="200" align="center" valign="top" height="100%"><div class="sidebar div_shadow">
 					<div class="sidebar_list">
-						<button class="list_home CH_list active""
+						<button class="list_home CH_list active"
 							onclick="location.href='${root}admin/admin_home'">관리자
 							홈</button>
 						<button class="list_test CH_list "
