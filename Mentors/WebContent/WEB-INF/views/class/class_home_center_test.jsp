@@ -11,23 +11,23 @@
 	href="${root }resources/style/class_home_style.css" />
 </head>
 <body>
-	<table width="1280">
+	<table width="1280" class="class_d_table">
 		<tr height="80">
 			<td colspan="2" align="center"><c:import
 					url="/WEB-INF/views/class/class_include/class_header.jsp" /></td>
 		</tr>
 		<tr>
 			<td rowspan="2" width="200" align="center" valign="top" height="100%"><div class="sidebar div_shadow">
-		<div class="sidebar_list">
-			<button class="CH_list list_home "
+				<div class="sidebar_list">
+			<button class="CH_list list_home"
 				onclick="location.href='${root}class/class_home_center_home'">강의
 				홈</button>
 			<button class="list_test CH_list active"
 				onclick="location.href='${root}class/class_home_center_test'">시험</button>
 			<button class="list_QnA CH_list "
-				onclick="location.href=''">Q&A</button>
+				onclick="location.href='${root}class/QnAlist'">Q&A</button>
 			<button class="list_notification CH_list "
-				onclick="location.href=''">공지사항</button>
+				onclick="location.href='${root}class/Notification'">공지사항</button>
 		</div>
 	</div></td>
 			<td height="80"><c:import
