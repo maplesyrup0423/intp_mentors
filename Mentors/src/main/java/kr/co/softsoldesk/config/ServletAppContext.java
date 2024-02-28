@@ -14,6 +14,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import kr.co.softsoldesk.mapper.TestMapper;
+
 
 @Configuration
 @EnableWebMvc
@@ -73,5 +75,11 @@ public class ServletAppContext implements WebMvcConfigurer {
 
 	// 쿼리문 실행을 위한 객체(쿼리문을 관리하는 Mapper를 정의)
 
+	   @Bean
+	   public MapperFactoryBean<TestMapper> test_mapper(SqlSessionFactory factory) throws Exception {
+	      MapperFactoryBean<TestMapper> factoryBean = new MapperFactoryBean<TestMapper>(TestMapper.class);
+	      factoryBean.setSqlSessionFactory(factory);
+	      return factoryBean;
+	   }
 
 }
