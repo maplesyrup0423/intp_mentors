@@ -1,0 +1,69 @@
+
+
+----------------------------테이블 내 모든 컬럼 조회---------------------------------------------
+select * from teacher_info;
+select* from event;
+select * from workplace_T;
+select * from WTT;
+select * from qna_q;
+select * from qna_a;
+select * from Notification;
+select * from cart;
+select * from M_admin;
+select * from wt_test_q;
+select * from wtt_test_a;
+select * from booklist;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------테이블 내 모든 컬럼 삭제-------------------------------------------
+TRUNCATE TABLE teacher_info;
+TRUNCATE TABLE event;
+TRUNCATE TABLE workplace_T;
+TRUNCATE TABLE WTT;
+TRUNCATE TABLE qna_q;
+TRUNCATE TABLE qna_a;
+TRUNCATE TABLE Notification;
+TRUNCATE TABLE cart;
+TRUNCATE TABLE M_admin;
+TRUNCATE TABLE wt_test_q;
+TRUNCATE TABLE wtt_test_a;
+TRUNCATE TABLE booklist;
+
+-----------------------------테이블 삭제--------------------------------------------
+DROP TABLE teacher_info;
+DROP TABLE event ;
+drop table workplace_T;
+drop table WTT;
+drop table qna_q;
+drop table qna_a;
+drop table Notification;
+drop table cart;
+drop table M_admin;
+drop table wt_test_q;
+drop table wtt_test_a;
+drop table booklist;

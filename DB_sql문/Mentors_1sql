@@ -1,0 +1,232 @@
+--계정생성
+ALTER SESSION SET "_ORACLE_SCRIPT" = true;
+CREATE USER mentors_01 IDENTIFIED BY 12345;
+GRANT connect, resource to mentors_01;
+GRANT CREATE view, create sequence, create procedure to mentors_01;
+
+-------------------------------------------------------------------------
+
+DROP TABLE teacher_info;
+
+CREATE TABLE teacher_info (
+    teacher_id       VARCHAR2(15) NOT NULL,
+    teacher_name     VARCHAR2(20) NOT NULL,
+    teacher_birth    VARCHAR2(8) NOT NULL,
+    teacher_gender   VARCHAR2(10) NOT NULL,
+    teacher_email    VARCHAR2(25) NOT NULL,
+    teacher_tel      VARCHAR2(13) NOT NULL,
+    teacher_password VARCHAR2(15) NOT NULL,
+    teacher_nickname VARCHAR2(20) NOT NULL,
+    teacher_work_in  VARCHAR2(40) NOT NULL,
+    teacher_type     VARCHAR2(12) NOT NULL,
+    teacher_neis     VARCHAR2(20) NOT NULL
+);
+ALTER TABLE Teacher_Info ADD PRIMARY KEY ( Teacher_Id );
+
+select * from teacher_info;
+
+select teacher_name,teacher_gender from teacher_info where teacher_id='id1';
+-------------------------------------------------------------------------
+DROP TABLE  event ;
+
+CREATE TABLE  event ( 
+        event_key VARCHAR2(20) NOT NULL, 
+        event_thumbnail VARCHAR2(500) NOT NULL, 
+        event_content_img VARCHAR2(500) NOT NULL,
+        event_s_date date NOT NULL, 
+        event_e_date date NOT NULL, 
+        event_title VARCHAR2(40) NOT NULL,
+        event_text VARCHAR2(500) NOT NULL 
+);
+
+
+ALTER TABLE event ADD PRIMARY KEY ( Event_Key );
+select* from event;
+
+-------------------------------------------------------------------------
+
+drop table workplace_T;
+
+create table workplace_T(
+    WT_Key VARCHAR2(20) NOT NULL,
+    WT_Title VARCHAR2(50) NOT NULL,
+    WT_Price number NOT NULL,
+    WT_TrainingTime number NOT NULL,
+    WT_Tag_School number NOT NULL, -- 1 초등학교 | 2 중학교 3 | 고등학교
+    WT_Tag_Time number NOT NULL, -- 1 0~60분 | 2 60~90분 | 3 90분이상
+    WT_Tag_TypeCategory number NOT NULL, -- 1 교과지도 | 2 학습지도 | 3 생활지도
+    WT_Thumbnail VARCHAR2(500) NOT NULL,
+    WT_Info VARCHAR2(500) NOT NULL,
+    WT_Text VARCHAR2(500) NOT NULL,
+    WT_Video VARCHAR2(500) NOT NULL
+);
+
+ALTER TABLE workplace_T ADD PRIMARY KEY ( WT_Key );
+
+select * from workplace_T;
+-------------------------------------------------------------------------
+drop table WTT;
+
+create table WTT(
+    WTT_Key VARCHAR2(20) NOT NULL,
+    WT_Key VARCHAR2(20) NOT NULL,
+    teacher_id VARCHAR2(15) NOT NULL,
+    WTT_payment_date date NOT NULL, --결제일
+    WTT_viewing_time number , --비디오 시청타임
+    WTT_test_result number, --시험점수
+    WTT_Completion number(1) -- 0: 미수료 1 : 수료
+);
+ALTER TABLE WTT MODIFY (WTT_viewing_time DEFAULT 0);
+ALTER TABLE WTT MODIFY (WTT_test_result DEFAULT 0);
+ALTER TABLE WTT MODIFY (WTT_Completion DEFAULT 0);
+ALTER TABLE WTT ADD PRIMARY KEY ( WTT_Key );
+ALTER TABLE WTT ADD FOREIGN KEY ( WT_Key ) REFERENCES workplace_T ( WT_Key );
+ALTER TABLE WTT ADD FOREIGN KEY ( teacher_id ) REFERENCES teacher_info ( teacher_id );
+select * from WTT;
+
+
+-------------------------------------------------------------------------
+
+drop table qna_q;
+
+create table qna_q(
+    q_key VARCHAR2(20) NOT NULL,
+    WTT_Key VARCHAR2(20) NOT NULL,
+    q_Title VARCHAR2(50) NOT NULL,
+    q_content VARCHAR2(50) NOT NULL,
+    q_a_check number(1),
+    q_date date
+);
+ALTER TABLE qna_q ADD PRIMARY KEY ( q_key );
+ALTER TABLE qna_q ADD FOREIGN KEY ( WTT_Key ) REFERENCES WTT ( WTT_Key );
+ALTER TABLE qna_q MODIFY (q_a_check DEFAULT 0);
+select * from qna_q;
+
+-------------------------------------------------------------------------
+drop table qna_a;
+
+create table qna_a(
+    a_key VARCHAR2(20) NOT NULL,
+    q_key VARCHAR2(20) NOT NULL,
+    a_content VARCHAR2(50) NOT NULL,
+    a_date date
+);
+ALTER TABLE qna_a ADD PRIMARY KEY ( a_key );
+ALTER TABLE qna_a ADD FOREIGN KEY ( q_key ) REFERENCES qna_q ( q_key );
+select * from qna_a;
+-------------------------------------------------------------------------
+drop table Notification;
+
+create table Notification(
+    noti_key VARCHAR2(20) NOT NULL,
+    WT_Key VARCHAR2(20) NOT NULL,
+    noti_Title VARCHAR2(50) NOT NULL,
+    noti_content VARCHAR2(50) NOT NULL,
+    noti_date date
+);
+ALTER TABLE Notification ADD PRIMARY KEY ( noti_key );
+ALTER TABLE Notification ADD FOREIGN KEY ( WT_Key ) REFERENCES workplace_T ( WT_Key );
+select * from Notification;
+
+-------------------------------------------------------------------------
+drop table cart;
+create table cart(
+    teacher_id VARCHAR2(15) NOT NULL,
+    WT_Key VARCHAR2(20) NOT NULL
+);
+ALTER TABLE cart ADD FOREIGN KEY ( teacher_id ) REFERENCES teacher_info ( teacher_id );
+ALTER TABLE cart ADD FOREIGN KEY ( WT_Key ) REFERENCES workplace_T ( WT_Key );
+select * from cart;
+
+-------------------------------------------------------------------------
+drop table M_admin;
+
+create table M_admin(
+    M_admin_id VARCHAR2(15) NOT NULL,
+    M_admin_pw VARCHAR2(15) NOT NULL
+);
+
+insert into M_admin values('system1004','1004!');
+select * from M_admin;
+
+-------------------------------------------------------------------------
+drop table wt_test_q;
+
+create table wt_test_q(
+    WT_Key VARCHAR2(20) NOT NULL,
+    test_Q VARCHAR2(100), --jsp 이름...
+    teat_q1 number(1),
+    teat_q2 number(1),
+    teat_q3 number(1),
+    teat_q4 number(1),
+    teat_q5 number(1),
+    teat_q6 number(1),
+    teat_q7 number(1),
+    teat_q8 number(1),
+    teat_q9 number(1),
+    teat_q10 number(1)
+);
+ALTER TABLE wt_test_q ADD FOREIGN KEY ( WT_Key ) REFERENCES workplace_T ( WT_Key );
+select * from wt_test_q;
+
+-------------------------------------------------------------------------
+drop table wtt_test_a;
+
+create table wtt_test_a(
+    WTT_Key VARCHAR2(20) NOT NULL,
+    test_aa number(1), -- 상태표시: 응시조건미달(초기값)=0/ 응시가능(조건충족)=1/ 응시불가(기간만료)=2 /응시완료 =3
+    teat_a1 number(1),
+    teat_a2 number(1),
+    teat_a3 number(1),
+    teat_a4 number(1),
+    teat_a5 number(1),
+    teat_a6 number(1),
+    teat_a7 number(1),
+    teat_a8 number(1),
+    teat_a9 number(1),
+    teat_a10 number(1)  
+);
+ALTER TABLE wtt_test_a MODIFY (test_aa DEFAULT 0);
+ALTER TABLE wtt_test_a ADD FOREIGN KEY ( WTT_Key ) REFERENCES WTT ( WTT_Key );
+select * from wtt_test_a;
+
+-------------------------------------------------------------------------
+drop table booklist;
+
+create table booklist(
+    BK_Key VARCHAR2(20) NOT NULL,
+    BK_img VARCHAR2(255),
+    BK_title VARCHAR2(200),
+    BK_autor VARCHAR2(200),
+    BK_date VARCHAR2(20),
+    BK_isbn VARCHAR2(40),
+    BK_publisher VARCHAR2(40),
+    BK_price NUMBER,
+    BK_yes24 VARCHAR2(200),
+    BK_ald VARCHAR2(200),
+    BK_kobo VARCHAR2(200),
+    BK_info VARCHAR2(4000),
+    BK_content VARCHAR2(4000),
+    BK_autorinfo VARCHAR2(4000),
+    BK_category NUMBER(1)
+);
+ALTER TABLE booklist ADD PRIMARY KEY ( BK_Key );
+
+select * from booklist;
+=======================================================
+--
+--create table board(
+--   board_id number PRIMARY KEY,
+--   board_title VARCHAR(255) NOT NULL,
+--   board_author VARCHAR(100) NOT NULL,
+--   board_created_at date,
+--   board_text varchar2(500)
+--);
+--
+--create table comment(
+--    comment_id number PRIMARY KEY,
+--    post_id INT NOT NULL,
+--    content TEXT NOT NULL,
+--    author VARCHAR(100) NOT NULL,
+--    created_at date,
+--);

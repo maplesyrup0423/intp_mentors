@@ -1,0 +1,35 @@
+--insert into event values('EV' || TO_CHAR(event_seqid.nextval),'썸네일','내용이미지','2024-01-01','2024-12-31','제목','내용');
+--teacher_info
+insert into teacher_info values('id1','예진','000423','여자','이메일@naver.com','010-8734-4177','pw1','예진에몽','sol','고등교사','k1048df8');
+insert into teacher_info values('id2','이름','000101','남자','이메일@naver.com','010-1234-5678','pw2','김이름','sol','중등교사','k1048df9');
+
+--workplace_T
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'강의 이름1',150000,150,1,1,1,'썸네일1','정보','기타텍스트','비디오링크');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'강의 이름2',10000,50,1,1,1,'썸네일2','정보','기타텍스트','비디오링크');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'',10000,50,1,1,1,'썸네일2','정보','기타텍스트','비디오링크');
+--wt_test_q
+insert into wt_test_q values('WT1','wt1_test',1,2,4,3,2,4,1,2,3,1);
+insert into wt_test_q values('WT2','wt2_test',1,2,4,3,2,1,1,2,3,1);
+insert into wt_test_q values('WT4','wt4_test',1,2,4,3,2,2,1,2,3,1);
+--WTT
+insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date,WTT_end_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT1','id1',sysdate,sysdate+30);
+insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date,WTT_end_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT2','id1',sysdate,sysdate+30);
+insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date,WTT_end_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT1','id2',sysdate,sysdate+30);
+--wtt_test_a
+insert into wtt_test_a (WTT_Key)values('WTT41');
+insert into wtt_test_a (WTT_Key)values('WTT42');
+insert into wtt_test_a (WTT_Key)values('WTT43');
+--시험제출시 insert문
+update wtt_test_a set teat_a1 =1,teat_a2=2,teat_a3=3,teat_a4=4,teat_a5=1,teat_a6=2,teat_a7=2,teat_a8=4,teat_a9=1,teat_a10=4, test_aa=3 where WTT_Key='WTT41';
+--@Update("update wtt_test_a set teat_a1 =#{teat_a1},teat_a2=#{teat_a2},teat_a3=#{teat_a3},teat_a4=#{teat_a4},"+
+--	"teat_a5=#{teat_a5},teat_a6=#{teat_a6},teat_a7=#{teat_a7},teat_a8=#{teat_a8},teat_a9=#{teat_a9},teat_a10=#{teat_a10}, test_aa=#{teat_aa} "+
+--			"where WTT_Key=#{WTT_Key}")
+
+
+--cart
+insert into cart values('id1','WT1');
+insert into cart values('id1','WT4');
+insert into cart values('id2','WT1');
+
+
+COMMIT;
