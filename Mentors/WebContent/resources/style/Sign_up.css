@@ -25,7 +25,7 @@ div.sign {
 	margin: auto;
 }
 
-/*닉네임 중복 확인 버튼*/
+/*중복 확인 버튼*/
 p button {
 	position: absolute;
 	right: 20px;
@@ -75,8 +75,8 @@ div.school_type {
 	align-items: center;
 }
 
-/*성별 선택 콤보 박스*/
-div.gender_choice select {
+/* 콤보 박스*/
+div.gender_choice select, div.school_type select {
 	width: 100%;
 	height: 50px;
 	border: none;
@@ -187,14 +187,14 @@ p input:focus+label::after, p input:valid+label::after {
 }
 
 /*---------------------------------------------------*/
-.sign_up_button { 
+.sign_up_button_space { 
 	display : flex;
 	width : 100%;
 	height : 100px;
 }
 
-input[type="button"] {
-	width : 48%;
+.cancle {
+	width : 350px;
 	height : 50px;
 	font-size : 25px;
 	background-color : white;
@@ -203,8 +203,8 @@ input[type="button"] {
 	margin-right : auto;
 }
 
-input[type="submit"] {
-	width : 48%;
+button.Sign_up_button {
+	width : 350px;
 	height : 50px;
 	font-size : 25px;
 	color : white;
@@ -215,10 +215,10 @@ input[type="submit"] {
 	margin-left : auto;
 }
 
-input[type="submit"]:hover {
+.sign_up_button_space button:hover {
 	font-size: 26px;
 }
 
-input[type="submit"]:focus {
+.sign_up_button_space button:focus {
 	font-size: 24px;
 }

@@ -1,5 +1,7 @@
 package kr.co.softsoldesk.controller;
 
+import java.util.Arrays;
+
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +46,9 @@ public class TeacherController {
 	}
 	
 	@GetMapping("/Sign_up")
-	public String Sign_up() {
+	public String Sign_up(@ModelAttribute("Sign_upTeacherBean") TeacherBean Sign_upTeacherBean,
+							Model model) {
+		
 		return "user/Sign_up";
 	}
 	
