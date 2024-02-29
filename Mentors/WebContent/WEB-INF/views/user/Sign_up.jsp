@@ -14,42 +14,49 @@
 	<div class="container">
 		<div class="sign">회원가입</div>
 		<hr />
-		<form action="${root }Sign_up_pro" method = "post">
+		<form:form action="${root }Sign_up_pro" method = "post"
+				   modelAttribute="Sign_upTeacherBean">
 			<div class="body">
 				<div class="letter_personal_information">개인정보 입력</div>
 				<!-- 개인정보 입력 -->
 				<div class="personal_information">
 					<!-- 성명 -->
 					<p>
-						<form:input path="name" /> <label for="name">
+						<form:input path = "Teacher_Name" /> 
+						<form:label path = "Teacher_Name">
 							<span>성명을 입력하세요. ex) 제갈김씨</span>
-						</label>
+						</form:label>
+						
 					</p>
 					<!-- 생일 -->
 					<p>
-						<input type="text" name="birth" required /> <label for="birth">
+						<form:input path = "Teacher_Birth" /> 
+						<form:label path = "Teacher_Birth">
 							<span>생년월일을 입력하세요. ex)15600231</span>
-						</label>
+						</form:label>
 					</p>
 					<!-- 성별 -->
 					<div class="gender_choice">
-						<select>
+						<form:select path = "Teacher_Gender">
 							<option value="male" selected>남성</option>
-							<option value="femail">여성</option>
-						</select>
+							<option value="femaie">여성</option>
+						</form:select>
 					</div>
 					<!-- 이메일 -->
 					<p>
-						<input type="text" name="email" required /> <label for="email">
+						<form:input path = "Teacher_Email" />
+						<form:label path = "Teacher_Email">
 							<span>이메일을 입력하세요. ex)Ahjipga@naver.com</span>
-						</label>
+						</form:label>
 					</p>
 					<!-- 전화번호 -->
 					<p>
-						<input type="text" name="phone_number" required /> <label
-							for="nickname"> <span>전화번호를 입력하세요.
-								ex)010-1234-5678</span>
-						</label>
+						<form:input path = "Teacher_Tel" /> 
+						<form:label path = "Teacher_Tel"> 
+							<span>전화번호를 입력하세요.
+								ex)010-1234-5678
+							</span>
+						</form:label>
 					</p>
 				</div>
 
@@ -58,41 +65,42 @@
 				<div class="create_account">
 					<!-- 아이디  -->
 					<p class="absolute">
-						<input type="text" name="id" required /> <label for="id">
+						<form:input path ="Teacher_Id" /> 
+						<form:label path = "Teacher_Id">
 							<span>아이디를 입력하세요.</span>
-						</label>
-						<button type="button">중복확인</button>
+						</form:label>
+						<button type="button" onclick="checkTeacherIdExist()">중복확인</button>
 					</p>
 					<div class="id_check_message">사용가능할지도 모르는 아이디입니다.</div>
-					<p class="absolute">
-						<input type="text" name="nickname" required /> <label
-							for="nickname"> <span>닉네임을 입력하고 중복확인을 눌러주세요 </span>
-						</label>
-					</p>
 
 					<!-- 비밀번호 -->
 					<p>
-						<input type="password" name="pw1" autocomplete="off" required />
-						<label for="pw1"> <span>비밀번호를 입력하세요</span>
-						</label>
+						<form:input path = "Teacher_Password" autocomplete="off"/>
+						<form:label path = "Teacher_Password"> 
+							<span>비밀번호를 입력하세요</span>
+						</form:label>
 					</p>
 					<!-- 비밀번호 확인 -->
 					<p>
-						<input type="password" name="pw2" autocomplete="off" required />
-						<label for="pw2"> <span>비밀번호 재확인</span>
-						</label>
+						<form:input path = "Teacher_Password2" autocomplete="off" />
+						<form:label path = "Teacher_Password2"> 
+							<span>비밀번호 확인</span>
+						</form:label> 
 					</p>
-					<div class="password_check_message">제대로 다시 작성한게 맞나요? 아닌거같은데?
-						확인안해요?</div>
+					<div class="password_check_message">
+						제대로 다시 작성한게 맞나요? 아닌거같은데? 확인안해요?
+					</div>
 					<!-- 닉네임 -->
 					<p class="absolute">
-						<input type="text" name="nickname" required /> <label
-							for="nickname"> <span>닉네임을 입력하고 중복확인을 눌러주세요 </span>
-						</label>
-						<button type="button">중복확인</button>
+						<form:input path = "Teacher_Nickname"  /> 
+						<form:label path = "Teacher_Nickname"> 
+							<span>닉네임을 입력하고 중복확인을 눌러주세요 </span>
+						</form:label>
+						<button type="button" onclick="checkTeacherNicknameExist()">중복확인</button>
 					</p>
-					<div class="nickname_check_message">이미 13348개 존재하는 닉네임입니다.
-						다른걸 고르세요</div>
+					<div class="nickname_check_message">
+						이미 13348개 존재하는 닉네임입니다. 다른걸 고르세요
+					</div>
 				</div>
 
 				<!-- 직장정보 -->
@@ -100,31 +108,34 @@
 				<div class="work_in_information">
 					<!-- 직장 -->
 					<p>
-						<input type="text" name="work_in" required /> <label
-							for="work_in"> <span>솔데스크 대학원</span>
-						</label>
+						<form:input path = "Teacher_Work_In" /> 
+						<form:label path = "Teacher_Work_In"> 
+							<span>솔데스크 대학원</span>
+						</form:label>
 					</p>
 
 					<!-- 교직타입 -->
 					<div class="school_type">
-						교직타입 <input type="radio" name="school_type" value="초등교사" checked>초등교사
-						<input type="radio" name="school_type" value="중등교사">중등교사 <input
-							type="radio" name="school_type" value="고등교사">고등교사
+						<form:select path = "Teacher_Type">
+							<option value="element_School" selected>초등교사</option>
+							<option value="middle_School">중등교사</option>
+							<option value="high_School">고등교사</option>
+						</form:select>
 					</div>
 
 					<p>
-						<input type="text" name="neis" required /> <label for="neis">
+						<form:input path = "Teacher_Neis" /> 
+						<form:label path = "Teacher_Neis">
 							<span>neis 정보를 입력하세요.</span>
-						</label>
+						</form:label>
 					</p>
 				</div>
-				<div class = "sign_up_button">
-					<input type="button" name="cancle" value="돌아가기" 
-					onclick="location.href='Login.jsp'"/>
-					<input type="submit" name="submit" value="회원가입" />
+				<div class = "sign_up_button_space">
+					<button type="button" class = "cancle" onclick="location.href='${root}user/Login'">돌아가기</button>
+					<form:button class="Sign_up_button">회원가입</form:button>
 				</div>
 			</div>
-		</form>
+		</form:form>
 			
 	</div>
 </body>
