@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import kr.co.softsoldesk.beans.TeacherBean;
 import kr.co.softsoldesk.beans.WTBean;
 import kr.co.softsoldesk.service.WTService;
 
@@ -28,6 +29,7 @@ private WTService wtService;
 	public String WT_list(Model model) {
 		List<WTBean> wtList = wtService.getWTList();
 		model.addAttribute("wtList", wtList);
+		
 		return "WT/WT_list";
 	}
 
@@ -44,18 +46,5 @@ private WTService wtService;
 		return "WT/WT_my_room";
 	}
 
-	@GetMapping("/WT_cart") // 장바구니
-	public String WT_cart() {
-		return "WT/WT_cart";
-	}
 
-	@GetMapping("/WT_payment") // 결제
-	public String WT_payment() {
-		return "WT/WT_payment";
-	}
-	
-	@GetMapping("/WT_payment_success") //결제 완료
-	public String WT_payment_success() {
-		return "WT/WT_payment_seccess";
-	}
 }
