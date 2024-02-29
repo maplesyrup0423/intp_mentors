@@ -7,8 +7,10 @@ import kr.co.softsoldesk.beans.TeacherBean;
 
 public interface TeacherMapper {
 	//로그인시 유저 정보 받기
-	@Select("select  teacher_name,teacher_birth,teacher_gender,teacher_email,teacher_tel,teacher_nickname,teacher_work_in,teacher_type,teacher_neis\r\n"
-			+ "from teacher_info where teacher_id = #{teacher_id} and teacher_password=#{teacher_password}")
+	@Select("select Teacher_Name, Teacher_Birth, Teacher_Gender, " 
+			+ "Teacher_Email, Teacher_Tel, Teacher_Nickname, "
+			+ "Teacher_Work_In, Teacher_Type, Teacher_Neis "
+			+ "from Teacher_Info where Teacher_Id = #{Teacher_Id} and Teacher_Password=#{Teacher_Password}")
 	TeacherBean getLoginTeacherInfo(TeacherBean teacherBean);
 	
 	//아이디 중복체크

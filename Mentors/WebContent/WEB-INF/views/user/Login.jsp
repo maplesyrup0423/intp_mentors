@@ -13,29 +13,34 @@
 <body>
 	<div class="background">
 		<div class="container">
-			<div class="log_in_letter">
-				로그인 <br />
-			</div>
-
-			<form action="LoginAction.jsp" method="post">
+			<div class="log_in_letter">로그인<br /></div>
+			
+			<c:if test="${fail == true }">
+				<div class="alert alert-danger">
+					<h3>로그인 실패</h3>
+					<p>아이디 비밀번호를 확인해주세요</p>
+				</div>
+			</c:if>
+				
+			<form:form action="${root }user/Login_pro" method="post"
+						modelAttribute="tempLoginTeacherBean">
 				<div class="body">
 					<div class="input_id">
-						<input type="text" name="id" placeholder="아이디를 입력하세요" />
+						<form:input path = "Teacher_Id" placeholder="아이디를 입력하세요" />
 					</div>
 
 					<div class="input_pw">
-						<input type="password" name="pw" placeholder="비밀번호를 입력하세요." />
+						<form:password path = "Teacher_Password" placeholder="비밀번호를 입력하세요." />
 					</div>
 				</div>
-				<center>
-					<input type="submit" name="submit" value="로그인" />
-				</center>
-			</form>
+				<div  class = "login_button_space">
+					<form:button class="login_button">로그인</form:button>
+				</div>
+			</form:form>
 			<footer> 
-				<a href="Find_ID.jsp">아이디 찾기</a> <span> | </span> <a
-				href="Find_Password.jsp">비밀번호 찾기</a> <span> | </span> <a
-				href="${root }user/Sign_up">회원가입</a> 
-				
+				<a href="Find_ID.jsp">아이디 찾기</a> <span> | </span> 
+				<a href="Find_Password.jsp">비밀번호 찾기</a> <span> | </span> 
+				<a href="${root }user/Sign_up">회원가입</a> 
 			</footer>
 		</div>
 	</div>
