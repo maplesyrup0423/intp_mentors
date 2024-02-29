@@ -12,11 +12,11 @@
 </head>
 <body>
 	<div class="all">
-	
-	<!-- header -->
-	<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
-	
-	
+
+		<!-- header -->
+		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+
+
 		<h2>직무연수</h2>
 		<hr>
 		<div class="container">
@@ -91,254 +91,34 @@
 
 		<hr>
 
-		<div class="WT_table_all">
-			<table class="WT_table">
-				<tr class="WT_thumbnail">
-					<td>
-					<c:forEach var='obj' items="${wtList }">
-						<div class="WT_table_box">
-							<div class="WT_table_top">
-								<a href="${root }WT/WT_info">
-									<div class="thumb"><img src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg"/></div>
-								</a>
-							</div>
-							<div class="WT_table_bottom">
-								<a href="${root }WT/WT_info">
-									<div class="wtt">${obj.WT_Title }</div>
-								</a>
-								<div id="wt_bot">
-									<div>
-										<span>${obj.WT_Price }원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
-									</div>
-								</div>
-							</div>
+		<c:forEach var='obj' items="${wtList }">
+			<div class="WT_table_box">
+				<div class="WT_table_top">
+					<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key}">
+						<div class="thumb">
+							<img class="WT_list_img"
+								src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg" />
 						</div>
-						
-						</c:forEach>
-					</td>
-					<td>
-						<div class="WT_table_box">
-							<div class="WT_table_top">
-								<a href="${root }WT/WT_info">
-									<div class="thumb"></div>
-								</a>
-							</div>
-							<div class="WT_table_bottom">
-								<a href="${root }WT/WT_info">
-									<div class="wtt">제목1</div>
-								</a>
-								<div id="wt_bot">
-									<div>
-										<span>0원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
-									</div>
-								</div>
-							</div>
+					</a>
+				</div>
+				<div class="WT_table_bottom">
+					<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key}">
+						<div class="wtt">${obj.WT_Title }</div>
+					</a>
+					<div id="wt_bot">
+						<div>
+							<span>${obj.WT_Price }원</span> <span><button
+									onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
 						</div>
-					</td>
-					<td>
-						<div class="WT_table_box">
-							<div class="WT_table_top">
-								<a href="${root }WT/WT_info">
-									<div class="thumb"></div>
-								</a>
-							</div>
-							<div class="WT_table_bottom">
-								<a href="${root }WT/WT_info">
-									<div class="wtt">제목1</div>
-								</a>
-								<div id="wt_bot">
-									<div>
-										<span>0원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="WT_table_box">
-							<div class="WT_table_top">
-								<a href="${root }WT/WT_info">
-									<div class="thumb"></div>
-								</a>
-							</div>
-							<div class="WT_table_bottom">
-								<a href="${root }WT/WT_info">
-									<div class="wtt">제목1</div>
-								</a>
-								<div id="wt_bot">
-									<div>
-										<span>0원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr class="WT_thumbnail">
-					<td>
-						<div class="WT_table_box">
-							<div class="WT_table_top">
-								<a href="${root }WT/WT_info">
-									<div class="thumb"></div>
-								</a>
-							</div>
-							<div class="WT_table_bottom">
-								<a href="${root }WT/WT_info">
-									<div class="wtt">제목1</div>
-								</a>
-								<div id="wt_bot">
-									<div>
-										<span>0원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="WT_table_box">
-							<div class="WT_table_top">
-								<a href="${root }WT/WT_info">
-									<div class="thumb"></div>
-								</a>
-							</div>
-							<div class="WT_table_bottom">
-								<a href="${root }WT/WT_info">
-									<div class="wtt">제목1</div>
-								</a>
-								<div id="wt_bot">
-									<div>
-										<span>0원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="WT_table_box">
-							<div class="WT_table_top">
-								<a href="${root }WT/WT_info">
-									<div class="thumb"></div>
-								</a>
-							</div>
-							<div class="WT_table_bottom">
-								<a href="${root }WT/WT_info">
-									<div class="wtt">제목1</div>
-								</a>
-								<div id="wt_bot">
-									<div>
-										<span>0원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="WT_table_box">
-							<div class="WT_table_top">
-								<a href="${root }WT/WT_info">
-									<div class="thumb"></div>
-								</a>
-							</div>
-							<div class="WT_table_bottom">
-								<a href="${root }WT/WT_info">
-									<div class="wtt">제목1</div>
-								</a>
-								<div id="wt_bot">
-									<div>
-										<span>0원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</td>
-				</tr>
+					</div>
+				</div>
+			</div>
 
-				<tr class="WT_thumbnail">
-					<td>
-						<div class="WT_table_box">
-							<div class="WT_table_top">
-								<a href="${root }WT/WT_info">
-									<div class="thumb"></div>
-								</a>
-							</div>
-							<div class="WT_table_bottom">
-								<a href="${root }WT/WT_info">
-									<div class="wtt">제목1</div>
-								</a>
-								<div id="wt_bot">
-									<div>
-										<span>0원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="WT_table_box">
-							<div class="WT_table_top">
-								<a href="${root }WT/WT_info">
-									<div class="thumb"></div>
-								</a>
-							</div>
-							<div class="WT_table_bottom">
-								<a href="${root }WT/WT_info">
-									<div class="wtt">제목1</div>
-								</a>
-								<div id="wt_bot">
-									<div>
-										<span>0원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="WT_table_box">
-							<div class="WT_table_top">
-								<a href="${root }WT/WT_info">
-									<div class="thumb"></div>
-								</a>
-							</div>
-							<div class="WT_table_bottom">
-								<a href="${root }WT/WT_info">
-									<div class="wtt">제목1</div>
-								</a>
-								<div id="wt_bot">
-									<div>
-										<span>0원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="WT_table_box">
-							<div class="WT_table_top">
-								<a href="${root }WT/WT_info">
-									<div class="thumb"></div>
-								</a>
-							</div>
-							<div class="WT_table_bottom">
-								<a href="${root }WT/WT_info">
-									<div class="wtt">제목10</div>
-								</a>
-								<div id="wt_bot">
-									<div>
-										<span>0원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</td>
-				</tr>
+		</c:forEach>
 
-			</table>
-
-		</div>
-		
 		<!-- footer -->
-	<c:import url="/WEB-INF/views/include/Mentors_main_footer.jsp" />
-		
+		<c:import url="/WEB-INF/views/include/Mentors_main_footer.jsp" />
+
 	</div>
 </body>
 </html>

@@ -17,5 +17,9 @@ public class WTDao {
 	public List<WTBean> getWTList() {
 		return wtMapper.getWTList();
 	}
+	
+	public WTBean getWTInfo(String WT_Key) {
+		return wtMapper.getWTInfo(WT_Key);
+	}
 
 }

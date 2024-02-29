@@ -56,14 +56,22 @@ button:hover{
     border-radius: 5%;
     width: 275px;
     height: 250px;
+    display: inline-block;
+    overflow:hidden;
+    margin: 10px;
 }
 
 .thumb{
     width: 275px;
     height: 150px;
     border-bottom: 1px solid #00457e;
-}
 
+}
+.WT_list_img{
+	 width: 275px;
+    height: 150px;
+  object-fit: cover;
+}
 .WT_table_bottom{
     margin-top: 15px;
 }

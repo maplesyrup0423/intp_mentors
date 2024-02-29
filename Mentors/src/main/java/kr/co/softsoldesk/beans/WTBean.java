@@ -23,4 +23,8 @@ public class WTBean {
 	//----------------------------------------------------
 	private MultipartFile upload_WT_Thumbnail; //썸네일 파일 받기
 	private MultipartFile upload_WT_Info; //상세정보 파일 받기
+	
+	
+	private String str_WT_Tag_School; //학급 문자열
+	private String str_WT_Tag_TypeCategory; //분야 문자
 }

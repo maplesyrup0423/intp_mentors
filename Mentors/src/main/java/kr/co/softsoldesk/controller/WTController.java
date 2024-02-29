@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softsoldesk.beans.WTBean;
 import kr.co.softsoldesk.service.WTService;
@@ -32,7 +32,10 @@ private WTService wtService;
 	}
 
 	@GetMapping("/WT_info") // 연수 상세
-	public String WT_info() {
+	public String WT_info(@RequestParam("WT_Key")String WT_Key, Model model) {
+		WTBean wtInfoBean = wtService.getWTInfo(WT_Key);
+		model.addAttribute("wtInfoBean",wtInfoBean);
+		
 		return "WT/WT_info";
 	}
 
