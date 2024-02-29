@@ -19,12 +19,14 @@ public class HomeController {
 	 * @Resource(name="loginUserBean") private UserBean loginUserBean;
 	 */
 	
-
 	@Resource(name = "loginTeacherBean")
 	private TeacherBean loginTeacherBean;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
+		System.out.println("홈컨트롤러 로그인 상태 값 : "+ loginTeacherBean.isTeacherLogin());
+		Boolean loginCheck =loginTeacherBean.isTeacherLogin();
+		model.addAttribute("loginCheck",loginCheck);
 		return "main";
 	}
 
