@@ -1,0 +1,18 @@
+--userMapper slq 문
+
+--로그인시 회원 정보 가져오기
+select  teacher_name,teacher_birth,teacher_gender,teacher_email,teacher_tel,teacher_nickname,teacher_work_in,teacher_type,teacher_neis
+from teacher_info where teacher_id = 'id1' and teacher_password='pw1';
+
+--아이디 중복 확인
+select teacher_name from teacher_info where teacher_id = 'id1';
+
+
+
+
+--WTMapper sql
+--리스트에 필요한 정보
+
+select WT_Key, WT_Title, WT_Thumbnail,WT_Price from workplace_T;
+
+COMMIT;

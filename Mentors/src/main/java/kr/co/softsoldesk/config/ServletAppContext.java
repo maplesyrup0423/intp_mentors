@@ -16,6 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import kr.co.softsoldesk.mapper.TeacherMapper;
 import kr.co.softsoldesk.mapper.TestMapper;
+import kr.co.softsoldesk.mapper.WTMapper;
 
 
 @Configuration
@@ -86,6 +87,14 @@ public class ServletAppContext implements WebMvcConfigurer {
 	   @Bean
 	   public MapperFactoryBean<TeacherMapper> teacherMapper(SqlSessionFactory factory) throws Exception {
 	      MapperFactoryBean<TeacherMapper> factoryBean = new MapperFactoryBean<TeacherMapper>(TeacherMapper.class);
+	      factoryBean.setSqlSessionFactory(factory);
+	      return factoryBean;
+	   }
+	   
+
+	   @Bean
+	   public MapperFactoryBean<WTMapper> wtMapper(SqlSessionFactory factory) throws Exception {
+	      MapperFactoryBean<WTMapper> factoryBean = new MapperFactoryBean<WTMapper>(WTMapper.class);
 	      factoryBean.setSqlSessionFactory(factory);
 	      return factoryBean;
 	   }

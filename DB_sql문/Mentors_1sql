@@ -58,7 +58,7 @@ create table workplace_T(
     WT_Tag_TypeCategory number NOT NULL, -- 1 교과지도 | 2 학습지도 | 3 생활지도
     WT_Thumbnail VARCHAR2(500) NOT NULL,
     WT_Info VARCHAR2(500) NOT NULL,
-    WT_Text VARCHAR2(500) NOT NULL,
+    WT_Text VARCHAR2(4000) NOT NULL,
     WT_Video VARCHAR2(500) NOT NULL
 );
 

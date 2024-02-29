@@ -95,23 +95,26 @@
 			<table class="WT_table">
 				<tr class="WT_thumbnail">
 					<td>
+					<c:forEach var='obj' items="${wtList }">
 						<div class="WT_table_box">
 							<div class="WT_table_top">
 								<a href="${root }WT/WT_info">
-									<div class="thumb"></div>
+									<div class="thumb"><img src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg"/></div>
 								</a>
 							</div>
 							<div class="WT_table_bottom">
 								<a href="${root }WT/WT_info">
-									<div class="wtt">제목1</div>
+									<div class="wtt">${obj.WT_Title }</div>
 								</a>
 								<div id="wt_bot">
 									<div>
-										<span>0원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
+										<span>${obj.WT_Price }원</span> <span><button onclick="location.href='${root }WT/WT_payment'">연수신청</button></span>
 									</div>
 								</div>
 							</div>
 						</div>
+						
+						</c:forEach>
 					</td>
 					<td>
 						<div class="WT_table_box">

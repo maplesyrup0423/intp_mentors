@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import kr.co.softsoldesk.beans.ContentBean;
+
 import kr.co.softsoldesk.beans.WTBean;
 import kr.co.softsoldesk.service.WTService;
 
