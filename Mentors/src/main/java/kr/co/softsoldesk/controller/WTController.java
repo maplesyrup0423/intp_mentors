@@ -11,16 +11,23 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import kr.co.softsoldesk.beans.ContentBean;
+import kr.co.softsoldesk.beans.WTBean;
+import kr.co.softsoldesk.service.WTService;
+
 
 @Controller
 @RequestMapping("/WT")
 public class WTController {
 	
-
+@Autowired
+private WTService wtService;
 
 
 	@GetMapping("/WT_list") // 연수 목록
-	public String WT_list() {
+	public String WT_list(Model model) {
+		List<WTBean> wtList = wtService.getWTList();
+		model.addAttribute("wtList", wtList);
 		return "WT/WT_list";
 	}
 
