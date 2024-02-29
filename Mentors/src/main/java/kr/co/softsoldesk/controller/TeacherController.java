@@ -3,12 +3,15 @@ package kr.co.softsoldesk.controller;
 import java.util.Arrays;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -25,7 +28,6 @@ public class TeacherController {
 	
 	@Resource(name = "loginTeacherBean")
 	private TeacherBean loginTeacherBean;
-	
 	
 	@GetMapping("/Login")
 	public String Login(@ModelAttribute("tempLoginTeacherBean") TeacherBean tempLoginTeacherBean,
@@ -52,6 +54,20 @@ public class TeacherController {
 		return "user/Sign_up";
 	}
 	
-	
+	@PostMapping("/Login_pro")
+	public String Login_pro(@Valid @ModelAttribute("tempLoginTeacherBean") 
+							TeacherBean tempLoginTeacherBean, BindingResult result) {
+		
+		if(result.hasErrors()) {
+			return "user/Login";
+		}
+		teacherService.getLoginTeacherInfo(tempLoginTeacherBean);
+		
+		if(loginTeacherBean.isTeacherLogin() == true) {
+			return "user/Login_success";
+		}else {			
+			return "user/Login_fail";
+		}
+	}
 
 }

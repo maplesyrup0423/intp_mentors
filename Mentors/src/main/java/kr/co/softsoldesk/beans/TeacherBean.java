@@ -29,4 +29,5 @@ public class TeacherBean {
    private boolean TeacherLogin; //로그인여부 확인
    private boolean TeacherIdExist; //회원 가입시 아이디 존재여부 확인(중복확인)
    
+   
 }
