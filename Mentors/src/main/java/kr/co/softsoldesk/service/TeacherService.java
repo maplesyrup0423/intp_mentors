@@ -35,4 +35,15 @@ public class TeacherService {
 		}
 	}
 	
+	
+	public boolean checkTeacherIdExist(String teacher_id) {
+		String teacher_name= teacherDao.checkTeacherIdExist(teacher_id);
+		
+		if(teacher_name==null) {
+			return true; //디비에 없다=사용가능한 아이디 
+		}else {
+			return false; //디비에 있다=사용 할 수 없는 아이디
+		}
+	}
+	
 }
