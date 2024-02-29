@@ -35,9 +35,9 @@ body{
 	margin-top: 20px;
 }
 
-.list_tab > input{
+.blist-home{
 	font-size: 16px;
-	width: 300px;
+	width: 200px;
 	height: 50px;
 	border-radius: 20px;
 	border: none;
@@ -114,7 +114,6 @@ body{
 .bd_img{
 	width: 400px;
 	height: 515px;
-	border: 1px solid red;
 	float: left;
 }
 
@@ -130,29 +129,18 @@ body{
 .bd_info{
 	width: 870px;
 	height: 515px;
-	border: 1px solid yellow;
 	float: left;
 }
 
 .info_box{
 	float: left;
-	border: 1px solid purple;
 	width: 750px;
 	height: 450px;
 	margin: 30px 60px;
 }
 
 .title{
-	font-size: 24px;
-	font-weight: bolder;
-}
-
-.sub_title{
-	font: 15px;
-	color: #888;
-	margin: 20px 0px;
-	padding: 0px 0px 20px;
-	font-weight: bolder;
+	padding-bottom: 40px;
 }
 
 .list1{
@@ -160,8 +148,9 @@ body{
 	font-size: 15px;
 	font-weight: bolder;
 	line-height: 2;
-	height: 100px;
+	height: 200px;
 	position: relative;
+	top: 30px;
 }
 
 .list2{
@@ -169,20 +158,9 @@ body{
 	font-size: 15px;
 	font-weight: bolder;
 	line-height: 2;
-	height: 200px;
+	height: 100px;
 	position: relative;
-}
-
-.ulist1{
-	list-style-type: none;
-	position: absolute;
-	bottom: 25px;
-}
-
-.ulist2{
-	list-style-type: none;
-	position: absolute;
-	bottom: 40px;
+	top: 20px;
 }
 
 .info_box1{
@@ -201,6 +179,7 @@ body{
 	height: 150px;
 }
 
+/*
 .box_btn {
 	text-align: center;
 }
@@ -216,7 +195,7 @@ body{
 	
 }
 
-/*
+
 #iw_exbtn{
 	display: flex;
 	text-align: center;
@@ -278,4 +257,23 @@ body{
 
 .A_view{
 	padding-bottom: 100px;
+}
+
+.booklist-title-font{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.booklist-info-font{
+	font-size: 14px;
+	font-weight: bold;
+	color: black;
+}
+
+th {
+	text-align: left;
+	font-size: 15px;
+	color: #737373;
+	line-height: 2;
+	margin-right: 50px;
 }
