@@ -5,27 +5,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="${root}resources/style/slidestest.css">
-	<link rel="stylesheet" href="${root}resources/style/slick.css" />
-	<link rel="stylesheet" href="${root}resources/style/xeicon.min.css">
-	<script src="${root}/resources/script/jquery-3.3.1.min.js"></script>
-	<script src="${root}/resources/script/slick.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="${root}resources/style/slidestest.css">
+<link rel="stylesheet" href="${root}resources/style/slick.css" />
+<link rel="stylesheet" href="${root}resources/style/xeicon.min.css">
+<script src="${root}/resources/script/jquery-3.3.1.min.js"></script>
+<script src="${root}/resources/script/slick.min.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<div class="all_center">
-	<!-- header -->
-	<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+	<div class="all_center">
+		<!-- header -->
+		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+		
+		<c:choose>
+			<c:when test="${loginTeacherBean.TeacherLogin == true}">
+				<h1>로그인상태</h1>
+			</c:when>
+			<c:otherwise>
+					<h1>로그아웃상태</h1>
+			</c:otherwise>
+		</c:choose>
 
-	
-	<!-- center -->
-	<div class="C-main">
-		<!--class="main" -->
-		<top>
+		<!-- center -->
+		<div class="C-main">
+			<!--class="main" -->
+			<top>
 			<div class="C-eventList">
 				<!-- /*allimg*/ -->
 
@@ -56,55 +64,55 @@
 				</div>
 
 			</div>
-		</top>
+			</top>
 
-		<div class="C-table">
-			<table class="C-contentTable" border="1">
-				<!-- contentall -->
-				<tr>
-					<td align="center">
-						<div class="C-list_div">
-							<!-- contentlist_div -->
-							<table class="contentlist">
-								<th class="bestlist" colspan="2">베스트 도서</th>
-								<tr class="best_book">
-									<td><a
-										href="https://namu.wiki/w/%EB%8B%AC%EB%9F%AC%EA%B5%AC%ED%8A%B8%20%EA%BF%88%20%EB%B0%B1%ED%99%94%EC%A0%90"><img
-											src="${root}resources/image/인공지능활용교육.jpg" alt="베스트book1">
-											<p>달러구트 꿈 백화점</p> </a></td>
-									<td><a
-										href="https://series.naver.com/novel/detail.series?productNo=9101145"><img
-											src="${root }resources/image/bookimg1.jpg" alt="베스트book2">
-											<p>강철 마법사</p> </a></td>
-								</tr>
+			<div class="C-table">
+				<table class="C-contentTable" border="1">
+					<!-- contentall -->
+					<tr>
+						<td align="center">
+							<div class="C-list_div">
+								<!-- contentlist_div -->
+								<table class="contentlist">
+									<th class="bestlist" colspan="2">베스트 도서</th>
+									<tr class="best_book">
+										<td><a
+											href="https://namu.wiki/w/%EB%8B%AC%EB%9F%AC%EA%B5%AC%ED%8A%B8%20%EA%BF%88%20%EB%B0%B1%ED%99%94%EC%A0%90"><img
+												src="${root}resources/image/인공지능활용교육.jpg" alt="베스트book1">
+												<p>달러구트 꿈 백화점</p> </a></td>
+										<td><a
+											href="https://series.naver.com/novel/detail.series?productNo=9101145"><img
+												src="${root }resources/image/bookimg1.jpg" alt="베스트book2">
+												<p>강철 마법사</p> </a></td>
+									</tr>
 
-								<th class="newlist" colspan="2">이번달 신권 추천</th>
-								<tr class="new_book">
-									<td><a href="https://page.kakao.com/content/48444531"><img
-											src="${root}resources/image/bookimg2.jpg" alt="새책1">
-										<p>카르미스</p></a></td>
-									<td><a
-										href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=151652184"><img
-											src="${root}resources/image/bookimg3.png" alt="새책2">
-										<p>모스크바의 신사</p></a></td>
-								</tr>
-							</table>
-						</div>
-					</td>
-					<td align="center">
-						<div class="C-list_div">
-							<!-- contentlist_div -->
-							<table class="besttext">
-								<th style="font-size: 30px;">인기 게시글</th>
+									<th class="newlist" colspan="2">이번달 신권 추천</th>
+									<tr class="new_book">
+										<td><a href="https://page.kakao.com/content/48444531"><img
+												src="${root}resources/image/bookimg2.jpg" alt="새책1">
+												<p>카르미스</p></a></td>
+										<td><a
+											href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=151652184"><img
+												src="${root}resources/image/bookimg3.png" alt="새책2">
+												<p>모스크바의 신사</p></a></td>
+									</tr>
+								</table>
+							</div>
+						</td>
+						<td align="center">
+							<div class="C-list_div">
+								<!-- contentlist_div -->
+								<table class="besttext">
+									<th style="font-size: 30px;">인기 게시글</th>
 
-							</table>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</div>
+								</table>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
 
-		<bottom>
+			<bottom>
 			<div style="text-align: center; width: 1280px;">
 				<h1>현재 신청 가능한 강의</h1>
 			</div>
@@ -114,37 +122,43 @@
 
 				<div class="list-img">
 					<!--center-img-->
-					<a href=""><img src="${root}resources/image/E_anime1.png" alt="봇치더락">
+					<a href=""><img src="${root}resources/image/E_anime1.png"
+						alt="봇치더락">
 						<p>봇치더락 2기 확정!</p> </a>
 				</div>
 
 				<div class="list-img">
 					<!--center-img-->
-					<a href=""><img src="${root}resources/image/E_enimeK-ON.jpg" alt="k-on">
+					<a href=""><img src="${root}resources/image/E_enimeK-ON.jpg"
+						alt="k-on">
 						<p>케이온 극장판 개봉!</p> </a>
 				</div>
 
 				<div class="list-img">
 					<!--center-img-->
-					<a href=""><img src="${root}resources/image/E_maple1.jpg" alt="루시드">
+					<a href=""><img src="${root}resources/image/E_maple1.jpg"
+						alt="루시드">
 						<p>메이플 이벤트!</p> </a>
 				</div>
 
 				<div class="list-img">
 					<!--center-img-->
-					<a href=""><img src="${root}resources/image/E_maple2.webp" alt="오르카">
+					<a href=""><img src="${root}resources/image/E_maple2.webp"
+						alt="오르카">
 						<p>이 악녀가!</p> </a>
 				</div>
 
 				<div class="list-img">
 					<!--center-img-->
-					<a href=""><img src="${root}resources/image/E_mido.webp" alt="미도와 파라솔">
+					<a href=""><img src="${root}resources/image/E_mido.webp"
+						alt="미도와 파라솔">
 						<p>미도와 파라솔 노래모음</p> </a>
 				</div>
 
 				<div class="list-img">
 					<!--center-img-->
-					<a href=""><img src="${root}resources/image/E_qwer.jpg" alt="qwer">
+					<a href=""><img src="${root}resources/image/E_qwer.jpg"
+						alt="qwer">
 						<p>김계란의 qwer데뷔!</p> </a>
 				</div>
 
@@ -153,15 +167,16 @@
 
 
 			</div>
-	</div>
-	</bottom>
+		</div>
+		</bottom>
 
-	<script type="text/javascript" src="${root}resources/script/main_center.js"></script>
-	
-	<!-- footer -->
-	<c:import url="/WEB-INF/views/include/Mentors_main_footer.jsp" />
-	
-	
-</div>
+		<script type="text/javascript"
+			src="${root}resources/script/main_center.js"></script>
+
+		<!-- footer -->
+		<c:import url="/WEB-INF/views/include/Mentors_main_footer.jsp" />
+
+
+	</div>
 </body>
 </html>

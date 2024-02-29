@@ -17,7 +17,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import kr.co.softsoldesk.mapper.BookMapper;
 import kr.co.softsoldesk.mapper.CartMapper;
 import kr.co.softsoldesk.mapper.TeacherMapper;
-import kr.co.softsoldesk.mapper.TestMapper;
 import kr.co.softsoldesk.mapper.WTMapper;
 
 
