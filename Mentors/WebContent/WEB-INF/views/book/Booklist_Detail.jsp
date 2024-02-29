@@ -34,30 +34,30 @@
 		</div>
 		<div class="bookdetail_box">
 			<div class="bd_img">
-				<div class="img_box"><img src="${root }resources/image/book_img/인공지능활용교육.jpg"/></div>
+				<div class="img_box"><img src="${root }resources/image/book_img/${bookInfo.BK_img}.jpg"/></div>
 			</div>
 			<div class="bd_info">
 				<div class="info_box">
-					<div class="title"><span class="booklist-title-font">인공지능 활용교육</span></div>
+					<div class="title"><span class="booklist-title-font">${bookInfo.BK_title}</span></div>
 					<hr/>
 					<div class="info_list"></div>
 					<div class="list1">
 						<table>
 							<tr>
 								<th>작가</th>
-								<td class="booklist-info-font">이동국, 이은상, 이봉규, 김성종, 강동우, 김두일, 이은주</td>
+								<td class="booklist-info-font">${bookInfo.BK_autor}</td>
 							</tr>
 							<tr>
 								<th>출판사</th>
-								<td class="booklist-info-font">테크빌교육</td>
+								<td class="booklist-info-font">${bookInfo.BK_publisher}</td>
 							</tr>
 							<tr>
 								<th>발행일</th>
-								<td class="booklist-info-font">2023년 9월 22일</td>
+								<td class="booklist-info-font">${bookInfo.BK_date}</td>
 							</tr>
 							<tr>
 								<th>ISBN</th>
-								<td class="booklist-info-font">9791163461852</td>
+								<td class="booklist-info-font">${bookInfo.BK_isbn}</td>
 							</tr>
 						</table>
 					</div>
@@ -66,11 +66,11 @@
 						<table>
 							<tr>
 								<th>정가</th>
-								<td class="booklist-info-font">20,000원</td>
+								<td class="booklist-info-font">${bookInfo.BK_price}</td>
 							</tr>
 							<tr>
 								<th>판매처</th>
-								<td><button id="sales" onclick="location.href='https://product.kyobobook.co.kr/detail/S000209211969'">교보문고<img src="../img/expand_btn.png" /></button></td>
+								<td><button id="sales" onclick="location.href='${bookInfo.BK_kobo}'">교보문고<img src="../img/expand_btn.png" /></button></td>
 							</tr>
 							<tr>
 								<th>링크복사</th>
@@ -112,7 +112,7 @@
 				<h2 class="font-weight-bold text-primary">도서 정보</h2>
 			</div>
 			<div class="div_card-body">
-				<div class="GS_table_div">도서내용</div>
+				<div class="GS_table_div">${bookInfo.BK_info}</div>
 			</div>
 
 		</div>
@@ -121,7 +121,7 @@
 				<h2 class="font-weight-bold text-primary">목차 정보</h2>
 			</div>
 			<div class="div_card-body">
-				<div class="GS_table_div">목차내용</div>
+				<div class="GS_table_div">${bookInfo.BK_content}</div>
 			</div>
 
 		</div>
@@ -130,7 +130,7 @@
 				<h2 class="font-weight-bold text-primary">저자 정보</h2>
 			</div>
 			<div class="div_card-body">
-				<div class="GS_table_div">저자내용</div>
+				<div class="GS_table_div">${bookInfo.BK_autorinfo}</div>
 			</div>
 
 		</div>
