@@ -17,9 +17,6 @@ public class HomeController {
 	/*
 	 * @Resource(name="loginUserBean") private UserBean loginUserBean;
 	 */
-	@Autowired
-	TestService testService;
-	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
 		return "main";
