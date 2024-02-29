@@ -4,15 +4,19 @@ import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softsoldesk.beans.TeacherBean;
+import kr.co.softsoldesk.beans.UserBean;
 import kr.co.softsoldesk.service.TeacherService;
 
 @Controller
 @RequestMapping("/user")
-public class UserController {
+public class TeacherController {
 	
 
 	@Autowired
@@ -23,7 +27,10 @@ public class UserController {
 	
 	
 	@GetMapping("/Login")
-	public String Login() {
+	public String Login(@ModelAttribute("tempLoginTeacherBean") TeacherBean tempLoginTeacherBean,
+			@RequestParam(value="fail", defaultValue = "false") boolean fail, Model model) {
+		
+		model.addAttribute("fail",fail);
 		return "user/Login";
 	}
 	

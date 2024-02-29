@@ -12,4 +12,8 @@ public class TeacherDao {
 	@Autowired
 	private TeacherMapper teachermapper;
 	
+	public TeacherBean getLoginTeacherInfo(TeacherBean teacherBean) {
+		return teachermapper.getLoginTeacherInfo(teacherBean);
+	}
+	
 }
