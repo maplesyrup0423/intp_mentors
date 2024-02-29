@@ -22,8 +22,6 @@ public class HomeController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
-		TestBean Tinfo= testService.getTInfo("id1");
-		model.addAttribute("Tinfo",Tinfo);
 		return "main";
 	}
 

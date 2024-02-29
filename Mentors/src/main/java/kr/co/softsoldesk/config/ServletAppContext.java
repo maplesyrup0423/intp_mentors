@@ -79,12 +79,6 @@ public class ServletAppContext implements WebMvcConfigurer {
 
 	// 쿼리문 실행을 위한 객체(쿼리문을 관리하는 Mapper를 정의)
 
-	   @Bean
-	   public MapperFactoryBean<TestMapper> test_mapper(SqlSessionFactory factory) throws Exception {
-	      MapperFactoryBean<TestMapper> factoryBean = new MapperFactoryBean<TestMapper>(TestMapper.class);
-	      factoryBean.setSqlSessionFactory(factory);
-	      return factoryBean;
-	   }
 	   
 	   @Bean
 	   public MapperFactoryBean<TeacherMapper> teacherMapper(SqlSessionFactory factory) throws Exception {

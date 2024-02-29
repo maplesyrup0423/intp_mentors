@@ -21,8 +21,6 @@
 	<!-- header -->
 	<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
 
-       <h1>디비 이름 ${Tinfo.teacher_name }</h1>
-       <h1>디비 성별 ${Tinfo.teacher_gender }</h1>
 	
 	<!-- center -->
 	<div class="C-main">
