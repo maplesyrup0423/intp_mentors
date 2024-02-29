@@ -45,47 +45,50 @@
 							<input type="button" value="아동도서(1-6학년)" /> <input type="button"
 								value="수업디자인연구소" />
 						</div>
-
-						<div class="book_list" id="b_list"
-							onclick="location.href='${root }book/Booklist_Detail';">
-							<a href="${root }book/Booklist_Detail">
-								<div class="book_info">
-									<div class="book_img">
-										<img class="b_img"
-											src="${root }resources/image/book_img/인공지능활용교육.jpg" />
-									</div>
-									<div class="book_info_list">
-										<div class="info_title">
-											<span class="booklist-title-font">인공지능 활용교육</span>
+						
+						
+						
+						<c:forEach var='obj' items="${bookList }">
+							<div class="book_list" id="b_list"
+								onclick="location.href='${root }book/Booklist_Detail';">
+								<a href="${root }book/Booklist_Detail?BK_Key=${obj.BK_Key}">
+									<div class="book_info">
+										<div class="book_img">
+											<img class="b_img"
+												src="${root }resources/image/book_img/${obj.BK_img }.jpg" />
 										</div>
-										<div class="info_list">
-											<div class="info_list2">
-												<table>
-													<tr>
-														<th class="autor">저자</th>
-														<td class="booklist-info-font">이동국</td>
-													</tr>
-													<tr>
-														<th class="ISBN">ISBN</th>
-														<td class="booklist-info-font">9791163461852</td>
-													</tr>
-													<tr>
-														<th class="pub_date">발행일</th>
-														<td class="booklist-info-font">2023년 9월 22일</td>
-													</tr>
-													<tr>
-														<th class="price">정가</th>
-														<td class="booklist-info-font">20,000원</td>
-													</tr>
-												</table>
+										<div class="book_info_list">
+											<div class="info_title">
+												<span class="booklist-title-font">${obj.BK_title }</span>
+											</div>
+											<div class="info_list">
+												<div class="info_list2">
+													<table>
+														<tr>
+															<th class="autor">저자</th>
+															<td class="booklist-info-font">${obj.BK_autor }</td>
+														</tr>
+														<tr>
+															<th class="ISBN">ISBN</th>
+															<td class="booklist-info-font">${obj.BK_isbn }</td>
+														</tr>
+														<tr>
+															<th class="pub_date">발행일</th>
+															<td class="booklist-info-font">${obj.BK_date }</td>
+														</tr>
+														<tr>
+															<th class="price">정가</th>
+															<td class="booklist-info-font">${obj.BK_price }원</td>
+														</tr>
+													</table>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							</a>
-			
-						</div>
-						
+								</a>
+
+							</div>
+						</c:forEach>
 					</div>
 
 				</section></td>
