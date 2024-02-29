@@ -69,5 +69,10 @@ public class TeacherController {
 			return "user/Login_fail";
 		}
 	}
+	
+	@GetMapping("/Mypage")
+	public String Mypage() {
+		return "user/Mypage";
+	}
 
 }

@@ -14,9 +14,11 @@
 	<div class="title_mypage">마이페이지</div>
 	<div class="main_div">
 				<div class="div_box">
-					<div class="delete_account_space">
-						<input class="delete_account" type="button" value="회원탈퇴"
-							onClick="location.href='delete_account.jsp'" />
+					<div class="account_space">
+						<input class="change_account" type="button" value="정보수정"
+						onClick="location.href='Mypage_change.jsp'" /> 
+						<input class="change_password" type="button" value="비밀번호 변경"
+						onClick="location.href='Password_change_confirm.jsp'" />
 					</div>
 <!-- --------------------------------------------------------- -->
 					<div class="div_card div_shadow">
@@ -137,13 +139,11 @@
 					</div>
 						<!-- 여기까지가 결제내역 테이블 -->
 			</div>
+			<div class="Mypage_button">
+				<input class="delete_account" type="button" value="회원탈퇴"
+				onClick="location.href='delete_account.jsp'" />
+			</div>
 		</div>
-	</div>
-	<div class="Mypage_button">
-		<input class="change_account" type="button" value="정보수정"
-			onClick="location.href='Mypage_change.jsp'" /> <input
-			class="change_password" type="button" value="비밀번호 변경"
-			onClick="location.href='Password_change_confirm.jsp'" />
 	</div>
 </body>
 </html>

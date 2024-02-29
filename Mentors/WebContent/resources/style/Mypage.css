@@ -10,8 +10,15 @@ div.main_div {
 }
 
 div.div_box {
-	width : 1280px;
+	margin : auto;
+	width : 85%;
 	padding-top : 40px;
+}
+
+div.account_space {
+	display : flex;
+	width : 100%;
+	height : 60px;
 }
 
 .title_mypage {
@@ -115,10 +122,10 @@ th.payment_status {
 
 /* 버튼들 */
 .Mypage_button {
-	width : 1280px;
+	width : 100%;
 	height : 100px;
-	margin : 30px auto;
-	text-align : center;
+	margin : 60px auto;
+	text-align : right;
 }
 
 input.change_account {
@@ -131,6 +138,7 @@ input.change_account {
 	border-width : 0px 0px 1px;
 	border : 1px solid gray;
 	box-shadow : 0px 1px 5px rgb(0, 69, 126, 60%);
+	margin-right : auto;
 }
 
 input.change_password {
@@ -148,29 +156,28 @@ input.change_password {
 input.delete_account {
 	width: 100px;
 	height: 25px;
-}
-
-td input[type=button].change_password {
-	width: 120px;
-	height: 30px;
-	background-color: #FFCD19;
+	border: none;
+    border-radius: 8px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #b6b6b6;
 }
 
 /* 버튼 효과 */
-td input[type=button] {
-	background-color: #FFCD19;
+input.change_account:hover, input.change_password:hover {
+	font-size : 26px;
+	cursor : pointer;
 }
 
-td input[type=button]:hover {
-	background-color: #e8bb1a;
+input.change_account:focus, input.change_password:focus {
+	font-size : 24px;
 }
 
-td input[type=button]:focus {
-	background-color: #e8bb1a;
-	box-shadow: 2px 2px 2px 0px gray inset;
+input.delete_account:hover {
+	background-color: #ff5345;
+	cursor : pointer;
 }
-
-
 /* ------------------------------------------------------- */
 .div_card {
 	/*position: relative;
@@ -183,10 +190,6 @@ td input[type=button]:focus {
 	border: 1px solid #e3e6f0;
 	border-radius: .35rem;
 	margin-top: 15px;
-}
-
-.div_shadow {
-	box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important
 }
 
 .div_card-body {
