@@ -1,40 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="java.sql.*"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:set var='root' value="${pageContext.request.contextPath }/" />
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var='root' value="${pageContext.request.contextPath }/"/>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Sign Up</title>
 <link rel="stylesheet" href="${root }resources/style/Sign_up.css" />
-<script>
-	function changeText1() {
-		document.getElementById("sign_comment").innerHTML = "로그인창으로 이동합니다.";
-	}
-	function restoreText() {
-		document.getElementById("sign_comment").innerHTML = "회원가입 버튼을 눌러 로그인창으로 돌아갈 수 있습니다.";
-	}
-</script>
 </head>
 <body>
-	<div class="logo_space">
-		<input type="button" onClick="location.href='Mypage.jsp'" />
-	</div>
 	<div class="container">
-		<div class="sign" onmouseover="changeText1()"
-			onmouseleave="restoreText()" onclick="location.href='Login.jsp'">회원가입</div>
-		<div class="sign_comment" id="sign_comment">회원가입 버튼을 눌러 로그인창으로
-			돌아갈 수 있습니다.</div>
+		<div class="sign">회원가입</div>
 		<hr />
-		<form action="">
+		<form action="${root }Sign_up_pro" method = "post">
 			<div class="body">
 				<div class="letter_personal_information">개인정보 입력</div>
 				<!-- 개인정보 입력 -->
 				<div class="personal_information">
 					<!-- 성명 -->
 					<p>
-						<input type="text" id="name" required> <label for="name">
+						<form:input path="name" /> <label for="name">
 							<span>성명을 입력하세요. ex) 제갈김씨</span>
 						</label>
 					</p>
@@ -131,13 +118,14 @@
 						</label>
 					</p>
 				</div>
-
+				<div class = "sign_up_button">
+					<input type="button" name="cancle" value="돌아가기" 
+					onclick="location.href='Login.jsp'"/>
+					<input type="submit" name="submit" value="회원가입" />
+				</div>
 			</div>
-
-			<center>
-				<input type="submit" name="submit" value="회원가입" />
-			</center>
 		</form>
+			
 	</div>
 </body>
 </html>
