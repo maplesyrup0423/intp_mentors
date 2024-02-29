@@ -3,6 +3,7 @@ ALTER SESSION SET "_ORACLE_SCRIPT" = true;
 CREATE USER mentors_01 IDENTIFIED BY 12345;
 GRANT connect, resource to mentors_01;
 GRANT CREATE view, create sequence, create procedure to mentors_01;
+ALTER USER mentors_01 DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
 
 -------------------------------------------------------------------------
 
