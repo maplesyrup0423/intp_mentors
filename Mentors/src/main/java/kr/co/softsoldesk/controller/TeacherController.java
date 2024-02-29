@@ -36,7 +36,10 @@ public class TeacherController {
 		model.addAttribute("fail",fail);
 		return "user/Login";
 	}
-	
+	@GetMapping("/Mypage")
+	public String Mypage() {
+		return "user/Mypage";
+	}
 	@GetMapping("/Find_ID")
 	public String Find_ID() {
 		return "user/Find_ID";
@@ -70,9 +73,6 @@ public class TeacherController {
 		}
 	}
 	
-	@GetMapping("/Mypage")
-	public String Mypage() {
-		return "user/Mypage";
-	}
+
 
 }
