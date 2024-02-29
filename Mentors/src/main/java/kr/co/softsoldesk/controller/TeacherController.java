@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softsoldesk.beans.TeacherBean;
-import kr.co.softsoldesk.beans.UserBean;
 import kr.co.softsoldesk.service.TeacherService;
 
 @Controller

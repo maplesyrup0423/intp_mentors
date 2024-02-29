@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.co.softsoldesk.beans.TeacherBean;
-import kr.co.softsoldesk.beans.UserBean;
 import kr.co.softsoldesk.dao.TeacherDao;
 
 @Service

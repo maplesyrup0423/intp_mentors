@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.annotation.SessionScope;
 
 import kr.co.softsoldesk.beans.TeacherBean;
-import kr.co.softsoldesk.beans.UserBean;
 
 
 @Configuration
