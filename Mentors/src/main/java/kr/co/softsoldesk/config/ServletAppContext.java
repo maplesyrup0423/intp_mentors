@@ -14,6 +14,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import kr.co.softsoldesk.mapper.CartMapper;
 import kr.co.softsoldesk.mapper.TeacherMapper;
 import kr.co.softsoldesk.mapper.TestMapper;
 import kr.co.softsoldesk.mapper.WTMapper;
@@ -95,6 +96,13 @@ public class ServletAppContext implements WebMvcConfigurer {
 	   @Bean
 	   public MapperFactoryBean<WTMapper> wtMapper(SqlSessionFactory factory) throws Exception {
 	      MapperFactoryBean<WTMapper> factoryBean = new MapperFactoryBean<WTMapper>(WTMapper.class);
+	      factoryBean.setSqlSessionFactory(factory);
+	      return factoryBean;
+	   }
+	   
+	   @Bean
+	   public MapperFactoryBean<CartMapper> cartMapper(SqlSessionFactory factory) throws Exception {
+	      MapperFactoryBean<CartMapper> factoryBean = new MapperFactoryBean<CartMapper>(CartMapper.class);
 	      factoryBean.setSqlSessionFactory(factory);
 	      return factoryBean;
 	   }
