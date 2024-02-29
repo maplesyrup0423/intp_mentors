@@ -28,7 +28,7 @@
 
 
 			<div class="info_etc">
-				<div class="info_tag">[직무${wtInfoBean.WT_Tag_Time }분] 디지털 활용</div>
+				<div class="info_tag">[직무${wtInfoBean.WT_TrainingTime }분] 디지털 활용</div>
 				<div class="info_title">${wtInfoBean.WT_Title }</div>
 				<div class="info_price">${wtInfoBean.WT_Price }원</div>
 				<div class="info_line"></div>
@@ -37,7 +37,7 @@
 					<table class="info_table">
 						<tr>
 							<td>학습 시간</td>
-							<td>${wtInfoBean.WT_Tag_Time }분</td>
+							<td>${wtInfoBean.WT_TrainingTime }분</td>
 						</tr>
 						<tr>
 							<td>추천학급</td>

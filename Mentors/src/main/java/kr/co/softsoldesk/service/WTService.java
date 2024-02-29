@@ -36,7 +36,6 @@ public class WTService {
 		}else if(infoBean.getWT_Tag_TypeCategory()==3) {
 			infoBean.setStr_WT_Tag_TypeCategory("생활지도");
 		}
-		
 		return infoBean;
 	}
 }
