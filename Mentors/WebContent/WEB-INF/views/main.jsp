@@ -20,16 +20,7 @@
 	<div class="all_center">
 		<!-- header -->
 		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
-		<h1>로그인 값 확인 ${loginCheck}</h1>
-		<c:choose>
-			<c:when test="${loginCheck == true}">
-				<h1>로그인상태</h1>
-			</c:when>
-			<c:otherwise>
-					<h1>로그아웃상태</h1>
-			</c:otherwise>
-		</c:choose>
-
+		
 		<!-- center -->
 		<div class="C-main">
 			<!--class="main" -->

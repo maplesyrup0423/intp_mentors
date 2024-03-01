@@ -8,8 +8,8 @@ import lombok.Setter;
 public class TeacherBean {
 
    public TeacherBean() {
-      this.TeacherLogin = false;
-      this.TeacherIdExist = false;
+      this.teacherLogin = false;
+      this.teacherIdExist = false;
    }
    
    private String Teacher_Name;
@@ -26,8 +26,8 @@ public class TeacherBean {
 
    private String Teacher_Password2; //비밀번호 확인용 비밀번호 2
    
-   private boolean TeacherLogin; //로그인여부 확인
-   private boolean TeacherIdExist; //회원 가입시 아이디 존재여부 확인(중복확인)
+   private boolean teacherLogin; //로그인여부 확인
+   private boolean teacherIdExist; //회원 가입시 아이디 존재여부 확인(중복확인)
    
    
 }
