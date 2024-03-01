@@ -42,6 +42,7 @@ public class TeacherService {
 			loginTeacherBean.setTeacher_Work_In(tempTeacherBean.getTeacher_Work_In());
 			loginTeacherBean.setTeacher_Type(tempTeacherBean.getTeacher_Type());
 			loginTeacherBean.setTeacher_Neis(tempTeacherBean.getTeacher_Neis());
+			loginTeacherBean.setTeacher_id(tempTeacherBean.getTeacher_id());
 			loginTeacherBean.setTeacherLogin(true);
 			System.out.println("로그인 상태값"+loginTeacherBean.isTeacherLogin());
 		}
