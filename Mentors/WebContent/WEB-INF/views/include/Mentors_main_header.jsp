@@ -30,7 +30,7 @@
 						<td class="td_cen"><a href="${root }WT/WT_my_room">나의 강의실</a></td>
 						<td class="td_cen"></td>
 						<td class="td_cen"></td>
-						<td class="td_img"><a href="${root }WT/WT_cart"><img
+						<td class="td_img"><a href="${root }WT/WT_cart?teacher_id=${loginTeacherBean.teacher_id}"><img
 								class="fas fa-cart-shopping"
 								src="${root}/resources/image/cart.png"></img></a></td>
 

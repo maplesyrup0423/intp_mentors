@@ -33,108 +33,43 @@
 		<div class="cen">
 
 			<div class="paybox">
+				<c:forEach var='obj' items="${cartList }">
+					<div class="WT_pay">
 
-				<div class="WT_pay">
+						<div class="cart_thum"><img class="WT_cart_thum"
+								src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg" /></div>
 
-					<div class="cart_thum"></div>
+						<div class="cart_info">
+							<div class="cart_title">
+								<span class="red">(연수)</span> [${obj.WT_TrainingTime }분] ${obj.WT_Title }
+							</div>
+							<div class="cart_a">
+								<span class="a_title">기수</span> <span class="a_con">oooooooooo</span>
+							</div>
+							<div class="cart_a">
+								<span class="a_title">연수기간</span> <span class="a_con">ooooooooooo</span>
+							</div>
+							<div class="cart_a">
+								<span class="a_title">증명서 발급</span> <span class="a_con">oooooooooooo</span>
+							</div>
+						</div>
 
-					<div class="cart_info">
-						<div class="cart_title">
-							<span class="red">(연수)</span> [150분] 제목 입니다! - 1
+						<div class="cart_payment">
+							<div class="cart_pay">${obj.WT_Price }원</div>
 						</div>
-						<div class="cart_a">
-							<span class="a_title">기수</span> <span class="a_con">oooooooooo</span>
-						</div>
-						<div class="cart_a">
-							<span class="a_title">연수기간</span> <span class="a_con">ooooooooooo</span>
-						</div>
-						<div class="cart_a">
-							<span class="a_title">증명서 발급</span> <span class="a_con">oooooooooooo</span>
+
+						<div class="cart_buttons">
+							<div>
+								<button onclick="location.href='${root }WT/WT_payment'"
+									class="cart_del">결제하기</button>
+							</div>
+							<div>
+								<button class="cart_del">삭제하기</button>
+							</div>
 						</div>
 					</div>
+				</c:forEach>
 
-					<div class="cart_payment">
-						<div class="cart_pay">18000원</div>
-					</div>
-
-					<div class="cart_buttons">
-						<div>
-							<button onclick="location.href='${root }WT/WT_payment'"
-								class="cart_del">결제하기</button>
-						</div>
-						<div>
-							<button class="cart_del">삭제하기</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="WT_pay">
-
-					<div class="cart_thum"></div>
-
-					<div class="cart_info">
-						<div class="cart_title">
-							<span class="red">(연수)</span> [150분] 제목 입니다! - 2
-						</div>
-						<div class="cart_a">
-							<span class="a_title">기수</span> <span class="a_con">oooooooooo</span>
-						</div>
-						<div class="cart_a">
-							<span class="a_title">연수기간</span> <span class="a_con">ooooooooooo</span>
-						</div>
-						<div class="cart_a">
-							<span class="a_title">증명서 발급</span> <span class="a_con">oooooooooooo</span>
-						</div>
-					</div>
-
-					<div class="cart_payment">
-						<div class="cart_pay">28000원</div>
-					</div>
-
-					<div class="cart_buttons">
-						<div>
-							<button onclick="location.href='${root }WT/WT_payment'"
-								class="cart_del">결제하기</button>
-						</div>
-						<div>
-							<button class="cart_del">삭제하기</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="WT_pay">
-
-					<div class="cart_thum"></div>
-
-					<div class="cart_info">
-						<div class="cart_title">
-							<span class="red">(연수)</span> [150분] 제목 입니다! - 3
-						</div>
-						<div class="cart_a">
-							<span class="a_title">기수</span> <span class="a_con">oooooooooo</span>
-						</div>
-						<div class="cart_a">
-							<span class="a_title">연수기간</span> <span class="a_con">ooooooooooo</span>
-						</div>
-						<div class="cart_a">
-							<span class="a_title">증명서 발급</span> <span class="a_con">oooooooooooo</span>
-						</div>
-					</div>
-
-					<div class="cart_payment">
-						<div class="cart_pay">38000원</div>
-					</div>
-
-					<div class="cart_buttons">
-						<div>
-							<button onclick="location.href='${root }WT/WT_payment'"
-								class="cart_del">결제하기</button>
-						</div>
-						<div>
-							<button class="cart_del">삭제하기</button>
-						</div>
-					</div>
-				</div>
 
 			</div>
 
