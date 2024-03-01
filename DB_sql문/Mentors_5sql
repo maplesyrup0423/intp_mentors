@@ -34,5 +34,6 @@ select wt.WT_Thumbnail, wt.WT_TrainingTime, wt.WT_Title, wt.WT_Price, wt.WT_Key 
 inner join cart c on wt.WT_Key = c.WT_Key
 inner join teacher_info t on c.teacher_id = t.teacher_id and c.teacher_id ='id1';
 
-
+select wt.WT_Thumbnail, wt.WT_TrainingTime, wt.WT_Title, wt.WT_Price, wt.WT_Key from workplace_T wt inner join cart c on wt.WT_Key = c.WT_Key 
+inner join teacher_info t on c.teacher_id = t.teacher_id and c.teacher_id='id1';
 COMMIT;
