@@ -12,11 +12,14 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import kr.co.softsoldesk.beans.TeacherBean;
+import kr.co.softsoldesk.interceptor.MainHeaderInterceptor;
 import kr.co.softsoldesk.mapper.BookMapper;
 import kr.co.softsoldesk.mapper.CartMapper;
 import kr.co.softsoldesk.mapper.TeacherMapper;
@@ -113,5 +116,16 @@ public class ServletAppContext implements WebMvcConfigurer {
 	      factoryBean.setSqlSessionFactory(factory);
 	      return factoryBean;
 	   }
+	   
+	   //interceptor 처리
+		public void addInterceptors(InterceptorRegistry registry) {
+			WebMvcConfigurer.super.addInterceptors(registry);
+			
+			MainHeaderInterceptor mainHeaderInterceptor =new MainHeaderInterceptor(loginTeacherBean);
+			InterceptorRegistration reg1 = registry.addInterceptor(mainHeaderInterceptor);
+			reg1.addPathPatterns("/**");
+		
+		}
+	   
 
 }
