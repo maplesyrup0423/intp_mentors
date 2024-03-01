@@ -15,4 +15,24 @@ select teacher_name from teacher_info where teacher_id = 'id1';
 
 select WT_Key, WT_Title, WT_Thumbnail,WT_Price from workplace_T;
 
+--연수 상세페이지에 필요한 정보
+select WT_Key,WT_Title,WT_Price,WT_TrainingTime,WT_Tag_School,WT_Tag_TypeCategory,WT_Thumbnail,
+    WT_Info, WT_Text from workplace_T where WT_Key='WT2';
+
+
+--cart sql
+--특정 교사의 장바구니 정보
+select * from cart;
+select * from workplace_T;
+select * from teacher_info;
+
+--메인 테이블은 cart
+--teacher_info테이블의 teacher_id='id1'일것! WT_Key를 이용해서 
+--workplace_T의 테이블 WT_Thumbnail, WT_TrainingTime, WT_Title, WT_Price, WT_Key를 가져오고싶다.
+
+select wt.WT_Thumbnail, wt.WT_TrainingTime, wt.WT_Title, wt.WT_Price, wt.WT_Key from workplace_T wt
+inner join cart c on wt.WT_Key = c.WT_Key
+inner join teacher_info t on c.teacher_id = t.teacher_id and c.teacher_id ='id1';
+
+
 COMMIT;
