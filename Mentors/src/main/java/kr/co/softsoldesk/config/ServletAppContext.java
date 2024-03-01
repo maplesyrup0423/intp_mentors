@@ -22,7 +22,6 @@ import kr.co.softsoldesk.beans.TeacherBean;
 import kr.co.softsoldesk.interceptor.MainHeaderInterceptor;
 import kr.co.softsoldesk.mapper.BookMapper;
 import kr.co.softsoldesk.mapper.CartMapper;
-import kr.co.softsoldesk.mapper.PayMapper;
 import kr.co.softsoldesk.mapper.TeacherMapper;
 import kr.co.softsoldesk.mapper.WTMapper;
 
@@ -118,12 +117,7 @@ public class ServletAppContext implements WebMvcConfigurer {
 	      return factoryBean;
 	   }
 	   
-	   @Bean
-	   public MapperFactoryBean<PayMapper> payMapper(SqlSessionFactory factory) throws Exception {
-	      MapperFactoryBean<PayMapper> factoryBean = new MapperFactoryBean<PayMapper>(PayMapper.class);
-	      factoryBean.setSqlSessionFactory(factory);
-	      return factoryBean;
-	   }
+	   
 	   
 	   //interceptor 처리
 		public void addInterceptors(InterceptorRegistry registry) {
