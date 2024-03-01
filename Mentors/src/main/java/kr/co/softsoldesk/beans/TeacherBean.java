@@ -17,7 +17,7 @@ public class TeacherBean {
    private String Teacher_Gender;
    private String Teacher_Email;
    private String Teacher_Tel;
-   private String Teacher_Id;
+   private String teacher_id;
    private String Teacher_Password;
    private String Teacher_Nickname;
    private String Teacher_Work_In;
