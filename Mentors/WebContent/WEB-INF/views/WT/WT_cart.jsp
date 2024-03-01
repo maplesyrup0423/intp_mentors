@@ -60,7 +60,7 @@
 
 						<div class="cart_buttons">
 							<div>
-								<button onclick="location.href='${root }WT/WT_payment'"
+								<button onclick="location.href='${root }WT/WT_payment?teacher_id=${loginTeacherBean.teacher_id}?WT_Key=${wtInfoBean.WT_Key }'"
 									class="cart_del">결제하기</button>
 							</div>
 							<div>
@@ -76,8 +76,13 @@
 			<div class="line"></div>
 
 			<div class="WT_total">
-				<div>총 주문 금액 : 50000원</div>
-				<button onclick="location.href='${root }WT/WT_payment'">전부
+				<!-- 가격 총합 구하기 -->
+				<c:set var = "total" value = "0" />
+				<c:forEach var="tot" items="${cartList }">
+					<c:set var= "total" value="${total + tot.WT_Price}"/>
+				</c:forEach>
+				<div>총 주문 금액 : ${total }원</div>
+				<button onclick="location.href='${root }WT/WT_payment?teacher_id=${loginTeacherBean.teacher_id}'">전부
 					결제하기</button>
 			</div>
 		</div>

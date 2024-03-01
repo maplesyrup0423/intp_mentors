@@ -33,12 +33,18 @@ public class CartController {
 	public String WT_cart(@RequestParam("teacher_id")String teacher_id, Model model) {
 		System.out.println("teacher_id = "+teacher_id);
 		List<CartBean> cartList= cartService.getCartInfo(teacher_id);
+		
 		model.addAttribute("cartList",cartList);
+		
 		return "WT/WT_cart";
 	}
 
 	@GetMapping("/WT_payment") // 결제
-	public String WT_payment() {
+	public String WT_payment(@RequestParam("teacher_id")String teacher_id, Model model) {
+		List<CartBean> cartList= cartService.getCartInfo(teacher_id);
+		
+		model.addAttribute("cartList",cartList);
+		
 		return "WT/WT_payment";
 	}
 	

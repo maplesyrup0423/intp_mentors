@@ -16,4 +16,5 @@ public interface CartMapper {
 			+ "inner join cart c on wt.WT_Key = c.WT_Key "
 			+ "inner join teacher_info t on c.teacher_id = t.teacher_id and c.teacher_id = #{teacher_id}")
 	List<CartBean> getCartInfo(String teacher_id);
+	
 }

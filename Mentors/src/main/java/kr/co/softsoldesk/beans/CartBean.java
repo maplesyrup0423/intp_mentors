@@ -14,4 +14,5 @@ public class CartBean {
 	private int WT_TrainingTime;
 	private String WT_Title;
 	private int WT_Price;
+
 }
