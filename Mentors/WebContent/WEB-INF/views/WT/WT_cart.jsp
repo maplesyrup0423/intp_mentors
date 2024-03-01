@@ -60,7 +60,7 @@
 
 						<div class="cart_buttons">
 							<div>
-								<button onclick="location.href='${root }WT/WT_payment?teacher_id=${loginTeacherBean.teacher_id}?WT_Key=${wtInfoBean.WT_Key }'"
+								<button onclick="location.href='${root }WT/WT_payment2?teacher_id=${loginTeacherBean.teacher_id}&WT_Key=${obj.WT_Key }'"
 									class="cart_del">결제하기</button>
 							</div>
 							<div>

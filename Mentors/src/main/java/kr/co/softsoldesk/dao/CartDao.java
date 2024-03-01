@@ -21,4 +21,8 @@ public class CartDao {
 		return cartMapper.getCartInfo(teacher_id);
 	}
 	
+	public CartBean getOneCartInfo(String teacher_id, String WT_Key) {
+		return cartMapper.getOneCartInfo(teacher_id, WT_Key);
+	}
+	
 }

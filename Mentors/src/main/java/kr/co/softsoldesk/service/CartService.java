@@ -28,4 +28,8 @@ public class CartService {
 		return cartDao.getCartInfo(teacher_id);
 	}
 	
+	public CartBean getOneCartInfo(String teacher_id, String WT_Key) {
+		return cartDao.getOneCartInfo(teacher_id, WT_Key);
+	}
+	
 }
