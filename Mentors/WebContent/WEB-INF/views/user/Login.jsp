@@ -28,7 +28,7 @@
 						modelAttribute="tempLoginTeacherBean">
 				<div class="body">
 					<div class="input_id">
-						<form:input path = "Teacher_Id" placeholder="아이디를 입력하세요" />
+						<form:input path = "teacher_id" placeholder="아이디를 입력하세요" />
 					</div>
 
 					<div class="input_pw">
