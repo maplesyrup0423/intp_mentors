@@ -13,14 +13,7 @@
 	crossorigin="anonymous"></script>
 <body>
 	<h1>로그인 값 확인 ${loginTeacherBean.teacherLogin}</h1>
-	<c:choose>
-		<c:when test="${loginTeacherBean.teacherLogin == true}">
-			<h1>로그인상태</h1>
-		</c:when>
-		<c:otherwise>
-			<h1>로그아웃상태</h1>
-		</c:otherwise>
-	</c:choose>
+
 
 	<table>
 		<!-- 헤더 -->
@@ -40,14 +33,23 @@
 						<td class="td_img"><a href="${root }WT/WT_cart"><img
 								class="fas fa-cart-shopping"
 								src="${root}/resources/image/cart.png"></img></a></td>
-						<td class="td_img"><a href="${root }user/Login"><img
-								src="${root}/resources/image/login.png" alt="로그인"
-								class="loginicon"></a></td>
 
-						<!-- 마이페이지 임시버튼 -->
-						<td class="td_img"><a href="${root }user/Mypage"><img
-								src="${root}/resources/image/login.png" alt="마이페이지"
-								class="loginicon"></a></td>
+						<c:choose>
+							<c:when test="${loginTeacherBean.teacherLogin == true}">
+
+								<td class="td_img"><a href="${root }user/Mypage"><img
+										src="${root}/resources/image/login.png" alt="마이페이지"
+										class="loginicon"></a></td>
+
+							</c:when>
+							<c:otherwise>
+								<td class="td_img"><a href="${root }user/Login"><img
+										src="${root}/resources/image/login.png" alt="로그인"
+										class="loginicon"></a></td>
+							</c:otherwise>
+						</c:choose>
+
+
 						<!-- 관리자 페이지 임시버튼 -->
 						<td class="td_img"><a href="${root }admin/admin_home"><img
 								src="${root}/resources/image/login.png" alt="관리자"
