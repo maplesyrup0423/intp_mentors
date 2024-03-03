@@ -4,5 +4,5 @@
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <script>
 	alert('장바구니에 추가되었습니다.')
-	location.href="${root}user/WT_info"
+	location.href="${root}WT/WT_info"
 </script>
