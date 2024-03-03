@@ -13,9 +13,9 @@ public class CartDao {
 	@Autowired
 	private CartMapper cartMapper;
 
-//	public void addCart(String teacher_id, String WT_Key) {
-//		cartMapper.addCart(teacher_id, WT_Key);
-//	}
+	public void addCart(String teacher_id, String WT_Key) {
+		cartMapper.addCart(teacher_id, WT_Key);
+	}
 	
 	public List<CartBean> getCartInfo(String teacher_id) {
 		return cartMapper.getCartInfo(teacher_id);

@@ -19,8 +19,16 @@ public class CartController {
 	@Autowired
 	private CartService cartService;
 
-	public String WT_cart_add() {
-
+	@GetMapping("/WT_cart_add")
+	public String WT_cart_add(@RequestParam("WT_Key") String WT_Key) {
+		cartService.addCart(WT_Key);
+		return "WT/WT_cart_success";
+		/*
+		if(loginTeacherBean.isTeacherLogin() == true) {
+			return "user/Login_success";
+		}else {			
+			return "user/Login_fail";
+		}*/
 	}
 
 	@GetMapping("/WT_cart") // 장바구니

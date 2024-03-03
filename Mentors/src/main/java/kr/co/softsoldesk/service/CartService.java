@@ -20,9 +20,9 @@ public class CartService {
 	
 	public void addCart(String WT_Key) {
 		
-		String t_id=loginTeacherBean.getTeacher_id();
-		System.out.println("장바구니에 추가하는 유저 아이디"+t_id);
-		cartDao.addCart(t_id, WT_Key);
+		String teacher_id=loginTeacherBean.getTeacher_id();
+		System.out.println("장바구니에 추가하는 유저 아이디 : "+teacher_id);
+		cartDao.addCart(teacher_id, WT_Key);
 	}
 	
 	public List<CartBean> getCartInfo(String teacher_id) {
