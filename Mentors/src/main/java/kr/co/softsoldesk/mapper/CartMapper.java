@@ -2,6 +2,7 @@ package kr.co.softsoldesk.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -30,4 +31,8 @@ public interface CartMapper {
 			+ "inner join teacher_info t on c.teacher_id = t.teacher_id and c.teacher_id = #{param1} and c.WT_Key = #{param2}")
 	CartBean getOneCartInfo(String param1, String param2);
 	
+	
+	//장바구니 항목 삭제
+	@Delete("delete from cart where WT_key=#{WT_Key}")
+	void deleteCart(String WT_Key);
 }

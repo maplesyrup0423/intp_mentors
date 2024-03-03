@@ -64,7 +64,8 @@
 									class="cart_del">결제하기</button>
 							</div>
 							<div>
-								<button class="cart_del">삭제하기</button>
+								<button onclick="location.href='${root }WT/WT_cart_delete?WT_Key=${obj.WT_Key }'"
+									 class="cart_del">삭제하기</button>
 							</div>
 						</div>
 					</div>

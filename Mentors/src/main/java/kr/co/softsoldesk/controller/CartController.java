@@ -18,7 +18,8 @@ public class CartController {
 
 	@Autowired
 	private CartService cartService;
-
+	
+	//장바구니 항목추가
 	@GetMapping("/WT_cart_add")
 	public String WT_cart_add(@RequestParam("WT_Key") String WT_Key) {
 
@@ -31,6 +32,13 @@ public class CartController {
 		cartService.addCart(WT_Key);
 		return "WT/WT_cart_success";
 	}
+	
+	//장바구니 항목삭제
+	@GetMapping("/WT_cart_delete")
+	public String WT_cart_delete(@RequestParam("WT_Key")String WT_Key) {
+		cartService.deleteCart(WT_Key);
+		return "WT/WT_cart_deleteSuccess";	
+		}
 
 	@GetMapping("/WT_cart") // 장바구니
 	public String WT_cart(@RequestParam("teacher_id") String teacher_id, Model model) {
@@ -68,5 +76,7 @@ public class CartController {
 	public String WT_payment_success() {
 		return "WT/WT_payment_seccess";
 	}
+	
+	
 
 }

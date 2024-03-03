@@ -38,4 +38,8 @@ public class CartService {
 		return cartDao.getCartWT_KeyInfo(teacher_id);
 	}
 	
+	public void deleteCart(String WT_Key) {
+		cartDao.deleteCart(WT_Key);
+	}
+	
 }

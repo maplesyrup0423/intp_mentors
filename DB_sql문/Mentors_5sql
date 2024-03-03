@@ -36,4 +36,12 @@ inner join teacher_info t on c.teacher_id = t.teacher_id and c.teacher_id ='id1'
 
 select wt.WT_Thumbnail, wt.WT_TrainingTime, wt.WT_Title, wt.WT_Price, wt.WT_Key from workplace_T wt inner join cart c on wt.WT_Key = c.WT_Key 
 inner join teacher_info t on c.teacher_id = t.teacher_id and c.teacher_id='id1';
+
+
+--특정 교사 장바구니에 있는 연수코드
+select WT_key from cart where teacher_id='id1';
+
+--장바구니 삭제
+delete from cart where WT_key='WT2';
+
 COMMIT;
