@@ -33,4 +33,9 @@ public class CartService {
 		return cartDao.getOneCartInfo(teacher_id, WT_Key);
 	}
 	
+	public List<String> getCartWT_KeyInfo(){
+		String teacher_id=loginTeacherBean.getTeacher_id();
+		return cartDao.getCartWT_KeyInfo(teacher_id);
+	}
+	
 }
