@@ -2,6 +2,8 @@ package kr.co.softsoldesk.controller;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softsoldesk.beans.CartBean;
+import kr.co.softsoldesk.beans.TeacherBean;
 import kr.co.softsoldesk.service.CartService;
 
 @Controller
@@ -18,6 +21,9 @@ public class CartController {
 
 	@Autowired
 	private CartService cartService;
+	
+	@Resource(name = "loginTeacherBean")
+	private TeacherBean loginTeacherBean;
 	
 	//장바구니 항목추가
 	@GetMapping("/WT_cart_add")

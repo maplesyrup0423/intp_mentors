@@ -4,5 +4,5 @@
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <script>
 	alert('삭제되었습니다.')
-	location.href="${root}WT/WT_list"
+	location.href="${root}WT/WT_cart?teacher_id=${loginTeacherBean.teacher_id}"
 </script>
