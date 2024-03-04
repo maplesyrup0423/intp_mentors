@@ -257,7 +257,7 @@ $(function() {
 
 					<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
 					<script>
- 					IMP.init("imp87331343");
+ 					IMP.init("imp14003125");
 					 
 					const button = document.querySelector("button");
 					 
@@ -269,7 +269,7 @@ $(function() {
 						 	amount: "${total }",
 						 	name: "결제 테스트",
 						 	merchant_uid: "order-2024-02-04",
-						 	m_redirect_url: "WT_payment_success"
+						 	m_redirect_url: "http://localhost:9098/Mentors/WT/WT_payment_success"
 
 					 	}); 
 					 };
