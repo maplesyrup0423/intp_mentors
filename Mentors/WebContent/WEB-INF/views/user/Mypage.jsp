@@ -139,9 +139,13 @@
 					</div>
 						<!-- 여기까지가 결제내역 테이블 -->
 			</div>
+			
+			
 			<div class="Mypage_button">
 				<input class="delete_account" type="button" value="회원탈퇴"
-				onClick="location.href='delete_account.jsp'" />
+						onClick="location.href='Mypage_change.jsp'" /> 
+				
+				<a href="${root }user/logout" class="logout">로그아웃</a>
 			</div>
 		</div>
 	</div>

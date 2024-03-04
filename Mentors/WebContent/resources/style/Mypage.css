@@ -123,6 +123,7 @@ th.payment_status {
 
 /* 버튼들 */
 .Mypage_button {
+	display : flex;
 	width : 100%;
 	height : 100px;
 	margin : 60px auto;
@@ -154,15 +155,29 @@ input.change_password {
 	box-shadow : 0px 1px 5px rgb(0, 69, 126, 60%);
 }
 
-input.delete_account {
-	width: 100px;
-	height: 25px;
+input.delete_account{
+	width: 150px;
+    height: 50px;
 	border: none;
     border-radius: 8px;
-    width: 150px;
-    height: 50px;
     font-size: 20px;
     background-color: #b6b6b6;
+    margin-right : auto;
+}
+
+a.logout {
+	display: inline-block;
+	width : 150px;
+	height : 50px;
+	border : none;
+	border-radius : 8px;
+	font-size : 20px;
+	color : black;
+	text-align : center;
+	text-decoration: none;
+	vertical-align: middle;
+	line-height: 50px;
+	background-color: #b6b6b6;
 }
 
 /* 버튼 효과 */
@@ -178,6 +193,10 @@ input.change_account:focus, input.change_password:focus {
 input.delete_account:hover {
 	background-color: #ff5345;
 	cursor : pointer;
+}
+
+a.logout:hover {
+	background-color: #ff5345;
 }
 /* ------------------------------------------------------- */
 .div_card {
