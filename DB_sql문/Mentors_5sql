@@ -40,8 +40,16 @@ inner join teacher_info t on c.teacher_id = t.teacher_id and c.teacher_id='id1';
 
 --특정 교사 장바구니에 있는 연수코드
 select WT_key from cart where teacher_id='id1';
+--특정 교사가 이미 결제한 연수 코드
+select wt_key from WTT where teacher_id='id1';
 
 --장바구니 삭제
 delete from cart where WT_key='WT2';
+
+
+--장바구니 결제시 insert
+insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT21','id1',sysdate);
+insert into wtt_test_a (WTT_Key)values('WTT41');
+
 
 COMMIT;
