@@ -25,6 +25,10 @@ public class CartDao {
 		return cartMapper.getOneCartInfo(teacher_id, WT_Key);
 	}
 	
+	public CartBean directPay(String WT_Key) {
+		return cartMapper.directPay(WT_Key);
+	}
+	
 	public List<String> getCartWT_KeyInfo(String teacher_id){
 		return cartMapper.getCartWT_KeyInfo(teacher_id);
 	}
