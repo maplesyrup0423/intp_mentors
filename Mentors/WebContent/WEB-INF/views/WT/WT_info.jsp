@@ -70,7 +70,7 @@
 
 		<div class="into_payment">
 			<span class="total">금액 ${wtInfoBean.WT_Price }원</span> <span class="total_buttons">
-				<button onclick="location.href='${root }WT/WT_payment'">연수 신청하기</button> <!--0원이면 바로 나의 강의실에 추가, 아니면 결제페이지로 이동-->
+				<button onclick="location.href='${root }WT/WT_payment2?teacher_id=${loginTeacherBean.teacher_id}&WT_Key=${wtInfoBean.WT_Key }'">연수 신청하기</button> <!--0원이면 바로 나의 강의실에 추가, 아니면 결제페이지로 이동-->
 				<button onclick="location.href='${root }WT/WT_cart_add?WT_Key=${wtInfoBean.WT_Key }'">장바구니에 넣기</button>
 			</span>
 		</div>
