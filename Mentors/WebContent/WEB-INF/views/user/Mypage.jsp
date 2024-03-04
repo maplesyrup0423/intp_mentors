@@ -11,8 +11,10 @@
 <link rel="stylesheet" href="${root }resources/style/Mypage.css" />
 </head>
 <body>
-	<div class="title_mypage">마이페이지</div>
-	<div class="main_div">
+	<!-- header --> 
+	<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+		<div class="title_mypage">마이페이지</div>
+		<div class="main_div">
 				<div class="div_box">
 					<div class="account_space">
 						<input class="change_account" type="button" value="정보수정"
@@ -149,5 +151,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- footer --> 
+	<c:import url="/WEB-INF/views/include/Mentors_main_footer.jsp" />
 </body>
 </html>
