@@ -35,6 +35,13 @@ public class CartController {
 				return "WT/WT_cart_fail";
 			}
 		}
+		List<String> WKList2 = cartService.getCartWT_KeyInfo2();
+		for (String WK : WKList2) {
+			if (WK.equals(WT_Key)) {
+				return "WT/WT_cart_fail2";
+			}
+		}
+		
 		cartService.addCart(WT_Key);
 		return "WT/WT_cart_success";
 	}
@@ -52,7 +59,7 @@ public class CartController {
 		List<CartBean> cartList = cartService.getCartInfo(teacher_id);
 
 		model.addAttribute("cartList", cartList);
-
+		
 		return "WT/WT_cart";
 	}
 
@@ -60,19 +67,30 @@ public class CartController {
 	public String WT_payment(@RequestParam("teacher_id") String teacher_id, Model model) {
 		System.out.println("전부 결제 teacher_id = " + teacher_id);
 		List<CartBean> cartList = cartService.getCartInfo(teacher_id);
+		
+
+		//WTT키 추가 및 장바구니 삭제
+		List<String> WKList = cartService.getCartWT_KeyInfo();
+		for (String WK : WKList) {
+			cartService.addWTT(WK);
+			cartService.deleteCart(WK);
+		}
 		model.addAttribute("cartList", cartList);
 
 		return "WT/WT_payment";
 	}
 
-	@GetMapping("/WT_payment2") // 결제
+	@GetMapping("/WT_payment2") // 단일결제
 	public String WT_payment2(@RequestParam("teacher_id") String teacher_id, @RequestParam("WT_Key") String WT_Key,
 			Model model) {
 		System.out.println("결제 teacher_id = " + teacher_id);
 		System.out.println("결제 WT_Key = " + WT_Key);
 
 		CartBean cBean = cartService.getOneCartInfo(teacher_id, WT_Key);
-
+		//WTT키 추가
+		cartService.addWTT(WT_Key);
+		//장바구니 삭제
+		cartService.deleteCart(WT_Key);
 		model.addAttribute("cBean", cBean);
 
 		return "WT/WT_payment2";

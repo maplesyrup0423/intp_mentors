@@ -29,7 +29,13 @@ public class CartDao {
 		return cartMapper.getCartWT_KeyInfo(teacher_id);
 	}
 	
+	public List<String> getCartWT_KeyInfo2(String teacher_id){
+		return cartMapper.getCartWT_KeyInfo2(teacher_id);
+	}
 	public void deleteCart(String WT_Key) {
 		cartMapper.deleteCart(WT_Key);
+	}
+	public void addWTT(String WT_Key,String teacher_id) {
+		cartMapper.addWTT(WT_Key,teacher_id);
 	}
 }

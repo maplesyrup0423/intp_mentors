@@ -36,6 +36,13 @@ public class TeacherController {
 		model.addAttribute("fail",fail);
 		return "user/Login";
 	}
+	
+	@GetMapping("/logout")
+	public String logout() {
+		loginTeacherBean.setTeacherLogin(false);
+		return "user/logout";
+	}
+	
 	@GetMapping("/Mypage")
 	public String Mypage() {
 		return "user/Mypage";
@@ -55,6 +62,11 @@ public class TeacherController {
 							Model model) {
 		
 		return "user/Sign_up";
+	}
+	
+	@GetMapping("/Mypage_change")
+	public String Mypage_change() {
+		return "user/Mypage_change";
 	}
 	
 	@PostMapping("/Login_pro")
