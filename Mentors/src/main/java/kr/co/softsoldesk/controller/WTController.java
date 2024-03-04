@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softsoldesk.beans.TeacherBean;
 import kr.co.softsoldesk.beans.WTBean;
+import kr.co.softsoldesk.beans.WTT_Bean;
 import kr.co.softsoldesk.service.WTService;
+import kr.co.softsoldesk.service.WTT_Service;
 
 
 @Controller
@@ -23,6 +25,7 @@ public class WTController {
 	
 @Autowired
 private WTService wtService;
+private WTT_Service wtt_Service;
 
 
 	@GetMapping("/WT_list") // 연수 목록
@@ -42,7 +45,10 @@ private WTService wtService;
 	}
 
 	@GetMapping("/WT_my_room") // 나의 강의실
-	public String WT_my_room() {
+	public String WT_my_room(Model model) {
+		//막약 라디오버튼이 0일경우
+		List<WTT_Bean> wttList=wtt_Service.addMyRoomAll();
+		model.addAttribute("wttList",wttList);
 		return "WT/WT_my_room";
 	}
 

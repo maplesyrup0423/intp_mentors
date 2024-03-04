@@ -30,6 +30,24 @@ public class WTT_Bean {
 	
 	//-----------------------------------------------------
 	
-	
+	public WTT_Bean() {
+		if(wt_Tag_School==1) {
+			str_WT_Tag_School="초등학교";
+		}else if(wt_Tag_School==2) {
+			str_WT_Tag_School="중학교";
+		}else if(wt_Tag_School==3) {
+			str_WT_Tag_School="고등학교";
+		}
+		System.out.println("str_WT_Tag_School : "+ str_WT_Tag_School);
+		
+		if(wt_Tag_TypeCategory==1) {
+			str_WT_Tag_TypeCategory="교과지도";
+		}else if(wt_Tag_TypeCategory==2) {
+			str_WT_Tag_TypeCategory="생활지도";
+		}else if(wt_Tag_TypeCategory==3) {
+			str_WT_Tag_TypeCategory="학습지도";
+		}
+		System.out.println("str_WT_Tag_TypeCategory : "+ str_WT_Tag_TypeCategory);
+	}
 	
 }
