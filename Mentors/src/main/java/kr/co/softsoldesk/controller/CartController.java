@@ -35,6 +35,13 @@ public class CartController {
 				return "WT/WT_cart_fail";
 			}
 		}
+		List<String> WKList2 = cartService.getCartWT_KeyInfo2();
+		for (String WK : WKList2) {
+			if (WK.equals(WT_Key)) {
+				return "WT/WT_cart_fail2";
+			}
+		}
+		
 		cartService.addCart(WT_Key);
 		return "WT/WT_cart_success";
 	}

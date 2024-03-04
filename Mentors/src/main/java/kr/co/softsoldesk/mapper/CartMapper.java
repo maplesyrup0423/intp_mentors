@@ -18,6 +18,9 @@ public interface CartMapper {
 	@Select("select WT_key from cart where teacher_id=#{teacher_id}")
 	List<String> getCartWT_KeyInfo(String teacher_id);
 	
+	//이미 결제한 연수 코드 목록
+	@Select("select wt_key from WTT where teacher_id=#{teacher_id}")
+	List<String> getCartWT_KeyInfo2(String teacher_id);
 	
 	//장바구니 리스트
 	@Select("select wt.WT_Thumbnail, wt.WT_TrainingTime, wt.WT_Title, wt.WT_Price, wt.WT_Key from workplace_T wt "

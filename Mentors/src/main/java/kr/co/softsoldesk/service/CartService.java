@@ -38,6 +38,11 @@ public class CartService {
 		return cartDao.getCartWT_KeyInfo(teacher_id);
 	}
 	
+	public List<String> getCartWT_KeyInfo2(){
+		String teacher_id=loginTeacherBean.getTeacher_id();
+		return cartDao.getCartWT_KeyInfo2(teacher_id);
+	}
+	
 	public void deleteCart(String WT_Key) {
 		cartDao.deleteCart(WT_Key);
 	}
