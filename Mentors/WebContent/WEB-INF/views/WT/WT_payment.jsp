@@ -257,7 +257,7 @@ $(function() {
 
 					<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
 					<script>
- 					IMP.init("imp14003125");
+ 					IMP.init("imp70847877");
 					 
 					const button = document.querySelector("button");
 					 
