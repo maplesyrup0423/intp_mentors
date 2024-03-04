@@ -7,6 +7,10 @@ insert into teacher_info values('id2','이름','000101','남자','이메일@naver.com',
 insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'강의 이름1',150000,150,1,1,1,'썸네일1','정보','기타텍스트','비디오링크');
 insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'강의 이름2',10000,50,1,1,1,'썸네일2','정보','기타텍스트','비디오링크');
 insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'dlfma6',10000,50,1,1,1,'썸네일2','정보','기타텍스트','비디오링크');
+
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'dlfma6',10000,50,1,1,1,'썸네일2','정보','기타텍스트','비디오링크');
+
+
 --delete from workplace_T where WT_Video='비디오링크';
 --delete from WTT where teacher_id='id2';
 --wt_test_q
