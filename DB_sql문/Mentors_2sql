@@ -14,6 +14,8 @@ select * from wt_test_q;
 select * from wtt_test_a;
 select * from booklist;
 
+commit;
+
 
 
 

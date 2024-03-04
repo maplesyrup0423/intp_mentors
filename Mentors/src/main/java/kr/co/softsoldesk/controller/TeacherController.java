@@ -57,6 +57,11 @@ public class TeacherController {
 		return "user/Sign_up";
 	}
 	
+	@GetMapping("/Mypage_change")
+	public String Mypage_change() {
+		return "user/Mypage_change";
+	}
+	
 	@PostMapping("/Login_pro")
 	public String Login_pro(@Valid @ModelAttribute("tempLoginTeacherBean") 
 							TeacherBean tempLoginTeacherBean, BindingResult result) {
