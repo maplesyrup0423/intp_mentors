@@ -108,7 +108,7 @@
 					<div id="wt_bot">
 						<div>
 							<span>${obj.WT_Price }원</span> <span><button
-									onclick="location.href='${root }WT/WT_payment2?teacher_id=${loginTeacherBean.teacher_id}&WT_Key=${obj.WT_Key }'">연수신청</button></span>
+									onclick="location.href='${root }WT/WT_payment3?WT_Key=${obj.WT_Key }'">연수신청</button></span>
 						</div>
 					</div>
 				</div>
