@@ -95,7 +95,7 @@ create table qna_q(
     WTT_Key VARCHAR2(20) NOT NULL,
     q_Title VARCHAR2(50) NOT NULL,
     q_content VARCHAR2(50) NOT NULL,
-    q_a_check number(1),
+    q_a_check number(1), --0: 답변미등록   //   1 : 답변등록
     q_date date
 );
 ALTER TABLE qna_q ADD PRIMARY KEY ( q_key );
