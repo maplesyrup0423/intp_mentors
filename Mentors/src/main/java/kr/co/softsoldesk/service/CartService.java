@@ -32,6 +32,10 @@ public class CartService {
 	public CartBean getOneCartInfo(String teacher_id, String WT_Key) {
 		return cartDao.getOneCartInfo(teacher_id, WT_Key);
 	}
+	
+	public CartBean directPay(String WT_Key) {
+		return cartDao.directPay(WT_Key);
+	}
 
 	public List<String> getCartWT_KeyInfo() {
 		String teacher_id = loginTeacherBean.getTeacher_id();
@@ -47,7 +51,8 @@ public class CartService {
 		cartDao.deleteCart(WT_Key);
 	}
 
-	public void addWTT(String WT_Key,String teacher_id) {
+	public void addWTT(String WT_Key) {
+		String teacher_id = loginTeacherBean.getTeacher_id();
 		cartDao.addWTT(WT_Key, teacher_id);
 	}
 }

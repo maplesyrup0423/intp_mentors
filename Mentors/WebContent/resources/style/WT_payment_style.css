@@ -67,7 +67,12 @@ table tr{
 .pay_info_table_thumb{
     width: 240px;
     height: 150px;
-    border: 1px solid black;
+    border: none;
+}
+
+.pay_thumb{
+	width: 240px;
+	height: 150px;
 }
 
 .pay_info_table_title{

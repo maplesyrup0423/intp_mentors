@@ -10,16 +10,24 @@ insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'스쿨 업사이클�
 본 과정은 학생들의 환경 감수성 함양을 위해 환경 교육을 흥미 있게 지도할 수 있는 방법과 실제 환경 놀이 방법을 실습 위주의 내용으로 상세하게 안내합니다.','mdb6lKQ4VPw');
 
 
-insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'제제제제목목목목',300000,40,1,1,1,'누구나_쉽게_배우는_샌드아트_Thumb','스쿨_업사이클링_환경놀이_info','연수목표
-1. 교사의 환경 감수성을 높이고 이를 수업에 활용할 수 있다.</br>
-</br>
-2. 다양한 교과와 연계하여 1회성이 아닌 지속 가능한 환경교육을 실천할 수 있다.</br>
-</br>
-3. 버려지는 용품을 활용한 업사이클링 놀이 수업을 진행할 수 있다.</br>
-</br>
-</br>
-연수개요</br>
-본 과정은 학생들의 환경 감수성 함양을 위해 환경 교육을 흥미 있게 지도할 수 있는 방법과 실제 환경 놀이 방법을 실습 위주의 내용으로 상세하게 안내합니다.','mdb6lKQ4VPw');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'누구나 쉽게 배우는 샌드아트',300000,40,1,1,1,'누구나_쉽게_배우는_샌드아트_Thumb','누구나_쉽게_배우는_샌드아트_info','연수목표','mdb6lKQ4VPw');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'교원을 위한 인공지능(AI) 첫걸음',300000,40,1,1,1,'교원을_위한_인공지능(AI)_첫걸음_Thumb','교원을_위한_인공지능(AI)_첫걸음_info','연수목표','mdb6lKQ4VPw');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'김병만과 함께하는 생태계 보전의 법칙',300000,40,1,1,1,'김병만과_함께하는_생태계_보전의_법칙_Thumb','김병만과_함께하는_생태계_보전의_법칙_info','연수목표','mdb6lKQ4VPw');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'김쌤과 머니쌤이 알려주는 투자이야기',300000,40,1,1,1,'김쌤과_머니쌤이_알려주는_투자이야기_Thumb','김쌤과_머니쌤이_알려주는_투자이야기_info','연수목표','mdb6lKQ4VPw');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'내일은 나도 직무연수 강사!',300000,40,1,1,1,'내일은_나도_직무연수_강사!_Thumb','내일은_나도_직무연수_강사!_info','연수목표','mdb6lKQ4VPw');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'벌거벗은 한국사(연수+도서)',300000,40,1,1,1,'벌거벗은_한국사(연수+도서)_Thumb','누구나_쉽게_배우는_샌드아트_info','연수목표','mdb6lKQ4VPw');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'선생님을 위한 올인원 보고서 스킬',300000,40,1,1,1,'선생님을_위한_올인원_보고서_스킬_Thumb','선생님을_위한_올인원_보고서_스킬_info','연수목표','mdb6lKQ4VPw');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'누구나 쉽게 배우는 샌드아트',300000,40,1,1,1,'수업에_활용하는_포토샵_Thumb','수업에_활용하는_포토샵_info','연수목표','mdb6lKQ4VPw');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'누구나 쉽게 배우는 샌드아트',300000,40,1,1,1,'신학기_스포일러!_학급_경영_꿀팁_Thumb','신학기_스포일러!_학급_경영_꿀팁_info','연수목표','mdb6lKQ4VPw');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'누구나 쉽게 배우는 샌드아트',300000,40,1,1,1,'야나두_써먹는_VOCA_Thumb','야나두_써먹는_VOCA_info','연수목표','mdb6lKQ4VPw');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'누구나 쉽게 배우는 샌드아트',300000,40,1,1,1,'종이나라!_무한한_상상력의_세계_Thumb','종이나라!_무한한_상상력의_세계_info','연수목표','mdb6lKQ4VPw');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'누구나 쉽게 배우는 샌드아트',300000,40,1,1,1,'커피에서_진로를_찾다_Thumb','커피에서_진로를_찾다_info','연수목표','mdb6lKQ4VPw');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'누구나 쉽게 배우는 샌드아트',300000,40,1,1,1,'태블릿으로_시작하는_쉬운_미술_수업_Thumb','태블릿으로_시작하는_쉬운_미술_수업_info','연수목표','mdb6lKQ4VPw');
+
+
+
+
+
 ----------------------------
 ----------------------------
 ----------------------------

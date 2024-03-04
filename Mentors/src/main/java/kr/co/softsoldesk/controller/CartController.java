@@ -72,7 +72,7 @@ public class CartController {
 		//WTT키 추가 및 장바구니 삭제
 		List<String> WKList = cartService.getCartWT_KeyInfo();
 		for (String WK : WKList) {
-			cartService.addWTT(WK,teacher_id);
+			cartService.addWTT(WK);
 			cartService.deleteCart(WK);
 		}
 		model.addAttribute("cartList", cartList);
@@ -88,12 +88,26 @@ public class CartController {
 
 		CartBean cBean = cartService.getOneCartInfo(teacher_id, WT_Key);
 		//WTT키 추가
-		cartService.addWTT(WT_Key, teacher_id);
+		cartService.addWTT(WT_Key);
 		//장바구니 삭제
 		cartService.deleteCart(WT_Key);
 		model.addAttribute("cBean", cBean);
 
 		return "WT/WT_payment2";
+	}
+	
+	@GetMapping("/WT_payment3") // 직접결제
+	public String WT_payment3(@RequestParam("WT_Key") String WT_Key,
+			Model model) {
+
+		CartBean cBean = cartService.directPay(WT_Key);
+		//WTT키 추가
+		cartService.addWTT(WT_Key);
+		//장바구니 삭제
+		cartService.deleteCart(WT_Key);
+		model.addAttribute("cBean", cBean);
+
+		return "WT/WT_payment3";
 	}
 
 	@GetMapping("/WT_payment_success") // 결제 완료

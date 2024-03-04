@@ -160,20 +160,18 @@ $(function() {
 				 -->
 
 	
-				<c:forEach var='obj' items="${cartList }">
 					<tr>
 						<td>
 							<div class="pay_info_table_thumb"><img class="pay_thumb"
-								src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg" /></div>
+								src="${root }resources/image/WT_img/WT_Thumb/${cBean.WT_Thumbnail}.jpg" /></div>
 						</td>
 	
 						<td>
-							<div class="pay_info_table_title">${obj.WT_Title }</div>
+							<div class="pay_info_table_title">${cBean.WT_Title }</div>
 							<div class="pay_info_table_term">기간 | 결제일로부터 30일</div>
 						</td>
-						<td><div class="pay_info_table_price">${obj.WT_Price }원</div></td>
+						<td><div class="pay_info_table_price">${cBean.WT_Price }원</div></td>
 					</tr>
-				</c:forEach>
 					
 
 			</table>
@@ -221,22 +219,14 @@ $(function() {
 				
 				
 				
-				<c:forEach var='obj' items="${cartList }">
 					<tr class="float_table_class">
-						<td class="float_table_class_title">${obj.WT_Title }</td>
-					<td class="float_table_class_pay">${obj.WT_Price }원</td>
+						<td class="float_table_class_title">${cBean.WT_Title }</td>
+					<td class="float_table_class_pay">${cBean.WT_Price }원</td>
 				</tr>
-				</c:forEach>
 				
-				
-				
-				<!-- 가격 총합 구하기 -->
-				<c:set var = "total" value = "0" />
-				<c:forEach var="tot" items="${cartList }">
-					<c:set var= "total" value="${total + tot.WT_Price}"/>
-				</c:forEach>
+
 				<tr>
-					<td colspan="2" class="total">합계 ${total }원</td>
+					<td colspan="2" class="total"> ${cBean.WT_Price }원</td>
 				</tr>
 				<tr>
 					<td colspan="2" class="agree">결제자 정보, 연수의 이름, 가격 그리고 필수 약관을
@@ -257,12 +247,12 @@ $(function() {
 
 					<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
 					<script>
- 					IMP.init("imp70847877");
+ 					IMP.init("imp87331343");
 					 
 					const button = document.querySelector("button");
 					 
 					const onClickPay = async () => {
-					 
+						 
 						IMP.request_pay({
 						 	pg: "kakaopay",
 						 	pay_method: "card",

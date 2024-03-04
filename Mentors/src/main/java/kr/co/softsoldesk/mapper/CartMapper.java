@@ -34,6 +34,10 @@ public interface CartMapper {
 			+ "inner join teacher_info t on c.teacher_id = t.teacher_id and c.teacher_id = #{param1} and c.WT_Key = #{param2}")
 	CartBean getOneCartInfo(String param1, String param2);
 	
+	//연수 리스트에서 바로 결제
+	@Select("select WT_Key, WT_Title, WT_Thumbnail, WT_Price from workplace_T where WT_Key=#{WT_Key}")
+	CartBean directPay(String WT_Key);
+	
 	
 	//장바구니 항목 삭제
 	@Delete("delete from cart where WT_key=#{WT_Key}")
