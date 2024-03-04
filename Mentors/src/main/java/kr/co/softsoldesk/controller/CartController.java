@@ -72,7 +72,7 @@ public class CartController {
 		//WTT키 추가 및 장바구니 삭제
 		List<String> WKList = cartService.getCartWT_KeyInfo();
 		for (String WK : WKList) {
-			cartService.addWTT(WK);
+			cartService.addWTT(WK,teacher_id);
 			cartService.deleteCart(WK);
 		}
 		model.addAttribute("cartList", cartList);
@@ -88,7 +88,7 @@ public class CartController {
 
 		CartBean cBean = cartService.getOneCartInfo(teacher_id, WT_Key);
 		//WTT키 추가
-		cartService.addWTT(WT_Key);
+		cartService.addWTT(WT_Key, teacher_id);
 		//장바구니 삭제
 		cartService.deleteCart(WT_Key);
 		model.addAttribute("cBean", cBean);
