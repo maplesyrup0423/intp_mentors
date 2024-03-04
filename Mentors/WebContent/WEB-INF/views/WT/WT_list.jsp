@@ -35,10 +35,7 @@
 								<input type="radio" value="2" name="rad1">60분~90분
 							</div>
 							<div>
-								<input type="radio" value="3" name="rad1">90분~120분
-							</div>
-							<div>
-								<input type="radio" value="4" name="rad1">120분~150분
+								<input type="radio" value="3" name="rad1">90분 이상
 							</div>
 						</div>
 					</td>
@@ -73,9 +70,6 @@
 							</div>
 							<div>
 								<input type="radio" value="3" name="rad3">생활지도
-							</div>
-							<div>
-								<input type="radio" value="4" name="rad3">어학
 							</div>
 						</div>
 					</td>
