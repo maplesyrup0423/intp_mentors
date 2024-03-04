@@ -32,6 +32,9 @@
 				<div class="Tbox Tbox_2">
 					학습완료 <span class="span_num">2</span>건
 				</div>
+				<div class="Tbox Tbox_3">
+					기간만료 <span class="span_num">2</span>건
+				</div>
 			</div>
 			<br> <br>
 			<div class="select_div">
@@ -43,15 +46,20 @@
 				<div class="WT_select">
 					<!--todo : selec 정보에 따라 보여주는 항목 달라짐
                             위에 span_num 숫자도 달라짐!!-->
-					<select name="" id="" onChange="javascript:change(this.value);">
-						<option value="0" selected>학습중</option>
-						<option value="1">학습완료</option>
+					<select name="" id="">
+						<option value="0" selected>전체</option>
+						<option value="1" >학습중</option>
+						<option value="2">학습완료</option>
+						<option value="3">기간만료</option>
 					</select>
 				</div>
 			</div>
 			<br> <br>
 
 			<div id="WT_area">
+
+
+
 				<div class="WT">
 					<div class="WT_left">
 						<table width="760px">
@@ -64,14 +72,11 @@
 										[온라인/기초]</span></td>
 							</tr>
 							<tr>
-								<td><span class="time_span">교육 시간<span
-										class="span_num WT_time"> 60</span> 분</td>
+								<td><span class="time_span">교육 시간</span> <span
+									class="span_num WT_time"> 60</span> 분</td>
 							</tr>
 						</table>
 
-
-
-						</span>
 					</div>
 					<div class="classbtn_div">
 						<button class="classbtn"
@@ -80,7 +85,7 @@
 					</div>
 
 				</div>
-				<br>
+
 				<!--<div class="WT">
 					<div class="WT_left">
 						<div class="WT_schol_type"> 중학교</div>
@@ -108,7 +113,7 @@
 
 	</div>
 </body>
-<script>
+<!-- <script>
 	const WT_area = document.getElementById("WT_area");
 	const WT_sum = document.getElementById("WT_sum");
 	function change(cd) {
@@ -126,5 +131,5 @@
 		WT_sum.innerText = cnt;
 		WT_area.innerHTML = str;
 	}
-</script>
+</script> -->
 </html>

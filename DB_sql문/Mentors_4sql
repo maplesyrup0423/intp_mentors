@@ -46,4 +46,6 @@ insert into qna_q values('qk' || TO_CHAR(qk_seqid.nextval),'WTT63','수료기준 문�
 --A
 insert into qna_a values('ak' || TO_CHAR(ak_seqid.nextval),'qk1','강의80퍼 시험 60점이여',sysdate);
 update qna_q set q_a_check=1 where q_key='qk1';
+
+
 COMMIT;

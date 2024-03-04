@@ -50,7 +50,7 @@ drop table workplace_T;
 
 create table workplace_T(
     WT_Key VARCHAR2(20) NOT NULL,
-    WT_Title VARCHAR2(50) NOT NULL,
+    WT_Title VARCHAR2(500) NOT NULL,
     WT_Price number NOT NULL,
     WT_TrainingTime number NOT NULL,
     WT_Tag_School number NOT NULL, -- 1 초등학교 | 2 중학교 3 | 고등학교
