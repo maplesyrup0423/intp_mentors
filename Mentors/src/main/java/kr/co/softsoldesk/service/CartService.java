@@ -47,8 +47,7 @@ public class CartService {
 		cartDao.deleteCart(WT_Key);
 	}
 
-	public void addWTT(String WT_Key) {
-		String teacher_id = loginTeacherBean.getTeacher_id();
-		cartDao.addWTT(teacher_id, WT_Key);
+	public void addWTT(String WT_Key,String teacher_id) {
+		cartDao.addWTT(WT_Key, teacher_id);
 	}
 }
