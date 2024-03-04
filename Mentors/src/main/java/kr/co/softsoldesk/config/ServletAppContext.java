@@ -24,6 +24,7 @@ import kr.co.softsoldesk.mapper.BookMapper;
 import kr.co.softsoldesk.mapper.CartMapper;
 import kr.co.softsoldesk.mapper.TeacherMapper;
 import kr.co.softsoldesk.mapper.WTMapper;
+import kr.co.softsoldesk.mapper.WTT_Mapper;
 
 
 @Configuration
@@ -113,6 +114,13 @@ public class ServletAppContext implements WebMvcConfigurer {
 	   @Bean
 	   public MapperFactoryBean<BookMapper> bookMapper(SqlSessionFactory factory) throws Exception {
 	      MapperFactoryBean<BookMapper> factoryBean = new MapperFactoryBean<BookMapper>(BookMapper.class);
+	      factoryBean.setSqlSessionFactory(factory);
+	      return factoryBean;
+	   }
+	   
+	   @Bean
+	   public MapperFactoryBean<WTT_Mapper> wtt_Mapper(SqlSessionFactory factory) throws Exception {
+	      MapperFactoryBean<WTT_Mapper> factoryBean = new MapperFactoryBean<WTT_Mapper>(WTT_Mapper.class);
 	      factoryBean.setSqlSessionFactory(factory);
 	      return factoryBean;
 	   }

@@ -13,30 +13,19 @@ import kr.co.softsoldesk.dao.WTT_Dao;
 
 @Service
 public class WTT_Service {
+	
 	@Autowired
 	private WTT_Dao wtt_Dao;
 	
 	@Resource(name = "loginTeacherBean")
 	private TeacherBean loginTeacherBean;
 	
-	String loginTeacher_id = loginTeacherBean.getTeacher_id();
+	
 	
 	public List<WTT_Bean> addMyRoomAll(){
-		return wtt_Dao.addMyRoomAll(loginTeacher_id);
-	}
-	
-	public List<WTT_Bean> addMyRoomSelect(int WTT_Completion){
-		return wtt_Dao.addMyRoomSelect(WTT_Completion, loginTeacher_id);
-	}
-	
-	
-	
-	
-	
-	
-	
-/*	public List<WTT_Bean> addMyRoomAll(){
-		List<WTT_Bean> wttList = wtt_Dao.addMyRoomAll();
+		String loginTeacher_id = loginTeacherBean.getTeacher_id();
+		System.out.println("loginTeacher_id = "+loginTeacher_id);
+		List<WTT_Bean> wttList = wtt_Dao.addMyRoomAll(loginTeacher_id);
 		for (WTT_Bean wtt : wttList) {
 			if(wtt.getWt_Tag_School()==1) {
 				wtt.setStr_WT_Tag_School("초등학교");
@@ -55,7 +44,18 @@ public class WTT_Service {
 			}
 		}
 		return wttList;
+	}
+	
+	/*public List<WTT_Bean> addMyRoomSelect(int WTT_Completion){
+		String loginTeacher_id = loginTeacherBean.getTeacher_id();
+		return wtt_Dao.addMyRoomSelect(WTT_Completion, loginTeacher_id);
 	}*/
+	
+	
+	
+	
+	
+	
 	
 	
 }

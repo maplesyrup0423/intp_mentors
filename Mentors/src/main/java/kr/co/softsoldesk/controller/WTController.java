@@ -25,6 +25,8 @@ public class WTController {
 	
 @Autowired
 private WTService wtService;
+
+@Autowired
 private WTT_Service wtt_Service;
 
 
@@ -46,9 +48,17 @@ private WTT_Service wtt_Service;
 
 	@GetMapping("/WT_my_room") // 나의 강의실
 	public String WT_my_room(Model model) {
+		
+		
 		//막약 라디오버튼이 0일경우
 		List<WTT_Bean> wttList=wtt_Service.addMyRoomAll();
 		model.addAttribute("wttList",wttList);
+		System.out.println("리스트 사이즈"+wttList.size());
+		
+		
+		//TODO 나머지 경우 처리해야함
+		
+		
 		return "WT/WT_my_room";
 	}
 

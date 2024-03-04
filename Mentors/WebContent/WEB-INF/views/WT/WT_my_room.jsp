@@ -48,7 +48,7 @@
                             위에 span_num 숫자도 달라짐!!-->
 					<select name="" id="">
 						<option value="0" selected>전체</option>
-						<option value="1" >학습중</option>
+						<option value="1">학습중</option>
 						<option value="2">학습완료</option>
 						<option value="3">기간만료</option>
 					</select>
@@ -59,33 +59,32 @@
 			<div id="WT_area">
 
 
+				<c:forEach var='obj' items="${wttList }">
+					<div class="WT">
+						<div class="WT_left">
+							<table width="760px">
+								<tr>
+									<td class="colorbox_pos"><div class="WT_schol_type">${obj.str_WT_Tag_School }</div>
+										<div class="WT_category">${obj.str_WT_Tag_TypeCategory }</div></td>
+								</tr>
+								<tr>
+									<td><span class="WT_name">${obj.wt_Title }</span></td>
+								</tr>
+								<tr>
+									<td><span class="time_span">교육 시간</span> <span
+										class="span_num WT_time">${obj.wt_TrainingTime }</span> 분</td>
+								</tr>
+							</table>
 
-				<div class="WT">
-					<div class="WT_left">
-						<table width="760px">
-							<tr>
-								<td class="colorbox_pos"><div class="WT_schol_type">추천학급</div>
-									<div class="WT_category">분야</div></td>
-							</tr>
-							<tr>
-								<td><span class="WT_name">[제 1회] 연수 이름이 들어갈자리입니다.
-										[온라인/기초]</span></td>
-							</tr>
-							<tr>
-								<td><span class="time_span">교육 시간</span> <span
-									class="span_num WT_time"> 60</span> 분</td>
-							</tr>
-						</table>
+						</div>
+						<div class="classbtn_div">
+							<button class="classbtn"
+								onclick="location.href='${root}class/class_home_center_home'">강의실
+								입장</button>
+						</div>
 
 					</div>
-					<div class="classbtn_div">
-						<button class="classbtn"
-							onclick="location.href='${root}class/class_home_center_home'">강의실
-							입장</button>
-					</div>
-
-				</div>
-
+				</c:forEach>
 				<!--<div class="WT">
 					<div class="WT_left">
 						<div class="WT_schol_type"> 중학교</div>

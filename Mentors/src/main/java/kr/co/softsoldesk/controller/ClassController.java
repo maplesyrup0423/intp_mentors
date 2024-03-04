@@ -13,8 +13,8 @@ import kr.co.softsoldesk.service.WTT_Service;
 @RequestMapping("/class")
 public class ClassController {
 
-	@Autowired
-	private WTT_Service wtt_Service;
+	/*@Autowired
+	private WTT_Service wtt_Service;*/
 
 	@GetMapping("/class_home_center_home")
 	public String class_home_center_home() {
