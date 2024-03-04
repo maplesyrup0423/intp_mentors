@@ -2,6 +2,7 @@
 	pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var='root' value="${pageContext.request.contextPath }/" />
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 
@@ -40,14 +41,23 @@
 			<div class="select_div">
 				<div class="div_sum">
 					총
-					<samp class="span_num" id="WT_sum">1</samp>
+					<samp class="span_num" id="WT_sum">${totel_ALL }</samp>
 					건
 				</div>
 				<div class="WT_select">
 					<!--todo : selec 정보에 따라 보여주는 항목 달라짐
                             위에 span_num 숫자도 달라짐!!-->
-					<select name="" id="">
-						<option value="0" selected>전체</option>
+					<%-- 	<form:form action="${root }WT//WT_my_room" method="GET"
+						modelAttribute="CompletionVal">
+						<form:select path="Completion">
+							<form:option value="0">전체</form:option>
+							<form:option value="1">학습중</form:option>
+							<form:option value="2">학습완료</form:option>
+							<form:option value="3">기간만료</form:option>
+						</form:select>
+					</form:form> --%>
+					<select>
+						<option value="0">전체</option>
 						<option value="1">학습중</option>
 						<option value="2">학습완료</option>
 						<option value="3">기간만료</option>
@@ -129,6 +139,27 @@
 		}
 		WT_sum.innerText = cnt;
 		WT_area.innerHTML = str;
+	}
+</script> -->
+<!-- <script>
+	function selectBoxChange(th) {
+
+			$.ajax({
+				url : "my_room",
+				type : "POST",
+				data : {
+					"btnValue" : th
+				},
+				success : function(data, textStatus, xhr) {
+					alert("변경 성공!");
+					document.location.reload(true);
+					console.log(data);
+				},
+				error : function(xhr, status, error) {
+					console.log(error);
+					alert("실패")
+				}
+			});
 	}
 </script> -->
 </html>
