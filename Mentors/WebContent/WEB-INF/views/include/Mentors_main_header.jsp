@@ -27,7 +27,7 @@
 						<td class="td_cen"><a href="${root }event/event3">이벤트</a></td>
 						<td class="td_cen"><a href="${root }book/Booklist">도서관</a></td>
 						<td class="td_cen"><a href="${root }board/Boardlist">게시판</a></td>
-						<td class="td_cen"><a href="${root }WT/WT_my_room?teacher_id=${loginTeacherBean.teacher_id}">나의 강의실</a></td>
+						<td class="td_cen"><a href="${root }WT/WT_my_room">나의 강의실</a></td>
 						<td class="td_cen"></td>
 						<td class="td_cen"></td>
 						<td class="td_img"><a href="${root }WT/WT_cart?teacher_id=${loginTeacherBean.teacher_id}"><img
