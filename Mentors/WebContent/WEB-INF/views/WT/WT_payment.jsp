@@ -279,9 +279,7 @@ $(function() {
 					 };
 					 
 					 function pay_success(){
-						 var teacher_id = ${loginTeacherBean.teacher_id}.val();
 						 location.href="${root }WT/WT_payment_success";
-						 
 					 }
 					 
 										 

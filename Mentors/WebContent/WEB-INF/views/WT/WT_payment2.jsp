@@ -252,17 +252,25 @@ $(function() {
 					const button = document.querySelector("button");
 					 
 					const onClickPay = async () => {
-					 
+						 
 						IMP.request_pay({
 						 	pg: "kakaopay",
 						 	pay_method: "card",
 						 	amount: "${total }",
 						 	name: "결제 테스트",
-						 	merchant_uid: "order-2024-02-04",
-						 	m_redirect_url: "WT_payment_success"
+						 	merchant_uid: "order-2024-02-04"
+						 	//m_redirect_url: "http://localhost:9098/Mentors/WT/WT_payment_success"
 
-					 	}); 
+					 	},function(response){
+					 		pay_success();
+					 	}
+						
+						); 
 					 };
+					 
+					 function pay_success(){
+						 location.href="${root }WT/WT_payment_success";
+					 }
 					 
 										 
 					 //-----------------------------------------------------

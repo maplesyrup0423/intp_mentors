@@ -98,7 +98,7 @@ public class CartController {
 
 	@GetMapping("/WT_payment_success") // 결제 완료
 	public String WT_payment_success() {
-		return "WT/WT_payment_seccess";
+		return "WT/WT_payment_success";
 	}
 	
 	
