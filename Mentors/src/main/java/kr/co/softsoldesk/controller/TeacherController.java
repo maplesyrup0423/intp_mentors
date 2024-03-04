@@ -43,6 +43,24 @@ public class TeacherController {
 		return "user/logout";
 	}
 	
+	@GetMapping("/Sign_up")
+	public String Sign_up(@ModelAttribute("Sign_upTeacherBean") TeacherBean Sign_upTeacherBean) {
+		
+		return "user/Sign_up";
+	}
+	
+	@PostMapping("/Sign_up_pro")
+	public String Sign_up_pro(@Valid @ModelAttribute("Sign_upTeacherBean") TeacherBean Sign_upTeacherBean, 
+			BindingResult result) {
+		
+		if(result.hasErrors()) {
+			return "user/sign_up";
+		}
+		//데이터베이스에 저장 및 회원가입 완료
+		teacherService.addTeacherInfo(Sign_upTeacherBean);
+		return "user/sign_up_success";
+	}
+	
 	@GetMapping("/Mypage")
 	public String Mypage() {
 		return "user/Mypage";
@@ -57,12 +75,7 @@ public class TeacherController {
 		return "user/Find_Password";
 	}
 	
-	@GetMapping("/Sign_up")
-	public String Sign_up(@ModelAttribute("Sign_upTeacherBean") TeacherBean Sign_upTeacherBean,
-							Model model) {
-		
-		return "user/Sign_up";
-	}
+	
 	
 	@GetMapping("/Mypage_change")
 	public String Mypage_change() {

@@ -17,6 +17,10 @@ public interface TeacherMapper {
 	@Select("select teacher_name from teacher_info where teacher_id = #{teacher_id}")
 	String checkTeacherIdExist(String teacher_id);
 	
+	@Insert("insert into teacher_info values(#{teacher_id}, #{Teacher_Name}, #{Teacher_Birth}, "
+			+ "#{Teacher_Gender}, #{Teacher_Email}, #{Teacher_Tel}, #{Teacher_Password}, "
+			+ "#{Teacher_Nickname}, #{Teacher_Work_In}, #{Teacher_Type} , #{Teacher_Neis})")
+	void addTeacherInfo(TeacherBean sign_upTeacherBean);
 	
 }
 

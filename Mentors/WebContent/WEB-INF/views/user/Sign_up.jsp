@@ -14,7 +14,7 @@
 	<div class="container">
 		<div class="sign">회원가입</div>
 		<hr />
-		<form:form action="${root }Sign_up_pro" method = "post"
+		<form:form action="${root }user/Sign_up_pro" method = "post"
 				   modelAttribute="Sign_upTeacherBean">
 			<div class="body">
 				<div class="letter_personal_information">개인정보 입력</div>
@@ -38,8 +38,8 @@
 					<!-- 성별 -->
 					<div class="gender_choice">
 						<form:select path = "Teacher_Gender">
-							<option value="male" selected>남성</option>
-							<option value="femaie">여성</option>
+							<option value="남성" selected>남성</option>
+							<option value="여성">여성</option>
 						</form:select>
 					</div>
 					<!-- 이메일 -->
@@ -65,8 +65,8 @@
 				<div class="create_account">
 					<!-- 아이디  -->
 					<p class="absolute">
-						<form:input path ="Teacher_Id" /> 
-						<form:label path = "Teacher_Id">
+						<form:input path = "teacher_id" /> 
+						<form:label path = "teacher_id">
 							<span>아이디를 입력하세요.</span>
 						</form:label>
 						<button type="button" onclick="checkTeacherIdExist()">중복확인</button>
@@ -117,9 +117,9 @@
 					<!-- 교직타입 -->
 					<div class="school_type">
 						<form:select path = "Teacher_Type">
-							<option value="element_School" selected>초등교사</option>
-							<option value="middle_School">중등교사</option>
-							<option value="high_School">고등교사</option>
+							<option value="초등교사" selected>초등교사</option>
+							<option value="중등교사">중등교사</option>
+							<option value="고등교사">고등교사</option>
 						</form:select>
 					</div>
 

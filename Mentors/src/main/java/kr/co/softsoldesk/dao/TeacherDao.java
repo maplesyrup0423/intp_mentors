@@ -16,6 +16,10 @@ public class TeacherDao {
 		return teachermapper.getLoginTeacherInfo(teacherBean);
 	}
 	
+	public void addTeacherInfo(TeacherBean sign_upteacherbean) {
+		teachermapper.addTeacherInfo(sign_upteacherbean);
+	}
+	
 	public String checkTeacherIdExist(String teacher_id) {
 		return teachermapper.checkTeacherIdExist(teacher_id);
 	}

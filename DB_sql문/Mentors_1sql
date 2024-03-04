@@ -19,7 +19,7 @@ CREATE TABLE teacher_info (
     teacher_password VARCHAR2(15) NOT NULL,
     teacher_nickname VARCHAR2(20) NOT NULL,
     teacher_work_in  VARCHAR2(40) NOT NULL,
-    teacher_type     VARCHAR2(12) NOT NULL,
+    teacher_type     VARCHAR2(16) NOT NULL,
     teacher_neis     VARCHAR2(20) NOT NULL
 );
 ALTER TABLE Teacher_Info ADD PRIMARY KEY ( Teacher_Id );

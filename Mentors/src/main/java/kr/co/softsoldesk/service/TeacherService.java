@@ -29,6 +29,9 @@ public class TeacherService {
 		}
 	}
 	
+	public void addTeacherInfo(TeacherBean sign_upteacherbean) {
+		teacherDao.addTeacherInfo(sign_upteacherbean);
+	}
 	
 	public void getLoginTeacherInfo(TeacherBean teacherBean) {
 		TeacherBean tempTeacherBean = teacherDao.getLoginTeacherInfo(teacherBean);
