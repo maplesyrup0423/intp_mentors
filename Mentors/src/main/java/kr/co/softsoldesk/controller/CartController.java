@@ -60,12 +60,6 @@ public class CartController {
 
 		model.addAttribute("cartList", cartList);
 		
-		//WTT키 추가 및 장바구니 삭제
-		List<String> WKList = cartService.getCartWT_KeyInfo();
-		for (String WK : WKList) {
-			cartService.addWTT(WK);
-			cartService.deleteCart(WK);
-		}
 		return "WT/WT_cart";
 	}
 
@@ -74,7 +68,13 @@ public class CartController {
 		System.out.println("전부 결제 teacher_id = " + teacher_id);
 		List<CartBean> cartList = cartService.getCartInfo(teacher_id);
 		
-		
+
+		//WTT키 추가 및 장바구니 삭제
+		List<String> WKList = cartService.getCartWT_KeyInfo();
+		for (String WK : WKList) {
+			cartService.addWTT(WK);
+			cartService.deleteCart(WK);
+		}
 		model.addAttribute("cartList", cartList);
 
 		return "WT/WT_payment";

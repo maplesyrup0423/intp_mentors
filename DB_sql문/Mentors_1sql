@@ -75,7 +75,7 @@ create table WTT(
     WTT_payment_date date NOT NULL, --결제일
     WTT_viewing_time number , --비디오 시청타임
     WTT_test_result number, --시험점수
-    WTT_Completion number(1) -- 0: 미수료 1 : 수료
+    WTT_Completion number(1) -- 0: 미수료 1 : 수료 2: 기간만료(미수료)
 );
 ALTER TABLE WTT MODIFY (WTT_viewing_time DEFAULT 0);
 ALTER TABLE WTT MODIFY (WTT_test_result DEFAULT 0);
