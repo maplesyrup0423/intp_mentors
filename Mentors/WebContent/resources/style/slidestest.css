@@ -5,7 +5,7 @@
 }
 
 .C-eventList {
-	position: absolute;
+	/* position: absolute; */
 	margin: auto;
 	width: 1280px;
 	height: 400px;
@@ -70,8 +70,42 @@
 	background-color: white;
 }
 
-.circle-login {
+.login-circle2 {
+	position: absolute;
+	z-index: 2 !important;
+	margin-left: 835px;
+	width: 450px;
+	height: 400px;
+    margin-top: -400px;
+	border-radius: 150px 10px 120px 10px;
+	background-color: white;
+}
+
+.loginbutton{
+	width: 250px; 
+	height: 50px; 
+	border-radius: 10px;
+	font-size: 20px;
+	background-color: #FF5345;
+	color: white;
+	font-weight: 900;
+}
+
+.circle-login{
 	margin-top: 120px;
+}
+
+.circle-login2{
+	margin-top: 120px;
+}
+
+.circle-login2 h1{
+	margin-top: 10px;
+	margin-left: -80px;
+}
+
+#My{
+	margin-left: 5px;
 }
 
 .blue_btn {
@@ -87,60 +121,53 @@
 
 /* ================================= */
 
-.C-table {
-	/* position: relative; */
-	padding-top: 550px;
-}
-
-.C-contentTable {
-	width: 1280px;
-}
-
-.C-list_div {
-	width: 640px;
-}
-
-.contentlist td {
-	padding: 15px;
-}
-
 a {
 	text-decoration-line: none;
 }
 
-.bestlist {
-	font-size: 30px;
+.user_teb_list{
+	margin-top: 50px;
 }
 
-.best_book {
-	/* float: left; */
-	width: 390px;
-	font-size: 15px;
-	text-align: center;
+.teb_list{
+	list-style-type: none;
+	float: left;
+	/* outline: 1px solid; */
+	margin-bottom: 0px;
+	padding-left: 30px;
 }
 
-.best_book img {
-	display: block;
-	width: 150px;
+.teb_list li{
+display: inline-block;
+border-radius: 7px 7px 0px 0px;
+margin-right: -4px;
+border: 1px solid;
+border-bottom: -0px;
 }
 
-.newlist {
-	font-size: 30px;
+.teb_item{
+	padding: 20px;
+	overflow: hidden;
+	width: 65px;
+	height: 20px;
 }
 
-.new_book {
-	width: 390px;
-	font-size: 15px;
-	text-align: center;
+.item_list{
+	display: inline-block;
+	outline: 1px solid;
+	margin-top: 0px;
+	border-radius: 0px 10px 10px 10px;
+	margin-top: -4px;
 }
 
-.new_book img {
-	display: block;
-	width: 150px;
+.item{
+	display: inline-block;
+	margin: 10px;
 }
 
-.besttext {
-	text-align: center;
+.item img{
+	width: 280px;
+	height: 154px;
 }
 
 /* ================================= */
@@ -154,6 +181,8 @@ a {
 
 .list-img{
     margin-left: 13.5px;
+	font-size: large;
+	font-weight: 700;
 }
 
 .list-img img {
