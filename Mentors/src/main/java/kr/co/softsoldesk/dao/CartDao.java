@@ -35,4 +35,7 @@ public class CartDao {
 	public void deleteCart(String WT_Key) {
 		cartMapper.deleteCart(WT_Key);
 	}
+	public void addWTT(String WT_Key,String teacher_id) {
+		cartMapper.addWTT(WT_Key,teacher_id);
+	}
 }
