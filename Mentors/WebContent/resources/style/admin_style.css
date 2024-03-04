@@ -1,3 +1,7 @@
+#admin_table{
+	margin: auto;
+}
+
 .all_view{
 	padding: 15px;
 }
@@ -94,14 +98,80 @@
 	margin: 0;
 }
 
+.new_write_btn{
+	width: 100px;
+	height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	border-style: none;
+	border-radius: 20px;
+	background-color: #00457E;
+	cursor: pointer;
+	float: right;
+}
 
 .bottom_move_btn{
 	text-align: center;
 }
 
+
 .m_btn{
 	width: 30px;
 	height: 30px;
 	background-color: #fff;
+	cursor: pointer;
+}
+
+
+.answer_btn-box{
+	width: 200px;
+	height: 26px;
+	float: right;
+	margin-right: 50px;
+	margin-bottom: 10px;
+}
+
+.top-finish_answer{
+	border: 2px solid green;
+	border-radius: 20px;
+	font-size: 15px;
+	color: green;
+	width: 80px;
+	height: 25px;
+	background-color: #fff;
+}
+
+.top-waitiong_answer{
+	border: 2px solid red;
+	border-radius: 20px;
+	font-size: 15px;
+	color: red;
+	width: 80px;
+	height: 25px;
+	background-color: #fff;
+}
+
+.finish_answer{
+	border: 2px solid green;
+	border-radius: 20px;
+	font-size: 15px;
+	color: green;
+	width: 80px;
+	height: 25px;
+	background-color: #fff;
+}
+
+.waitiong_answer{
+	border: 2px solid red;
+	border-radius: 20px;
+	font-size: 15px;
+	color: red;
+	width: 80px;
+	height: 25px;
+	background-color: #fff;
+}
+
+.qna-table-list{
 	cursor: pointer;
 }

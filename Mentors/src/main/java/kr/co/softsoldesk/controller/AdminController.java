@@ -25,6 +25,12 @@ public class AdminController {
    public String admin_qna() {
       return "admin/admin_qna";
    }
+   
+   @GetMapping("/admin_qna_detail")
+   public String admin_qna_detail(){
+	   return "admin/admin_qna_detail";
+   }
+   
    @GetMapping("/admin_noti")
    public String admin_noti() {
       return "admin/admin_noti";

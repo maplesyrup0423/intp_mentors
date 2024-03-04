@@ -7,9 +7,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="${root }resources/style/admin_style.css" />
 </head>
 <body>
-<table width="1280">
+<table id="admin_table" width="1280">
 		<tr height="80">
 			<td colspan="2" align="center"><c:import
 					url="/WEB-INF/views/admin/admin_include/admin_header.jsp" /></td>
