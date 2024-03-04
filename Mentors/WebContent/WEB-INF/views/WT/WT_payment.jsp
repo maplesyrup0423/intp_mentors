@@ -280,7 +280,6 @@ $(function() {
 					 
 					 function pay_success(){
 						 var teacher_id = ${loginTeacherBean.teacher_id}.val();
-						 alert('결제에 성공했습니다!');
 						 location.href="${root }WT/WT_payment_success";
 						 
 					 }
