@@ -271,8 +271,26 @@ $(function() {
 						 	merchant_uid: "order-2024-02-04",
 						 	m_redirect_url: "http://localhost:9098/Mentors/WT/WT_payment_success"
 
-					 	}); 
+					 	},function(response){
+					 		pay_success();
+					 	}
+						
+						); 
 					 };
+					 
+					 function pay_success(){
+						 var teacher_id = ${loginTeacherBean.teacher_id}.val();
+						 
+						 $.ajax({
+					            url: "${root}main",
+					            type: "POST",
+					            data: {
+					            	teacher_id: teacher_id,
+					            }
+					        });
+
+						 
+					 }
 					 
 										 
 					 //-----------------------------------------------------

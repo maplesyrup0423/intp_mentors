@@ -18,9 +18,9 @@ increment by 1;
 ?--'WT' || TO_CHAR(WT_seqid.nextval)
  -------------------------------------------------------------------------
 --WWT_Key 키값 시퀀스
-drop SEQUENCE WWT_seqid;
+drop SEQUENCE WTT_seqid;
 
-create SEQUENCE WWT_seqid
+create SEQUENCE WTT_seqid
 start with 1
 increment by 1;
 
@@ -63,3 +63,5 @@ start with 1
 increment by 1;
 
 ?--'BOOK' || TO_CHAR(BK_key_seqid.nextval)
+
+commit;
