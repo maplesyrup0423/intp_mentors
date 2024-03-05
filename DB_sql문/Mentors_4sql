@@ -18,11 +18,10 @@ insert into wt_test_q values('WT1','wt1_test',1,2,4,3,2,4,1,2,3,1);
 insert into wt_test_q values('WT2','wt2_test',1,2,4,3,2,1,1,2,3,1);
 insert into wt_test_q values('WT4','wt4_test',1,2,4,3,2,2,1,2,3,1);
 --WTT
-insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT29','id1',sysdate);
+insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT21','id1',sysdate);
 insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT3','id1',sysdate);
 insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT2','id1',sysdate);
 insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT1','id2',sysdate,sysdate+30);
-UPDATE WTT set wtt_completion=2 where WT_Key='WT26';
 --wtt_test_a
 insert into wtt_test_a (WTT_Key)values('WTT41');
 insert into wtt_test_a (WTT_Key)values('WTT42');
@@ -47,6 +46,4 @@ insert into qna_q values('qk' || TO_CHAR(qk_seqid.nextval),'WTT63','수료기준 문�
 --A
 insert into qna_a values('ak' || TO_CHAR(ak_seqid.nextval),'qk1','강의80퍼 시험 60점이여',sysdate);
 update qna_q set q_a_check=1 where q_key='qk1';
-
-
 COMMIT;

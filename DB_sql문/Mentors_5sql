@@ -52,14 +52,4 @@ insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_C
 insert into wtt_test_a (WTT_Key)values('WTT41');
 
 
---연수리스트 필터
-select WT_Key from workplace_T where WT_Tag_School=1 and WT_Tag_Time=2 and WT_Tag_TypeCategory=2;
-
---WT_my_room 정보 (전체)
-select wtt.wtt_Key,wtt.WTT_Completion, wtt.wtt_payment_date, wt.wt_Title, wt.wt_TrainingTime, wt.wt_Tag_School, wt.wt_Tag_TypeCategory
-from workplace_t wt inner join wtt on wtt.WT_key=wt.WT_key;
---WT_my_room 정보 (필터)
-select wtt.wtt_Key,wtt.WTT_Completion, wtt.wtt_payment_date, wt.wt_Title, wt.wt_TrainingTime, wt.wt_Tag_School, wt.wt_Tag_TypeCategory
-from workplace_t wt inner join wtt on wtt.WT_key=wt.WT_key and wtt.WTT_Completion=0;
-
 COMMIT;
