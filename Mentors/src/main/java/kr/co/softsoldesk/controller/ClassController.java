@@ -18,6 +18,9 @@ public class ClassController {
 
 	@GetMapping("/class_home_center_home")
 	public String class_home_center_home(@RequestParam("wtt_Key")String wtt_Key) {
+		
+		//TODO % 정보 2개 Math.round()로 컨트롤러 단계에서 소수점 절삭할것
+		
 		return "class/class_home_center_home";
 	}
 

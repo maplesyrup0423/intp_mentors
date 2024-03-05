@@ -127,6 +127,26 @@ span{
 	cursor: pointer;
 }
 
+.modify-btn{
+	border: 2px solid green;
+	border-radius: 20px;
+	font-size: 15px;
+	color: green;
+	width: 50px;
+	height: 25px;
+	background-color: #fff;
+}
+
+.delete-btn{
+	border: 2px solid red;
+	border-radius: 20px;
+	font-size: 15px;
+	color: red;
+	width: 50px;
+	height: 25px;
+	background-color: #fff;
+}
+
 
 .answer_btn-box{
 	width: 200px;

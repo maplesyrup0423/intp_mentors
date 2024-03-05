@@ -72,8 +72,8 @@
 											</td>
 											<td>이것만 알자! 평가문항 출제 길잡이1</td>
 											<td>
-												<button class="wt-modify-btn">수정</button>
-												<button class="wt-delete-btn">삭제</button>
+												<button class="modify-btn">수정</button>
+												<button class="delete-btn">삭제</button>
 											</td>
 										</tr>
 										<tr>

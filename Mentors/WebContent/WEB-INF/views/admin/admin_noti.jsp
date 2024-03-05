@@ -43,6 +43,13 @@
 				<h2 class="font-weight-bold text-primary">공지사항</h2>
 			</div>
 			<div class="div_card-body">
+			<div class="qna_select">
+					<select>
+						<option value="all">전체</option>
+						<option value="1">이것만 알자! 평가문항 출제 길잡이1</option>
+						<option value="2">이것만 알자! 평가문항 출제 길잡이2</option>
+					</select>
+				</div>
 				<div class="searchbar">
 					<input type="text" class="searchbar_text" placeholder="검색어를 입력하세요">
 					<img class="search_btn" src="${root }resources/image/icon/admin_search_btn.png"></img>
@@ -54,6 +61,7 @@
 								<th>번호</th>
 								<th>제목</th>
 								<th>등록일</th>
+								<th>관리</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -61,31 +69,40 @@
 								<td>1</td>
 								<td>휴가는 언제 사용할 수 있을까요?</td>
 								<td>2024-02-18</td>
+								<td>
+									<button class="modify-btn">수정</button>
+									<button class="delete-btn">삭제</button>
+								</td>
 							</tr>
 							<tr>
 								<td>2</td>
 								<td>제목</td>
 								<td>등록일</td>
+								<td>상태</td>
 							</tr>
 							<tr>
                                 <td>3</td>
                                 <td>제목</td>
                                 <td>등록일</td>
+                                <td>상태</td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>제목</td>
                                 <td>등록일</td>
+                                <td>상태</td>
                             </tr>
                             <tr>
                                 <td>5</td>
                                 <td>제목</td>
                                 <td>등록일</td>
+                                <td>상태</td>
                             </tr>
                             <tr>
                                 <td>6</td>
                                 <td>제목</td>
                                 <td>등록일</td>
+                                <td>상태</td>
                             </tr>
 						</tbody>
 					</table>
