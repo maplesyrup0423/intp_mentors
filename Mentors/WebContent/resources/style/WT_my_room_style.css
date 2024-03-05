@@ -1,16 +1,15 @@
-.all div {
-	display: inline-block;
-}
 
-.all {
-	width: 100%;
+
+.all_my_room {
+	width: 1280px;
 	text-align: center;
+	margin: auto;
 }
 
 .all2 {
 	display: block;
 	/* border: 2px solid rgb(195, 190, 190);*/
-	width: 80%;
+	width: 90%;
 	margin: auto;
 	padding: 5px;
 }
@@ -21,7 +20,11 @@
 
 .Tbox_all {
 	width: 1200px;
-	text-align: left;
+	text-align: center;
+}
+
+.Tbox_all a {
+	display: inline-block;
 }
 
 .Tbox {
@@ -40,13 +43,24 @@
 /*
 		Tbox_1 ,Tbox_2 오른쪽으로 바꾸기 
 		*/
+.Tbox_0 {
+	margin-left: 30px;
+	background-color: rgb(255, 205, 25, 50%);
+}
+
 .Tbox_1 {
 	margin-left: 30px;
-	background-color: rgb(0,69,126,50%) ;
+	background-color: rgb(160, 155, 255, 50%);
 }
 
 .Tbox_2 {
-	background-color:  rgb( 255,205,25,50%);
+	margin-left: 30px;
+	background-color: rgb(0, 69, 126, 50%);
+}
+
+.Tbox_3 {
+	margin-left: 30px;
+	background-color: rgb(255, 83, 69, 50%);
 }
 
 .select_div {
@@ -70,9 +84,9 @@
 }
 
 .WT {
-	width: 90%;
-	margin-bottom:5px;
-	margin-top:5px;
+	width: 100%;
+	margin-bottom: 5px;
+	margin-top: 5px;
 	display: block;
 	height: 120px;
 	border: 1px solid #00457E;
@@ -82,7 +96,7 @@
 
 .WT:hover {
 	border-color: #00457E;
-	box-shadow: 3px 3px 15px rgb(0,69,126, 0.2);
+	box-shadow: 3px 3px 15px rgb(0, 69, 126, 0.2);
 }
 
 .classbtn_div {
@@ -93,28 +107,31 @@
 	width: 80%;
 }
 
-.WT_left td{
+.WT_left td {
 	padding: 5px;
 }
-.colorbox_pos{
-padding-right: 230px !important;
-}
 
+/* .colorbox_pos {
+	padding-right: 230px !important;
+}
+ */
 .WT .WT_schol_type {
-	border: 1px solid  rgb(0,69,126) ;
-	background-color:  rgb(0,69,126,50%) ;
+	border: 1px solid rgb(0, 69, 126);
+	background-color: rgb(0, 69, 126, 50%);
 	border-radius: 5px;
 	text-align: center;
 	width: 100px;
+	display: inline-block;
 }
 
 .WT .WT_category {
-	border: 1px solid rgb( 255,205,25);
+	border: 1px solid rgb(255, 205, 25);
 	margin-left: 5px;
-	background-color: rgb( 255,205,25,50%);
+	background-color: rgb(255, 205, 25, 50%);
 	border-radius: 5px;
 	text-align: center;
 	width: 100px;
+	display: inline-block;
 }
 
 .WT .WT_name {
@@ -131,7 +148,7 @@ padding-right: 230px !important;
 }
 
 .WT .classbtn {
-	height: 100%;
+	height: 120px;
 	color: white;
 	border: 1px solid #00457E;
 	background-color: #00457E;
@@ -141,4 +158,28 @@ padding-right: 230px !important;
 
 #WT_area {
 	width: 100%;
+}
+/***********************************************************************/
+.WTT_Completion_div {
+	float: right; border : 2px solid;
+	border-radius: 20px;
+	width: 80px;
+	display: inline-block;
+	border: 2px solid #ff5345;
+}
+
+.WTT_Completion_bc0{
+	border-color: #A09BFF;
+	color:  #A09BFF ;
+	background-color: rgb(160, 155, 255, 15%);
+}
+.WTT_Completion_bc1{
+	border-color: #00457E;
+	color:  #00457E;
+	background-color: rgb(0, 69, 126, 15%);
+}
+.WTT_Completion_bc2{
+	border-color: #FF5345 ;
+	color:  #FF5345 ;
+	background-color: rgb(255, 83, 69, 15%);
 }

@@ -23,7 +23,7 @@
 		<div class="info_top">
 
 
-			<div class="info_thumbnail"><img class="WT_list_img"
+			<div class="info_thumbnail"><img class="WT_list_img_info"
 								src="${root }resources/image/WT_img/WT_Thumb/${wtInfoBean.WT_Thumbnail}.jpg" /></div>
 
 
@@ -87,7 +87,7 @@
 		</div>
 
 		<div class="info_box">
-			<div id="info_info"><img class="WT_list_img"
+			<div id="info_info"><img class="WT_list_img_info_info"
 								src="${root }resources/image/WT_img/WT_info/${wtInfoBean.WT_Info}.jpg" /></div>
 			<div id="info_training">${wtInfoBean.WT_Text}</div>
 		</div>

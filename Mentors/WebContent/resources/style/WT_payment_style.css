@@ -57,6 +57,7 @@ table tr{
 .pay_info_table {
     border-spacing: 0 20px;
     width: 820px;
+    margin-bottom: 30px;
 }
 
 .pay_info_table tr td{

@@ -255,9 +255,10 @@ $(function() {
 							class="pay_confirm" onclick="isChecked()">결제하기</button></td>
 					<!--카카오 페이로 넘어감-->
 
+					<!-- imp70847877 : 되는거 -->
 					<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
 					<script>
- 					IMP.init("imp70847877");
+ 					IMP.init("imp14003125");
 					 
 					const button = document.querySelector("button");
 					 

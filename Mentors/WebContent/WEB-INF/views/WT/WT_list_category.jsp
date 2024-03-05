@@ -77,9 +77,7 @@
 					<td>
 						<button class="tag_confirm" onclick="page_move()">확인</button>
 					</td>
-					
 				</tr>
-				
 			</table>
 
 			
@@ -121,6 +119,7 @@
 		</div>
 
 		<hr>
+
 	<div class="WT_List_Box">
 		<c:forEach var='obj' items="${wtList }">
 			<div class="WT_table_box">

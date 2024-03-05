@@ -2,6 +2,7 @@
 	pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var='root' value="${pageContext.request.contextPath }/" />
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +14,7 @@
 </head>
 
 <body>
-	<div class="all">
+	<div class="all_my_room">
 
 		<!-- header -->
 		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
@@ -26,75 +27,84 @@
 				<hr>
 			</div>
 			<div class="Tbox_all">
-				<div class="Tbox Tbox_1">
-					학습중 <span class="span_num">1</span>건
-				</div>
-				<div class="Tbox Tbox_2">
-					학습완료 <span class="span_num">2</span>건
-				</div>
+				<a href="${root }WT/WT_my_room_btn?Completion=3">
+					<div class="Tbox Tbox_0">
+						전체 <span class="span_num">${totel_ALL }</span>건
+					</div>
+				</a> <a href="${root }WT/WT_my_room_btn?Completion=0">
+					<div class="Tbox Tbox_1">
+						학습중 <span class="span_num">${totel_0 }</span>건
+					</div>
+				</a> <a href="${root }WT/WT_my_room_btn?Completion=1">
+					<div class="Tbox Tbox_2">
+						학습완료 <span class="span_num">${totel_1 }</span>건
+					</div>
+				</a> <a href="${root }WT/WT_my_room_btn?Completion=2">
+					<div class="Tbox Tbox_3">
+						기간만료 <span class="span_num">${totel_2 }</span>건
+					</div>
+				</a>
 			</div>
 			<br> <br>
 			<div class="select_div">
 				<div class="div_sum">
 					총
-					<samp class="span_num" id="WT_sum">1</samp>
+					<samp class="span_num" id="WT_sum">${totel_select }</samp>
 					건
 				</div>
-				<div class="WT_select">
+				<%-- <div class="WT_select">
 					<!--todo : selec 정보에 따라 보여주는 항목 달라짐
                             위에 span_num 숫자도 달라짐!!-->
-					<select name="" id="" onChange="javascript:change(this.value);">
-						<option value="0" selected>학습중</option>
-						<option value="1">학습완료</option>
+						<form:form action="${root }WT//WT_my_room" method="GET"
+						modelAttribute="CompletionVal">
+						<form:select path="Completion">
+							<form:option value="0">전체</form:option>
+							<form:option value="1">학습중</form:option>
+							<form:option value="2">학습완료</form:option>
+							<form:option value="3">기간만료</form:option>
+						</form:select>
+					</form:form>
+					<select>
+						<option value="0">전체</option>
+						<option value="1">학습중</option>
+						<option value="2">학습완료</option>
+						<option value="3">기간만료</option>
 					</select>
-				</div>
+				</div> --%>
 			</div>
 			<br> <br>
 
 			<div id="WT_area">
-				<div class="WT">
-					<div class="WT_left">
-						<table width="760px">
-							<tr>
-								<td class="colorbox_pos"><div class="WT_schol_type">추천학급</div>
-									<div class="WT_category">분야</div></td>
-							</tr>
-							<tr>
-								<td><span class="WT_name">[제 1회] 연수 이름이 들어갈자리입니다.
-										[온라인/기초]</span></td>
-							</tr>
-							<tr>
-								<td><span class="time_span">교육 시간<span
-										class="span_num WT_time"> 60</span> 분</td>
-							</tr>
-						</table>
 
 
+				<c:forEach var='obj' items="${wttList }">
+					<div class="WT">
+						<div class="WT_left">
+							<table width="1150px">
+								<tr>
+									<td class="colorbox_pos"><div class="WT_schol_type">${obj.str_WT_Tag_School }</div>
+										<div class="WT_category">${obj.str_WT_Tag_TypeCategory }</div>
+										<div class="WTT_Completion_div ${obj.wtt_Completion_div_color_class }">${obj.str_wtt_Completion }
+										</div></td>
+									<td rowspan="3" width="100px"><div class="classbtn_div">
+											<button class="classbtn"
+												onclick="location.href='${root}class/class_home_center_home?wtt_Key=${obj.wtt_Key }'">강의실
+												입장</button>
+										</div></td>
+								</tr>
+								<tr>
+									<td><span class="WT_name">${obj.wt_Title }</span></td>
+								</tr>
+								<tr>
+									<td><span class="time_span">교육 시간</span> <span
+										class="span_num WT_time">${obj.wt_TrainingTime }</span> 분</td>
+								</tr>
+							</table>
 
-						</span>
+						</div>
+
 					</div>
-					<div class="classbtn_div">
-						<button class="classbtn"
-							onclick="location.href='${root}class/class_home_center_home'">강의실
-							입장</button>
-					</div>
-
-				</div>
-				<br>
-				<!--<div class="WT">
-					<div class="WT_left">
-						<div class="WT_schol_type"> 중학교</div>
-						<div class="WT_category">학습지도 </div>
-						<br>
-						<br>
-						<span class="WT_name">이것만 알자! 평가문항 출제 길잡이</span>
-						<br>
-						<br>
-						<span class="time_span">교육 시간<span class="span_num WT_time"> 1800</span> 분</span>
-					</div>
-					<div class="classbtn_div"><button class="classbtn">강의실 입장</button></div>
-                    <br>
-				</div>-->
+				</c:forEach>
 
 			</div>
 
@@ -108,7 +118,7 @@
 
 	</div>
 </body>
-<script>
+<!-- <script>
 	const WT_area = document.getElementById("WT_area");
 	const WT_sum = document.getElementById("WT_sum");
 	function change(cd) {
@@ -126,5 +136,26 @@
 		WT_sum.innerText = cnt;
 		WT_area.innerHTML = str;
 	}
-</script>
+</script> -->
+<!-- <script>
+	function selectBoxChange(th) {
+
+			$.ajax({
+				url : "my_room",
+				type : "POST",
+				data : {
+					"btnValue" : th
+				},
+				success : function(data, textStatus, xhr) {
+					alert("변경 성공!");
+					document.location.reload(true);
+					console.log(data);
+				},
+				error : function(xhr, status, error) {
+					console.log(error);
+					alert("실패")
+				}
+			});
+	}
+</script> -->
 </html>

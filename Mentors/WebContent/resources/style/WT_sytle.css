@@ -16,7 +16,8 @@ button:hover{
 
 .container{
     padding: 10px;
-
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .container_table{
@@ -31,7 +32,7 @@ button:hover{
     margin-left:10px;
     margin-right: 10px;
     border: 1px solid #00457e;
-    border-radius: 5px;
+    border-radius: 5%;
     margin: auto;
     background: linear-gradient(#00457e 25%, #fff 25%);
     text-align: left;
@@ -46,32 +47,44 @@ button:hover{
     color: aliceblue;
 }
 
+.tag_confirm{
+	width: 60px;
+	height: 60px;
+	border: none;
+	border-radius: 50%;
+	color: aliceblue;
+	background-color: #00457e;
+	
+}
+
+
 .WT_table{
     border-spacing: 30px 20px;
     margin: auto;
 }
 
 .WT_table_box{
-    border: 1px solid #00457e;
+    border: none;
     border-radius: 5%;
-    width: 275px;
-    height: 250px;
+    width: 290px;
+    height: 260px;
     display: inline-block;
     overflow:hidden;
-    margin: 10px;
+    margin: 12px;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important
 }
 
 .thumb{
-    width: 275px;
-    height: 150px;
-    border-bottom: 1px solid #00457e;
+    width: 290px;
+    height: 160px;
 
 }
-.WT_list_img{
-	 width: 275px;
-    height: 150px;
-  object-fit: cover;
+.WT_list_img {
+	width: 290px;
+	height: 160px;
+	object-fit: cover;
 }
+
 .WT_table_bottom{
     margin-top: 15px;
 }
@@ -105,13 +118,24 @@ button:hover{
     background-color: #00457e;
 }
 
+.WT_List_Box{
+	margin-bottom: 50px;
+}
+
 
 /*----WT_info-----------------------------------------*/
 
 .info_thumbnail{
     width: 600px;
     height: 400px;
-    border: 2px solid black;
+    border: none;
+}
+
+
+.WT_list_img_info{
+	width: 600px;
+    height: 400px;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important
 }
 
 .info_etc{
@@ -234,6 +258,8 @@ button:hover{
     background-color: #b6b6b6;
 }
 
+
+
 .info_info>a{
     color: aliceblue;
     font-weight: 600;
@@ -274,18 +300,24 @@ button:hover{
 
 #info_info{
     display: inline-block;
-    border: 2px solid blue;
+    border: none;
     width: 1000px;
-    height:800px;
     margin: 10px;
+    margin-bottom: 100px;
+}
+
+.WT_list_img_info_info{
+	width: 1000px;
+	height: auto;
 }
 
 #info_training{
     display: inline-block;
-    border: 2px solid red;
+    border: none;
     width: 1000px;
-    height:800px;
     margin: 10px;
+    margin-bottom: 100px;
+    text-align: left;
 }
 
 

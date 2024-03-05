@@ -20,11 +20,22 @@ public class AdminController {
    public String admin_wt() {
       return "admin/admin_wt";
    }
+   
+   @GetMapping("/admin_wt_insert")
+   public String admin_wt_insert() {
+	   return "admin/admin_wt_insert";
+   }
 
    @GetMapping("/admin_qna")
    public String admin_qna() {
       return "admin/admin_qna";
    }
+   
+   @GetMapping("/admin_qna_detail")
+   public String admin_qna_detail(){
+	   return "admin/admin_qna_detail";
+   }
+   
    @GetMapping("/admin_noti")
    public String admin_noti() {
       return "admin/admin_noti";
