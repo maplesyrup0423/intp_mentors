@@ -21,7 +21,7 @@
 
 .Tbox_all {
 	width: 1200px;
-	text-align: left;
+	text-align: center;
 }
 
 .Tbox {
@@ -40,16 +40,24 @@
 /*
 		Tbox_1 ,Tbox_2 오른쪽으로 바꾸기 
 		*/
+.Tbox_0 {
+	margin-left: 30px;
+	background-color: rgb(255, 205, 25, 50%);
+}
+
 .Tbox_1 {
 	margin-left: 30px;
-	background-color: rgb(0,69,126,50%) ;
+	background-color: rgb(160,155,255, 50%);
 }
 
 .Tbox_2 {
-	background-color:  rgb( 255,205,25,50%);
+	margin-left: 30px;
+	background-color: rgb(0,69,126, 50%);
 }
+
 .Tbox_3 {
-	background-color:  rgb( 255,83,69,50%);
+	margin-left: 30px;
+	background-color: rgb(255, 83, 69, 50%);
 }
 
 .select_div {
@@ -74,8 +82,8 @@
 
 .WT {
 	width: 90%;
-	margin-bottom:5px;
-	margin-top:5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
 	display: block;
 	height: 120px;
 	border: 1px solid #00457E;
@@ -85,7 +93,7 @@
 
 .WT:hover {
 	border-color: #00457E;
-	box-shadow: 3px 3px 15px rgb(0,69,126, 0.2);
+	box-shadow: 3px 3px 15px rgb(0, 69, 126, 0.2);
 }
 
 .classbtn_div {
@@ -96,25 +104,26 @@
 	width: 80%;
 }
 
-.WT_left td{
+.WT_left td {
 	padding: 5px;
 }
-.colorbox_pos{
-padding-right: 230px !important;
+
+.colorbox_pos {
+	padding-right: 230px !important;
 }
 
 .WT .WT_schol_type {
-	border: 1px solid  rgb(0,69,126) ;
-	background-color:  rgb(0,69,126,50%) ;
+	border: 1px solid rgb(0, 69, 126);
+	background-color: rgb(0, 69, 126, 50%);
 	border-radius: 5px;
 	text-align: center;
 	width: 100px;
 }
 
 .WT .WT_category {
-	border: 1px solid rgb( 255,205,25);
+	border: 1px solid rgb(255, 205, 25);
 	margin-left: 5px;
-	background-color: rgb( 255,205,25,50%);
+	background-color: rgb(255, 205, 25, 50%);
 	border-radius: 5px;
 	text-align: center;
 	width: 100px;

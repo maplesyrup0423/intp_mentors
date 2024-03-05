@@ -55,32 +55,68 @@ public class WTController {
 	@GetMapping("/WT_my_room") // 나의 강의실
 	public String WT_my_room(Model model) {
 
-	
-		// 막약 라디오버튼이 0일경우
-		List<WTT_Bean> wttList = wtt_Service.addMyRoomAll();
-		model.addAttribute("wttList", wttList);
-		System.out.println("리스트 사이즈" + wttList.size());
-		int totel_ALL = wttList.size();
+		// 첫화면은 전체
+			List<WTT_Bean> wttList = wtt_Service.addMyRoomAll();
+			model.addAttribute("wttList", wttList);
+			System.out.println("리스트 사이즈" + wttList.size());
+			int totel_select = wttList.size();
+			model.addAttribute("totel_select",totel_select);
+			model.addAttribute("totel_ALL", totel_select);
+			
+			//카테고리별 강의 수
+			//학습중
+			List<WTT_Bean> wttList0=wtt_Service.addMyRoomSelect(0);
+			int totel_0 = wttList0.size();
+			model.addAttribute("totel_0", totel_0);
+			//수료완료
+			List<WTT_Bean> wttList1=wtt_Service.addMyRoomSelect(1);
+			int totel_1 = wttList1.size();
+			model.addAttribute("totel_1", totel_1);
+			//기간만료
+			List<WTT_Bean> wttList2=wtt_Service.addMyRoomSelect(2);
+			int totel_2 = wttList2.size();
+			model.addAttribute("totel_2", totel_2);
+
+		return "WT/WT_my_room";
+	}
+
+	@GetMapping("/WT_my_room_btn") // 나의 강의실
+	public String WT_my_room_btn(Model model, @RequestParam("Completion") int Completion) {
+
+		System.out.println("Completion : " + Completion);
+		//총 강의 수 구하기
+		List<WTT_Bean> wttList3 = wtt_Service.addMyRoomAll();
+		int totel_ALL = wttList3.size();
 		model.addAttribute("totel_ALL", totel_ALL);
-
-		// TODO 나머지 경우 처리해야함
-
+		//카테고리별 강의 수
+		//학습중
+		List<WTT_Bean> wttList0=wtt_Service.addMyRoomSelect(0);
+		int totel_0 = wttList0.size();
+		model.addAttribute("totel_0", totel_0);
+		//수료완료
+		List<WTT_Bean> wttList1=wtt_Service.addMyRoomSelect(1);
+		int totel_1 = wttList1.size();
+		model.addAttribute("totel_1", totel_1);
+		//기간만료
+		List<WTT_Bean> wttList2=wtt_Service.addMyRoomSelect(2);
+		int totel_2 = wttList2.size();
+		model.addAttribute("totel_2", totel_2);
+		
+		
+		
+		if (Completion == 3) {
+			List<WTT_Bean> wttList = wtt_Service.addMyRoomAll();
+			model.addAttribute("wttList", wttList);
+			int totel_select = wttList.size();
+			model.addAttribute("totel_select",totel_select);
+		}else{
+			List<WTT_Bean> wttList=wtt_Service.addMyRoomSelect(Completion);
+			model.addAttribute("wttList", wttList);
+			int totel_select = wttList.size();
+			model.addAttribute("totel_select",totel_select);
+		}
 		return "WT/WT_my_room";
 	}
-/*
-	@RequestMapping(value = "/my_room", method = { RequestMethod.POST })
-	public String test(@RequestParam(value = "btnValue", required = false) String btnValue) {
-
-		System.out.println("btnValue ㅎㅎ : " + btnValue);
-		return "WT/WT_my_room";
-	}
-	  @RequestMapping(value="/my_room", method=RequestMethod.POST)
-	    @ResponseBody
-	    public String stringify(@RequestParam("btnValue")String btnValue) {
-		  System.out.println("btnValue ㅎㅎ : " + btnValue);
-			return "WT/WT_my_room";
-	    }*/
-	
 	
 	@GetMapping("/WT_list_category")
 	public String WT_list_category(@RequestParam("wt_Tag_Time") int wt_Tag_Time,

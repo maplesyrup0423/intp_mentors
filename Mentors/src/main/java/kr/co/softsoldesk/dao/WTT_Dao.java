@@ -20,7 +20,7 @@ public class WTT_Dao {
 		return wtt_Mapper.addMyRoomAll(teacher_id);
 	}
 	
-/*	public List<WTT_Bean> addMyRoomSelect(int WTT_Completion, String teacher_id){
+	public List<WTT_Bean> addMyRoomSelect(int WTT_Completion, String teacher_id){
 		return wtt_Mapper.addMyRoomSelect(WTT_Completion, teacher_id);
-	}*/
+	}
 }

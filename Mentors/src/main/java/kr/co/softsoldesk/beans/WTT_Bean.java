@@ -13,7 +13,7 @@ public class WTT_Bean {
 	private String wtt_payment_date; // 결제일
 	private int wtt_viewing_time; // 수강시간
 	private int wtt_test_result; // 시험점수
-	private int WTT_Completion; // 0: 미수료 1 : 수료 2: 기간만료(미수료)
+	private int wtt_Completion; // 0: 미수료 1 : 수료 2: 기간만료(미수료)
 
 	// -----------------------------------------------------
 	private String wt_Title; // 강의이름
