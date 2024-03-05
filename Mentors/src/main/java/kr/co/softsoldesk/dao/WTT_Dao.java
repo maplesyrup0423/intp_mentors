@@ -23,4 +23,7 @@ public class WTT_Dao {
 	public List<WTT_Bean> addMyRoomSelect(int WTT_Completion, String teacher_id){
 		return wtt_Mapper.addMyRoomSelect(WTT_Completion, teacher_id);
 	}
+	public WTT_Bean getWTT_Bean(String wtt_Key) {
+		return wtt_Mapper.getWTT_Bean(wtt_Key);
+	}
 }
