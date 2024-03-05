@@ -17,7 +17,7 @@ public class ClassController {
 	private WTT_Service wtt_Service;*/
 
 	@GetMapping("/class_home_center_home")
-	public String class_home_center_home() {
+	public String class_home_center_home(@RequestParam("wtt_Key")String wtt_Key) {
 		return "class/class_home_center_home";
 	}
 
