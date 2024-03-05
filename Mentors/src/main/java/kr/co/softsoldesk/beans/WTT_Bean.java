@@ -13,7 +13,7 @@ public class WTT_Bean {
 	private String wtt_payment_date; // 결제일
 	private int wtt_viewing_time; // 수강시간
 	private int wtt_test_result; // 시험점수
-	private int wtt_Completion; // 0: 미수료 1 : 수료 2: 기간만료(미수료)
+	private int wtt_Completion; // 0: 학습중 1 : 학습완료 2: 기간만료(미수료)
 
 	// -----------------------------------------------------
 	private String wt_Title; // 강의이름
@@ -22,6 +22,7 @@ public class WTT_Bean {
 	private int wt_Tag_TypeCategory;// 분야 코드
 
 	// -----------------------------------------------------
+	private String str_wtt_Completion; //강의 수료여부 문자열
 	private String str_WT_Tag_School; // 학급 문자열
 	private String str_WT_Tag_TypeCategory; // 분야 문자
 	private String end_date; // 연수 마감일 wtt_payment_date +30일
@@ -29,6 +30,5 @@ public class WTT_Bean {
 	private Double progress; // 강의 진행도 (영상+시험)
 
 	// -----------------------------------------------------
-
-
+	private String wtt_Completion_div_color_class; //my room 학습별 컬러 클래스값
 }

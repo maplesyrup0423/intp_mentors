@@ -42,6 +42,17 @@ public class WTT_Service {
 			}else if(wtt.getWt_Tag_TypeCategory()==3) {
 				wtt.setStr_WT_Tag_TypeCategory("생활지도");
 			}
+			
+			if(wtt.getWtt_Completion()==0) {
+				wtt.setStr_wtt_Completion("학습중");
+				wtt.setWtt_Completion_div_color_class("WTT_Completion_bc0");
+			}else if(wtt.getWtt_Completion()==1) {
+				wtt.setStr_wtt_Completion("학습완료");
+				wtt.setWtt_Completion_div_color_class("WTT_Completion_bc1");
+			}else if(wtt.getWtt_Completion()==2) {
+				wtt.setStr_wtt_Completion("기간만료");
+				wtt.setWtt_Completion_div_color_class("WTT_Completion_bc2");
+			}
 		}
 		return wttList;
 	}
@@ -66,6 +77,18 @@ public class WTT_Service {
 			}else if(wtt.getWt_Tag_TypeCategory()==3) {
 				wtt.setStr_WT_Tag_TypeCategory("생활지도");
 			}
+			
+			if(wtt.getWtt_Completion()==0) {
+				wtt.setStr_wtt_Completion("학습중");
+				wtt.setWtt_Completion_div_color_class("WTT_Completion_bc0");
+			}else if(wtt.getWtt_Completion()==1) {
+				wtt.setStr_wtt_Completion("학습완료");
+				wtt.setWtt_Completion_div_color_class("WTT_Completion_bc1");
+			}else if(wtt.getWtt_Completion()==2) {
+				wtt.setStr_wtt_Completion("기간만료");
+				wtt.setWtt_Completion_div_color_class("WTT_Completion_bc2");
+			}
+			
 		}
 		return wttList;
 	}

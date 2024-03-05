@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<div class="all">
+	<div class="all_my_room">
 
 		<!-- header -->
 		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
@@ -31,21 +31,18 @@
 					<div class="Tbox Tbox_0">
 						전체 <span class="span_num">${totel_ALL }</span>건
 					</div>
-				</a>
-				<a href="${root }WT/WT_my_room_btn?Completion=0">
-				<div class="Tbox Tbox_1">
-					학습중 <span class="span_num">${totel_0 }</span>건
-				</div>
-				</a>
-				<a href="${root }WT/WT_my_room_btn?Completion=1">
-				<div class="Tbox Tbox_2">
-					학습완료 <span class="span_num">${totel_1 }</span>건
-				</div>
-				</a>
-				<a href="${root }WT/WT_my_room_btn?Completion=2">
-				<div class="Tbox Tbox_3">
-					기간만료 <span class="span_num">${totel_2 }</span>건
-				</div>
+				</a> <a href="${root }WT/WT_my_room_btn?Completion=0">
+					<div class="Tbox Tbox_1">
+						학습중 <span class="span_num">${totel_0 }</span>건
+					</div>
+				</a> <a href="${root }WT/WT_my_room_btn?Completion=1">
+					<div class="Tbox Tbox_2">
+						학습완료 <span class="span_num">${totel_1 }</span>건
+					</div>
+				</a> <a href="${root }WT/WT_my_room_btn?Completion=2">
+					<div class="Tbox Tbox_3">
+						기간만료 <span class="span_num">${totel_2 }</span>건
+					</div>
 				</a>
 			</div>
 			<br> <br>
@@ -83,10 +80,17 @@
 				<c:forEach var='obj' items="${wttList }">
 					<div class="WT">
 						<div class="WT_left">
-							<table width="760px">
+							<table width="1150px">
 								<tr>
 									<td class="colorbox_pos"><div class="WT_schol_type">${obj.str_WT_Tag_School }</div>
-										<div class="WT_category">${obj.str_WT_Tag_TypeCategory }</div></td>
+										<div class="WT_category">${obj.str_WT_Tag_TypeCategory }</div>
+										<div class="WTT_Completion_div ${obj.wtt_Completion_div_color_class }">${obj.str_wtt_Completion }
+										</div></td>
+									<td rowspan="3" width="100px"><div class="classbtn_div">
+											<button class="classbtn"
+												onclick="location.href='${root}class/class_home_center_home'">강의실
+												입장</button>
+										</div></td>
 								</tr>
 								<tr>
 									<td><span class="WT_name">${obj.wt_Title }</span></td>
@@ -98,11 +102,8 @@
 							</table>
 
 						</div>
-						<div class="classbtn_div">
-							<button class="classbtn"
-								onclick="location.href='${root}class/class_home_center_home'">강의실
-								입장</button>
-						</div>
+
+
 
 					</div>
 				</c:forEach>
