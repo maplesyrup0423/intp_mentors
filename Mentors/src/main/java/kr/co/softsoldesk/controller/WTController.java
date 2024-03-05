@@ -140,7 +140,7 @@ public class WTController {
 			model.addAttribute("wtList", wtList);
 
 			return "WT/WT_list_category";
-		}else if(wt_Tag_School != 0 && wt_Tag_Time ==0 && wt_Tag_TypeCategory !=0) {
+		}else if(wt_Tag_School == 0 && wt_Tag_Time ==0 && wt_Tag_TypeCategory !=0) {
 			List<WTBean> wtList = wtService.getCategory(wt_Tag_TypeCategory);
 			model.addAttribute("wtList", wtList);
 

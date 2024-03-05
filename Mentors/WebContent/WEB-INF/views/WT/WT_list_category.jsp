@@ -74,10 +74,13 @@
 							</div>
 						</div>
 					</td>
+					<td>
+						<button class="tag_confirm" onclick="page_move()">확인</button>
+					</td>
 				</tr>
 			</table>
 
-			<button class="tag_confirm" onclick="page_move()">확인</button>
+			
 
 			<script>
 			
@@ -117,6 +120,7 @@
 
 		<hr>
 
+	<div class="WT_List_Box">
 		<c:forEach var='obj' items="${wtList }">
 			<div class="WT_table_box">
 				<div class="WT_table_top">
@@ -141,6 +145,7 @@
 			</div>
 
 		</c:forEach>
+	</div>
 
 		<!-- footer -->
 		<c:import url="/WEB-INF/views/include/Mentors_main_footer.jsp" />
