@@ -88,7 +88,7 @@
 										</div></td>
 									<td rowspan="3" width="100px"><div class="classbtn_div">
 											<button class="classbtn"
-												onclick="location.href='${root}class/class_home_center_home'">강의실
+												onclick="location.href='${root}class/class_home_center_home?wtt_Key=${obj.wtt_Key }'">강의실
 												입장</button>
 										</div></td>
 								</tr>
@@ -102,8 +102,6 @@
 							</table>
 
 						</div>
-
-
 
 					</div>
 				</c:forEach>
