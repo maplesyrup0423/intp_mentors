@@ -22,32 +22,34 @@ public class WTDao {
 		return wtMapper.getWTInfo(WT_Key);
 	}
 	
-	public List<WTBean> getSchool(int WT_Tag_School){
-		return wtMapper.getSchool(WT_Tag_School);
+	//=----------------------------------------------------------
+	
+	public List<WTBean> getSchool(int wt_Tag_School){
+		return wtMapper.getSchool(wt_Tag_School);
 	}
 	
-	public List<WTBean> getTime(int WT_Tag_Time){
-		return wtMapper.getTime(WT_Tag_Time);
+	public List<WTBean> getTime(int wt_Tag_Time){
+		return wtMapper.getTime(wt_Tag_Time);
 	}
 	
-	public List<WTBean> getCategory(int WT_Tag_TypeCategory){
-		return wtMapper.getCategory(WT_Tag_TypeCategory);
+	public List<WTBean> getCategory(int wt_Tag_TypeCategory){
+		return wtMapper.getCategory(wt_Tag_TypeCategory);
 	}
 	
-	public List<WTBean> getSchoolNTime(int WT_Tag_School, int WT_Tag_Time){
-		return wtMapper.getSchoolNTime(WT_Tag_School, WT_Tag_Time);
+	public List<WTBean> getSchoolNTime(int wt_Tag_School, int wt_Tag_Time){
+		return wtMapper.getSchoolNTime(wt_Tag_School, wt_Tag_Time);
 	}
 	
-	public List<WTBean> getSchoolNCategory(int WT_Tag_School, int WT_Tag_TypeCategory){
-		return wtMapper.getSchoolNCategory(WT_Tag_School, WT_Tag_TypeCategory);
+	public List<WTBean> getSchoolNCategory(int wt_Tag_School, int wt_Tag_TypeCategory){
+		return wtMapper.getSchoolNCategory(wt_Tag_School, wt_Tag_TypeCategory);
 	}
 	
-	public List<WTBean> getTimeNCategory(int WT_Tag_Time, int WT_Tag_TypeCategory){
-		return wtMapper.getTimeNCategory(WT_Tag_Time, WT_Tag_TypeCategory);
+	public List<WTBean> getTimeNCategory(int wt_Tag_Time, int wt_Tag_TypeCategory){
+		return wtMapper.getTimeNCategory(wt_Tag_Time, wt_Tag_TypeCategory);
 	}
 	
-	public List<WTBean> getAllTag(int WT_Tag_School, int WT_Tag_Time, int WT_Tag_TypeCategory){
-		return wtMapper.getAllTag(WT_Tag_School, WT_Tag_Time, WT_Tag_TypeCategory);
+	public List<WTBean> getAllTag(int wt_Tag_School, int wt_Tag_Time, int wt_Tag_TypeCategory){
+		return wtMapper.getAllTag(wt_Tag_School, wt_Tag_Time, wt_Tag_TypeCategory);
 	}
 
 }

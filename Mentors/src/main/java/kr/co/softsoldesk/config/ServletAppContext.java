@@ -19,6 +19,7 @@ import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import kr.co.softsoldesk.beans.TeacherBean;
+import kr.co.softsoldesk.beans.WTBean;
 import kr.co.softsoldesk.interceptor.MainHeaderInterceptor;
 import kr.co.softsoldesk.mapper.BookMapper;
 import kr.co.softsoldesk.mapper.CartMapper;
@@ -50,6 +51,9 @@ public class ServletAppContext implements WebMvcConfigurer {
 	
 	@Resource(name = "loginTeacherBean")
 	private TeacherBean loginTeacherBean;
+	
+	@Resource(name = "tempCategoryBean")
+	private WTBean tempCategoryBean;
 
 	// Controller 메서드가 반환하는 jsp 이름 앞뒤에 경로, 확장자 설정
 	@Override

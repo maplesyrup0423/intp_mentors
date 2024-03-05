@@ -83,11 +83,54 @@ public class WTController {
 	
 	
 	@GetMapping("/WT_list_category")
-	public String WT_list_category() {
+	public String WT_list_category(@RequestParam("wt_Tag_Time") int wt_Tag_Time,
+									@RequestParam("wt_Tag_School") int wt_Tag_School,
+									@RequestParam("wt_Tag_TypeCategory") int wt_Tag_TypeCategory,
+									Model model) {
 		
-		// TODO 값 3개 일단 받아와서 if문으로 service친구 불러옴~ 값 어떻게 받아옴~
-		
-		return "WT/WT_list_category";
+		// TODO 값 3개 일단 받아와서 if문으로
+		if(wt_Tag_School == 0 && wt_Tag_Time ==0 && wt_Tag_TypeCategory ==0) {
+			List<WTBean> wtList = wtService.getWTList();
+			model.addAttribute("wtList", wtList);
+			
+			return "WT/WT_list";
+		}else if(wt_Tag_School != 0 && wt_Tag_Time ==0 && wt_Tag_TypeCategory ==0) {
+			List<WTBean> wtList = wtService.getSchool(wt_Tag_School);
+			model.addAttribute("wtList", wtList);
+
+			return "WT/WT_list_category";
+		}else if(wt_Tag_School == 0 && wt_Tag_Time !=0 && wt_Tag_TypeCategory ==0) {
+			List<WTBean> wtList = wtService.getTime(wt_Tag_Time);
+			model.addAttribute("wtList", wtList);
+
+			return "WT/WT_list_category";
+		}else if(wt_Tag_School != 0 && wt_Tag_Time ==0 && wt_Tag_TypeCategory !=0) {
+			List<WTBean> wtList = wtService.getCategory(wt_Tag_TypeCategory);
+			model.addAttribute("wtList", wtList);
+
+			return "WT/WT_list_category";
+		}else if(wt_Tag_School != 0 && wt_Tag_Time !=0 && wt_Tag_TypeCategory ==0) {
+			List<WTBean> wtList = wtService.getSchoolNTime(wt_Tag_School, wt_Tag_Time);
+			model.addAttribute("wtList", wtList);
+
+			return "WT/WT_list_category";
+		}else if(wt_Tag_School != 0 && wt_Tag_Time ==0 && wt_Tag_TypeCategory !=0) {
+			List<WTBean> wtList = wtService.getSchoolNCategory(wt_Tag_School,wt_Tag_TypeCategory);
+			model.addAttribute("wtList", wtList);
+
+			return "WT/WT_list_category";
+		}else if(wt_Tag_School == 0 && wt_Tag_Time !=0 && wt_Tag_TypeCategory !=0) {
+			List<WTBean> wtList = wtService.getTimeNCategory(wt_Tag_Time, wt_Tag_TypeCategory);
+			model.addAttribute("wtList", wtList);
+
+			return "WT/WT_list_category";
+		}else{
+			List<WTBean> wtList = wtService.getAllTag(wt_Tag_School, wt_Tag_Time, wt_Tag_TypeCategory);
+			model.addAttribute("wtList", wtList);
+
+			return "WT/WT_list_category";
+		}
+
 	}
 	
 	

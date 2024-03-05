@@ -77,30 +77,35 @@
 				</tr>
 			</table>
 
+			<button class="tag_confirm" onclick="page_move()">확인</button>
 
 			<script>
+			
+			var value1 = 0;
+			var value2 = 0;
+			var value3 = 0;
 
 				$('input[name="rad1"]').change(function() {
-					var value = $(this).val();
+					value1 = $(this).val();
 					var checked = $(this).prop('checked');
-					alert(value);
-					window.location.href="${root }WT/WT_list_category";
+					alert(value1);
 				});
 				
 				$('input[name="rad2"]').change(function() {
-					var value = $(this).val();
+					value2 = $(this).val();
 					var checked = $(this).prop('checked');
-					alert(value);
-					window.location.href="${root }WT/WT_list_category";
+					alert(value2);
 				});
 				
 				$('input[name="rad3"]').change(function() {
-					var value = $(this).val();
+					value3 = $(this).val();
 					var checked = $(this).prop('checked');
-					alert(value);
-					window.location.href="${root }WT/WT_list_category";
+					alert(value3);
 				});
 				
+			function page_move(){
+				location.href= "${root}WT/WT_list_category?wt_Tag_Time="+value1+"&wt_Tag_School="+value2+"&wt_Tag_TypeCategory="+value3;
+			}
 				
 			</script>
 

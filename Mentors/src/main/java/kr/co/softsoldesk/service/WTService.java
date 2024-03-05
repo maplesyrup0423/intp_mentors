@@ -28,19 +28,19 @@ public class WTService {
 
 	public WTBean getWTInfo(String WT_Key) {
 		WTBean infoBean =wtDao.getWTInfo(WT_Key);
-		if(infoBean.getWT_Tag_School()==1) {
+		if(infoBean.getWt_Tag_School()==1) {
 			infoBean.setStr_WT_Tag_School("초등학교");
-		}else if(infoBean.getWT_Tag_School()==2) {
+		}else if(infoBean.getWt_Tag_School()==2) {
 			infoBean.setStr_WT_Tag_School("중학교");
-		}else if(infoBean.getWT_Tag_School()==3) {
+		}else if(infoBean.getWt_Tag_School()==3) {
 			infoBean.setStr_WT_Tag_School("고등학교");
 		}
 		
-		if(infoBean.getWT_Tag_TypeCategory()==1) {
+		if(infoBean.getWt_Tag_TypeCategory()==1) {
 			infoBean.setStr_WT_Tag_TypeCategory("교과지도");
-		}else if(infoBean.getWT_Tag_TypeCategory()==2) {
+		}else if(infoBean.getWt_Tag_TypeCategory()==2) {
 			infoBean.setStr_WT_Tag_TypeCategory("학습지도");
-		}else if(infoBean.getWT_Tag_TypeCategory()==3) {
+		}else if(infoBean.getWt_Tag_TypeCategory()==3) {
 			infoBean.setStr_WT_Tag_TypeCategory("생활지도");
 		}
 		return infoBean;
