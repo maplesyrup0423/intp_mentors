@@ -5,7 +5,7 @@
 .all_view{
 	padding: 15px;
 }
-/*
+
 .list_tb{
 	border-collapse: collapse;
     width: 900px;
@@ -24,7 +24,7 @@
 	background-color: #00457E;
     color: #fff;
 }
-*/
+
 
 .div_card {
     min-width: 0;
@@ -67,4 +67,89 @@
 .text-primary {
 	text-align: center;
     color: #00457E !important;
+}
+
+.qna_select{
+	margin-bottom: 15px;
+}
+
+.searchbar{
+	position: relative;
+	width: 400px;
+}
+.searchbar_text {
+	height: 40px;
+	width: 100%;
+	background: #fafafa;
+	margin: auto;
+	font-size: 16px;
+}
+.search_btn {
+	position: absolute;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	top: 8px;
+	right: 2px;
+	margin: 0;
+}
+
+
+.wt_img_td{
+	width: 250px;
+	height: 100px;
+}
+
+.wt_img_td img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.bottom_move_btn{
+	text-align: center;
+}
+
+span{
+	margin-right: -200px;
+}
+
+.m_btn{
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.wt-modify-btn{
+	border: 2px solid green;
+	border-radius: 20px;
+	font-size: 15px;
+	color: green;
+	width: 50px;
+	height: 25px;
+	background-color: #fff;
+}
+
+.wt-delete-btn{
+	border: 2px solid red;
+	border-radius: 20px;
+	font-size: 15px;
+	color: red;
+	width: 50px;
+	height: 25px;
+	background-color: #fff;
+}
+
+.new_wt_btn{
+	width: 100px;
+	height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	border-style: none;
+	border-radius: 20px;
+	background-color: #00457E;
+	cursor: pointer;
+	float: right;
+	margin-right: 80px;
 }
