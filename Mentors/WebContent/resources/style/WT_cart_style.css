@@ -131,6 +131,7 @@
 .WT_total {
 	display: inline-block;
 	margin-top: 20px;
+	margin-bottom: 30px;
 }
 
 .WT_total>div {

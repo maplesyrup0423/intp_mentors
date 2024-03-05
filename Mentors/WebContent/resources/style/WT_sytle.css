@@ -77,11 +77,12 @@ button:hover{
     height: 160px;
 
 }
-.WT_list_img{
-	 width: 290px;
-    height: 160px;
-  object-fit: cover;
+.WT_list_img {
+	width: 290px;
+	height: 160px;
+	object-fit: cover;
 }
+
 .WT_table_bottom{
     margin-top: 15px;
 }
@@ -125,7 +126,14 @@ button:hover{
 .info_thumbnail{
     width: 600px;
     height: 400px;
-    border: 2px solid black;
+    border: none;
+}
+
+
+.WT_list_img_info{
+	width: 600px;
+    height: 400px;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important
 }
 
 .info_etc{
@@ -248,6 +256,8 @@ button:hover{
     background-color: #b6b6b6;
 }
 
+
+
 .info_info>a{
     color: aliceblue;
     font-weight: 600;
@@ -288,18 +298,24 @@ button:hover{
 
 #info_info{
     display: inline-block;
-    border: 2px solid blue;
+    border: none;
     width: 1000px;
-    height:800px;
     margin: 10px;
+    margin-bottom: 100px;
+}
+
+.WT_list_img_info_info{
+	width: 1000px;
+	height: auto;
 }
 
 #info_training{
     display: inline-block;
-    border: 2px solid red;
+    border: none;
     width: 1000px;
-    height:800px;
     margin: 10px;
+    margin-bottom: 100px;
+    text-align: left;
 }
 
 
