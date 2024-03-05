@@ -25,6 +25,30 @@
     color: #fff;
 }
 
+.wt-table-list{
+	width: 800px;
+}
+
+.wt-table-list tr td{
+	padding: 20px;
+    height: 40px;
+    font-size: 12pt;
+}
+
+.wt-table-list th{
+	padding-bottom: 5px;
+    width: 170px;
+    font-size: 14pt;
+}
+
+.wt-table-textarea{
+	box-shadow: 0px 1px 5px 0px rgb(0,69,126, 20%);
+	border: none;
+	border-radius: 7px;
+	width: 400px;
+	height: 40px;
+	font-size: 12pt;
+}
 
 .div_card {
     min-width: 0;
@@ -120,7 +144,7 @@ span{
 	cursor: pointer;
 }
 
-.wt-modify-btn{
+.modify-btn{
 	border: 2px solid green;
 	border-radius: 20px;
 	font-size: 15px;
@@ -130,7 +154,7 @@ span{
 	background-color: #fff;
 }
 
-.wt-delete-btn{
+.delete-btn{
 	border: 2px solid red;
 	border-radius: 20px;
 	font-size: 15px;
@@ -150,6 +174,76 @@ span{
 	border-radius: 20px;
 	background-color: #00457E;
 	cursor: pointer;
-	float: right;
 	margin-right: 80px;
+	float: right;
+}
+
+.wt-insert-title{
+	text-align: left;
+}
+
+.wt-select{
+	width: 100px;
+	height: 30px;
+	font-size: 16px;
+}
+
+
+.wt-insert_btn{
+	width: 100px;
+	height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	border-style: none;
+	border-radius: 20px;
+	background-color: #00457E;
+	cursor: pointer;
+	margin: 20px;
+}
+
+.wt-movelist_btn{
+	width: 100px;
+	height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	border-style: none;
+	border-radius: 20px;
+	background-color: #00457E;
+	cursor: pointer;
+	margin: 20px;
+}
+
+.answertext_box{
+	border: none;
+	width: 600px;
+	height: 200px;
+	font-size: 16px;
+}
+
+.qna_detail-answer_btn{
+	width: 100px;
+	height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	border-style: none;
+	border-radius: 20px;
+	background-color: #00457E;
+	cursor: pointer;
+	margin: 20px;
+}
+
+.qna_detail-list_btn{
+	width: 100px;
+	height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	border-style: none;
+	border-radius: 20px;
+	background-color: #00457E;
+	cursor: pointer;
+	margin: 20px;
 }

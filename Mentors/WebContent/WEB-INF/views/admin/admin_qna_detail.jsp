@@ -78,9 +78,23 @@
 									
 								</table>
 							</div>
+							<div class="qna-answertext_box">
+							<h2>답변작성</h2>
+							<table class="list_tb">
+								<tr>
+									<th>답변내용</th>
+									<td>
+										<textarea class="answertext_box" cols="30" rows="10"></textarea>
+									</td>
+								</tr>
+							</table>
+							</div>
+							
 							<div class="qna_detail-bottom_btn">
-								<button class="qna_detail-answer_btn">답변작성</button>
-								<button class="qna_detail-list_btn">목록으로</button>
+								<input class="qna_detail-answer_btn" type="button" value="답변작성"
+									onclick="location.href='${root}admin/admin_qna'"/>
+								<input class="qna_detail-list_btn" type="button" value="목록으로"
+									onclick="location.href='${root}admin/admin_qna'"/>
 							</div>
 						</div>
 					</div>

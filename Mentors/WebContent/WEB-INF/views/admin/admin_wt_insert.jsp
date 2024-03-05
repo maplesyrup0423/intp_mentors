@@ -7,7 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="${root }resources/style/admin_detail_style.css" />
+<link rel="stylesheet"
+	href="${root }resources/style/admin_detail_style.css" />
 </head>
 <body>
 	<table id="admin_table" width="1280">
@@ -36,11 +37,105 @@
 					</div>
 				</div></td>
 			<td width="1080" align="center" valign="top">
-			
-				
-			
+
+				<div class="all_view">
+					<div class="div_card div_shadow">
+						<div class="div_card-header">
+							<h2 class="font-weight-bold text-primary">연수관리</h2>
+						</div>
+						<div class="div_card-body">
+							<div>
+							<h2 class="wt-insert-title">연수등록</h2>
+								<table class="wt-table-list">
+									<tr>
+										<th>과정명</th>
+										<td>
+											<input class="wt-table-textarea" type="text" />
+										</td>
+									</tr>
+									
+									<tr>
+										<th>가격</th>
+										<td>
+											<input class="wt-table-textarea" type="text" />
+										</td>
+									</tr>
+									
+									<tr>
+										<th>학습시간</th>
+										<td>
+											<input class="wt-table-textarea" type="text" />
+										</td>
+									</tr>
+									
+									<tr>
+										<th>학급</th>
+										<td>
+											<select class="wt-select">
+												<option value="1">초등학교</option>
+												<option value="2">중학교</option>
+												<option value="3">고등학교</option>
+											</select>
+										</td>
+									</tr>
+									
+									<tr>
+										<th>분야</th>
+										<td>
+											<select class="wt-select">
+												<option value="1">교과지도</option>
+												<option value="2">학습지도</option>
+												<option value="3">생활지도</option>
+											</select>
+										</td>
+									</tr>
+									
+									<tr>
+										<th>썸네일</th>
+										<td>
+											<input class="wt-table-textarea" type="text" />
+										</td>
+									</tr>
+									
+									<tr>
+										<th>상세이미지</th>
+										<td>
+											<input class="wt-table-textarea" type="text" />
+										</td>
+									</tr>
+									
+									<tr>
+										<th>연수정보</th>
+										<td>
+											<input class="wt-table-textarea" type="text" />
+										</td>
+									</tr>
+									
+									<tr>
+										<th>비디오</th>
+										<td>
+											<input class="wt-table-textarea" type="text" />
+										</td>
+									</tr>
+								</table>
+								<div class="wt-bottom_btn-box">
+									<input class="wt-insert_btn" type="button" value="연수등록"
+									onclick="location.href='${root}admin/admin_wt'"/>
+									<input class="wt-movelist_btn" type="button" value="목록으로"
+									onclick="location.href='${root}admin/admin_wt'"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</td>
 		</tr>
+
+	</table>
+
+	</td>
+	</tr>
 
 	</table>
 
