@@ -2,6 +2,8 @@ package kr.co.softsoldesk.service;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,11 @@ public class WTService {
 	
 	@Autowired
 	private WTDao wtDao;
+	
+	@Resource(name = "tempCategoryBean")
+	private WTBean tempCategoryBean;
+	
+	
 	
 	public 	List<WTBean> getWTList(){
 		return wtDao.getWTList();
@@ -38,4 +45,34 @@ public class WTService {
 		}
 		return infoBean;
 	}
+	
+	
+	public List<WTBean> getSchool(int WT_Tag_School){
+		return wtDao.getSchool(WT_Tag_School);
+	}
+	
+	public List<WTBean> getTime(int WT_Tag_Time){
+		return wtDao.getTime(WT_Tag_Time);
+	}
+	
+	public List<WTBean> getCategory(int WT_Tag_TypeCategory){
+		return wtDao.getCategory(WT_Tag_TypeCategory);
+	}
+	
+	public List<WTBean> getSchoolNTime(int WT_Tag_School, int WT_Tag_Time){
+		return wtDao.getSchoolNTime(WT_Tag_School, WT_Tag_Time);
+	}
+	
+	public List<WTBean> getSchoolNCategory(int WT_Tag_School, int WT_Tag_TypeCategory){
+		return wtDao.getSchoolNCategory(WT_Tag_School, WT_Tag_TypeCategory);
+	}
+	
+	public List<WTBean> getTimeNCategory(int WT_Tag_Time, int WT_Tag_TypeCategory){
+		return wtDao.getTimeNCategory(WT_Tag_Time, WT_Tag_TypeCategory);
+	}
+	
+	public List<WTBean> getAllTag(int WT_Tag_School, int WT_Tag_Time, int WT_Tag_TypeCategory){
+		return wtDao.getAllTag(WT_Tag_School, WT_Tag_Time, WT_Tag_TypeCategory);
+	}
+	
 }

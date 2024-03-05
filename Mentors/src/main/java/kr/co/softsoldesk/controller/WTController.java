@@ -30,6 +30,11 @@ public class WTController {
 
 	@Autowired
 	private WTT_Service wtt_Service;
+	
+	@Resource(name = "tempCategoryBean")
+	private WTBean tempCategoryBean;
+	
+	
 
 	@GetMapping("/WT_list") // 연수 목록
 	public String WT_list(Model model) {
@@ -75,4 +80,15 @@ public class WTController {
 		  System.out.println("btnValue ㅎㅎ : " + btnValue);
 			return "WT/WT_my_room";
 	    }*/
+	
+	
+	@GetMapping("/WT_list_category")
+	public String WT_list_category() {
+		
+		// TODO 값 3개 일단 받아와서 if문으로 service친구 불러옴~ 값 어떻게 받아옴~
+		
+		return "WT/WT_list_category";
+	}
+	
+	
 }

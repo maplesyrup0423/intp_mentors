@@ -27,9 +27,6 @@
 
 
 .div_card {
-    /*position: relative;
-    display: flex;
-    flex-direction: column;*/
     min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
@@ -72,7 +69,6 @@
     color: #00457E !important;
 }
 
-
 .qna_select{
 	margin-bottom: 15px;
 }
@@ -98,7 +94,53 @@
 	margin: 0;
 }
 
-.new_write_btn{
+
+.wt_img_td{
+	width: 250px;
+	height: 100px;
+}
+
+.wt_img_td img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.bottom_move_btn{
+	text-align: center;
+}
+
+span{
+	margin-right: -200px;
+}
+
+.m_btn{
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.wt-modify-btn{
+	border: 2px solid green;
+	border-radius: 20px;
+	font-size: 15px;
+	color: green;
+	width: 50px;
+	height: 25px;
+	background-color: #fff;
+}
+
+.wt-delete-btn{
+	border: 2px solid red;
+	border-radius: 20px;
+	font-size: 15px;
+	color: red;
+	width: 50px;
+	height: 25px;
+	background-color: #fff;
+}
+
+.new_wt_btn{
 	width: 100px;
 	height: 40px;
 	font-size: 15px;
@@ -109,73 +151,5 @@
 	background-color: #00457E;
 	cursor: pointer;
 	float: right;
-	margin-right: 110px;
-}
-
-.bottom_move_btn{
-	text-align: center;
-}
-
-span{
-	margin-right: -220px;
-}
-
-.m_btn{
-	width: 30px;
-	height: 30px;
-	background-color: #fff;
-	cursor: pointer;
-}
-
-
-.answer_btn-box{
-	width: 200px;
-	height: 26px;
-	float: right;
-	margin-right: 50px;
-	margin-bottom: 10px;
-}
-
-.top-finish_answer{
-	border: 2px solid green;
-	border-radius: 20px;
-	font-size: 15px;
-	color: green;
-	width: 80px;
-	height: 25px;
-	background-color: #fff;
-}
-
-.top-waitiong_answer{
-	border: 2px solid red;
-	border-radius: 20px;
-	font-size: 15px;
-	color: red;
-	width: 80px;
-	height: 25px;
-	background-color: #fff;
-}
-
-.finish_answer{
-	border: 2px solid green;
-	border-radius: 20px;
-	font-size: 15px;
-	color: green;
-	width: 80px;
-	height: 25px;
-	background-color: #fff;
-}
-
-.waitiong_answer{
-	border: 2px solid red;
-	border-radius: 20px;
-	font-size: 15px;
-	color: red;
-	width: 80px;
-	height: 25px;
-	background-color: #fff;
-}
-
-.qna-table-list{
-	cursor: pointer;
+	margin-right: 80px;
 }
