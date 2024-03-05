@@ -20,6 +20,11 @@ public class AdminController {
    public String admin_wt() {
       return "admin/admin_wt";
    }
+   
+   @GetMapping("/admin_wt_insert")
+   public String admin_wt_insert() {
+	   return "admin/admin_wt_insert";
+   }
 
    @GetMapping("/admin_qna")
    public String admin_qna() {

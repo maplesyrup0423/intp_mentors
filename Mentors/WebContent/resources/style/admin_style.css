@@ -109,12 +109,16 @@
 	background-color: #00457E;
 	cursor: pointer;
 	float: right;
+	margin-right: 110px;
 }
 
 .bottom_move_btn{
 	text-align: center;
 }
 
+span{
+	margin-right: -220px;
+}
 
 .m_btn{
 	width: 30px;
