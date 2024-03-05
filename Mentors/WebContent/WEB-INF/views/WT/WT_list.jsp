@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="${root}resources/style/WT_sytle.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <title>직무연수</title>
 </head>
 <body>
@@ -76,6 +77,32 @@
 				</tr>
 			</table>
 
+
+			<script>
+
+				$('input[name="rad1"]').change(function() {
+					var value = $(this).val();
+					var checked = $(this).prop('checked');
+					alert(value);
+					window.location.href="${root }WT/WT_list_category";
+				});
+				
+				$('input[name="rad2"]').change(function() {
+					var value = $(this).val();
+					var checked = $(this).prop('checked');
+					alert(value);
+					window.location.href="${root }WT/WT_list_category";
+				});
+				
+				$('input[name="rad3"]').change(function() {
+					var value = $(this).val();
+					var checked = $(this).prop('checked');
+					alert(value);
+					window.location.href="${root }WT/WT_list_category";
+				});
+				
+				
+			</script>
 
 
 
