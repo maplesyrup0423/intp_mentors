@@ -22,12 +22,12 @@ a{
     text-decoration-line: none;
 }
 
-.E_button{
+.endE_button{
     margin-bottom: 20px;
 }
 
 
-.E_list{
+.E_endlist{
     margin: 10px;
     overflow: auto;
 }
@@ -35,10 +35,11 @@ a{
 .event{
     position: relative;
     display: inline-block;
+    overflow: hidden;
     width: 380px;
     height: 400px;
     border-radius: 30px 30px 30px 30px;
-    /* background-color: aqua; */
+    /* background-color: rgba(128, 128, 128, .5); */
     margin-top: 25px;
     margin-left: 20px;
     box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important
@@ -64,15 +65,39 @@ margin-top: 50px;
 .day_circle{
     position: absolute;
     border-radius: 50%;
-    background-color: #8c45ff;
+    background-color: #FF5345;
     /* background-color: #a09bff; */
     color: white;
     text-align: center;
     width: 80px;
     height: 80px;
     margin-left: 280px;
+    /* width: 200px;
+    height: 200px;
+    margin-left: 100px;
+    margin-top: -175px;
+    opacity: 0.5; */
 }
 
-.ing-day{
-    margin-top: 22px;
+.day_end{
+    margin-top: 23px;
+}
+
+.endfilter{
+    position: absolute;
+    border-radius: 50%;
+    /* background-color: rgba(128, 128, 128, .5); */
+    /* background-color: gray; */
+    background-color: black;
+    width: 250px;
+    height: 250px;
+    font-size: 45px;
+    color: white;
+    margin-left: 70px;
+    margin-top: -200px;
+    opacity: .7;
+}
+
+.endtext{
+margin-top: 85px;
 }

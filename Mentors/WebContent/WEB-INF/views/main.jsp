@@ -37,20 +37,9 @@
 
 
                     <div class="login-circle">
-                        <div class="circle-login">
-
-                            <h1> 로그인 이후 <br>이용해주세요!</h1>
-                            <button class="login blue_btn">로그인</button>
-                            <br>
-
-                            <span>아이디 </span>
-                            ·
-                            <span>비밀번호</span>
-                            <span id="newUser">회원가입</span>
-                        </div>
-                    </div>
-
-                    <div class="login-circle2">
+                    <c:choose>
+                    	<c:when test="${loginTeacherBean.teacherLogin == true}">
+                    		<div class="login-circle2">
                         <div class="circle-login2">
 
                             <span id="My">내 정보
@@ -62,6 +51,25 @@
                             <button class="loginbutton">뭐든 가는 버튼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 〉</button>
                         </div>
+                    </div>
+                    
+                    	</c:when>
+                    	
+                    	<c:otherwise>
+                    		<div class="circle-login">
+
+                            <h1> 로그인 이후 <br>이용해주세요!</h1>
+                            <button class="login blue_btn">로그인</button>
+                            <br>
+
+                            <span>아이디 </span>
+                            ·
+                            <span>비밀번호</span>
+                            <span id="newUser">회원가입</span>
+                        </div>
+                    	</c:otherwise>
+                    </c:choose>
+                        
                     </div>
 
                 </div>
