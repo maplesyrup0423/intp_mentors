@@ -134,11 +134,11 @@
 	$(function() {
 		// play list 선언
 		var videos = [ {
-			videoURL : "VVVmPjnqT8U",
+			videoURL : "VVVmPjnqT8U", //강의 url(id?) db에서 따오기
 			containment : 'self',
 			autoPlay : true,
 			mute : false,
-			startAt : 0,
+			startAt : 0, //영상 시작 시간(초) db에서 따와서 넣기
 			opacity : 1,
 			loop : false,
 			showControls : false,

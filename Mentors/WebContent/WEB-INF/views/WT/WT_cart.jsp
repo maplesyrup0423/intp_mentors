@@ -44,13 +44,7 @@
 								<span class="red">(연수)</span> [${obj.WT_TrainingTime }분] ${obj.WT_Title }
 							</div>
 							<div class="cart_a">
-								<span class="a_title">기수</span> <span class="a_con">oooooooooo</span>
-							</div>
-							<div class="cart_a">
-								<span class="a_title">연수기간</span> <span class="a_con">ooooooooooo</span>
-							</div>
-							<div class="cart_a">
-								<span class="a_title">증명서 발급</span> <span class="a_con">oooooooooooo</span>
+								<span class="a_title">연수기간</span> <span class="a_con">결제일로부터 30일</span>
 							</div>
 						</div>
 
