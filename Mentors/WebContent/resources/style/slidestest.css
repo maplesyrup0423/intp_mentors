@@ -126,7 +126,8 @@ a {
 }
 
 .main_list{
-	background-color: greenyellow;
+	/* background-color: greenyellow; */
+	background-color: white;
 	margin-top: 100px;
 }
 
@@ -172,17 +173,20 @@ z-index: 1;
 	border-radius: 10px 10px 0px 0px;
 	border: 1px solid;
 	font-size: 20px;
+	/* background-color: white; */
 }
 
 /* visited */
-.teb_item_button :hover,
-.teb_item_button :visited{
+.teb_item_button :hover
+,.teb_item_button :visited{
 	height: 61px;
 	z-index: 3;
 	border: 1px solid;
 	border-bottom: none;
-
+	background-color: white;
 }
+
+
 
 .tab_link{
 	padding: 20px 50px;
