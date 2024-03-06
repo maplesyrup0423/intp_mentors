@@ -41,6 +41,7 @@ public class TeacherService {
 			loginTeacherBean.setTeacher_Gender(tempTeacherBean.getTeacher_Gender());
 			loginTeacherBean.setTeacher_Email(tempTeacherBean.getTeacher_Email());
 			loginTeacherBean.setTeacher_Tel(tempTeacherBean.getTeacher_Tel());
+			System.out.println("log 01 : "+loginTeacherBean.getTeacher_Tel());
 			loginTeacherBean.setTeacher_Nickname(tempTeacherBean.getTeacher_Nickname());
 			loginTeacherBean.setTeacher_Work_In(tempTeacherBean.getTeacher_Work_In());
 			loginTeacherBean.setTeacher_Type(tempTeacherBean.getTeacher_Type());
@@ -55,32 +56,32 @@ public class TeacherService {
 	}
 
 	public void getModifyTeacherinfo(TeacherBean modifyTeacherBean) {
-		TeacherBean tempModifyUserBean = teacherDao.getModifyTeacherinfo(loginTeacherBean.getTeacher_id());
+		//TeacherBean tempModifyUserBean = teacherDao.getModifyTeacherinfo(loginTeacherBean.getTeacher_id());
 		
 		modifyTeacherBean.setTeacher_id(loginTeacherBean.getTeacher_id());
-		modifyTeacherBean.setTeacher_Name(tempModifyUserBean.getTeacher_Name());
-		modifyTeacherBean.setTeacher_Birth(tempModifyUserBean.getTeacher_Birth());
-		modifyTeacherBean.setTeacher_Email(tempModifyUserBean.getTeacher_Email());
-		modifyTeacherBean.setTeacher_Tel(tempModifyUserBean.getTeacher_Tel());
-		modifyTeacherBean.setTeacher_Nickname(tempModifyUserBean.getTeacher_Nickname());
-		modifyTeacherBean.setTeacher_Gender(tempModifyUserBean.getTeacher_Gender());
-		modifyTeacherBean.setTeacher_Work_In(tempModifyUserBean.getTeacher_Work_In());
-		modifyTeacherBean.setTeacher_Type(tempModifyUserBean.getTeacher_Type());
-		modifyTeacherBean.setTeacher_Neis(tempModifyUserBean.getTeacher_Neis());
+		modifyTeacherBean.setTeacher_Name(loginTeacherBean.getTeacher_Name());
+		modifyTeacherBean.setTeacher_Birth(loginTeacherBean.getTeacher_Birth());
+		modifyTeacherBean.setTeacher_Email(loginTeacherBean.getTeacher_Email());
+		modifyTeacherBean.setTeacher_Tel(loginTeacherBean.getTeacher_Tel());
+		modifyTeacherBean.setTeacher_Nickname(loginTeacherBean.getTeacher_Nickname());
+		modifyTeacherBean.setTeacher_Gender(loginTeacherBean.getTeacher_Gender());
+		modifyTeacherBean.setTeacher_Work_In(loginTeacherBean.getTeacher_Work_In());
+		modifyTeacherBean.setTeacher_Type(loginTeacherBean.getTeacher_Type());
+		modifyTeacherBean.setTeacher_Neis(loginTeacherBean.getTeacher_Neis());
 	}
 	
 	public void modifyTeacherInfo(TeacherBean modifyTeacherBean) {
 		modifyTeacherBean.setTeacher_id(loginTeacherBean.getTeacher_id());
 		teacherDao.modifyTeacherInfo(modifyTeacherBean);
 		
-		TeacherBean tempModifyTeacherBean = teacherDao.getModifyTeacherinfo(loginTeacherBean.getTeacher_id());
-		loginTeacherBean.setTeacher_Name(tempModifyTeacherBean.getTeacher_Name());
-		loginTeacherBean.setTeacher_Email(tempModifyTeacherBean.getTeacher_Email());
-		loginTeacherBean.setTeacher_Tel(tempModifyTeacherBean.getTeacher_Tel());
-		loginTeacherBean.setTeacher_Nickname(tempModifyTeacherBean.getTeacher_Nickname());
-		loginTeacherBean.setTeacher_Work_In(tempModifyTeacherBean.getTeacher_Work_In());
-		loginTeacherBean.setTeacher_Type(tempModifyTeacherBean.getTeacher_Type());
-		loginTeacherBean.setTeacher_Neis(tempModifyTeacherBean.getTeacher_Neis());
+		//TeacherBean tempModifyTeacherBean = teacherDao.getModifyTeacherinfo(loginTeacherBean.getTeacher_id());
+		loginTeacherBean.setTeacher_Name(modifyTeacherBean.getTeacher_Name());
+		loginTeacherBean.setTeacher_Email(modifyTeacherBean.getTeacher_Email());
+		loginTeacherBean.setTeacher_Tel(modifyTeacherBean.getTeacher_Tel());
+		loginTeacherBean.setTeacher_Nickname(modifyTeacherBean.getTeacher_Nickname());
+		loginTeacherBean.setTeacher_Work_In(modifyTeacherBean.getTeacher_Work_In());
+		loginTeacherBean.setTeacher_Type(modifyTeacherBean.getTeacher_Type());
+		loginTeacherBean.setTeacher_Neis(modifyTeacherBean.getTeacher_Neis());
 	}
 	
 }

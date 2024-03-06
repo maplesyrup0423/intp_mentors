@@ -23,12 +23,12 @@ public interface TeacherMapper {
 			+ "#{teacher_Nickname}, #{teacher_Work_In}, #{teacher_Type} , #{teacher_Neis})")
 	void addTeacherInfo(TeacherBean sign_upTeacherBean);
 	
-	@Select("select Teacher_Name, Teacher_Birth, Teacher_Email, " 
+	/*@Select("select Teacher_Name, Teacher_Birth, Teacher_Email, " 
 			+ "Teacher_Gender, Teacher_id, Teacher_Nickname, "
 			+ "Teacher_Work_In, Teacher_Type, Teacher_Neis "
 			+ "from Teacher_info "
 			+ "where Teacher_id = #{teacher_id}")
-	TeacherBean getModifyTeacherinfo(String Teacher_id);
+	TeacherBean getModifyTeacherinfo(String Teacher_id);*/
 	
 	@Update("update Teacher_Info " +
 			"set Teacher_Email = #{teacher_Email}, " 
