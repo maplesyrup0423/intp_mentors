@@ -29,7 +29,7 @@
 							<table class="personal_info_table">
 								<tr>
 									<td class="td_left">성명</td>
-									<td class="td_right"><input type="text" id="Teacher_Name" name="Teacher_Name" value="${LoginTeacherBean.Teacher_Name }" disabled="disabled"/></td>
+									<td class="td_right"><input type="text" id="Teacher_Name" name="Teacher_Name" value="${loginTeacherBean.teacher_Name }" disabled="disabled"/></td>
 								</tr>
 
 								<tr>
