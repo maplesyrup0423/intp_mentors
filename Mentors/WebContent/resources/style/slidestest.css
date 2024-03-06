@@ -125,44 +125,92 @@ a {
 	text-decoration-line: none;
 }
 
-.user_teb_list{
-	margin-top: 50px;
+.main_list{
+	background-color: greenyellow;
+	margin-top: 100px;
 }
+
+/* .user_teb_list{
+	0margin-top: 50px; 
+} */
 
 .teb_list{
 	list-style-type: none;
 	float: left;
-	/* outline: 1px solid; */
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
 	padding-left: 30px;
+	position: absolute;
 }
 
 .teb_list li{
 display: inline-block;
 border-radius: 7px 7px 0px 0px;
-margin-right: -4px;
-border: 1px solid;
+margin-right: -7px;
+/* border: 1px solid; */
 border-bottom: -0px;
+z-index: 1;
 }
 
-.teb_item{
-	padding: 20px;
-	overflow: hidden;
-	width: 65px;
-	height: 20px;
+/* visited */
+.teb_item :visited{
+	/* height: 30px; */
+	padding-bottom: 22px;
+	z-index: 3;
+	border-style: 2px solid;
+	border-bottom: none;
+}
+
+.teb_item_button{
+	width: 150px;
+	height: 60px;
+}
+
+.tab_link_button{
+	margin-top: -18px;
+	width: 150px;
+	height:60px;
+	border-radius: 10px 10px 0px 0px;
+	border: 1px solid;
+	font-size: 20px;
+}
+
+/* visited */
+.teb_item_button :hover,
+.teb_item_button :visited{
+	height: 61px;
+	z-index: 3;
+	border: 1px solid;
+	border-bottom: none;
+
+}
+
+.tab_link{
+	padding: 20px 50px;
+	/* overflow: hidden; */
+	/* width: 65px;
+	height: 25px; */
+	background-color: white;
+	z-index: 1;
+	border-radius: 10px 10px 0px 0px;
+	/* outline: 1px solid; */
+	/* border-style: 1px solid; */
+	border: 1px solid;
+	margin-left: 1px;
 }
 
 .item_list{
 	display: inline-block;
-	outline: 1px solid;
-	margin-top: 0px;
+	border: 1px solid;
 	border-radius: 0px 10px 10px 10px;
 	margin-top: -4px;
+	z-index: 2;
+	margin-top: 15px;
 }
 
 .item{
 	display: inline-block;
-	margin: 10px;
+	margin: 50px 10px 20px 10px ;
+	/* margin-top: 50px; */
 }
 
 .item img{

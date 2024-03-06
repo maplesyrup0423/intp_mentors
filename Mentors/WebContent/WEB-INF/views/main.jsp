@@ -98,25 +98,37 @@
 			</div>
 			</header>
 
-			<div class="main_list">
-				<div class="user_teb_list">
-					<ul class="teb_list">
-						<li class="teb_item"><a href="" class="tab_link"> <span
-								class="teb_text">전체메뉴</span>
-						</a></li>
-						<li class="teb_item"><a href="" class="tab_link"> <span
-								class="teb_text">초등학생</span>
-						</a></li>
-						<li class="teb_item"><a href="" class="tab_link"> <span
-								class="teb_text">중학생</span>
-						</a></li>
-						<li class="teb_item"><a href="" class="tab_link"> <span
-								class="teb_text">고등학생</span>
-						</a></li>
-					</ul>
-				</div>
+			<div class="main_list"> 
+        <!-- 카테고리 전체 -->
+            <div class="user_teb_list">
+            <!-- 학년별 카테고리 -->
+                <ul class="teb_list">
+                <!-- 학년별 카테고리 창 -->
+                    <li class="teb_item ">
+                        <a href=""class="tab_link ">
+                            <span class="teb_text">전체메뉴</span>
+                        </a>
+                    </li>
+                    <li class="teb_item ">
+                        <a href="" class="tab_link ">
+                            <span class="teb_text">초등학생</span>
+                        </a>
+                    </li>
+                    <li class="teb_item ">
+                        <a href="" class="tab_link ">
+                            <span class="teb_text">중학생</span>
+                        </a>
+                    </li>
+                    <li class="teb_item ">
+                        <a href="" class="tab_link ">
+                            <span class="teb_text">고등학생</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-				<br>
+            <br>
+            <br>
 
 				<div class="item_list">
 
@@ -152,25 +164,37 @@
 
 			</div>
 
-			<div class="main_list">
-				<div class="user_teb_list">
-					<ul class="teb_list">
-						<li class="teb_item"><a href="" class="tab_link"> <span
-								class="teb_text">전체메뉴</span>
-						</a></li>
-						<li class="teb_item"><a href="" class="tab_link"> <span
-								class="teb_text">교과지도</span>
-						</a></li>
-						<li class="teb_item"><a href="" class="tab_link"> <span
-								class="teb_text">학습지도</span>
-						</a></li>
-						<li class="teb_item"><a href="" class="tab_link"> <span
-								class="teb_text">생활지도</span>
-						</a></li>
-					</ul>
-				</div>
-
-				<br>
+			<div class="main_list"> 
+            <!-- 카테고리 전체 -->
+                <div class="user_teb_list">
+                <!-- 학년별 카테고리 -->
+                    <ul class="teb_list">
+                    <!-- 학년별 카테고리 창 -->
+                        <li class="teb_item_button ">
+                            <button class="tab_link_button ">
+                                <span class="teb_text">전체메뉴</span>
+                            </button>
+                        </li>
+                        <li class="teb_item_button ">
+                            <button  class="tab_link_button">
+                                <span class="teb_text">교과지도</span>
+                            </button>
+                        </li>
+                        <li class="teb_item_button ">
+                            <button  class="tab_link_button">
+                                <span class="teb_text">학습지도</span>
+                            </button>
+                        </li>
+                        <li class="teb_item_button ">
+                            <button  class="tab_link_button ">
+                                <span class="teb_text">생활지도</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+    
+                <br>
+                <br>
 
 				<div class="item_list">
 
