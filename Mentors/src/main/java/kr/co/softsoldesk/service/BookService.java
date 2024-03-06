@@ -20,4 +20,10 @@ public class BookService {
 	public BookBean getBookInfo(String bk_Key) {
 		return bookDao.getBookInfo(bk_Key);
 	}
+	
+	public List<BookBean> getBookListSelect(int bk_category){
+		return bookDao.getBookListSelect(bk_category);
+	}
+	
+	
 }

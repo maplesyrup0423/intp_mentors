@@ -38,14 +38,14 @@
 							</button>
 						</div>
 						<div class="book_cate">
-							<input type="button" value="전체" />
-							<input type="button" value="교육과정/교육정책" />
-							<input type="button" value="학급운영/생활지도" />
-							<input type="button" value="디지털역량" />
-							<input type="button" value="수업지도/학습지도" />
-							<input type="button" value="교육철학/에세이" />
-							<input type="button" value="아동도서(1-6학년)" />
-							<input type="button" value="수업디자인연구소" />
+							<input class="${BCB.bk_category_class_0 }" type="button" onclick="location.href='${root }book/Booklist_btn?bk_category=0'" value="전체" />
+							<input class="${BCB.bk_category_class_1 }"  type="button" onclick="location.href='${root }book/Booklist_btn?bk_category=1'" value="교육과정/교육정책" />
+							<input class="${BCB.bk_category_class_2 }"  type="button" onclick="location.href='${root }book/Booklist_btn?bk_category=2'" value="학급운영/생활지도" />
+							<input class="${BCB.bk_category_class_3 }"  type="button" onclick="location.href='${root }book/Booklist_btn?bk_category=3'" value="디지털역량" />
+							<input class="${BCB.bk_category_class_4 }"  type="button" onclick="location.href='${root }book/Booklist_btn?bk_category=4'" value="수업지도/학습지도" />
+							<input class="${BCB.bk_category_class_5 }"  type="button" onclick="location.href='${root }book/Booklist_btn?bk_category=5'" value="교육철학/에세이" />
+							<input class="${BCB.bk_category_class_6 }"  type="button" onclick="location.href='${root }book/Booklist_btn?bk_category=6'" value="아동도서(1-6학년)" />
+							<input class="${BCB.bk_category_class_7 }"  type="button" onclick="location.href='${root }book/Booklist_btn?bk_category=7'" value="수업디자인연구소" />
 						</div>
 						
 						

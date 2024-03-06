@@ -22,4 +22,6 @@ public class BookBean {
 	private String bk_content;
 	private String bk_autorinfo;
 	private int bk_category;
+	
+
 }

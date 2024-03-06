@@ -19,4 +19,8 @@ public class BookDao {
 	public BookBean getBookInfo(String bk_Key) {
 		return bookMapper.getBookInfo(bk_Key);
 	}
+	
+	public List<BookBean> getBookListSelect(int bk_category){
+		return bookMapper.getBookListSelect(bk_category);
+	}
 }
