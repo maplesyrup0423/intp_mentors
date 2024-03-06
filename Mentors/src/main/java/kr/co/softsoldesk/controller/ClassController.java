@@ -91,6 +91,9 @@ public class ClassController {
 		int time = (mm * 60) + ss;// 82
 		System.out.println(time);
 		classService.updateViewTime(time, wtt_Key);
+		
+		//TODO - 영상 끌때마다 응시조건 확인
+		
 		return "class/class_video_save";
 	}
 
