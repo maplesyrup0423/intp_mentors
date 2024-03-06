@@ -40,8 +40,8 @@
 				</div>
 			</form:form>
 			<footer> 
-				<a href="Find_ID.jsp">아이디 찾기</a> <span> | </span> 
-				<a href="Find_Password.jsp">비밀번호 찾기</a> <span> | </span> 
+				<a href="${root }user/Find_ID">아이디 찾기</a> <span> | </span> 
+				<a href="${root }user/Find_Password">비밀번호 찾기</a> <span> | </span> 
 				<a href="${root }user/Sign_up">회원가입</a> 
 			</footer>
 		</div>

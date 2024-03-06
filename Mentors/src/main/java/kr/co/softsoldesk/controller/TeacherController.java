@@ -107,11 +107,11 @@ public class TeacherController {
 	public String Mypage_change_pro(@Valid @ModelAttribute("modifyTeacherBean") TeacherBean modifyTeacherBean,
 									BindingResult result) {
 		if(result.hasErrors()) {
-			return "user/Mypage";
+			return "user/Mypage_change";
 		}
 		
 		teacherService.modifyTeacherInfo(modifyTeacherBean);
-		return "user/Mypage_change_success";
+		return "user/Mypage_change_succss";
 	}
 			
 }
