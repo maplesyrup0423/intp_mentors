@@ -23,7 +23,7 @@ div.account_space {
 }
 
 .title_mypage {
-	width : 400px;
+	width : 600px;
 	height : 80px;
 	margin : 30px auto;
 	font-size : 60px;
@@ -65,60 +65,22 @@ div.account_space {
 	font-weight : bold;
 }
 
-.td_right {
+td.td_right {
 	width: 450px;
 	height: 55px;
-	border: 1px solid black;
+	border: none;
 	border-radius : 8px;
-	opacity: 0.7;
 	font-size : 17px;
 	padding-left : 10px;
 }
 
-/* 결제내역 테이블 가장자리 설정 */
-table.payment_table {
-	border: 1px solid rgb(0,69,126);
-	border-radius: 8px;
-}
-
-div.payment_div {
-	padding-top: 50px;
-	height: 100px;
-}
-
-div.div_payment {
-	width: 800px;
-	height: 150px;
-	padding: 4px;
-	margin: auto;
-}
-
-div h2.category_payment {
-	width: 200px;
-	height: 50px;
-	border-radius: 8px;
-	border-top: 2px dashed black;
-	border-bottom: 2px dashed black;
-	text-align: center;
-	line-height: 50px;
-	margin: auto;
-}
-
-/* 결제내역 테이블 각 너비 설정 */
-th.payment_date {
-	width: 100px;
-}
-
-th.payment_datails {
-	width: 400px;
-}
-
-th.payment_amount {
-	width: 100px;
-}
-
-th.payment_status {
-	width: 100px;
+input.td_right {
+	width: 450px;
+	height: 55px;
+	border: 1px solid black;
+	border-radius : 8px;
+	font-size : 17px;
+	padding-left : 10px;
 }
 
 /* 버튼들 */

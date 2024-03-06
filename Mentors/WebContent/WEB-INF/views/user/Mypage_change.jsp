@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var='root' value="${pageContext.request.contextPath }/"/>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var='root' value="${pageContext.request.contextPath }/" />
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,105 +11,103 @@
 <link rel="stylesheet" href="${root }resources/style/Mypage_change.css" />
 </head>
 <body>
-	<!-- header --> 
+	<!-- header -->
 	<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
-		<div class="title_mypage">마이페이지</div>
-		<div class="main_div">
-				<div class="div_box">
-					<div class="account_space">
-						<input class="change_account" type="button" value="정보수정"
-						onClick="location.href='Mypage_change.jsp'" /> 
-						<input class="change_password" type="button" value="비밀번호 변경"
-						onClick="location.href='Password_change_confirm.jsp'" />
+	<div class="title_mypage">마이페이지 수정</div>
+
+	<div class="main_div">
+		<div class="div_box">
+			<!-- --------------------------------------------------------- -->
+			<form:form action="${root }user/Mypage_change_pro" method="post"
+				modelAttribute="modifyTeacherBean">
+				<div class="div_card div_shadow">
+					<div class="div_card-header">
+						<h6 class="font-weight-bold text-primary">개인정보</h6>
 					</div>
-<!-- --------------------------------------------------------- -->
-					<form:form action="${root }user/modify_pro" method="post" modelAttribute="modifyTeacherBean">			
-					<div class="div_card div_shadow">
-						<div class="div_card-header">
-							<h6 class="font-weight-bold text-primary">개인정보</h6>
-						</div>
-						<div class="div_card-body">
-							<table class="personal_info_table">
-								<tr>
-									<td class="td_left"><form:label path="user_name">성명</form:label></td>
-									<td class="td_right"><form:input path="user_name" readonly="true"/></td>
-								</tr>
+					<div class="div_card-body">
+						<table class="personal_info_table">
+							<tr>
+								<td class="td_left"><form:label path="teacher_Name">성명</form:label></td>
+								<td class="td_right"><form:input class = "td_right" path="teacher_Name" readonly="true" /></td>
+							</tr>
+							<tr>
+								<td class="td_left"><form:label path="teacher_Birth">생년월일</form:label></td>
+								<td class="td_right"><form:input class = "td_right" path="teacher_Birth" readonly="true" /></td>
+							</tr>
 
-								<tr>
-									<td class="td_left">생년월일</td>
-									<td class="td_right">1281-01-23</td>
-								</tr>
+							<tr>
+								<td class="td_left"><form:label path="teacher_Email">이메일</form:label></td>
+								<td class="td_right"><form:input class = "td_right" path="teacher_Email" readonly="true"/></td>
+							</tr>
 
-								<tr>
-									<td class="td_left">이메일</td>
-									<td class="td_right">ajipgagosipda@gipgago.sipda</td>
-								</tr>
+							<tr>
+								<td class="td_left"><form:label path="teacher_Tel">전화번호</form:label></td>
+								<td class="td_right"><form:input class = "td_right" path="teacher_Tel" /></td>
+							</tr>
 
-								<tr>
-									<td class="td_left">전화번호</td>
-									<td class="td_right">02-784-8917</td>
-								</tr>
+							<tr>
+								<td class="td_left"><form:label path="teacher_Gender">성별</form:label></td>
+								<td class="td_right"><form:input class = "td_right" path="teacher_Gender"  /></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!-- --------------------------------------------------------- -->
+				<div class="div_card div_shadow">
+					<div class="div_card-header">
+						<h6 class="font-weight-bold text-primary">계정정보</h6>
+					</div>
+					<div class="div_card-body">
+						<table class="account_info_table">
+							<tr>
+								<td class="td_left"><form:label path="teacher_id">아이디</form:label></td>
+								<td class="td_right"><form:input class = "td_right" path="teacher_id" readonly="true" /></td>
+							</tr>
+							<tr>
+								<td class="td_left"><form:label path="teacher_Nickname">닉네임</form:label></td>
+								<td class="td_right"><form:input class = "td_right" path="teacher_Nickname" /></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!-- ------------------------------------------------------------------- -->
+				<div class="div_card div_shadow">
+					<div class="div_card-header">
+						<h6 class="font-weight-bold text-primary">직장정보</h6>
+					</div>	
+					<div class="div_card-body">
+						<table class="work_in_table">
+							<tr>
+								<td class="td_left"><form:label path="teacher_Work_In">직장명</form:label></td>
+								<td class="td_right"><form:input class = "td_right" path="teacher_Work_In"/></td>
+							</tr>
 
-								<tr>
-									<td class="td_left">성별</td>
-									<td class="td_right">남?자?</td>
-								</tr>
-							</table>
+							<tr>
+								<td class="td_left">교직타입</td>
+								<td class="td_right">
+								<form:select path = "teacher_Type">
+									<option value="초등교사" selected>초등교사</option>
+									<option value="중등교사">중등교사</option>
+									<option value="고등교사">고등교사</option>
+								</form:select>
+								</td>
+							</tr>
+							<tr>
+								<td class="td_left"><form:label path="teacher_Neis">Neis</form:label></td>
+								<td class="td_right"><form:input class = "td_right" path="teacher_Neis"/></td>
+							</tr>
+							
+						</table>
+						<div class="Mypage_button">
+							<form:button class = "Mypage_change_button">변경하기</form:button>
 						</div>
 					</div>
-<!-- --------------------------------------------------------- -->
-					<div class="div_card div_shadow">
-						<div class="div_card-header">
-							<h6 class="font-weight-bold text-primary">계정정보</h6>
-						</div>
-						<div class="div_card-body">
-							<table class="account_info_table">
-								<tr>
-									<td class="td_left">아이디</td>
-									<td class="td_right">hahahahah</td>
-								</tr>
-								<tr>
-									<td class="td_left">닉네임</td>
-									<td class="td_right">대머리</td>
-								</tr>
-							</table>
-							</div>
-						</div>
-<!-- ------------------------------------------------------------------- -->
-							<div class="div_card div_shadow">
-								<div class="div_card-header">
-									<h6 class="font-weight-bold text-primary">직장정보</h6>
-								</div>
-								<div class="div_card-body">
-									<table class="work_in_table">
-										<tr>
-											<td class="td_left">직장명</td>
-											<td class="td_right">솔데스크 대학원생 양성 학습소</td>
-										</tr>
-
-										<tr>
-											<td class="td_left">교직타입</td>
-											<td class="td_right"><input type="radio"
-												name="school_type" value="초등교사" checked
-												onclick="return(false);">초등교사 <input type="radio"
-												name="school_type" value="중등교사" onclick="return(false);">중등교사
-												<input type="radio" name="school_type" value="고등교사"
-												onclick="return(false);">고등교사</td>
-										</tr>
-									</table>
-								</div>
-							</div>
-
-			</div>
-			<div class="Mypage_button">
-				<input class="delete_account" type="button" value="회원탈퇴"
-						onClick="location.href='Mypage_change.jsp'" /> 
-				
-				<a href="${root }user/logout" class="logout">로그아웃</a>
-			</div>
+				</div>
+			</form:form>
 		</div>
-	</form:form>
-	<!-- footer --> 
+	</div>
+
+	<!-- footer -->
 	<c:import url="/WEB-INF/views/include/Mentors_main_footer.jsp" />
 </body>
 </html>
