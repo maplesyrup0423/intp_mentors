@@ -134,11 +134,11 @@
 	$(function() {
 		// play list 선언
 		var videos = [ {
-			videoURL : "VVVmPjnqT8U", //강의 url(id?) db에서 따오기
+			videoURL : "${tempWttBean.wt_Video}", //강의 url(id?) db에서 따오기
 			containment : 'self',
 			autoPlay : true,
 			mute : false,
-			startAt : 0, //영상 시작 시간(초) db에서 따와서 넣기
+			startAt : ${tempWttBean.wtt_viewing_time}, //영상 시작 시간(초) db에서 따와서 넣기
 			opacity : 1,
 			loop : false,
 			showControls : false,
@@ -201,7 +201,7 @@
 
 		<div class="contents">
 
-			<div class="vedio_title">강의제목제목제목제목제목제목제목제목</div>
+			<div class="vedio_title">${wtt_viewing_time.wt_Title }</div>
 			<div class="video_w">
 				<div id="myPlayer" class="myPlayer"></div>
 			</div>

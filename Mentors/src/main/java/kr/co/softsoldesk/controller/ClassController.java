@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softsoldesk.beans.ClassBean;
+import kr.co.softsoldesk.beans.WTBean;
 import kr.co.softsoldesk.beans.WTT_Bean;
 import kr.co.softsoldesk.service.ClassService;
 import kr.co.softsoldesk.service.WTT_Service;
@@ -58,7 +59,10 @@ public class ClassController {
 	}
 
 	@GetMapping("/class_video")
-	public String class_video() {
+	public String class_video(@RequestParam("wtt_Key") String wtt_Key, Model model) {
+		WTT_Bean tempWttBean = classService.getWtInfo(wtt_Key);
+		model.addAttribute("tempWttBean",tempWttBean);
+		
 		return "class/class_video";
 	}
 
