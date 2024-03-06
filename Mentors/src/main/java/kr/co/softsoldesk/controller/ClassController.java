@@ -35,6 +35,7 @@ public class ClassController {
 		int progressRound= (int)Math.floor(wttBean.getProgress());
 		System.out.println("video_progressRound : "+ video_progressRound);
 		System.out.println("progressRound : "+ progressRound);
+		System.out.println("시청 시간 "+wttBean.getWtt_viewing_time());
 		
 		model.addAttribute("video_progressRound",video_progressRound);
 		model.addAttribute("progressRound",progressRound);
@@ -65,6 +66,7 @@ public class ClassController {
 	@GetMapping("/class_video")
 	public String class_video(@RequestParam("wtt_Key") String wtt_Key, Model model) {
 		WTT_Bean tempWttBean = classService.getWtInfo(wtt_Key);
+		System.out.println("시청 시간 "+tempWttBean.getWtt_viewing_time());
 		model.addAttribute("tempWttBean",tempWttBean);
 		model.addAttribute("wtt_Key",wtt_Key);
 		
