@@ -34,6 +34,7 @@ public class ClassController {
 		int progressRound= (int)Math.floor(wttBean.getProgress());
 		System.out.println("video_progressRound : "+ video_progressRound);
 		System.out.println("progressRound : "+ progressRound);
+		
 		model.addAttribute("video_progressRound",video_progressRound);
 		model.addAttribute("progressRound",progressRound);
 		
@@ -43,17 +44,20 @@ public class ClassController {
 	}
 
 	@GetMapping("/class_home_center_test")
-	public String class_home_center_test() {
+	public String class_home_center_test(@RequestParam("wtt_Key")String wtt_Key, Model model) {
+		WTT_Bean wttBean=wtt_Service.getWTT_Bean(wtt_Key);
+		model.addAttribute("wttBean",wttBean);
+		
 		return "class/class_home_center_test";
 	}
 
 	@GetMapping("/QnAlist")
-	public String QnAlist() {
+	public String QnAlist(@RequestParam("wtt_Key")String wtt_Key, Model model) {
 		return "class/QnAlist";
 	}
 
 	@GetMapping("/Notification")
-	public String Notification() {
+	public String Notification(@RequestParam("wtt_Key")String wtt_Key, Model model) {
 		return "class/Notification";
 	}
 

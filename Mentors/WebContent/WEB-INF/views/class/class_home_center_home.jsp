@@ -21,14 +21,14 @@
 			<td rowspan="2" width="200" align="center" valign="top" height="100%"><div class="sidebar div_shadow">
 		<div class="sidebar_list">
 			<button class="CH_list list_home active"
-				onclick="location.href='${root}class/class_home_center_home'">강의
+				onclick="location.href='${root}class/class_home_center_home?wtt_Key=${wttBean.wtt_Key }'">강의
 				홈</button>
 			<button class="list_test CH_list "
-				onclick="location.href='${root}class/class_home_center_test'">시험</button>
+				onclick="location.href='${root}class/class_home_center_test?wtt_Key=${wttBean.wtt_Key }'">시험</button>
 			<button class="list_QnA CH_list "
-				onclick="location.href='${root}class/QnAlist'">Q&A</button>
+				onclick="location.href='${root}class/QnAlist?wtt_Key=${wttBean.wtt_Key }'">Q&A</button>
 			<button class="list_notification CH_list "
-				onclick="location.href='${root}class/Notification'">공지사항</button>
+				onclick="location.href='${root}class/Notification?wtt_Key=${wttBean.wtt_Key }'">공지사항</button>
 		</div>
 	</div></td>
 			<td height="80"><c:import
@@ -55,7 +55,7 @@
 											<!--도넛 그래프 -->
 											<div class="chart-container">
 												<div class="chart_d donut_chart1">
-													<span class="chart-center">72%</span>
+													<span class="chart-center">${progressRound }%</span>
 												</div>
 											</div>
 										</td>
@@ -75,8 +75,8 @@
 													</tr>
 													<tr>
 														<th>점수</th>
-														<td></td>
-														<td></td>
+														<td>${wttBean.timeVprogressFinal }</td>
+														<td>${wttBean.testResultFinal }</td>
 													</tr>
 													<tr>
 														<th>수료조건</th>
@@ -92,8 +92,7 @@
 											<!--수료/미수료 표기-->
 											<div class="grade_status">
 												<span>수료여부</span>
-												<div class="WTT_Completion_div">
-													<span class="WTT_Completion">미수료</span>
+												<div class="WTT_Completion_div ${wttBean.wtt_Completion_div_color_class }">${wttBean.str_wtt_Completion }
 												</div>
 											</div>
 										</td>
@@ -110,8 +109,8 @@
 							<div class="div_card-body">
 								<table width="1000px">
 									<tr>
-										<td rowspan="2">이것만 알자! 평가문항 출제 길잡이</td>
-										<td><span>진도율(%) 72%</span></td>
+										<td rowspan="2">${wttBean.wt_Title }</td>
+										<td><span>진도율(%) ${video_progressRound }%</span></td>
 										<td rowspan="2"><button class="blue_btn"
 												onclick="location.href='${root}class/class_video'">학습하기</button></td>
 									</tr>

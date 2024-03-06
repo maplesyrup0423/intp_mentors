@@ -17,7 +17,7 @@
 			<td><div class="headline_top__left">
 
 					<span><div class="color_div"></div>교육과정</span>
-					<p class="WT_title">이것만 알자! 평가문항 출제 길잡이</p>
+					<p class="WT_title">${wttBean.wt_Title }</p>
 				</div></td>
 		</tr>
 	</table>

@@ -217,14 +217,29 @@ button{
 	border-radius: 20px;
 	font-size: 15px;
 }
-.WTT_Completion_div{
-	border: 2px solid #ff5345;
+
+.WTT_Completion_div {
+	float: right; border : 2px solid;
 	border-radius: 20px;
 	width: 80px;
 	display: inline-block;
+	border: 2px solid #ff5345;
 }
-.WTT_Completion{
-	color: #ff5345;
+
+.WTT_Completion_bc0{
+	border-color: #A09BFF;
+	color:  #A09BFF ;
+	background-color: rgb(160, 155, 255, 15%);
+}
+.WTT_Completion_bc1{
+	border-color: #00457E;
+	color:  #00457E;
+	background-color: rgb(0, 69, 126, 15%);
+}
+.WTT_Completion_bc2{
+	border-color: #FF5345 ;
+	color:  #FF5345 ;
+	background-color: rgb(255, 83, 69, 15%);
 }
 .class_home_center_home_Table{
 	width: 800px;
