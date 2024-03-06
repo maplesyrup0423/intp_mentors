@@ -34,30 +34,30 @@
 		</div>
 		<div class="bookdetail_box">
 			<div class="bd_img">
-				<div class="img_box"><img src="${root }resources/image/book_img/${bookInfo.BK_img}.jpg"/></div>
+				<div class="img_box"><img src="${root }resources/image/book_img/${bookInfo.bk_img}.jpg"/></div>
 			</div>
 			<div class="bd_info">
 				<div class="info_box">
-					<div class="title"><span class="booklist-title-font">${bookInfo.BK_title}</span></div>
+					<div class="title"><span class="booklist-title-font">${bookInfo.bk_title}</span></div>
 					<hr/>
 					<div class="info_list"></div>
 					<div class="list1">
 						<table>
 							<tr>
 								<th>작가</th>
-								<td class="booklist-info-font">${bookInfo.BK_autor}</td>
+								<td class="booklist-info-font">${bookInfo.bk_autor}</td>
 							</tr>
 							<tr>
 								<th>출판사</th>
-								<td class="booklist-info-font">${bookInfo.BK_publisher}</td>
+								<td class="booklist-info-font">${bookInfo.bk_publisher}</td>
 							</tr>
 							<tr>
 								<th>발행일</th>
-								<td class="booklist-info-font">${bookInfo.BK_date}</td>
+								<td class="booklist-info-font">${bookInfo.bk_date}</td>
 							</tr>
 							<tr>
 								<th>ISBN</th>
-								<td class="booklist-info-font">${bookInfo.BK_isbn}</td>
+								<td class="booklist-info-font">${bookInfo.bk_isbn}</td>
 							</tr>
 						</table>
 					</div>
@@ -66,11 +66,11 @@
 						<table>
 							<tr>
 								<th>정가</th>
-								<td class="booklist-info-font">${bookInfo.BK_price}</td>
+								<td class="booklist-info-font">${bookInfo.bk_price}</td>
 							</tr>
 							<tr>
 								<th>판매처</th>
-								<td><button id="sales" onclick="location.href='${bookInfo.BK_kobo}'">교보문고<img src="../img/expand_btn.png" /></button></td>
+								<td><button id="sales" onclick="location.href='${bookInfo.bk_kobo}'">교보문고<img src="../img/expand_btn.png" /></button></td>
 							</tr>
 							<tr>
 								<th>링크복사</th>
@@ -112,7 +112,7 @@
 				<h2 class="font-weight-bold text-primary">도서 정보</h2>
 			</div>
 			<div class="div_card-body">
-				<div class="GS_table_div">${bookInfo.BK_info}</div>
+				<div class="GS_table_div">${bookInfo.bk_info}</div>
 			</div>
 
 		</div>
@@ -121,7 +121,7 @@
 				<h2 class="font-weight-bold text-primary">목차 정보</h2>
 			</div>
 			<div class="div_card-body">
-				<div class="GS_table_div">${bookInfo.BK_content}</div>
+				<div class="GS_table_div">${bookInfo.bk_content}</div>
 			</div>
 
 		</div>
@@ -130,7 +130,7 @@
 				<h2 class="font-weight-bold text-primary">저자 정보</h2>
 			</div>
 			<div class="div_card-body">
-				<div class="GS_table_div">${bookInfo.BK_autorinfo}</div>
+				<div class="GS_table_div">${bookInfo.bk_autorinfo}</div>
 			</div>
 
 		</div>

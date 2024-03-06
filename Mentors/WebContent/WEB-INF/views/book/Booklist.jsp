@@ -53,34 +53,34 @@
 						<c:forEach var='obj' items="${bookList }">
 							<div class="book_list" id="b_list"
 								onclick="location.href='${root }book/Booklist_Detail';">
-								<a href="${root }book/Booklist_Detail?BK_Key=${obj.BK_Key}">
+								<a href="${root }book/Booklist_Detail?bk_Key=${obj.bk_Key}">
 									<div class="book_info">
 										<div class="book_img">
 											<img class="b_img"
-												src="${root }resources/image/book_img/${obj.BK_img }.jpg" />
+												src="${root }resources/image/book_img/${obj.bk_img }.jpg" />
 										</div>
 										<div class="book_info_list">
 											<div class="info_title">
-												<span class="booklist-title-font">${obj.BK_title }</span>
+												<span class="booklist-title-font">${obj.bk_title }</span>
 											</div>
 											<div class="info_list">
 												<div class="info_list2">
 													<table>
 														<tr>
 															<th class="autor">저자</th>
-															<td class="booklist-info-font">${obj.BK_autor }</td>
+															<td class="booklist-info-font">${obj.bk_autor }</td>
 														</tr>
 														<tr>
 															<th class="ISBN">ISBN</th>
-															<td class="booklist-info-font">${obj.BK_isbn }</td>
+															<td class="booklist-info-font">${obj.bk_isbn }</td>
 														</tr>
 														<tr>
 															<th class="pub_date">발행일</th>
-															<td class="booklist-info-font">${obj.BK_date }</td>
+															<td class="booklist-info-font">${obj.bk_date }</td>
 														</tr>
 														<tr>
 															<th class="price">정가</th>
-															<td class="booklist-info-font">${obj.BK_price }원</td>
+															<td class="booklist-info-font">${obj.bk_price }원</td>
 														</tr>
 													</table>
 												</div>
