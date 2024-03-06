@@ -27,8 +27,8 @@ public class BookController {
 	}
 	
 	@GetMapping("/Booklist_Detail")
-	public String Booklist_Detail(@RequestParam("BK_Key") String BK_Key,Model model) {
-		BookBean bookInfo= bookService.getBookInfo(BK_Key);
+	public String Booklist_Detail(@RequestParam("bk_Key") String bk_Key,Model model) {
+		BookBean bookInfo= bookService.getBookInfo(bk_Key);
 		model.addAttribute("bookInfo",bookInfo);
 		return "book/Booklist_Detail";
 	}

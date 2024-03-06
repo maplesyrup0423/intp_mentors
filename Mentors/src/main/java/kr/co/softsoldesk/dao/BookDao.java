@@ -16,7 +16,7 @@ public class BookDao {
 	public List<BookBean> getBookList(){
 		return bookMapper.getBookList();
 	}
-	public BookBean getBookInfo(String BK_Key) {
-		return bookMapper.getBookInfo(BK_Key);
+	public BookBean getBookInfo(String bk_Key) {
+		return bookMapper.getBookInfo(bk_Key);
 	}
 }

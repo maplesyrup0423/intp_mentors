@@ -17,7 +17,7 @@ public class BookService {
 	public List<BookBean> getBookList(){
 		return bookDao.getBookList();
 	}
-	public BookBean getBookInfo(String BK_Key) {
-		return bookDao.getBookInfo(BK_Key);
+	public BookBean getBookInfo(String bk_Key) {
+		return bookDao.getBookInfo(bk_Key);
 	}
 }
