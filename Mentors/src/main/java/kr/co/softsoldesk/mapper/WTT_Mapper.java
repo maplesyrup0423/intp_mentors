@@ -21,7 +21,7 @@ public interface WTT_Mapper {
 	
 	
 	//class 정보
-	@Select("select wtt.wtt_Key,wtt.wt_Key,wtt.WTT_Completion, wtt.wtt_payment_date, wt.wt_Title, wt.wt_TrainingTime, wt.wt_Tag_School, wt.wt_Tag_TypeCategory,wtt.WTT_viewing_time "
+	@Select("select wtt.wtt_Key,wtt.wt_Key,wtt.WTT_Completion, wtt.wtt_payment_date, wt.wt_Title, wt.wt_TrainingTime, wt.wt_Tag_School, wt.wt_Tag_TypeCategory,wtt.WTT_viewing_time, wtt.WTT_test_result "
 			+ "from workplace_t wt inner join wtt on wtt.WT_key=wt.WT_key and wtt.wtt_Key=#{wtt_Key}")
 	WTT_Bean getWTT_Bean(String wtt_Key);
 }
