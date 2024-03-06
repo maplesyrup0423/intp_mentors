@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="${root}resources/style/slidestest.css">
 <link rel="stylesheet" href="${root}resources/style/slick.css" />
 <link rel="stylesheet" href="${root}resources/style/xeicon.min.css">
+
 <script src="${root}/resources/script/jquery-3.3.1.min.js"></script>
 <script src="${root}/resources/script/slick.min.js"></script>
 <meta charset="UTF-8">
