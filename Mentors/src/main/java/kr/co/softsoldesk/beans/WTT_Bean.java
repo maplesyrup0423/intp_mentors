@@ -40,7 +40,5 @@ public class WTT_Bean {
 	// -----------------------------------------------------
 	private String wtt_Completion_div_color_class; //my room 학습별 컬러 클래스값
 	
-	
-	//TODO 시험 제출 Table 정보 만들기
-	
+
 }

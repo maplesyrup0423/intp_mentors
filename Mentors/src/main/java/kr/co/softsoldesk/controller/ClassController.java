@@ -15,30 +15,25 @@ import kr.co.softsoldesk.service.WTT_Service;
 @Controller
 @RequestMapping("/class")
 public class ClassController {
-	
+
 	@Autowired
 	private ClassService classService;
-	
+
 	@Autowired
 	private WTT_Service wtt_Service;
 
 	@GetMapping("/class_home_center_home")
-	public String class_home_center_home(@RequestParam("wtt_Key")String wtt_Key, Model model) {
-		
-		
-		WTT_Bean wttBean=wtt_Service.getWTT_Bean(wtt_Key);
-		model.addAttribute("wttBean",wttBean);
-		
+	public String class_home_center_home(@RequestParam("wtt_Key") String wtt_Key, Model model) {
+
+		WTT_Bean wttBean = wtt_Service.getWTT_Bean(wtt_Key);
+		model.addAttribute("wttBean", wttBean);
+
 		// % 정보 2개 단계에서 소수점 절삭할것
-		int video_progressRound = (int)Math.floor(wttBean.getVideo_progress());
-		int progressRound= (int)Math.floor(wttBean.getProgress());
-		System.out.println("video_progressRound : "+ video_progressRound);
-		System.out.println("progressRound : "+ progressRound);
-		model.addAttribute("video_progressRound",video_progressRound);
-		model.addAttribute("progressRound",progressRound);
-		
-		
-		
+		int video_progressRound = (int) Math.floor(wttBean.getVideo_progress());
+		int progressRound = (int) Math.floor(wttBean.getProgress());
+		model.addAttribute("video_progressRound", video_progressRound);
+		model.addAttribute("progressRound", progressRound);
+
 		return "class/class_home_center_home";
 	}
 
@@ -66,12 +61,14 @@ public class ClassController {
 	public String class_test() {
 		return "class/class_test";
 	}
-	
+
 	@GetMapping("/class_answer")
-	public String class_answer(@RequestParam("teat_a1") int teat_a1, @RequestParam("teat_a2") int teat_a2, @RequestParam("teat_a3") int teat_a3,
-								@RequestParam("teat_a4") int teat_a4, @RequestParam("teat_a5") int teat_a5, @RequestParam("teat_a6") int teat_a6,
-								@RequestParam("teat_a7") int teat_a7, @RequestParam("teat_a8") int teat_a8, @RequestParam("teat_a9") int teat_a9,
-								@RequestParam("teat_a10") int teat_a10, @RequestParam("wtt_Key") String wtt_Key, Model model){
+	public String class_answer(@RequestParam("teat_a1") int teat_a1, @RequestParam("teat_a2") int teat_a2,
+			@RequestParam("teat_a3") int teat_a3, @RequestParam("teat_a4") int teat_a4,
+			@RequestParam("teat_a5") int teat_a5, @RequestParam("teat_a6") int teat_a6,
+			@RequestParam("teat_a7") int teat_a7, @RequestParam("teat_a8") int teat_a8,
+			@RequestParam("teat_a9") int teat_a9, @RequestParam("teat_a10") int teat_a10,
+			@RequestParam("wtt_Key") String wtt_Key, Model model) {
 		System.out.println(wtt_Key);
 		System.out.println(teat_a1);
 		System.out.println(teat_a2);
