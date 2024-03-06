@@ -47,7 +47,7 @@
 
 							<tr>
 								<td class="td_left"><form:label path="teacher_Gender">성별</form:label></td>
-								<td class="td_right"><form:input class = "td_right" path="teacher_Gender"  /></td>
+								<td class="td_right"><form:input class = "td_right" path="teacher_Gender" readonly="true" /></td>
 							</tr>
 						</table>
 					</div>
@@ -85,11 +85,9 @@
 							<tr>
 								<td class="td_left">교직타입</td>
 								<td class="td_right">
-								<form:select path = "teacher_Type">
-									<option value="초등교사" selected>초등교사</option>
-									<option value="중등교사">중등교사</option>
-									<option value="고등교사">고등교사</option>
-								</form:select>
+									<label><input type="radio" name="teacher_Type" value="초등교사" ${modifyTeacherBean.teacher_Type == '초등교사' ? 'checked' : ''}> 초등교사</label>
+							        <label><input type="radio" name="teacher_Type" value="중등교사" ${modifyTeacherBean.teacher_Type == '중등교사' ? 'checked' : ''}> 중등교사</label>
+							        <label><input type="radio" name="teacher_Type" value="고등교사" ${modifyTeacherBean.teacher_Type == '고등교사' ? 'checked' : ''}> 고등교사</label>
 								</td>
 							</tr>
 							<tr>
