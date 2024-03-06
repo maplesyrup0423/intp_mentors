@@ -11,6 +11,8 @@ where BK_category = 3;
 select * from booklist;
 select BK_Key,BK_title,BK_category from booklist;
 select BK_Key,BK_img,BK_title,BK_autor,BK_date,BK_isbn,BK_price from booklist;
+select BK_Key,BK_img,BK_title,BK_autor,BK_date,BK_isbn,BK_price from booklist where BK_category=2;
+
 select BK_Key,BK_img, BK_title,BK_autor,BK_date,BK_isbn,BK_publisher,BK_price,BK_yes24,BK_ald,BK_kobo
 ,BK_info, BK_content,BK_autorinfo,BK_category from booklist where BK_Key='BOOK1';
 
