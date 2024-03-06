@@ -28,4 +28,7 @@ public class TeacherDao {
 		return teachermapper.getModifyTeacherinfo(Teacher_id);
 	}
 	
+	public void modifyTeacherInfo(TeacherBean modifyTeacherBean) {
+		teachermapper.modifyTeacherInfo(modifyTeacherBean);
+	}
 }

@@ -29,27 +29,27 @@
 							<table class="personal_info_table">
 								<tr>
 									<td class="td_left">성명</td>
-									<td class="td_right"><input type="text" id="Teacher_Name" name="Teacher_Name" value="${loginTeacherBean.teacher_Name }" disabled="disabled"/></td>
+									<td class="td_right"><input type="text" class = "td_right" id="teacher_Name" name="teacher_Name" value="${loginTeacherBean.teacher_Name }" disabled="disabled"/></td>
 								</tr>
 
 								<tr>
 									<td class="td_left">생년월일</td>
-									<td class="td_right">1281-01-23</td>
+									<td class="td_right"><input type="text" class = "td_right" id="teacher_Birth" name="teacher_Birth" value="${loginTeacherBean.teacher_Birth }" disabled="disabled"/></td>
 								</tr>
 
 								<tr>
 									<td class="td_left">이메일</td>
-									<td class="td_right">ajipgagosipda@gipgago.sipda</td>
+									<td class="td_right"><input type="text" class = "td_right" id="teacher_Email" name="teacher_Email" value="${loginTeacherBean.teacher_Email }" disabled="disabled"/></td>
 								</tr>
 
 								<tr>
 									<td class="td_left">전화번호</td>
-									<td class="td_right">02-784-8917</td>
+									<td class="td_right"><input type="text" class = "td_right" id="teacher_Tel" name="teacher_Tel" value="${loginTeacherBean.teacher_Tel }" disabled="disabled"/></td>
 								</tr>
 
 								<tr>
 									<td class="td_left">성별</td>
-									<td class="td_right">남?자?</td>
+									<td class="td_right"><input type="text" class = "td_right" id="teacher_Gender" name="teacher_Gender" value="${loginTeacherBean.teacher_Gender }" disabled="disabled"/></td>
 								</tr>
 							</table>
 						</div>
@@ -63,11 +63,11 @@
 							<table class="account_info_table">
 								<tr>
 									<td class="td_left">아이디</td>
-									<td class="td_right">hahahahah</td>
+									<td class="td_right"><input type="text" class = "td_right" id="teacher_id" name="teacher_id" value="${loginTeacherBean.teacher_id }" disabled="disabled"/></td>
 								</tr>
 								<tr>
 									<td class="td_left">닉네임</td>
-									<td class="td_right">대머리</td>
+									<td class="td_right"><input type="text" class = "td_right" id="teacher_Nickname" name="teacher_Nickname" value="${loginTeacherBean.teacher_Nickname }" disabled="disabled"/></td>
 								</tr>
 							</table>
 							</div>
@@ -81,22 +81,17 @@
 									<table class="work_in_table">
 										<tr>
 											<td class="td_left">직장명</td>
-											<td class="td_right">솔데스크 대학원생 양성 학습소</td>
+											<td class="td_right"><input type="text" class = "td_right" id="teacher_Work_In" name="teacher_Work_In" value="${loginTeacherBean.teacher_Work_In }" disabled="disabled"/></td>
 										</tr>
 
 										<tr>
 											<td class="td_left">교직타입</td>
-											<td class="td_right"><input type="radio"
-												name="school_type" value="초등교사" checked
-												onclick="return(false);">초등교사 <input type="radio"
-												name="school_type" value="중등교사" onclick="return(false);">중등교사
-												<input type="radio" name="school_type" value="고등교사"
-												onclick="return(false);">고등교사</td>
+											<td class="td_right"><input type="text" class = "td_right" id="teacher_Type" name="teacher_Type" value="${loginTeacherBean.teacher_Type }" disabled="disabled"/></td>
 										</tr>
 										
 										<tr>
 											<td class="td_left">Neis</td>
-											<td class="td_right">12345678</td>
+											<td class="td_right"><input type="text" class = "td_right" id="teacher_Neis" name="teacher_Neis" value="${loginTeacherBean.teacher_Neis }" disabled="disabled"/></td>
 										</tr>
 									</table>
 								</div>

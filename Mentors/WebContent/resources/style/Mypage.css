@@ -65,12 +65,20 @@ div.account_space {
 	font-weight : bold;
 }
 
-.td_right {
+td.td_right {
+	width: 450px;
+	height: 55px;
+	border: none;
+	border-radius : 8px;
+	font-size : 17px;
+	padding-left : 10px;
+}
+
+input.td_right {
 	width: 450px;
 	height: 55px;
 	border: 1px solid black;
 	border-radius : 8px;
-	opacity: 0.7;
 	font-size : 17px;
 	padding-left : 10px;
 }

@@ -30,7 +30,6 @@ public interface TeacherMapper {
 			+ "where Teacher_id = #{teacher_id}")
 	TeacherBean getModifyTeacherinfo(String Teacher_id);
 	
-	
 	@Update("update Teacher_Info " +
 			"set Teacher_Email = #{teacher_Email}, " 
 			+ "Teacher_Tel = #{teacher_Tel}, "
@@ -38,7 +37,7 @@ public interface TeacherMapper {
 			+ "Teacher_Work_In = #{teacher_Work_In}, "
 			+ "Teacher_Type = #{teacher_Type}, "
 			+ "Teacher_Neis = #{teacher_Neis}"
-			+ "where Teacher_Name = #{teacher_Name}")
+			+ "where Teacher_id = #{teacher_id}")
 	void modifyTeacherInfo(TeacherBean modifyTeacherBean);
 	
 }

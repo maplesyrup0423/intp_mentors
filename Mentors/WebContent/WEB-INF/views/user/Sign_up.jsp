@@ -24,37 +24,37 @@
 				<div class="personal_information">
 					<!-- 성명 -->
 					<p>
-						<form:input path = "Teacher_Name" /> 
-						<form:label path = "Teacher_Name">
+						<form:input path = "teacher_Name" /> 
+						<form:label path = "teacher_Name">
 							<span>성명을 입력하세요. ex) 제갈김씨</span>
 						</form:label>
 						
 					</p>
 					<!-- 생일 -->
 					<p>
-						<form:input path = "Teacher_Birth" /> 
-						<form:label path = "Teacher_Birth">
+						<form:input path = "teacher_Birth" /> 
+						<form:label path = "teacher_Birth">
 							<span>생년월일을 입력하세요. ex)15600231</span>
 						</form:label>
 					</p>
 					<!-- 성별 -->
 					<div class="gender_choice">
-						<form:select path = "Teacher_Gender">
+						<form:select path = "teacher_Gender">
 							<option value="남성" selected>남성</option>
 							<option value="여성">여성</option>
 						</form:select>
 					</div>
 					<!-- 이메일 -->
 					<p>
-						<form:input path = "Teacher_Email" />
-						<form:label path = "Teacher_Email">
+						<form:input path = "teacher_Email" />
+						<form:label path = "teacher_Email">
 							<span>이메일을 입력하세요. ex)Ahjipga@naver.com</span>
 						</form:label>
 					</p>
 					<!-- 전화번호 -->
 					<p>
-						<form:input path = "Teacher_Tel" /> 
-						<form:label path = "Teacher_Tel"> 
+						<form:input path = "teacher_Tel" /> 
+						<form:label path = "teacher_Tel"> 
 							<span>전화번호를 입력하세요.
 								ex)010-1234-5678
 							</span>
@@ -77,15 +77,15 @@
 
 					<!-- 비밀번호 -->
 					<p>
-						<form:input path = "Teacher_Password" autocomplete="off"/>
-						<form:label path = "Teacher_Password"> 
+						<form:input path = "teacher_Password" autocomplete="off"/>
+						<form:label path = "teacher_Password"> 
 							<span>비밀번호를 입력하세요</span>
 						</form:label>
 					</p>
 					<!-- 비밀번호 확인 -->
 					<p>
-						<form:input path = "Teacher_Password2" autocomplete="off" />
-						<form:label path = "Teacher_Password2"> 
+						<form:input path = "teacher_Password2" autocomplete="off" />
+						<form:label path = "teacher_Password2"> 
 							<span>비밀번호 확인</span>
 						</form:label> 
 					</p>
@@ -94,8 +94,8 @@
 					</div>
 					<!-- 닉네임 -->
 					<p class="absolute">
-						<form:input path = "Teacher_Nickname"  /> 
-						<form:label path = "Teacher_Nickname"> 
+						<form:input path = "teacher_Nickname"  /> 
+						<form:label path = "teacher_Nickname"> 
 							<span>닉네임을 입력하고 중복확인을 눌러주세요 </span>
 						</form:label>
 						<button type="button" onclick="checkTeacherNicknameExist()">중복확인</button>
@@ -110,15 +110,15 @@
 				<div class="work_in_information">
 					<!-- 직장 -->
 					<p>
-						<form:input path = "Teacher_Work_In" /> 
-						<form:label path = "Teacher_Work_In"> 
+						<form:input path = "teacher_Work_In" /> 
+						<form:label path = "teacher_Work_In"> 
 							<span>솔데스크 대학원</span>
 						</form:label>
 					</p>
 
 					<!-- 교직타입 -->
 					<div class="school_type">
-						<form:select path = "Teacher_Type">
+						<form:select path = "teacher_Type">
 							<option value="초등교사" selected>초등교사</option>
 							<option value="중등교사">중등교사</option>
 							<option value="고등교사">고등교사</option>
@@ -126,8 +126,8 @@
 					</div>
 
 					<p>
-						<form:input path = "Teacher_Neis" /> 
-						<form:label path = "Teacher_Neis">
+						<form:input path = "teacher_Neis" /> 
+						<form:label path = "teacher_Neis">
 							<span>neis 정보를 입력하세요.</span>
 						</form:label>
 					</p>

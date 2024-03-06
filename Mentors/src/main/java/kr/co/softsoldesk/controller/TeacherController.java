@@ -94,15 +94,24 @@ public class TeacherController {
 	}
 		
 	@GetMapping("/Mypage_change")
-	public String Mypage_change(@RequestParam("Teacher_id") String Teacher_id, 
-								Model model) {
+	public String Mypage_change(@ModelAttribute("modifyTeacherBean") TeacherBean modifyTeacherBean) {
+			
+		teacherService.getModifyTeacherinfo(modifyTeacherBean);
 		
-		model.addAttribute("Teacher_id", Teacher_id);
 		
-		TeacherBean modifyTeacherBean = teacherService.getModifyTeacherinfo(Teacher_id);
-		model.addAttribute("modifyTeacherBean", modifyTeacherBean);
-		model.addAttribute("loginTeacherBean", loginTeacherBean);
 		return "user/Mypage_change";
+		
 	}
-	
+
+	@PostMapping("/Mypage_change_pro")
+	public String Mypage_change_pro(@Valid @ModelAttribute("modifyTeacherBean") TeacherBean modifyTeacherBean,
+									BindingResult result) {
+		if(result.hasErrors()) {
+			return "user/Mypage";
+		}
+		
+		teacherService.modifyTeacherInfo(modifyTeacherBean);
+		return "user/Mypage_change_success";
+	}
+			
 }
