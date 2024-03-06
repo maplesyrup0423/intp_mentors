@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softsoldesk.beans.ClassBean;
+import kr.co.softsoldesk.beans.WTT_Bean;
 import kr.co.softsoldesk.service.ClassService;
 import kr.co.softsoldesk.service.WTT_Service;
 
@@ -17,11 +18,26 @@ public class ClassController {
 	
 	@Autowired
 	private ClassService classService;
+	
+	@Autowired
+	private WTT_Service wtt_Service;
 
 	@GetMapping("/class_home_center_home")
-	public String class_home_center_home(@RequestParam("wtt_Key")String wtt_Key) {
+	public String class_home_center_home(@RequestParam("wtt_Key")String wtt_Key, Model model) {
 		
-		//TODO % 정보 2개 Math.round()로 컨트롤러 단계에서 소수점 절삭할것
+		
+		WTT_Bean wttBean=wtt_Service.getWTT_Bean(wtt_Key);
+		model.addAttribute("wttBean",wttBean);
+		
+		// % 정보 2개 단계에서 소수점 절삭할것
+		int video_progressRound = (int)Math.floor(wttBean.getVideo_progress());
+		int progressRound= (int)Math.floor(wttBean.getProgress());
+		System.out.println("video_progressRound : "+ video_progressRound);
+		System.out.println("progressRound : "+ progressRound);
+		model.addAttribute("video_progressRound",video_progressRound);
+		model.addAttribute("progressRound",progressRound);
+		
+		
 		
 		return "class/class_home_center_home";
 	}

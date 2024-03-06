@@ -1,5 +1,8 @@
 package kr.co.softsoldesk.service;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -134,16 +137,34 @@ public class WTT_Service {
 		double testResult20=(double)testResult*0.2;
 		double timeVprogress80=timeVprogress*0.8;
 		double progress=testResult20+timeVprogress80;
+		wtt_Bean.setTestResultFinal(testResult20);
+		wtt_Bean.setTimeVprogressFinal(timeVprogress80);
 		wtt_Bean.setProgress(progress);
 		
 		
 		
 		
-		//TODO 결제일 date 타입으로 포멧
+		// 결제일 date 타입으로 포멧
+		try {
+		System.out.println("log1 : "+ wtt_Bean.getWtt_payment_date());
+		String pdate = wtt_Bean.getWtt_payment_date();
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date sdate = format.parse(pdate);
+		System.out.println("log2 : " + sdate);
+		wtt_Bean.setSDate(sdate);
 		
-		//TODO 마감일 구하기 결제일 +30
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 		
-
+		//마감일 구하기 결제일 +30
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(wtt_Bean.getSDate());
+		cal.add(Calendar.DATE, 30);
+		Date edate = new Date(cal.getTimeInMillis());
+		System.out.println("log3 : " + edate);
+		wtt_Bean.setEDate(edate);
 		
 		return wtt_Bean;
 	}
