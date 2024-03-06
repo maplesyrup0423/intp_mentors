@@ -18,5 +18,13 @@ public class ClassDao {
 		
 		System.out.println("dao");
 	}
+	
+	public ClassBean getQ(String wtt_Key) {
+		return classMapper.getQ(wtt_Key);
+	}
+	
+	public void updateScore(int WTT_test_result, String wtt_Key) {
+		classMapper.updateScore(WTT_test_result, wtt_Key);
+	}
 
 }

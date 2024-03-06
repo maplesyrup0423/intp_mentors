@@ -17,6 +17,8 @@ insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'dlfma6',10000,
 insert into wt_test_q values('WT1','wt1_test',1,2,4,3,2,4,1,2,3,1);
 insert into wt_test_q values('WT2','wt2_test',1,2,4,3,2,1,1,2,3,1);
 insert into wt_test_q values('WT4','wt4_test',1,2,4,3,2,2,1,2,3,1);
+insert into wt_test_q values('WT41','wt1_test',1,1,1,1,1,1,1,1,1,1);
+
 --WTT
 insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT21','id1',sysdate);
 insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT3','id1',sysdate);
@@ -28,11 +30,12 @@ insert into wtt_test_a (WTT_Key)values('WTT42');
 insert into wtt_test_a (WTT_Key)values('WTT43');
 --시험제출시 insert문
 update wtt_test_a set teat_a1 =1,teat_a2=2,teat_a3=3,teat_a4=4,teat_a5=1,teat_a6=2,teat_a7=2,teat_a8=4,teat_a9=1,teat_a10=4, test_aa=3 where WTT_Key='WTT41';
+select * from wtt_test_a;
 --@Update("update wtt_test_a set teat_a1 =#{teat_a1},teat_a2=#{teat_a2},teat_a3=#{teat_a3},teat_a4=#{teat_a4},"+
 --	"teat_a5=#{teat_a5},teat_a6=#{teat_a6},teat_a7=#{teat_a7},teat_a8=#{teat_a8},teat_a9=#{teat_a9},teat_a10=#{teat_a10}, test_aa=#{teat_aa} "+
 --			"where WTT_Key=#{WTT_Key}")
 
-
+update wtt_test_a set teat_a1 =1,teat_a2=1,teat_a3=1,teat_a4=1,teat_a5=1,teat_a6=1,teat_a7=1,teat_a8=1,teat_a9=1,teat_a10=1, test_aa=3 where WTT_Key='WTT41';
 --cart
 insert into cart values('id1','WT2');
 insert into cart values('id1','WT3');

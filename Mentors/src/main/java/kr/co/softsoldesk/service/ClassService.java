@@ -18,5 +18,13 @@ public class ClassService {
 		System.out.println("service");
 		
 	}
+	
+	public ClassBean getQ(String wtt_Key) {
+		return classDao.getQ(wtt_Key);
+	}
+	
+	public void updateScore(int WTT_test_result,String wtt_Key) {
+		classDao.updateScore(WTT_test_result, wtt_Key);
+	}
 
 }
