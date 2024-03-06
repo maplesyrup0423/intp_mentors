@@ -38,12 +38,14 @@
 							</button>
 						</div>
 						<div class="book_cate">
-							<input type="button" value="전체" /> <input type="button"
-								value="교육과정/교육정책" /> <input type="button" value="학급운영/생활지도" />
-							<input type="button" value="디지털역량" /> <input type="button"
-								value="수업지도/학습지도" /> <input type="button" value="교육철학/에세이" />
-							<input type="button" value="아동도서(1-6학년)" /> <input type="button"
-								value="수업디자인연구소" />
+							<input type="button" value="전체" />
+							<input type="button" value="교육과정/교육정책" />
+							<input type="button" value="학급운영/생활지도" />
+							<input type="button" value="디지털역량" />
+							<input type="button" value="수업지도/학습지도" />
+							<input type="button" value="교육철학/에세이" />
+							<input type="button" value="아동도서(1-6학년)" />
+							<input type="button" value="수업디자인연구소" />
 						</div>
 						
 						

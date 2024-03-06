@@ -112,7 +112,7 @@
 										<td rowspan="2">${wttBean.wt_Title }</td>
 										<td><span>진도율(%) ${video_progressRound }%</span></td>
 										<td rowspan="2"><button class="blue_btn"
-												onclick="location.href='${root}class/class_video'">학습하기</button></td>
+												onclick="location.href='${root}class/class_video?wtt_Key=${wttBean.wtt_Key}'">학습하기</button></td>
 									</tr>
 									<tr>
 

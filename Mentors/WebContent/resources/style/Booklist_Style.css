@@ -64,7 +64,7 @@ body{
 	border-style: none;
 }
 
-.book_cate input:hover, active{
+.book_cate input:hover {
 	height: 38px;
 	background: linear-gradient(325deg, #ffcd19, #ff5345);
 	color: #fff;
