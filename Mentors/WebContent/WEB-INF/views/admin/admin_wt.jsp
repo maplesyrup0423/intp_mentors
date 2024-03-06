@@ -43,8 +43,8 @@
 							<h2 class="font-weight-bold text-primary">연수관리</h2>
 						</div>
 						<div class="div_card-body">
-							<div class="qna_select">
-								<select>
+							<div class="all_select">
+								<select class="admin_select">
 									<option value="1">이것만 알자! 평가문항 출제 길잡이1</option>
 									<option value="1">이것만 알자! 평가문항 출제 길잡이2</option>
 								</select>
@@ -60,7 +60,7 @@
 										<tr>
 											<th>연수코드</th>
 											<th>썸네일</th>
-											<th>과정명</th>
+											<th>연수명</th>
 											<th>관리</th>
 										</tr>
 									</thead>
@@ -110,7 +110,7 @@
 								</table>
 							</div>
 							<div class="bottom_move_btn">
-								<span>
+								<span class="admin_span">
 									<input class="m_btn" type="button" value="<">
 									<input class="m_btn" type="button" value="1">
 									<input class="m_btn" type="button" value=">">
