@@ -17,10 +17,8 @@
 		<div class="main_div">
 				<div class="div_box">
 					<div class="account_space">
-						<input class="change_account" type="button" value="정보수정"
-						onClick="location.href='Mypage_change.jsp'" /> 
-						<input class="change_password" type="button" value="비밀번호 변경"
-						onClick="location.href='Password_change_confirm.jsp'" />
+						<a href="${root }user/Mypage_change" class="Mypage_change">정보수정</a>
+						<a href="${root }user/Password_change_confirm" class="change_password">비밀번호 변경</a>
 					</div>
 <!-- --------------------------------------------------------- -->
 					<div class="div_card div_shadow">
@@ -31,7 +29,7 @@
 							<table class="personal_info_table">
 								<tr>
 									<td class="td_left">성명</td>
-									<td class="td_right">김씨</td>
+									<td class="td_right"><input type="text" id="Teacher_Name" name="Teacher_Name" value="${LoginTeacherBean.Teacher_Name }" disabled="disabled"/></td>
 								</tr>
 
 								<tr>
@@ -94,6 +92,11 @@
 												name="school_type" value="중등교사" onclick="return(false);">중등교사
 												<input type="radio" name="school_type" value="고등교사"
 												onclick="return(false);">고등교사</td>
+										</tr>
+										
+										<tr>
+											<td class="td_left">Neis</td>
+											<td class="td_right">12345678</td>
 										</tr>
 									</table>
 								</div>

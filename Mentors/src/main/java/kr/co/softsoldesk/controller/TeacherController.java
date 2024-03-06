@@ -37,6 +37,22 @@ public class TeacherController {
 		return "user/Login";
 	}
 	
+	@PostMapping("/Login_pro")
+	public String Login_pro(@Valid @ModelAttribute("tempLoginTeacherBean") 
+							TeacherBean tempLoginTeacherBean, BindingResult result) {
+		
+		if(result.hasErrors()) {
+			return "user/Login";
+		}
+		teacherService.getLoginTeacherInfo(tempLoginTeacherBean);
+		
+		if(loginTeacherBean.isTeacherLogin() == true) {
+			return "user/Login_success";
+		}else {			
+			return "user/Login_fail";
+		}
+	}
+	
 	@GetMapping("/logout")
 	public String logout() {
 		loginTeacherBean.setTeacherLogin(false);
@@ -61,10 +77,6 @@ public class TeacherController {
 		return "user/sign_up_success";
 	}
 	
-	@GetMapping("/Mypage")
-	public String Mypage() {
-		return "user/Mypage";
-	}
 	@GetMapping("/Find_ID")
 	public String Find_ID() {
 		return "user/Find_ID";
@@ -75,29 +87,22 @@ public class TeacherController {
 		return "user/Find_Password";
 	}
 	
-	
-	
+	@GetMapping("/Mypage")
+	public String Mypage() {
+		
+		return "user/Mypage";
+	}
+		
 	@GetMapping("/Mypage_change")
-	public String Mypage_change() {
+	public String Mypage_change(@RequestParam("Teacher_id") String Teacher_id, 
+								Model model) {
+		
+		model.addAttribute("Teacher_id", Teacher_id);
+		
+		TeacherBean modifyTeacherBean = teacherService.getModifyTeacherinfo(Teacher_id);
+		model.addAttribute("modifyTeacherBean", modifyTeacherBean);
+		model.addAttribute("loginTeacherBean", loginTeacherBean);
 		return "user/Mypage_change";
 	}
 	
-	@PostMapping("/Login_pro")
-	public String Login_pro(@Valid @ModelAttribute("tempLoginTeacherBean") 
-							TeacherBean tempLoginTeacherBean, BindingResult result) {
-		
-		if(result.hasErrors()) {
-			return "user/Login";
-		}
-		teacherService.getLoginTeacherInfo(tempLoginTeacherBean);
-		
-		if(loginTeacherBean.isTeacherLogin() == true) {
-			return "user/Login_success";
-		}else {			
-			return "user/Login_fail";
-		}
-	}
-	
-
-
 }

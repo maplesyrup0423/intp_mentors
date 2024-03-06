@@ -50,8 +50,10 @@ public class TeacherService {
 			System.out.println("로그인 상태값"+loginTeacherBean.isTeacherLogin());
 		}
 	}
-	
-	
 
+	public TeacherBean getModifyTeacherinfo(String Teacher_id) {
+		return teacherDao.getModifyTeacherinfo(Teacher_id);
+		
+	}
 	
 }

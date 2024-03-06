@@ -11,69 +11,105 @@
 <link rel="stylesheet" href="${root }resources/style/Mypage_change.css" />
 </head>
 <body>
-	<center>
-		<table class="main_table" >
-			<h1 class = "title_mypage">마이페이지 수정</h1>
-			<tr class="main_tr">
-				<td class="main_td">
-					<div class = "div_box" >
-						<h2 class = "category">개인정보 관리</h2>
-						<table class="personal_info_table">
-							<tr>
-								<td class = "td_left">성명</td>
-								<td class = "td_right"><input type="text" value = "김씨"/></td>
-								<td class = "td_left">생년월일</td>
-								<td class = "td_right"><input type="text" value = "1281-01-23"/></td>
-							</tr>
-
-							<tr>
-								<td class = "td_left">이메일</td>
-								<td class = "td_right"><input type="text" value = "ajipgagosipda@gipgago.sipda"/></td>
-								<td class = "td_left">전화번호</td>
-								<td class = "td_right"><input type="text" value = "02-784-8917"/></td>
-							</tr>
-						</table>
-
-						<table class="account_info_table">
-							<h2 class = "category">계정정보 관리</h2>
-							<tr>
-								<td class = "td_left">아이디</td>
-								<td class = "td_right"><input type="text" value = "hahahahah"/></td>
-								<td class = "td_left">닉네임</td>
-								<td class = "td_right"><input type="text" value = "대머리"/></td>
-							</tr>
-							
-							<tr>
-								<td class = "td_left">현재 비밀번호</td>
-								<td class = "td_right"><input type="password" /></td>
-							</tr>
-						</table>
-						
-						<table class="work_in_table">
-							<h2 class = "category">직장정보 관리</h2>
-							<tr>
-								<td class = "td_left">직장명</td>
-								<td class = "td_right"><input type="text" value = "솔데스크 대학원생 양성 학습소"/></td>
-								<td class = "td_left">교직타입</td>
-								<td class = "td_right">
-									<input type="radio" name="school_type" value="초등교사" checked>초등교사 
-									<input type="radio" name="school_type" value="중등교사">중등교사
-									<input type="radio" name="school_type" value="고등교사">고등교사
-								</td>
-							</tr>
-						</table>
-					</div> 
-					<div>
-						<table>
-							<tr>
-								<td><input class = "change_fin" type="button" value = "수정완료"
-								onClick="location.href='Mypage.jsp'"/></td>
-							</tr>
-						</table>
+	<!-- header --> 
+	<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+		<div class="title_mypage">마이페이지</div>
+		<div class="main_div">
+				<div class="div_box">
+					<div class="account_space">
+						<input class="change_account" type="button" value="정보수정"
+						onClick="location.href='Mypage_change.jsp'" /> 
+						<input class="change_password" type="button" value="비밀번호 변경"
+						onClick="location.href='Password_change_confirm.jsp'" />
 					</div>
-				</td>
-			</tr>
-		</table>
-	</center>
+<!-- --------------------------------------------------------- -->
+					<form:form action="${root }user/modify_pro" method="post" modelAttribute="modifyTeacherBean">			
+					<div class="div_card div_shadow">
+						<div class="div_card-header">
+							<h6 class="font-weight-bold text-primary">개인정보</h6>
+						</div>
+						<div class="div_card-body">
+							<table class="personal_info_table">
+								<tr>
+									<td class="td_left"><form:label path="user_name">성명</form:label></td>
+									<td class="td_right"><form:input path="user_name" readonly="true"/></td>
+								</tr>
+
+								<tr>
+									<td class="td_left">생년월일</td>
+									<td class="td_right">1281-01-23</td>
+								</tr>
+
+								<tr>
+									<td class="td_left">이메일</td>
+									<td class="td_right">ajipgagosipda@gipgago.sipda</td>
+								</tr>
+
+								<tr>
+									<td class="td_left">전화번호</td>
+									<td class="td_right">02-784-8917</td>
+								</tr>
+
+								<tr>
+									<td class="td_left">성별</td>
+									<td class="td_right">남?자?</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+<!-- --------------------------------------------------------- -->
+					<div class="div_card div_shadow">
+						<div class="div_card-header">
+							<h6 class="font-weight-bold text-primary">계정정보</h6>
+						</div>
+						<div class="div_card-body">
+							<table class="account_info_table">
+								<tr>
+									<td class="td_left">아이디</td>
+									<td class="td_right">hahahahah</td>
+								</tr>
+								<tr>
+									<td class="td_left">닉네임</td>
+									<td class="td_right">대머리</td>
+								</tr>
+							</table>
+							</div>
+						</div>
+<!-- ------------------------------------------------------------------- -->
+							<div class="div_card div_shadow">
+								<div class="div_card-header">
+									<h6 class="font-weight-bold text-primary">직장정보</h6>
+								</div>
+								<div class="div_card-body">
+									<table class="work_in_table">
+										<tr>
+											<td class="td_left">직장명</td>
+											<td class="td_right">솔데스크 대학원생 양성 학습소</td>
+										</tr>
+
+										<tr>
+											<td class="td_left">교직타입</td>
+											<td class="td_right"><input type="radio"
+												name="school_type" value="초등교사" checked
+												onclick="return(false);">초등교사 <input type="radio"
+												name="school_type" value="중등교사" onclick="return(false);">중등교사
+												<input type="radio" name="school_type" value="고등교사"
+												onclick="return(false);">고등교사</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+
+			</div>
+			<div class="Mypage_button">
+				<input class="delete_account" type="button" value="회원탈퇴"
+						onClick="location.href='Mypage_change.jsp'" /> 
+				
+				<a href="${root }user/logout" class="logout">로그아웃</a>
+			</div>
+		</div>
+	</form:form>
+	<!-- footer --> 
+	<c:import url="/WEB-INF/views/include/Mentors_main_footer.jsp" />
 </body>
 </html>

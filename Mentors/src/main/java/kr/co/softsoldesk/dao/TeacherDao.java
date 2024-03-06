@@ -24,5 +24,8 @@ public class TeacherDao {
 		return teachermapper.checkTeacherIdExist(teacher_id);
 	}
 	
+	public TeacherBean getModifyTeacherinfo(String Teacher_id) {
+		return teachermapper.getModifyTeacherinfo(Teacher_id);
+	}
 	
 }

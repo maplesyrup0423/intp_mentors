@@ -130,29 +130,51 @@ th.payment_status {
 	text-align : right;
 }
 
-input.change_account {
+a.Mypage_change {
 	width : 500px;
 	height : 50px;
 	border-radius : 7px;
 	font-size : 25px;
-	color : white;
 	background-color : #00457E;
 	border-width : 0px 0px 1px;
 	border : 1px solid gray;
 	box-shadow : 0px 1px 5px rgb(0, 69, 126, 60%);
 	margin-right : auto;
+	text-align : center;
+	text-decoration: none;
+	vertical-align: middle;
+	line-height: 50px;
 }
 
-input.change_password {
+a.Mypage_change:link {
+	color : white;
+}
+
+a.Mypage_change:visited {
+	color : white;
+}
+
+a.change_password {
 	width : 500px;
 	height : 50px;
 	border-radius : 7px;
-	font-size : 25px;
-	color : white;
 	background-color : #00457E;
 	border-width : 0px 0px 1px;
 	border : 1px solid gray;
 	box-shadow : 0px 1px 5px rgb(0, 69, 126, 60%);
+	text-align : center;
+	text-decoration: none;
+	vertical-align: middle;
+	line-height: 50px;
+	font-size : 25px;
+}
+
+a.change_password:link {
+	color : white;
+}
+
+a.change_password:visited {
+	color : white;
 }
 
 input.delete_account{
