@@ -22,6 +22,7 @@ public class WTT_Bean {
 	private int wt_TrainingTime; // 강의 시간
 	private int wt_Tag_School;// 학급 코드
 	private int wt_Tag_TypeCategory;// 분야 코드
+	private int wt_Video; //비디오 url
 
 	// -----------------------------------------------------
 	private String str_wtt_Completion; //강의 수료여부 문자열
