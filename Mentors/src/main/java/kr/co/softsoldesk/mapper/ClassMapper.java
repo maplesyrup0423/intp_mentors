@@ -22,5 +22,8 @@ public interface ClassMapper {
 	@Select("select WT_Title, WT_TrainingTime, WT_Video from workplace_T wt inner join WTT wtt on wt.WT_Key = wtt.WT_Key where wtt.wtt_Key = #{wtt_Key}")
 	WTT_Bean getWtInfo(String wtt_Key);
 	
+	@Update("update wtt set WTT_viewing_time=#{param1} where wtt_Key = #{param2}")
+	void updateViewTime(int param1, String param2);
+	
 
 }
