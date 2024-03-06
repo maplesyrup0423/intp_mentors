@@ -19,7 +19,7 @@ public interface ClassMapper {
 	@Update("update wtt set WTT_test_result=#{param1} where WTT_key = #{param2}")
 	void updateScore(int param1, String param2);
 	
-	@Select("select WT_Title, WT_TrainingTime, WT_Video from workplace_T wt inner join WTT wtt on wt.WT_Key = wtt.WT_Key where wtt.wtt_Key = #{wtt_Key}")	
+	@Select("select WT_Title, WT_TrainingTime, WT_Video from workplace_T wt inner join WTT wtt on wt.WT_Key = wtt.WT_Key where wtt.wtt_Key = #{wtt_Key}")
 	WTT_Bean getWtInfo(String wtt_Key);
 	
 

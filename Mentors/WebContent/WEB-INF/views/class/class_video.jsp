@@ -201,7 +201,7 @@
 
 		<div class="contents">
 
-			<div class="vedio_title">${wtt_viewing_time.wt_Title }</div>
+			<div class="vedio_title">${tempWttBean.wt_Title }</div>
 			<div class="video_w">
 				<div id="myPlayer" class="myPlayer"></div>
 			</div>
