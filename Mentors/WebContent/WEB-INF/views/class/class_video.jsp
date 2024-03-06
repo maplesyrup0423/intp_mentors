@@ -131,6 +131,9 @@
 </script>
 
 <script>
+
+	var ctime;
+	
 	$(function() {
 		// play list 선언
 		var videos = [ {
@@ -156,6 +159,7 @@
 		// 총시간 가져오기
 		$('#myPlayer').on("YTPTime", function(e) {
 			var currentTime = $('#myPlayer').YTPGetTime();
+			ctime = currentTime;
 			$('.now_time').html('NOW : ' + currentTime);
 
 			var totalTime = $('#myPlayer').YTPGetTotalTime();
@@ -176,6 +180,10 @@
 		});
 
 	});
+	
+	function video_check(){
+		 location.href="${root }class/class_video_save?wtt_Key=${wtt_Key}&wtt_viewing_time="+ctime;
+	 }
 </script>
 
 </head>
@@ -189,8 +197,8 @@
 			</div>
 			<div class="Exit_div">
 				<div>
-					<a href="${root }class/class_home_Include"> <img src="${root }resources/image/Exit.png"
-						id="Exit" /></a>
+					<button onclick="video_check()"> <img src="${root }resources/image/Exit.png"
+						id="Exit" /></button>
 				</div>
 				<div>
 					<span class="text_fff">나가기</span>

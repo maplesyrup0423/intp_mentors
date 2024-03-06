@@ -32,5 +32,9 @@ public class ClassDao {
 	public WTT_Bean getWtInfo(String wtt_Key) {
 		return classMapper.getWtInfo(wtt_Key);
 	}
+	
+	public void updateViewTime(int wtt_viewing_time, String wtt_Key) {
+		classMapper.updateViewTime(wtt_viewing_time, wtt_Key);
+	}
 
 }

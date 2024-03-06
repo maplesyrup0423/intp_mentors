@@ -66,8 +66,30 @@ public class ClassController {
 	public String class_video(@RequestParam("wtt_Key") String wtt_Key, Model model) {
 		WTT_Bean tempWttBean = classService.getWtInfo(wtt_Key);
 		model.addAttribute("tempWttBean",tempWttBean);
+		model.addAttribute("wtt_Key",wtt_Key);
 		
 		return "class/class_video";
+	}
+	
+	@GetMapping("/class_video_save")
+	public String class_video_save(@RequestParam("wtt_Key") String wtt_Key, @RequestParam("wtt_viewing_time") String wtt_viewing_time, Model model) {
+		model.addAttribute("wtt_Key",wtt_Key);
+		      
+		String a = wtt_viewing_time;
+		System.out.println(a);
+		System.out.println(a.length());
+		String m = a.substring(0, 2); // 01
+		System.out.println(m);
+		String s = a.substring(5, 7); // 22
+		System.out.println(s);
+		int mm = Integer.parseInt(m);// 1
+		System.out.println(mm);
+		int ss = Integer.parseInt(s);// 22
+		System.out.println(ss);
+		int time = (mm * 60) + ss;// 82
+		System.out.println(time);
+		classService.updateViewTime(time, wtt_Key);
+		return "class/class_video_save";
 	}
 
 	@GetMapping("/class_test")
