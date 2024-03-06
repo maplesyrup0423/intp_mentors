@@ -125,8 +125,8 @@ public class WTT_Service {
 		}
 		
 		//강의 시간 % 구하기
-		int vTime=wtt_Bean.getWtt_viewing_time();
-		int tTime=wtt_Bean.getWt_TrainingTime();
+		int vTime=wtt_Bean.getWtt_viewing_time()/60;//초를 분으로 바꿈
+		int tTime=wtt_Bean.getWt_TrainingTime();//분
 		double timeVprogress = ((double)vTime/(double)tTime)*100;
 		wtt_Bean.setVideo_progress(timeVprogress);
 		
