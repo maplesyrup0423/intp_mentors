@@ -41,6 +41,22 @@
     font-size: 14pt;
 }
 
+.event-table-list{
+	width: 800px;
+}
+
+.event-table-list tr td{
+	padding: 20px;
+    height: 40px;
+    font-size: 12pt;
+}
+
+.event-table-list th{
+	padding-bottom: 5px;
+    width: 170px;
+    font-size: 14pt;
+}
+
 .wt-table-textarea{
 	box-shadow: 0px 1px 5px 0px rgb(0,69,126, 20%);
 	border: none;
@@ -93,8 +109,13 @@
     color: #00457E !important;
 }
 
-.qna_select{
+.all_select{
 	margin-bottom: 15px;
+}
+
+.admin_select{
+	height: 30px;
+	text-align: center;
 }
 
 .searchbar{
@@ -129,11 +150,21 @@
 	max-height: 100%;
 }
 
+.event_img_td{
+	width: 250px;
+	height: 100px;
+}
+
+.event_img_td img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
 .bottom_move_btn{
 	text-align: center;
 }
 
-span{
+.admin_span{
 	margin-right: -200px;
 }
 
@@ -178,10 +209,6 @@ span{
 	float: right;
 }
 
-.wt-insert-title{
-	text-align: left;
-}
-
 .wt-select{
 	width: 100px;
 	height: 30px;
@@ -215,7 +242,34 @@ span{
 	margin: 20px;
 }
 
+.event-insert_btn{
+	width: 100px;
+	height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	border-style: none;
+	border-radius: 20px;
+	background-color: #00457E;
+	cursor: pointer;
+	margin: 20px;
+}
+
+.event-movelist_btn{
+	width: 100px;
+	height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	border-style: none;
+	border-radius: 20px;
+	background-color: #00457E;
+	cursor: pointer;
+	margin: 20px;
+}
+
 .answertext_box{
+	resize: none;
 	border: none;
 	width: 600px;
 	height: 200px;
@@ -246,4 +300,38 @@ span{
 	background-color: #00457E;
 	cursor: pointer;
 	margin: 20px;
+}
+
+.noti_detail-modify_btn{
+	width: 100px;
+	height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	border-style: none;
+	border-radius: 20px;
+	background-color: #00457E;
+	cursor: pointer;
+	margin: 20px;
+}
+
+.noti_detail-list_btn{
+	width: 100px;
+	height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	border-style: none;
+	border-radius: 20px;
+	background-color: #00457E;
+	cursor: pointer;
+	margin: 20px;
+}
+
+.noti-insert-titletext_box{
+	resize: none;
+	border: none;
+	width: 600px;
+	height: 20px;
+	font-size: 16px;
 }

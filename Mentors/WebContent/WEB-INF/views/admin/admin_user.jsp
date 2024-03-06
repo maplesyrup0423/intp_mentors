@@ -51,6 +51,7 @@
 							<th>이름</th>
 							<th>비밀번호</th>
 							<th>생성일</th>
+							<th>계정탈퇴</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -60,6 +61,9 @@
 							<td>이용대</td>
 							<td>뚫어보시지</td>
 							<td>2024-02-18</td>
+							<td>
+								<button class="user-delete_btn">계정삭제</button>
+							</td>
 						</tr>
 						<tr>
 							<td>2</td>
@@ -67,6 +71,9 @@
 							<td>이름</td>
 							<td>비밀번호</td>
 							<td>생성일</td>
+							<td>
+								<button class="user-delete_btn">계정삭제</button>
+							</td>
 						</tr>
 						<tr>
 							<td>3</td>
@@ -74,6 +81,9 @@
 							<td>이름</td>
 							<td>비밀번호</td>
 							<td>생성일</td>
+							<td>
+								<button class="user-delete_btn">계정삭제</button>
+							</td>
 						</tr>
 						<tr>
 							<td>4</td>
@@ -81,6 +91,9 @@
 							<td>이름</td>
 							<td>비밀번호</td>
 							<td>생성일</td>
+							<td>
+								<button class="user-delete_btn">계정삭제</button>
+							</td>
 						</tr>
 						<tr>
 							<td>5</td>
@@ -88,6 +101,9 @@
 							<td>이름</td>
 							<td>비밀번호</td>
 							<td>생성일</td>
+							<td>
+								<button class="user-delete_btn">계정삭제</button>
+							</td>
 						</tr>
 						<tr>
 							<td>6</td>
@@ -95,6 +111,9 @@
 							<td>이름</td>
 							<td>비밀번호</td>
 							<td>생성일</td>
+							<td>
+								<button class="user-delete_btn">계정삭제</button>
+							</td>
 						</tr>
 					</tbody>
 				</table>

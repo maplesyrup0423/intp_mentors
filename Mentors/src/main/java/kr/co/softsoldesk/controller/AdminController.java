@@ -38,8 +38,19 @@ public class AdminController {
    
    @GetMapping("/admin_noti")
    public String admin_noti() {
-      return "admin/admin_noti";
+      return "admin/admin_noti";  
    }
+   
+   @GetMapping("/admin_noti_detail")
+   public String admin_noti_detail() {
+	   return "admin/admin_noti_detail";
+   }
+   
+   @GetMapping("/admin_noti_insert")
+   public String admin_noti_insert() {
+	   return "admin/admin_noti_insert";
+   }
+   
    @GetMapping("/admin_pay")
    public String admin_pay() {
       return "admin/admin_pay";
@@ -51,5 +62,10 @@ public class AdminController {
    @GetMapping("/admin_event")
    public String admin_event() {
       return "admin/admin_event";
+   }
+   
+   @GetMapping("/admin_event_insert")
+   public String admin_event_insert() {
+	   return "admin/admin_event_insert";
    }
 }

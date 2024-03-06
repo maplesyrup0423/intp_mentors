@@ -1,5 +1,7 @@
 package kr.co.softsoldesk.beans;
 
+import java.util.Date;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,14 +27,18 @@ public class WTT_Bean {
 	private String str_wtt_Completion; //강의 수료여부 문자열
 	private String str_WT_Tag_School; // 학급 문자열
 	private String str_WT_Tag_TypeCategory; // 분야 문자
-	private String end_date; // 연수 마감일 wtt_payment_date +30일
+	//private String end_date; // 연수 마감일 wtt_payment_date +30일
 	private double video_progress; // 강의 진행도 (영상만)
 	private double progress; // 강의 진행도 (영상+시험)
+	
+	private double timeVprogressFinal; // 영상 진행도 점수(80%)
+	private double testResultFinal; // 시험 점수 (20%)
+	
+	private Date sDate; //강의 시작일(결제일)
+	private Date eDate; //강의 마감일(결제일 +30)
 
 	// -----------------------------------------------------
 	private String wtt_Completion_div_color_class; //my room 학습별 컬러 클래스값
 	
-	
-	//TODO 시험 제출 Table 정보 만들기
-	
+
 }

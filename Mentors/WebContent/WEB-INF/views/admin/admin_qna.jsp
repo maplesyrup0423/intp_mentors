@@ -43,8 +43,8 @@
 				<h2 class="font-weight-bold text-primary">Q&A</h2>
 			</div>
 			<div class="div_card-body">
-				<div class="qna_select">
-					<select>
+				<div class="all_select">
+					<select class="admin_select">
 						<option value="all">전체</option>
 						<option value="1">이것만 알자! 평가문항 출제 길잡이1</option>
 						<option value="2">이것만 알자! 평가문항 출제 길잡이2</option>
@@ -65,7 +65,7 @@
 						<thead>
 							<tr>
 								<th>번호</th>
-								<th>과목명</th>
+								<th>연수명</th>
 								<th>제목</th>
 								<th>작성자</th>
 								<th>등록일</th>

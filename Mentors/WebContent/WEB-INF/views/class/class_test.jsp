@@ -12,45 +12,77 @@
 <link rel="stylesheet" href="${root }resources/style/class_home_style.css">
 <title>시험</title>
 <script>
-	function getAnswer1(event) {
-		document.getElementById('result1').innerText = event.target.value;
-	}
 
-	function getAnswer2(event) {
-		document.getElementById('result2').innerText = event.target.value;
-	}
+var a1 = 0;
+var a2 = 0;
+var a3 = 0;
+var a4 = 0;
+var a5 = 0;
+var a6 = 0;
+var a7 = 0;
+var a8 = 0;
+var a9 = 0;
+var a10 = 0;
 
-	function getAnswer3(event) {
-		document.getElementById('result3').innerText = event.target.value;
-	}
 
-	function getAnswer4(event) {
-		document.getElementById('result4').innerText = event.target.value;
-	}
+function getAnswer1(event) {
+	document.getElementById('result1').innerText = event.target.value;
+	a1 = parseInt(document.getElementById('result1').textContent);
+}
 
-	function getAnswer5(event) {
-		document.getElementById('result5').innerText = event.target.value;
-	}
+function getAnswer2(event) {
+	document.getElementById('result2').innerText = event.target.value;
+	a2 = parseInt(document.getElementById('result2').textContent);
+}
 
-	function getAnswer6(event) {
-		document.getElementById('result6').innerText = event.target.value;
-	}
+function getAnswer3(event) {
+	document.getElementById('result3').innerText = event.target.value;
+	a3 = parseInt(document.getElementById('result3').textContent);
+}
 
-	function getAnswer7(event) {
-		document.getElementById('result7').innerText = event.target.value;
-	}
+function getAnswer4(event) {
+	document.getElementById('result4').innerText = event.target.value;
+	a4 = parseInt(document.getElementById('result4').textContent);
+}
 
-	function getAnswer8(event) {
-		document.getElementById('result8').innerText = event.target.value;
-	}
+function getAnswer5(event) {
+	document.getElementById('result5').innerText = event.target.value;
+	a5 = parseInt(document.getElementById('result5').textContent);
+}
 
-	function getAnswer9(event) {
-		document.getElementById('result9').innerText = event.target.value;
-	}
+function getAnswer6(event) {
+	document.getElementById('result6').innerText = event.target.value;
+	a6 = parseInt(document.getElementById('result6').textContent);
+}
 
-	function getAnswer10(event) {
-		document.getElementById('result10').innerText = event.target.value;
-	}
+function getAnswer7(event) {
+	document.getElementById('result7').innerText = event.target.value;
+	a7 = parseInt(document.getElementById('result7').textContent);
+}
+
+function getAnswer8(event) {
+	document.getElementById('result8').innerText = event.target.value;
+	a8 = parseInt(document.getElementById('result8').textContent);
+}
+
+function getAnswer9(event) {
+	document.getElementById('result9').innerText = event.target.value;
+	a9 = parseInt(document.getElementById('result9').textContent);
+}
+
+function getAnswer10(event) {
+	document.getElementById('result10').innerText = event.target.value;
+	a10 = parseInt(document.getElementById('result10').textContent);
+}
+
+var str = "WTT41";
+
+function check_answer() {
+	location.href = "${root}class/class_answer?teat_a1=" + a1 + "&teat_a2="
+			+ a2 + "&teat_a3=" + a3 + "&teat_a4=" + a4 + "&teat_a5=" + a5
+			+ "&teat_a6=" + a6 + "&teat_a7=" + a7 + "&teat_a8=" + a8
+			+ "&teat_a9=" + a9 + "&teat_a10=" + a10 + "&wtt_Key="+str; //연수-선생님 키 값은 받아오게 나중에 변경
+}
 </script>
 </head>
 
@@ -446,7 +478,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td colspan="4"><button class="test_a_button" onclick="href='${root}class/class_home_Include'">제출하기</button></td>
+					<td colspan="4"><button class="test_a_button" onclick="check_answer()">제출하기</button></td>
 				</tr>
 			</table>
 		</div>
