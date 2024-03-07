@@ -29,7 +29,7 @@ public interface ClassMapper {
 	String getWttCompletion(String wtt_key);
 	
 	@Update("update wtt set wtt_Completion=#{param1} where wtt_key = #{param2}")
-	void updateWttCompletion(String param1, String param2);
+	void updateWttCompletion(int param1, String param2);
 	
 	@Update("update wtt_test_a set test_aa=#{param1} where where wtt_key = #{param2}")
 	void updateTestAA(int param1, String param2);
