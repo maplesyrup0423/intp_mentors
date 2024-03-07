@@ -36,5 +36,17 @@ public class ClassService {
 	public void updateViewTime(int wtt_viewing_time, String wtt_Key) {
 		classDao.updateViewTime(wtt_viewing_time, wtt_Key);
 	}
+	
+	public String getWttCompletion(String wtt_key) {
+		return classDao.getWttCompletion(wtt_key);
+	}
+	
+	public void updateTestAA(int test_aa, String wtt_key) {
+		classDao.updateTestAA(test_aa, wtt_key);
+	}
+	
+	public void updateWttCompletion(String wtt_Completion, String wtt_key) {
+		classDao.updateWttCompletion(wtt_Completion, wtt_key);
+	}
 
 }

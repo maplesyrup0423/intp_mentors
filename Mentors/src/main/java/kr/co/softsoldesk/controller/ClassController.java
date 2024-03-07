@@ -40,7 +40,8 @@ public class ClassController {
 		model.addAttribute("video_progressRound",video_progressRound);
 		model.addAttribute("progressRound",progressRound);
 		
-		
+		String wttCompletion = classService.getWttCompletion(wtt_Key);
+		model.addAttribute("wttCompletion", wttCompletion); //강의 상태
 		
 		return "class/class_home_center_home";
 	}
@@ -92,8 +93,13 @@ public class ClassController {
 		System.out.println(time);
 		classService.updateViewTime(time, wtt_Key);
 		
-		//TODO - 영상 끌때마다 응시조건 확인
+		//TODO - 영상 끌때마다 응시조건 업데이트
+		WTT_Bean wb = wtt_Service.getWTT_Bean(wtt_Key);
 		
+		if(wb.getVideo_progress() >= 90) {
+			classService.updateTestAA(1, wtt_Key);
+		}
+
 		return "class/class_video_save";
 	}
 
@@ -147,7 +153,11 @@ public class ClassController {
 			tcb.setCnt(tcb.getCnt()+1);
 		}
 		
-		classService.updateScore((tcb.getCnt()*10),wtt_Key);
+		classService.updateScore((tcb.getCnt()*10),wtt_Key); //채점
+		
+		WTT_Bean wb = wtt_Service.getWTT_Bean(wtt_Key);
+		
+		//TODO 수강 상태 변경
 		
 		
 		return "class/class_answer";
