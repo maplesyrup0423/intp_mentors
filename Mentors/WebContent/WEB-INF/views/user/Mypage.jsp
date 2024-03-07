@@ -143,7 +143,7 @@
 			
 			<div class="Mypage_button">
 				<input class="delete_account" type="button" value="회원탈퇴"
-						onClick="location.href='Mypage_change.jsp'" /> 
+						onClick="location.href='${root}delete_account'" /> 
 				
 				<a href="${root }user/logout" class="logout">로그아웃</a>
 			</div>

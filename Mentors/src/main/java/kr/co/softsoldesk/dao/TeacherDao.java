@@ -40,4 +40,8 @@ public class TeacherDao {
 		return teachermapper.getTeacherPw(teacher_id, teacher_name, teacher_tel);
 	}
 	
+	public void deleteAccount(TeacherBean deleteBean) {
+		teachermapper.deleteAccount(deleteBean);
+	}
+	
 }

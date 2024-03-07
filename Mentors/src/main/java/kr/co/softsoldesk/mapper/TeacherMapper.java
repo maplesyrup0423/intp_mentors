@@ -1,5 +1,6 @@
 package kr.co.softsoldesk.mapper;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -50,6 +51,11 @@ public interface TeacherMapper {
 			+ "from teacher_info "
 			+ "where teacher_id = #{param1} and teacher_name = #{param2} and teacher_tel = #{param3}")
 	String getTeacherPw(String param1, String param2, String param3);
+	
+	@Delete("delete from teacher_info "
+			+ "where teacher_password = #{teacher_Password")
+	void deleteAccount(TeacherBean deleteBean);
+	
 	
 }
 

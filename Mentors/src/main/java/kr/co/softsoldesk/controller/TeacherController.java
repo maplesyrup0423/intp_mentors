@@ -1,7 +1,5 @@
 package kr.co.softsoldesk.controller;
 
-import java.util.Arrays;
-
 import javax.annotation.Resource;
 import javax.validation.Valid;
 
@@ -170,5 +168,12 @@ public class TeacherController {
 		teacherService.modifyTeacherInfo(modifyTeacherBean);
 		return "user/Mypage_change_succss";
 	}
-			
+	
+	@GetMapping("/delete_account")
+	public String delete_account() {
+		
+		
+		return "delete_account";
+	}
+	
 }
