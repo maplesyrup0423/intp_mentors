@@ -11,8 +11,11 @@
 <link rel="stylesheet" href="${root }resources/style/Password_change_confirm.css" />
 </head>
 <body>
+	<!-- header --> 
+	<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
 	<center>
-		<form action="">
+		<form:form action="password_change_pro" method = "post"
+					modelAttribute="pwChangeBean">
 			<table class = "password_change_table">
 				<tr>
 					<td>
@@ -22,20 +25,22 @@
 							새로운 비밀번호를 입력해주세요.
 						</div>
 						<center>
-							<input class = "password_change_input" type="password" name = "current_password" placeholder = "현재 비밀번호를 입력하세요." autocomplete = "off"/> <br />
-							<input class = "password_change_input" type="password" name = "new_password" placeholder = "새로운 비밀번호를 입력하세요." autocomplete = "off"/> <br />
-							<input class = "password_change_input" type="password" name = "new_password_confirm" placeholder = "새로운 비밀번호를 다시 입력하세요." autocomplete = "off"/>
+							<form:input type = "password" class = "password_change_input" path = "current_password" placeholder = "현재 비밀번호를 입력하세요." autocomplete = "off"/> <br />
+							<form:input type = "password" class = "password_change_input" path = "teacher_Password" placeholder = "새로운 비밀번호를 입력하세요." autocomplete = "off"/> <br />
+							<form:input type = "password" class = "password_change_input" path = "teacher_Password2" placeholder = "새로운 비밀번호를 다시 입력하세요." autocomplete = "off"/>
 						</center>
 							
 						<center>
 							<input class = "password_change_cancel" type="button" value = "취소" 
-							onClick="location.href='Mypage.jsp'"/>
-							<input class = "password_change_submit" type="submit" name = "submit" value = "확인" />
+							onClick="location.href='${root}user/Mypage'"/>
+							<form:button class = "password_change_submit">확인</form:button>
 						</center>
 					</td>
 				</tr>
 			</table>
-		</form>
+		</form:form>
 	</center>
+	<!-- footer --> 
+	<c:import url="/WEB-INF/views/include/Mentors_main_footer.jsp" />
 </body>
 </html>

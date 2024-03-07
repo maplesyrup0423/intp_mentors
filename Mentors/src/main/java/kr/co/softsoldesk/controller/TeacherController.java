@@ -170,6 +170,11 @@ public class TeacherController {
 		return "user/Mypage_change_success";
 	}
 	
+	@GetMapping("/Password_change_confirm")
+	public String Password_change_confirm(@ModelAttribute("pwChangeBean") TeacherBean pwChangeBean) {
+		return "user/Password_change_confirm";
+	}
+	
 	@GetMapping("/delete_account")
 	public String delete_account(@ModelAttribute("deleteAccountBean") TeacherBean deleteAccountBean) {
 		

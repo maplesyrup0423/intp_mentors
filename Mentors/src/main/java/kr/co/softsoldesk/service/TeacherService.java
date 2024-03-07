@@ -97,4 +97,7 @@ public class TeacherService {
 		loginTeacherBean.setTeacherLogin(false);
 	}
 	
+	public void changeTeacherPw(TeacherBean changePwBean) {
+		teacherDao.changeTeacherPw(changePwBean);
+	}
 }
