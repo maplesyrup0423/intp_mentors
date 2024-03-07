@@ -32,8 +32,8 @@ public class TeacherDao {
 		teachermapper.modifyTeacherInfo(modifyTeacherBean);
 	}
 	
-	public TeacherBean getTeacherId(TeacherBean getTeacherId) {
-		return teachermapper.getTeacherId(getTeacherId);
+	public String getTeacherId(String teacher_name, String teacher_tel) {
+		return teachermapper.getTeacherId(teacher_name, teacher_tel);
 	}
 	
 }

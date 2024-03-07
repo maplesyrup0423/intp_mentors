@@ -44,12 +44,22 @@ public class TeacherController {
 		if(result.hasErrors()) {
 			return "user/Login";
 		}
+		
 		teacherService.getLoginTeacherInfo(tempLoginTeacherBean);
 		
+		String admin_id = tempLoginTeacherBean.getTeacher_id();
+		String admin_pw = tempLoginTeacherBean.getTeacher_Password();
+		
+		if(admin_id.equals("system1004")&&admin_pw.equals("1004!")) {
+			return "admin/admin_welcome";
+		}
+		
+		else {
 		if(loginTeacherBean.isTeacherLogin() == true) {
 			return "user/Login_success";
 		}else {			
 			return "user/Login_fail";
+		}
 		}
 	}
 	
@@ -92,9 +102,14 @@ public class TeacherController {
 		if(result.hasErrors()) {
 			return "Find_ID";
 		}
-		teacherService.getTeacherId(tempFindIdBean);
+		String getTeacher_Name = tempFindIdBean.getTeacher_Name();
+		String getTeacher_Tel = tempFindIdBean.getTeacher_Tel();
 		
+		String getTeacher_Id = teacherService.getTeacherId(getTeacher_Name, getTeacher_Tel);
 		
+		model.addAttribute("getTeacher_Id", getTeacher_Id);
+		System.out.println("안녕하세요.");
+		System.out.println(getTeacher_Id);
 		return "user/Find_ID_success";
 	}
 	

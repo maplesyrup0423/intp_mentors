@@ -84,8 +84,8 @@ public class TeacherService {
 		loginTeacherBean.setTeacher_Neis(modifyTeacherBean.getTeacher_Neis());
 	}
 	
-	public void getTeacherId(TeacherBean getTeacherId) {
-		TeacherBean getteacherid = teacherDao.getTeacherId(getTeacherId);
+	public String getTeacherId(String teacher_name, String teacher_tel) {
+		return teacherDao.getTeacherId(teacher_name, teacher_tel);
 	}
 	
 }
