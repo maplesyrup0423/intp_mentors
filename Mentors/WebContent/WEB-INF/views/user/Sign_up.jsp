@@ -96,13 +96,9 @@
 					<p class="absolute">
 						<form:input path = "teacher_Nickname"  /> 
 						<form:label path = "teacher_Nickname"> 
-							<span>닉네임을 입력하고 중복확인을 눌러주세요 </span>
+							<span>닉네임을 입력해주세요. </span>
 						</form:label>
-						<button type="button" onclick="checkTeacherNicknameExist()">중복확인</button>
 					</p>
-					<div class="nickname_check_message">
-						이미 13348개 존재하는 닉네임입니다. 다른걸 고르세요
-					</div>
 				</div>
 
 				<!-- 직장정보 -->

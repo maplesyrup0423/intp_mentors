@@ -80,6 +80,7 @@ public class TeacherController {
 		if(result.hasErrors()) {
 			return "user/sign_up";
 		}
+		
 		//데이터베이스에 저장 및 회원가입 완료
 		teacherService.addTeacherInfo(Sign_upTeacherBean);
 		return "user/sign_up_success";
@@ -166,14 +167,32 @@ public class TeacherController {
 		}
 		
 		teacherService.modifyTeacherInfo(modifyTeacherBean);
-		return "user/Mypage_change_succss";
+		return "user/Mypage_change_success";
 	}
 	
 	@GetMapping("/delete_account")
-	public String delete_account() {
+	public String delete_account(@ModelAttribute("deleteAccountBean") TeacherBean deleteAccountBean) {
 		
 		
-		return "delete_account";
+		return "user/delete_account";
+	}
+	
+	@PostMapping("/delete_account_pro")
+	public String delete_account_pro(@Valid @ModelAttribute("deleteAccountBean") TeacherBean deleteAccountBean,
+										BindingResult result) {
+		
+		if(result.hasErrors()) {
+			return "user/delete_account";
+		}
+		
+		if(loginTeacherBean.getTeacher_Password().equals(deleteAccountBean.getTeacher_Password())) {
+			teacherService.deleteAccount(deleteAccountBean);
+			return "user/delete_account_success";
+		}
+		else {
+			return "user/delete_account_fail";
+		}
+		
 	}
 	
 }
