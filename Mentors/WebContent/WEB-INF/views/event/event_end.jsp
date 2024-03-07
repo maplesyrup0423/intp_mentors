@@ -13,6 +13,9 @@
 
 
     <div class="Event_main">
+    
+    <!-- header -->
+		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
       
         <h1 style="font-size: 50px; margin-left: -800;" >종료된 이벤트</h1>
         <!-- <hr style="margin-bottom: 30px;"> -->
@@ -21,7 +24,29 @@
             <button class="blue_btn">종료된 이벤트</button>
         </div>
         <div class="E_list">
-            <div class="event" >
+
+			<c:forEach var='obj' items="${eventList }">
+				
+				
+				<div class="event" >
+                <a href="${root }event/event_return">
+                    <img src="${root }resources/image/event_img/event_Thumb/${obj.event_thumbnail }.jpg" >
+                    <br>
+                    <div id="title"><h3>${obj.event_title  }</h3></div>
+                    <br>
+                    <div id="e_day">${obj.event_s_date }~ ${obj.event_e_date }</div>
+                    <div class="day_circle">
+                        <h2 class="day_end">종료</h2>
+                    </div>
+                    <div class="endfilter">
+                        <div class="endtext">마감완료</div>
+                    </div>
+                </a>
+            </div>
+
+			</c:forEach>
+
+			<div class="event" >
                 <a href="${root }event/event_return">
                     <img src="${root }resources/image/event_img/event_Thumb/event1-1.jpg" >
                     <br>
@@ -119,7 +144,8 @@
 
         </div>
 
-
+		<!-- footer -->
+		<c:import url="/WEB-INF/views/include/Mentors_main_footer.jsp" />
 
     </div>
 </body>

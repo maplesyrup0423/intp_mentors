@@ -25,5 +25,9 @@ public class EventService {
 	public EventBean getEventInfo(String event_key) {
 		return eventDao.getEventInfo(event_key);
 	}
+	
+	public int setDday() {
+		return eventDao.setDday();
+	}
 
 }

@@ -14,5 +14,9 @@ public class EventBean {
 	private String event_e_date;
 	private String event_title;
 	private String event_text;
+	
+//-------------------------------
+	
+	private int d_day;
 
 }

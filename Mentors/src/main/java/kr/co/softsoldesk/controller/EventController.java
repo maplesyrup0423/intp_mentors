@@ -23,27 +23,31 @@ public class EventController {
 	public String event3(Model model) {
 		
 		List<EventBean> eventCList = eventService.getConEventList();
+		
+		//TODO 영열영열아 d-day구하는거 화이팅
+		for(EventBean eb : eventCList) {
+			int d = (int)Math.ceil(eventService.setDday());
+			eb.setD_day(d);
+			System.out.println(eb.getD_day());
+		}
+		
 		model.addAttribute("eventList", eventCList);
 		
 		return "event/event3";
 	}
 	
-	@GetMapping("/event3_end")
-	public String event3_end(Model model) {
+	@GetMapping("/event_end")
+	public String event_end(Model model) {
 		List<EventBean> eventEList = eventService.getEndEventList();
+
 		model.addAttribute("eventList", eventEList);
 		
-		return "event/event3";
+		return "event/event_end";
 	}
 	
 	@GetMapping("/event_info")
 	public String event_info() {
 		return "event/event_info";
-	}
-	
-	@GetMapping("/event_end")
-	public String event_end() {
-		return "event/event_end";
 	}
 	
 	@GetMapping("/event_return")

@@ -23,14 +23,14 @@
 
 		<div class="E_button">
 			<button class="blue_btn"><a href="${root }event/event3">진행중인 이벤트</a></button>
-			<button class="blue_btn"><a href="${root }event/event3_end">종료된 이벤트</a></button>
+			<button class="blue_btn"><a href="${root }event/event_end">종료된 이벤트</a></button>
 		</div>
 		<hr>
 		<div class="E_list">
 		
 			<c:forEach var='obj' items="${eventList }">
 				<div class="event">
-					<a href="${root}event/event_info"> <img
+					<a href="${root}event/event_info?${obj.event_key}"> <img
 						src="${root }resources/image/event_img/event_Thumb/${obj.event_thumbnail }.jpg"
 						alt=""> <br>
 						<div id="title">
@@ -38,11 +38,14 @@
 						</div> <br>
 						<div id="e_day">${obj.event_s_date } ~ ${obj.event_e_date }</div>
 						<div class="day_circle">
-							<h2>D-1</h2>
+							<h2>D-${obj.d_day }</h2>
 						</div>
 					</a>
 				</div>
+
 			</c:forEach>
+			
+			
 		
 			<div class="event">
 				<a href="${root}event/event_info"> 
