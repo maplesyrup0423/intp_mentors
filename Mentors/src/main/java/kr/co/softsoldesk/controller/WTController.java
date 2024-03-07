@@ -76,6 +76,10 @@ public class WTController {
 			List<WTT_Bean> wttList2=wtt_Service.addMyRoomSelect(2);
 			int totel_2 = wttList2.size();
 			model.addAttribute("totel_2", totel_2);
+			//불합격
+			List<WTT_Bean> wttList3=wtt_Service.addMyRoomSelect(3);
+			int totel_3 = wttList3.size();
+			model.addAttribute("totel_3", totel_3);
 
 		return "WT/WT_my_room";
 	}
@@ -85,8 +89,8 @@ public class WTController {
 
 		System.out.println("Completion : " + Completion);
 		//총 강의 수 구하기
-		List<WTT_Bean> wttList3 = wtt_Service.addMyRoomAll();
-		int totel_ALL = wttList3.size();
+		List<WTT_Bean> wttList1004 = wtt_Service.addMyRoomAll();
+		int totel_ALL = wttList1004.size();
 		model.addAttribute("totel_ALL", totel_ALL);
 		//카테고리별 강의 수
 		//학습중
@@ -101,10 +105,13 @@ public class WTController {
 		List<WTT_Bean> wttList2=wtt_Service.addMyRoomSelect(2);
 		int totel_2 = wttList2.size();
 		model.addAttribute("totel_2", totel_2);
+		//불합격
+		List<WTT_Bean> wttList3=wtt_Service.addMyRoomSelect(3);
+		int totel_3 = wttList3.size();
+		model.addAttribute("totel_3", totel_3);
 		
 		
-		
-		if (Completion == 3) {
+		if (Completion == 1004) {
 			List<WTT_Bean> wttList = wtt_Service.addMyRoomAll();
 			model.addAttribute("wttList", wttList);
 			int totel_select = wttList.size();

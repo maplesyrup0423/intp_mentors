@@ -41,7 +41,7 @@ public class ClassDao {
 		return classMapper.getWttCompletion(wtt_key);
 	}
 
-	public void updateWttCompletion(String wtt_Completion, String wtt_key) {
+	public void updateWttCompletion(int wtt_Completion, String wtt_key) {
 		classMapper.updateWttCompletion(wtt_Completion, wtt_key);
 	}
 	

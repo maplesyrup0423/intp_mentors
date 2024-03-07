@@ -42,5 +42,7 @@ public class WTT_Bean {
 	// -----------------------------------------------------
 	private String wtt_Completion_div_color_class; //my room 학습별 컬러 클래스값
 	
+	private int d_Day;
+	
 
 }

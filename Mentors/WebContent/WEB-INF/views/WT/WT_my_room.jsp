@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var='root' value="${pageContext.request.contextPath }/" />
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE html>
 <html>
 
@@ -27,7 +28,7 @@
 				<hr>
 			</div>
 			<div class="Tbox_all">
-				<a href="${root }WT/WT_my_room_btn?Completion=3">
+				<a href="${root }WT/WT_my_room_btn?Completion=1004">
 					<div class="Tbox Tbox_0">
 						전체 <span class="span_num">${totel_ALL }</span>건
 					</div>
@@ -42,6 +43,11 @@
 				</a> <a href="${root }WT/WT_my_room_btn?Completion=2">
 					<div class="Tbox Tbox_3">
 						기간만료 <span class="span_num">${totel_2 }</span>건
+					</div>
+				</a>
+				 <a href="${root }WT/WT_my_room_btn?Completion=3">
+					<div class="Tbox Tbox_4">
+						불합격 <span class="span_num4">${totel_3 }</span>건
 					</div>
 				</a>
 			</div>
@@ -82,12 +88,23 @@
 						<div class="WT_left">
 							<table width="1150px">
 								<tr>
+									<td rowspan="3" width="100px"><c:if test="${obj.d_Day !=0}">
+											<div class="day_circle">D-${obj.d_Day}</div>
+										</c:if>
+										<c:if test="${obj.d_Day ==0}">
+											<div class="day_circle_end">END</div>
+										</c:if>
+										
+										
+										
+										</td>
 									<td class="colorbox_pos"><div class="WT_schol_type">${obj.str_WT_Tag_School }</div>
 										<div class="WT_category">${obj.str_WT_Tag_TypeCategory }</div>
-										<div class="WTT_Completion_div ${obj.wtt_Completion_div_color_class }">${obj.str_wtt_Completion }
+										<div
+											class="WTT_Completion_div ${obj.wtt_Completion_div_color_class }">${obj.str_wtt_Completion }
 										</div></td>
-									<td rowspan="3" width="100px"><div class="classbtn_div">
-											<button class="classbtn"
+									<td rowspan="3" width="100px"><div class="classbtn_div ">
+											<button <c:if test="${obj.d_Day ==0}">disabled </c:if>class="classbtn <c:if test="${obj.d_Day ==0}">endBtnColor </c:if>"
 												onclick="location.href='${root}class/class_home_center_home?wtt_Key=${obj.wtt_Key }'">강의실
 												입장</button>
 										</div></td>

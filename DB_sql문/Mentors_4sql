@@ -73,7 +73,6 @@ where n.noti_key = 'qk2';
 
 
 select * from wtt;
-SELECT *
-  FROM wtt WHERE TO_CHAR(wtt_payment_date+30, 'yyyy-mm-dd hh24:mi:ss') < TO_CHAR(SYSDATE, 'yyyy-mm-dd hh24:mi:ss') and wtt_Completion=0;
+SELECT * FROM wtt WHERE TO_CHAR(wtt_payment_date+30, 'yyyy-mm-dd hh24:mi:ss') < TO_CHAR(SYSDATE, 'yyyy-mm-dd hh24:mi:ss') and wtt_Completion=0;
 
-
+update wtt set wtt_completion=3 where wtt_key='WTT162';
