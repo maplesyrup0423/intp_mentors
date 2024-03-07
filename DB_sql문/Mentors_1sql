@@ -27,6 +27,8 @@ ALTER TABLE Teacher_Info ADD PRIMARY KEY ( Teacher_Id );
 select * from teacher_info;
 
 select teacher_name,teacher_gender from teacher_info where teacher_id='id1';
+update teacher_info set teacher_password = 'pw4' where teacher_password='pw3';
+update teacher_info set teacher_password = 'pw3' where teacher_password='pw4';
 -------------------------------------------------------------------------
 DROP TABLE  event ;
 

@@ -44,4 +44,8 @@ public class TeacherDao {
 		teachermapper.deleteAccount(deleteBean);
 	}
 	
+	public void changeTeacherPw(TeacherBean changePwBean) {
+		teachermapper.changeTeacherPw(changePwBean);
+	}
+	
 }
