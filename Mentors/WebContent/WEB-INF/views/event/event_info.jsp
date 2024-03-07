@@ -20,18 +20,18 @@
     
     <div id="up-point"></div>
 
-    <h1 style="text-align: left;">니들이 뭘 알아 자식들아 그냥 알아서 해 </h1>
+    <h1 style="text-align: left;">${eBean.event_title } </h1>
 
     <hr>
 
     <div style="text-align: left;">
-        <span id="s_dayt"> 이벤트 기간&nbsp;&nbsp;|&nbsp; 2024-02-27</span>
-        <span id="e_dayt">~ 2024-03-01</span>
+        <span id="s_dayt"> 이벤트 기간&nbsp;&nbsp;|&nbsp; ${eBean.event_s_date }</span>
+        <span id="e_dayt">~ ${eBean.event_e_date }</span>
     </div>
 
     <hr>
 
-      <img src="${root }resources/image/event_img/event_info/eventinfo1.jpg" 
+      <img src="${root }resources/image/event_img/event_info/${eBean.event_content_img }.jpg" 
       style="width: 100%; height: auto;">
 
         <div>

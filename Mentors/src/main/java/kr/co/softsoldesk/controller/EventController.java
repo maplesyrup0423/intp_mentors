@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softsoldesk.beans.EventBean;
 import kr.co.softsoldesk.service.EventService;
@@ -51,7 +52,9 @@ public class EventController {
 	}
 	
 	@GetMapping("/event_info")
-	public String event_info() {
+	public String event_info(@RequestParam("event_key") String event_key, Model model) {
+		EventBean eBean = eventService.getEventInfo(event_key);
+		model.addAttribute("eBean", eBean);
 		return "event/event_info";
 	}
 	
