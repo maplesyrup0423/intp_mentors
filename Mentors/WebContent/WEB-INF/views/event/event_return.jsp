@@ -4,5 +4,5 @@
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <script>
 	alert('진행이 종료된 이벤트 입니다')
-	location.href="${root}event/event3_end"
+	location.href="${root}event/event_end"
 </script>

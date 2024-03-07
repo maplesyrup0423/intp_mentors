@@ -26,8 +26,8 @@ public class EventDao {
 		return eventMapper.getEventInfo(event_key);
 	}
 	
-	public int setDday() {
-		return eventMapper.setDday();
+	public int setDday(String event_key) {
+		return eventMapper.setDday(event_key);
 	}
 
 }

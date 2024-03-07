@@ -26,8 +26,8 @@ public class EventService {
 		return eventDao.getEventInfo(event_key);
 	}
 	
-	public int setDday() {
-		return eventDao.setDday();
+	public int setDday(String event_key) {
+		return eventDao.setDday(event_key);
 	}
 
 }

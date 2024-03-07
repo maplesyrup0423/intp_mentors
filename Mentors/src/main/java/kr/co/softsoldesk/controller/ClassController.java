@@ -93,7 +93,7 @@ public class ClassController {
 		System.out.println(time);
 		classService.updateViewTime(time, wtt_Key);
 		
-		//TODO - 영상 끌때마다 응시조건 업데이트
+		//영상 끌때마다 응시조건 업데이트
 		WTT_Bean wb = wtt_Service.getWTT_Bean(wtt_Key);
 		
 		if(wb.getVideo_progress() >= 90) {
@@ -156,8 +156,6 @@ public class ClassController {
 		classService.updateScore((tcb.getCnt()*10),wtt_Key); //채점
 		
 		WTT_Bean wb = wtt_Service.getWTT_Bean(wtt_Key);
-		
-		//TODO 수강 상태 변경
 		
 		
 		return "class/class_answer";

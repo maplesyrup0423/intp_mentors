@@ -24,12 +24,17 @@ public class EventController {
 		
 		List<EventBean> eventCList = eventService.getConEventList();
 		
-		//TODO 영열영열아 d-day구하는거 화이팅
+		//TODO 영열영열아 db에 값 넣어놔라
 		for(EventBean eb : eventCList) {
-			int d = (int)Math.ceil(eventService.setDday());
+			int d = (int)Math.ceil(eventService.setDday(eb.getEvent_key()));
+			String sdate = eb.getEvent_s_date().substring(0,11);
+			String edate = eb.getEvent_e_date().substring(0,11);
+			eb.setEvent_s_date(sdate);
+			eb.setEvent_e_date(edate);
 			eb.setD_day(d);
 			System.out.println(eb.getD_day());
 		}
+		
 		
 		model.addAttribute("eventList", eventCList);
 		
