@@ -123,49 +123,55 @@ public class WTT_Service {
 			wtt_Bean.setStr_wtt_Completion("기간만료");
 			wtt_Bean.setWtt_Completion_div_color_class("WTT_Completion_bc2");
 		}
-		
-		//강의 시간 % 구하기
-		int vTime=wtt_Bean.getWtt_viewing_time()/60;//초를 분으로 바꿈
-		int tTime=wtt_Bean.getWt_TrainingTime();//분
-		double timeVprogress = ((double)vTime/(double)tTime)*100;
+
+		// 강의 시간 % 구하기
+		int vTime = wtt_Bean.getWtt_viewing_time() / 60;// 초를 분으로 바꿈
+		int tTime = wtt_Bean.getWt_TrainingTime();// 분
+		double timeVprogress = ((double) vTime / (double) tTime) * 100;
 		wtt_Bean.setVideo_progress(timeVprogress);
-		
-		
-		
+
 		// 전체 강의 진행도
 		int testResult = wtt_Bean.getWtt_test_result();
-		double testResult20=(double)testResult*0.2;
-		double timeVprogress80=timeVprogress*0.8;
-		double progress=testResult20+timeVprogress80;
+		double testResult20 = (double) testResult * 0.2;
+		double timeVprogress80 = timeVprogress * 0.8;
+		double progress = testResult20 + timeVprogress80;
 		wtt_Bean.setTestResultFinal(testResult20);
 		wtt_Bean.setTimeVprogressFinal(timeVprogress80);
 		wtt_Bean.setProgress(progress);
-		
-		
-		
-		
+
 		// 결제일 date 타입으로 포멧
 		try {
-		System.out.println("log1 : "+ wtt_Bean.getWtt_payment_date());
-		String pdate = wtt_Bean.getWtt_payment_date();
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		Date sdate = format.parse(pdate);
-		System.out.println("log2 : " + sdate);
-		wtt_Bean.setSDate(sdate);
-		
-		}
-		catch (Exception e) {
+			System.out.println("log1 : " + wtt_Bean.getWtt_payment_date());
+			String pdate = wtt_Bean.getWtt_payment_date();
+			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			Date sdate = format.parse(pdate);
+			System.out.println("log2 : " + sdate);
+			wtt_Bean.setSDate(sdate);
+
+			// 시작일 Date to String yyyy-MM-dd
+			SimpleDateFormat format2 = new SimpleDateFormat("yyyy-MM-dd");
+			String start_date = format2.format(sdate);
+			System.out.println("start_date" + start_date);
+			wtt_Bean.setStart_date(start_date);
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		//마감일 구하기 결제일 +30
+
+		// 마감일 구하기 결제일 +30
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(wtt_Bean.getSDate());
 		cal.add(Calendar.DATE, 30);
 		Date edate = new Date(cal.getTimeInMillis());
 		System.out.println("log3 : " + edate);
 		wtt_Bean.setEDate(edate);
-		
+
+		// 마감일 Date to String yyyy-MM-dd
+		SimpleDateFormat format2 = new SimpleDateFormat("yyyy-MM-dd");
+		String end_date = format2.format(edate);
+		System.out.println("end_date" + end_date);
+		wtt_Bean.setEnd_date(end_date);
+
 		return wtt_Bean;
 	}
 

@@ -68,3 +68,12 @@ from Notification n
 inner join workplace_T wt on n.WT_Key = wt.WT_Key
 where n.noti_key = 'qk2';
 
+
+----------------------------------
+
+
+select * from wtt;
+SELECT *
+  FROM wtt WHERE TO_CHAR(wtt_payment_date+30, 'yyyy-mm-dd hh24:mi:ss') < TO_CHAR(SYSDATE, 'yyyy-mm-dd hh24:mi:ss') and wtt_Completion=0;
+
+
