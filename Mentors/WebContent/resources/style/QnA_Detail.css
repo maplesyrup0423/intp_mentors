@@ -47,18 +47,27 @@
 	width: 1060px;
 }
 
+.bottom_btn_right {
+    text-align: left; /* 왼쪽 정렬을 위한 설정 */
+    margin-top: 20px; /* 위쪽 여백 설정 */
+    clear: both; /* 버튼 아래로 내려가도록 설정 */
+}
+
 .bottom_btn_right>button {
 	width: 120px;
-	height: 40px;
-	/* padding: 0 20px;*/
-	border-radius: 5px;
-	background: #474747;
-	font-size: 16px;
-	color: #ebebeb;
-	cursor: pointer;
-	/* margin: 500px;*/
-	float: right;
+    height: 40px;
+    border-radius: 5px;
+    background: #474747;
+    font-size: 16px;
+    color: #ebebeb;
+    cursor: pointer;
+    margin: 0 5px; /* 각 버튼 사이의 여백 설정 */
+    margin-top: 100px;
+    float: right;
+    margin-left: 10px;
 }
+
+
 
 .title {
 	float: left;
@@ -127,4 +136,22 @@
 
 .right_td {
 	width: 500px;
+}
+
+
+
+.text{
+	float: left;
+}
+
+.button_q{
+	width: 100%;
+	display: inline-block;
+	
+}
+
+
+.qna_a{
+	margin-top: 1px solid black;
+	
 }

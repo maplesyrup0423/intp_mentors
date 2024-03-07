@@ -28,7 +28,6 @@ import kr.co.softsoldesk.mapper.TeacherMapper;
 import kr.co.softsoldesk.mapper.WTMapper;
 import kr.co.softsoldesk.mapper.WTT_Mapper;
 
-
 @Configuration
 @EnableWebMvc
 @ComponentScan("kr.co.softsoldesk.controller")
@@ -49,10 +48,10 @@ public class ServletAppContext implements WebMvcConfigurer {
 
 	@Value("${db.password}")
 	private String db_password;
-	
+
 	@Resource(name = "loginTeacherBean")
 	private TeacherBean loginTeacherBean;
-	
+
 	@Resource(name = "tempCategoryBean")
 	private WTBean tempCategoryBean;
 
@@ -93,61 +92,79 @@ public class ServletAppContext implements WebMvcConfigurer {
 
 	// 쿼리문 실행을 위한 객체(쿼리문을 관리하는 Mapper를 정의)
 
-	   
-	   @Bean
-	   public MapperFactoryBean<TeacherMapper> teacherMapper(SqlSessionFactory factory) throws Exception {
-	      MapperFactoryBean<TeacherMapper> factoryBean = new MapperFactoryBean<TeacherMapper>(TeacherMapper.class);
-	      factoryBean.setSqlSessionFactory(factory);
-	      return factoryBean;
-	   }
-	   
+	@Bean
+	public MapperFactoryBean<TeacherMapper> teacherMapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<TeacherMapper> factoryBean = new MapperFactoryBean<TeacherMapper>(TeacherMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
 
-	   @Bean
-	   public MapperFactoryBean<WTMapper> wtMapper(SqlSessionFactory factory) throws Exception {
-	      MapperFactoryBean<WTMapper> factoryBean = new MapperFactoryBean<WTMapper>(WTMapper.class);
-	      factoryBean.setSqlSessionFactory(factory);
-	      return factoryBean;
-	   }
-	   
-	   @Bean
-	   public MapperFactoryBean<CartMapper> cartMapper(SqlSessionFactory factory) throws Exception {
-	      MapperFactoryBean<CartMapper> factoryBean = new MapperFactoryBean<CartMapper>(CartMapper.class);
-	      factoryBean.setSqlSessionFactory(factory);
-	      return factoryBean;
-	   }
-	   
-	   @Bean
-	   public MapperFactoryBean<BookMapper> bookMapper(SqlSessionFactory factory) throws Exception {
-	      MapperFactoryBean<BookMapper> factoryBean = new MapperFactoryBean<BookMapper>(BookMapper.class);
-	      factoryBean.setSqlSessionFactory(factory);
-	      return factoryBean;
-	   }
-	   
-	   @Bean
-	   public MapperFactoryBean<WTT_Mapper> wtt_Mapper(SqlSessionFactory factory) throws Exception {
-	      MapperFactoryBean<WTT_Mapper> factoryBean = new MapperFactoryBean<WTT_Mapper>(WTT_Mapper.class);
-	      factoryBean.setSqlSessionFactory(factory);
-	      return factoryBean;
-	   }
-	   
-	   @Bean
-	   public MapperFactoryBean<ClassMapper> classMapper(SqlSessionFactory factory) throws Exception {
-	      MapperFactoryBean<ClassMapper> factoryBean = new MapperFactoryBean<ClassMapper>(ClassMapper.class);
-	      factoryBean.setSqlSessionFactory(factory);
-	      return factoryBean;
-	   }
-	   
-	   
-	   
-	   //interceptor 처리
-		public void addInterceptors(InterceptorRegistry registry) {
-			WebMvcConfigurer.super.addInterceptors(registry);
-			
-			MainHeaderInterceptor mainHeaderInterceptor =new MainHeaderInterceptor(loginTeacherBean);
-			InterceptorRegistration reg1 = registry.addInterceptor(mainHeaderInterceptor);
-			reg1.addPathPatterns("/**");
-		
-		}
-	   
+	@Bean
+	public MapperFactoryBean<WTMapper> wtMapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<WTMapper> factoryBean = new MapperFactoryBean<WTMapper>(WTMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+
+	@Bean
+	public MapperFactoryBean<CartMapper> cartMapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<CartMapper> factoryBean = new MapperFactoryBean<CartMapper>(CartMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+
+	@Bean
+	public MapperFactoryBean<BookMapper> bookMapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<BookMapper> factoryBean = new MapperFactoryBean<BookMapper>(BookMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+
+	@Bean
+	public MapperFactoryBean<WTT_Mapper> wtt_Mapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<WTT_Mapper> factoryBean = new MapperFactoryBean<WTT_Mapper>(WTT_Mapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+
+	@Bean
+	public MapperFactoryBean<ClassMapper> classMapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<ClassMapper> factoryBean = new MapperFactoryBean<ClassMapper>(ClassMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+
+	@Bean
+	public MapperFactoryBean<NotificationMapper> NotificationMapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<NotificationMapper> factoryBean = new MapperFactoryBean<NotificationMapper>(
+				NotificationMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+
+	}
+
+	@Bean
+	public MapperFactoryBean<QnAaMapper> QnAaMapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<QnAaMapper> factoryBean = new MapperFactoryBean<QnAaMapper>(QnAaMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+
+	@Bean
+	public MapperFactoryBean<QnAqMapper> QnAqMapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<QnAqMapper> factoryBean = new MapperFactoryBean<QnAqMapper>(QnAqMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+
+	// interceptor 처리
+	public void addInterceptors(InterceptorRegistry registry) {
+		WebMvcConfigurer.super.addInterceptors(registry);
+
+		MainHeaderInterceptor mainHeaderInterceptor = new MainHeaderInterceptor(loginTeacherBean);
+		InterceptorRegistration reg1 = registry.addInterceptor(mainHeaderInterceptor);
+		reg1.addPathPatterns("/**");
+
+	}
 
 }
