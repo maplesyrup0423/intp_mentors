@@ -116,8 +116,32 @@ public class TeacherController {
 	
 	
 	@GetMapping("/Find_Password")
-	public String Find_Password(@ModelAttribute("tempFindPwBean") TeacherBean tempFindPwBean) {
+	public String Find_Password(@ModelAttribute("tempFindPwBean") 
+								TeacherBean tempFindPwBean, Model model) {
+		
+		model.addAttribute("tempFindPwBean", tempFindPwBean);
+		
 		return "user/Find_Password";
+	}
+	
+	@PostMapping("/Find_Password_pro")
+	public String Find_Password_pro(@Valid @ModelAttribute("tempFindPwBean")
+									TeacherBean tempFindPwBean, BindingResult result, Model model) {
+		
+		if(result.hasErrors()) {
+			return "Find_Password";
+		}
+		String getTeacher_Id = tempFindPwBean.getTeacher_id();
+		String getTeacher_Name = tempFindPwBean.getTeacher_Name();
+		String getTeacher_Tel = tempFindPwBean.getTeacher_Tel();
+		
+		String getTeacher_Password = teacherService.getTeacherPw(getTeacher_Id, getTeacher_Name, getTeacher_Tel);
+		
+		model.addAttribute("getTeacher_Password", getTeacher_Password);
+		System.out.println("안녕하세요.");
+		System.out.println(getTeacher_Password);
+		return "user/Find_Password_success";
+		
 	}
 	
 	@GetMapping("/Mypage")
