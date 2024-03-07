@@ -78,12 +78,30 @@ public class TeacherController {
 	}
 	
 	@GetMapping("/Find_ID")
-	public String Find_ID() {
+	public String Find_ID(@ModelAttribute("tempFindIdBean") 
+						  TeacherBean tempFindIdBean, Model model) {
+		
+		model.addAttribute("tempFindIdBean", tempFindIdBean);
 		return "user/Find_ID";
 	}
 	
+	@PostMapping("/Find_ID_pro")
+	public String Find_ID_pro(@Valid @ModelAttribute("tempFindIdBean")
+						  TeacherBean tempFindIdBean, BindingResult result, Model model) {
+		
+		if(result.hasErrors()) {
+			return "Find_ID";
+		}
+		teacherService.getTeacherId(tempFindIdBean);
+		
+		
+		return "user/Find_ID_success";
+	}
+	
+	
+	
 	@GetMapping("/Find_Password")
-	public String Find_Password() {
+	public String Find_Password(@ModelAttribute("tempFindPwBean") TeacherBean tempFindPwBean) {
 		return "user/Find_Password";
 	}
 	

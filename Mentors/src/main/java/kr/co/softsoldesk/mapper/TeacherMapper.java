@@ -40,11 +40,11 @@ public interface TeacherMapper {
 			+ "where Teacher_id = #{teacher_id}")
 	void modifyTeacherInfo(TeacherBean modifyTeacherBean);
 	
-	@Select("select teacher_id from teacher_info "
+	@Select("select teacher_id " 
+			+ "from teacher_info "
 			+ "where teacher_name=#{teacher_Name} and "
 			+ "teacher_tel=#{teacher_Tel}")
-	String getTeacherId (String teacher_id);
-	
+	TeacherBean getTeacherId(TeacherBean getTeacherId);
 	
 }
 

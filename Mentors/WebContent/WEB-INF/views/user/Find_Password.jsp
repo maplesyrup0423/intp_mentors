@@ -21,19 +21,20 @@
 		</div>
 		<div class="change_find_info">
 			<input type="button" name="find_id_button" value="아이디 찾기" 
-			onClick="location.href='Find_ID.jsp'" /> 
+			onClick="location.href='${root}user/Find_ID'" /> 
 			<span class = ""> | </span>
 			<input type="button" name="find_password_button" value="비밀번호 찾기" 
-			onClick="location.href='Find_Password.jsp'" />
+			onClick="location.href='${root}user/Find_Password'" />
 		</div>
-		<form action="">
+		<form:form action="${root }user/Find_Password_pro" method = "post" 
+						modelAttribute="tempFindPwBean">
 			<div class="body">
 				<div class="input_id">
-					<input type="text" name="id" placeholder="아이디를 입력하세요" />
+					<form:input path="teacher_id" placeholder="아이디를 입력하세요" />
 				</div>
 
 				<div class="input_name">
-					<input type="text" name="name" placeholder="성명을 입력하세요" />
+					<form:input path="teacher_Name" placeholder="성명을 입력하세요" />
 				</div>
 
 				<div class="input_tel">
@@ -42,10 +43,10 @@
 			</div>
 			<center>
 				<input class="cancel" type="button" value="취소"
-				onClick="location.href='Login.jsp'" /> <input type="submit"
-				name="submit" value="확인" />
+				onClick="location.href='Login.jsp'" /> 
+				<form:button class = "submit">확인</form:button>
 			</center>
-		</form>
+		</form:form>
 	</div>
 	<!-- footer --> 
 	<c:import url="/WEB-INF/views/include/Mentors_main_footer.jsp" />

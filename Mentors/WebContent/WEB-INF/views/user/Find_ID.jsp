@@ -21,10 +21,10 @@
 		</div>
 			<div class = "change_find_info">
 				<input type="button" name="find_id_button" value="아이디 찾기"
-				onClick="location.href='Find_ID.jsp'" /> 
+				onClick="location.href='${root}user/Find_ID'" /> 
 				<span class = ""> | </span>
 				<input type="button" name="find_password_button" value="비밀번호 찾기"
-				onClick="location.href='Find_Password.jsp'" />
+				onClick="location.href='${root}user/Find_Password'" />
 			</div>
 		<form:form action="${root }user/Find_ID_pro" method="post"
 						modelAttribute="tempFindIdBean">
