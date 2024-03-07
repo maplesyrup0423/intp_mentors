@@ -38,7 +38,7 @@
 				</div>
 
 				<div class="input_tel">
-					<input type="text" name="tel" placeholder="전화번호를 입력하세요" />
+					<form:input path = "Teacher_Tel" placeholder="전화번호를 입력하세요" />
 				</div>
 			</div>
 			<center>

@@ -36,4 +36,8 @@ public class TeacherDao {
 		return teachermapper.getTeacherId(teacher_name, teacher_tel);
 	}
 	
+	public String getTeacherPw(String teacher_id, String teacher_name, String teacher_tel) {
+		return teachermapper.getTeacherPw(teacher_id, teacher_name, teacher_tel);
+	}
+	
 }

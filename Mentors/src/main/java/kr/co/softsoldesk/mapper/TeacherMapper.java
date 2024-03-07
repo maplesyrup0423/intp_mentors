@@ -46,7 +46,10 @@ public interface TeacherMapper {
 			+ "teacher_tel=#{param2}")
 	String getTeacherId(String param1, String param2);
 	
-	
+	@Select("select teacher_password "
+			+ "from teacher_info "
+			+ "where teacher_id = #{param1} and teacher_name = #{param2} and teacher_tel = #{param3}")
+	String getTeacherPw(String param1, String param2, String param3);
 	
 }
 
