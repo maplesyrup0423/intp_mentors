@@ -53,7 +53,7 @@ public interface TeacherMapper {
 	String getTeacherPw(String param1, String param2, String param3);
 	
 	@Delete("delete from teacher_info "
-			+ "where teacher_password = #{teacher_Password")
+			+ "where teacher_password = #{teacher_Password}")
 	void deleteAccount(TeacherBean deleteBean);
 	
 	

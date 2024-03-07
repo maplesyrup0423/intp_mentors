@@ -92,7 +92,8 @@ public class TeacherService {
 		return teacherDao.getTeacherPw(teacher_id, teacher_name, teacher_tel);
 	}
 	
-	public void deleteAccount(TeacherBean deleteBean) {
+	public void deleteAccount(TeacherBean deleteBean) {	
+		teacherDao.deleteAccount(deleteBean);
 		loginTeacherBean.setTeacherLogin(false);
 	}
 	
