@@ -17,7 +17,8 @@ insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'dlfma6',10000,
 insert into wt_test_q values('WT1','wt1_test',1,2,4,3,2,4,1,2,3,1);
 insert into wt_test_q values('WT2','wt2_test',1,2,4,3,2,1,1,2,3,1);
 insert into wt_test_q values('WT4','wt4_test',1,2,4,3,2,2,1,2,3,1);
-insert into wt_test_q values('WT41','wt1_test',1,1,1,1,1,1,1,1,1,1);
+insert into wt_test_q values('WT5','wt1_test',1,1,1,1,1,1,1,1,1,1);
+insert into wt_test_q values('WT2','wt2_test',2,2,2,2,2,2,2,2,2,2);
 
 --WTT
 insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT21','id1',sysdate);
@@ -50,3 +51,20 @@ insert into qna_q values('qk' || TO_CHAR(qk_seqid.nextval),'WTT63','수료기준 문�
 insert into qna_a values('ak' || TO_CHAR(ak_seqid.nextval),'qk1','강의80퍼 시험 60점이여',sysdate);
 update qna_q set q_a_check=1 where q_key='qk1';
 COMMIT;
+
+
+--test_q select
+select teat_q1, teat_q2, teat_q3, teat_q4, teat_q5, teat_q6, teat_q7, teat_q8, teat_q9, teat_q10 from wt_test_q q inner join WTT w on w.WT_Key = q.WT_Key where w.WTT_key = 'WTT41';
+
+select * from wt_test_q;
+select * from WTT;
+
+
+select WT_Title, WT_TrainingTime, WT_Video from workplace_T wt inner join WTT wtt on wt.WT_Key = wtt.WT_Key where wtt.wtt_Key = 'WTT41';
+
+
+select noti_Title, noti_content, noti_date
+from Notification n
+inner join workplace_T wt on n.WT_Key = wt.WT_Key
+where n.noti_key = 'qk2';
+
