@@ -30,7 +30,7 @@
 		
 			<c:forEach var='obj' items="${eventList }">
 				<div class="event">
-					<a href="${root}event/event_info?${obj.event_key}"> <img
+					<a href="${root}event/event_info?event_key=${obj.event_key}"> <img
 						src="${root }resources/image/event_img/event_Thumb/${obj.event_thumbnail }.jpg"
 						alt=""> <br>
 						<div id="title">

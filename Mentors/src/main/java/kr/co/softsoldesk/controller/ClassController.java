@@ -157,7 +157,12 @@ public class ClassController {
 		
 		WTT_Bean wb = wtt_Service.getWTT_Bean(wtt_Key);
 		
-		
+		if(wb.getWtt_test_result() <= 60) {
+			wb.setWtt_Completion(3);
+		}else {
+			wb.setWtt_Completion(1);
+		}
+	
 		return "class/class_answer";
 	}
 
