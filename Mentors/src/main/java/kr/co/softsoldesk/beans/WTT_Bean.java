@@ -15,7 +15,7 @@ public class WTT_Bean {
 	private String wtt_payment_date; // 결제일
 	private int wtt_viewing_time; // 수강시간
 	private int wtt_test_result; // 시험점수
-	private int wtt_Completion; // 0: 학습중 1 : 학습완료 2: 기간만료(미수료)  -- 로그인 시점 / 시험제출 시점에 갱신
+	private int wtt_Completion; // 0: 학습중 1 : 학습완료 2: 학습불가(미수료) -- 로그인 시점 / 시험제출 시점에 갱신
 
 	// -----------------------------------------------------
 	private String wt_Title; // 강의이름

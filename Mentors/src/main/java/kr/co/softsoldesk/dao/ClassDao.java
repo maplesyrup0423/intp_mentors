@@ -36,5 +36,16 @@ public class ClassDao {
 	public void updateViewTime(int wtt_viewing_time, String wtt_Key) {
 		classMapper.updateViewTime(wtt_viewing_time, wtt_Key);
 	}
+	
+	public String getWttCompletion(String wtt_key) {
+		return classMapper.getWttCompletion(wtt_key);
+	}
 
+	public void updateWttCompletion(String wtt_Completion, String wtt_key) {
+		classMapper.updateWttCompletion(wtt_Completion, wtt_key);
+	}
+	
+	public void updateTestAA(int test_aa, String wtt_key) {
+		classMapper.updateTestAA(test_aa, wtt_key);
+	}
 }
