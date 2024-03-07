@@ -5,6 +5,7 @@
     
 }
 
+
 .line{
     border-top: 1px solid black;
     margin-bottom: 15px;
@@ -23,7 +24,8 @@
 
 .test_q{
 	padding-top: 50px;
-	padding-left: 100px;
+	padding-left: 50px;
+	margin-bottom: 100px;
 }
 
 .test_a{

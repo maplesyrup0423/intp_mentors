@@ -129,6 +129,9 @@ ALTER TABLE Notification ADD PRIMARY KEY ( noti_key );
 ALTER TABLE Notification ADD FOREIGN KEY ( WT_Key ) REFERENCES workplace_T ( WT_Key );
 select * from Notification;
 
+insert into Notification values('qk' || TO_CHAR(noti_seqid.nextval), 'WT1', '공지사항', '공지내용', sysdate);
+insert into Notification values('qk' || TO_CHAR(noti_seqid.nextval), 'WT1', '공지사항2', '공지내용', sysdate);
+insert into Notification values('qk' || TO_CHAR(noti_seqid.nextval), 'WT1', '공지사항3', '공지내용', sysdate);
 -------------------------------------------------------------------------
 drop table cart;
 create table cart(
@@ -170,6 +173,7 @@ create table wt_test_q(
 ALTER TABLE wt_test_q ADD FOREIGN KEY ( WT_Key ) REFERENCES workplace_T ( WT_Key );
 select * from wt_test_q;
 
+
 -------------------------------------------------------------------------
 drop table wtt_test_a;
 
@@ -185,7 +189,7 @@ create table wtt_test_a(
     teat_a7 number(1),
     teat_a8 number(1),
     teat_a9 number(1),
-    teat_a10 number(1)  
+    teat_a10 number(1)
 );
 ALTER TABLE wtt_test_a MODIFY (test_aa DEFAULT 0);
 ALTER TABLE wtt_test_a ADD FOREIGN KEY ( WTT_Key ) REFERENCES WTT ( WTT_Key );

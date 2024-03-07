@@ -60,7 +60,7 @@
 											<td>-</td>
 											<td><button class="blue_btn"
 											
-											onclick="location.href='${root}class/class_test'">응시</button></td>
+											onclick="location.href='${root}class/class_test?wtt_Key=${wttBean.wtt_Key }'">응시</button></td>
 										</tr>
 									</tbody>
 								</table>

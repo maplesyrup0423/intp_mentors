@@ -98,7 +98,8 @@ public class ClassController {
 	}
 
 	@GetMapping("/class_test")
-	public String class_test() {
+	public String class_test(@RequestParam("wtt_Key") String wtt_Key, Model model) {
+		model.addAttribute("wtt_Key",wtt_Key);
 		return "class/class_test";
 	}
 	
