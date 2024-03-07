@@ -110,6 +110,12 @@
 	margin-top: -50px;
 	margin-bottom: 50px;
 }
+
+/*나가기 버튼*/
+.out_button{
+	background: none;
+	border: none;
+}
 </style>
 
 <link href="${root }resources/style/jquery.mb.YTPlayer.min.css" media="all"
@@ -197,7 +203,7 @@
 			</div>
 			<div class="Exit_div">
 				<div>
-					<button onclick="video_check()"> <img src="${root }resources/image/Exit.png"
+					<button onclick="video_check()" class="out_button"> <img src="${root }resources/image/Exit.png"
 						id="Exit" /></button>
 				</div>
 				<div>
