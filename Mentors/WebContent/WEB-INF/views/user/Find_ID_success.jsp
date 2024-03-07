@@ -10,6 +10,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	히히
+	회원님의 아이디 : ${getTeacher_Id }
 </body>
 </html>

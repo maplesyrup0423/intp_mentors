@@ -13,7 +13,7 @@ public interface TeacherMapper {
 			+ "Teacher_Work_In, Teacher_Type, Teacher_Neis, Teacher_Password "
 			+ "from Teacher_Info where teacher_id = #{teacher_id} and Teacher_Password=#{teacher_Password}")
 	TeacherBean getLoginTeacherInfo(TeacherBean teacherBean);
-	
+
 	//아이디 중복체크
 	@Select("select teacher_name from teacher_info where teacher_id = #{teacher_id}")
 	String checkTeacherIdExist(String teacher_id);
@@ -42,9 +42,11 @@ public interface TeacherMapper {
 	
 	@Select("select teacher_id " 
 			+ "from teacher_info "
-			+ "where teacher_name=#{teacher_Name} and "
-			+ "teacher_tel=#{teacher_Tel}")
-	TeacherBean getTeacherId(TeacherBean getTeacherId);
+			+ "where teacher_name=#{param1} and "
+			+ "teacher_tel=#{param2}")
+	String getTeacherId(String param1, String param2);
+	
+	
 	
 }
 
