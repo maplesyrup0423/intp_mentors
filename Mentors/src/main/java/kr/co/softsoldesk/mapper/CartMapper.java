@@ -47,4 +47,11 @@ public interface CartMapper {
 	@Insert("insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),#{WT_Key},#{teacher_id},sysdate)")
 	void addWTT(@Param("WT_Key")String WT_Key,@Param("teacher_id") String teacher_id);
 	
+	//WTT_Key 값 받아오기
+	@Select("select wtt_key from wtt where teacher_id=#{teacher_id} and wt_key=#{wt_key}")
+	String getWttKey(@Param("teacher_id") String teacher_id,@Param("WT_Key")String WT_Key);
+	
+	//wtt_test_a insert
+	@Insert("insert into wtt_test_a (WTT_Key)values(#{wtt_key})")
+	void addTestA(String wtt_key);
 }

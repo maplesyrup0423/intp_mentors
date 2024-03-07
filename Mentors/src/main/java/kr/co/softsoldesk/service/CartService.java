@@ -55,4 +55,13 @@ public class CartService {
 		String teacher_id = loginTeacherBean.getTeacher_id();
 		cartDao.addWTT(WT_Key, teacher_id);
 	}
+	
+	public String getWttKey(String WT_Key) {
+		String teacher_id = loginTeacherBean.getTeacher_id();
+		return cartDao.getWttKey(teacher_id, WT_Key);
+	}
+	
+	public void addTestA(String wtt_key){
+		cartDao.addTestA(wtt_key);
+	}
 }

@@ -48,4 +48,8 @@ public class ClassDao {
 	public void updateTestAA(int test_aa, String wtt_key) {
 		classMapper.updateTestAA(test_aa, wtt_key);
 	}
+	
+	public int getTest_aa(String wtt_Key) {
+		return classMapper.getTest_aa(wtt_Key);
+	}
 }

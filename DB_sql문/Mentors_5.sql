@@ -65,5 +65,14 @@ update WTT set WTT_viewing_time=10 where WTT_Key='WTT161';
 
 --class
 select wtt.wtt_Key,wtt.wt_Key,wtt.WTT_Completion, wtt.wtt_payment_date, wt.wt_Title, 
-wt.wt_TrainingTime, wt.wt_Tag_School, wt.wt_Tag_TypeCategory from workplace_t wt inner join wtt on wtt.WT_key=wt.WT_key and wtt.wtt_Key=#{wtt_Key}"
+wt.wt_TrainingTime, wt.wt_Tag_School, wt.wt_Tag_TypeCategory from workplace_t wt inner join wtt on wtt.WT_key=wt.WT_key and wtt.wtt_Key='';
+
+
+--
+select test_aa from wtt_test_a where WTT_Key='wtt161'; 
+
+
+
+
+
 COMMIT;

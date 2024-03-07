@@ -2,6 +2,7 @@ package kr.co.softsoldesk.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -41,5 +42,12 @@ public class CartDao {
 	}
 	public void addWTT(String WT_Key,String teacher_id) {
 		cartMapper.addWTT(WT_Key,teacher_id);
+	}
+	public String getWttKey(String teacher_id,String WT_Key) {
+		return cartMapper.getWttKey(teacher_id, WT_Key);
+	}
+	
+	public void addTestA(String wtt_key){
+		cartMapper.addTestA(wtt_key);
 	}
 }

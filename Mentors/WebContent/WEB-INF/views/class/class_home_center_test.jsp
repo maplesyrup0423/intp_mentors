@@ -54,11 +54,11 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td>저작권법 온라인 시험</td>
+											<td>${wttBean.wt_Title} 시험</td>
 											<td>20%</td>
-											<td>2024-01-01~2023-01-21</td>
+											<td>${wttBean.start_date}~${wttBean.end_date}</td>
 											<td>-</td>
-											<td><button class="blue_btn"
+											<td><button class="blue_btn <c:if test="${aa !=1}"> endBtnColor </c:if>" <c:if test="${aa !=1}">disabled </c:if>
 											
 											onclick="location.href='${root}class/class_test?wtt_Key=${wttBean.wtt_Key }'">응시</button></td>
 										</tr>

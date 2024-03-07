@@ -48,5 +48,9 @@ public class ClassService {
 	public void updateWttCompletion(int wtt_Completion, String wtt_key) {
 		classDao.updateWttCompletion(wtt_Completion, wtt_key);
 	}
+	
+	public int getTest_aa(String wtt_Key) {
+		return classDao.getTest_aa(wtt_Key);
+	}
 
 }

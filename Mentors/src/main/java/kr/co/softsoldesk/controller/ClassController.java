@@ -50,6 +50,8 @@ public class ClassController {
 	public String class_home_center_test(@RequestParam("wtt_Key")String wtt_Key, Model model) {
 		WTT_Bean wttBean=wtt_Service.getWTT_Bean(wtt_Key);
 		model.addAttribute("wttBean",wttBean);
+		int aa =classService.getTest_aa(wtt_Key);
+		model.addAttribute("aa",aa);
 		
 		return "class/class_home_center_test";
 	}

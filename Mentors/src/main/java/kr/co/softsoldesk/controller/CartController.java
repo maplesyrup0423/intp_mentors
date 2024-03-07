@@ -109,6 +109,9 @@ public class CartController {
 		for (String WK : WKList) {
 			cartService.addWTT(WK);
 			cartService.deleteCart(WK);
+			String wttkey=cartService.getWttKey(WK);
+			cartService.addTestA(wttkey);
+			
 		}
 		
 		return "WT/WT_payment_success";

@@ -104,7 +104,7 @@
 											class="WTT_Completion_div ${obj.wtt_Completion_div_color_class }">${obj.str_wtt_Completion }
 										</div></td>
 									<td rowspan="3" width="100px"><div class="classbtn_div ">
-											<button <c:if test="${obj.d_Day ==0}">disabled </c:if>class="classbtn <c:if test="${obj.d_Day ==0}">endBtnColor </c:if>"
+											<button class="classbtn "
 												onclick="location.href='${root}class/class_home_center_home?wtt_Key=${obj.wtt_Key }'">강의실
 												입장</button>
 										</div></td>

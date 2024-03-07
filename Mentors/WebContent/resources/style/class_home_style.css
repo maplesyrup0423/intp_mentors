@@ -5,7 +5,12 @@
 차트 애니메이션(미정)
 버튼 토글
 */
-.class_d_table{
+.endBtnColor {
+	background-color: darkgray !important;
+	border-color: darkgray !important;
+}
+
+.class_d_table {
 	margin: auto;
 }
 /*-------------------------div style----------------------------------------------*/
@@ -22,54 +27,50 @@
 	margin-top: 15px;
 }
 
-
 .div_shadow {
 	box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important
 }
+
 .div_card-body {
 	flex: 1 1 auto;
 	min-height: 1px;
 	padding: 1.25rem
 }
 
-
-
 .div_card-header:first-child {
-    border-radius: calc(0.35rem - 1px) calc(0.35rem - 1px) 0 0;
+	border-radius: calc(0.35rem - 1px) calc(0.35rem - 1px) 0 0;
 }
-.div_card-header {
-    padding: 0.20rem 1.0rem;
-    margin-bottom: 0;
-    background-color: #f8f9fc;
-    border-bottom: 1px solid #e3e6f0;
-}
-.font-weight-bold {
-    font-weight: 700 !important;
-    font-size:20px;
-    margin-top: 15px;
-    margin-bottom: 15px;
 
+.div_card-header {
+	padding: 0.20rem 1.0rem;
+	margin-bottom: 0;
+	background-color: #f8f9fc;
+	border-bottom: 1px solid #e3e6f0;
 }
+
+.font-weight-bold {
+	font-weight: 700 !important;
+	font-size: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
 .text-primary {
-    color: #00457E !important;
+	color: #00457E !important;
 }
 /*----------------------------class_home_center_home_top.jsp--------------------------*/
-.navbar{
+.navbar {
 	height: 4.375rem;
 	box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, .15) !important;
 	padding: 0.5rem 1rem;
 	margin-left: 10px;
-	
 }
 
-.text_fff{
+.text_fff {
 	color: #fff;
-	
 }
 /*----------------------------class_home_Include.jsp-------------------------------------*/
-
-html,
-body {
+html, body {
 	height: 100%;
 }
 
@@ -77,30 +78,19 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: rgb(232, 232, 232)
-
-
 }
 
 .main_f {
-	
 	width: 1280px;
 	height: 100%;
 	margin: auto;
 	background-color: #fff;
-
 }
 
-table,
-td,
-th,
-ul,
-li,
-div,
-button{
+table, td, th, ul, li, div, button {
 	margin: 0;
 	padding: 0;
 }
-
 
 /*----------------------------class_home_top.jsp-------------------------------------*/
 .class_home_top {
@@ -117,13 +107,10 @@ button{
 	margin-top: 0px;
 	margin-left: 80px;
 	height: 80px;
-
-
 }
 
 #logo {
 	max-width: 100%;
-
 }
 
 .Exit_div {
@@ -159,11 +146,9 @@ button{
 	background-color: #fff;
 }
 
-.CH_list:hover,
-.active {
-	background-color:#00457E;
+.CH_list:hover, .active {
+	background-color: #00457E;
 	color: #fff;
-
 }
 
 /*.list>a{
@@ -178,7 +163,6 @@ button{
 /*----------------------------class_home_center_home.jsp-------------------------------------*/
 .gray {
 	/*background-color: rgb(230, 230, 230);*/
-	
 	padding: 15px;
 }
 
@@ -189,14 +173,11 @@ button{
 	margin-bottom: 15px;
 	padding: 5px;
 }*/
-
 .color_div {
-
 	background-color: #00457E;
 	width: 10px;
 	height: 25px;
 	display: inline-block;
-
 }
 
 .headline_top_table {
@@ -206,6 +187,7 @@ button{
 .headline {
 	/*border-left: 1px solid rgb(192, 192, 192);*/
 	/*border-bottom: 1px solid rgb(192, 192, 192);*/
+	
 }
 
 .blue_btn {
@@ -219,68 +201,71 @@ button{
 }
 
 .WTT_Completion_div {
-	float: right; border : 2px solid;
+	float: right;
+	border: 2px solid;
 	border-radius: 20px;
 	width: 80px;
 	display: inline-block;
 	border: 2px solid #ff5345;
 }
 
-.WTT_Completion_bc0{
+.WTT_Completion_bc0 {
 	border-color: #A09BFF;
-	color:  #A09BFF ;
+	color: #A09BFF;
 	background-color: rgb(160, 155, 255, 15%);
 }
-.WTT_Completion_bc1{
+
+.WTT_Completion_bc1 {
 	border-color: #00457E;
-	color:  #00457E;
+	color: #00457E;
 	background-color: rgb(0, 69, 126, 15%);
 }
-.WTT_Completion_bc2{
-	border-color: #FF5345 ;
-	color:  #FF5345 ;
+
+.WTT_Completion_bc2 {
+	border-color: #FF5345;
+	color: #FF5345;
 	background-color: rgb(255, 83, 69, 15%);
 }
-.class_home_center_home_Table{
+
+.class_home_center_home_Table {
 	width: 800px;
 	padding: 5px;
 }
 
-.class_home_center_home_Table td{
+.class_home_center_home_Table td {
 	padding: 5px;
 }
 
-
 .GS_table {
-  border-collapse: collapse;
-  width: 800px;
-  margin: 1rem auto;
-  border: 1px solid #000;
-  background-color: white;
+	border-collapse: collapse;
+	width: 800px;
+	margin: 1rem auto;
+	border: 1px solid #000;
+	background-color: white;
 }
 
 /* 테이블 행 */
 .GS_table th, .GS_table td {
-  padding: 8px;
-  text-align: left;
-  border: 1px solid #ddd;
-  text-align: center;
+	padding: 8px;
+	text-align: left;
+	border: 1px solid #ddd;
+	text-align: center;
 }
 
 .GS_table th {
-  background-color: #00457E;
-  color: #fff;
+	background-color: #00457E;
+	color: #fff;
 }
-.grade_status{
-	
+
+.grade_status {
 	text-align: center;
 }
 /*----------------------------class_home_center_test.jsp-------------------------------------*/
-
-.con_test{
+.con_test {
 	width: 900px;
 }
-.con_test_title{
+
+.con_test_title {
 	width: 900px;
 }
 /*.con_test_title>p{
@@ -289,23 +274,20 @@ button{
 	text-align: left;
 }*/
 
-
 /*----------------------------class_home_center_home_video.jsp-------------------------------------*/
-
-.video_all{
+.video_all {
 	margin: auto;
 	width: 1280px;
 }
 
-.video{
+.video {
 	margin: auto;
 	margin-top: 50px;
 	width: 900px;
 	height: 500px;
-
 }
 
-.video_title{
+.video_title {
 	margin-top: 50px;
 	margin-bottom: 50px;
 	text-align: center;
@@ -313,24 +295,22 @@ button{
 	font-weight: 600;
 }
 
-
-
-
-
 /*----------------------------도넛 그래프(임시)-------------------------------------*/
-.chart-container{
-	display:  flex;
+.chart-container {
+	display: flex;
 	gap: 15px;
 	margin-bottom: 20px;
 	padding: 10px;
 }
-.chart_d{
+
+.chart_d {
 	position: relative;
 	width: 160px;
 	height: 160px;
 	border-radius: 50%;
 }
-.chart-center{
+
+.chart-center {
 	background-color: #fff;
 	position: absolute;
 	top: 50%;
@@ -341,7 +321,7 @@ button{
 	text-align: center;
 	line-height: 80px;
 	font-size: 20px;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 }
 /*----------------------막대그래프(임시)---------------------------------*/
 .progress-bar {
@@ -367,7 +347,6 @@ button{
 }
 
 /*-----------------------------------------------------------------*/
-
 .chart_div {
 	width: 200px;
 	height: 200px;
