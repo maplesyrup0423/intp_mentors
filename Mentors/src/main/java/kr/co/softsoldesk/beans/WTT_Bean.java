@@ -28,7 +28,8 @@ public class WTT_Bean {
 	private String str_wtt_Completion; //강의 수료여부 문자열
 	private String str_WT_Tag_School; // 학급 문자열
 	private String str_WT_Tag_TypeCategory; // 분야 문자
-	//private String end_date; // 연수 마감일 wtt_payment_date +30일
+	private String start_date; // 연수 시작 //yyyy-MM-dd
+	private String end_date; // 연수 마감일 wtt_payment_date +30일 //yyyy-MM-dd
 	private double video_progress; // 강의 진행도 (영상만)
 	private double progress; // 강의 진행도 (영상+시험)
 	
