@@ -179,13 +179,11 @@ public class ServletAppContext implements WebMvcConfigurer {
 		
 		CheckLoginInterceptor checkLoginInterceptor = new CheckLoginInterceptor(loginTeacherBean);
 		InterceptorRegistration reg2 = registry.addInterceptor(checkLoginInterceptor);
-		//reg2.addPathPatterns("/user/Mypage", "/user/Mypage_change", "/user/Password_change_confirm", "/user/delete_account", "/user/logout");
-		reg2.addPathPatterns("/user/*");
-		reg2.excludePathPatterns("/user/Login", "/user/Find_Password", "/user/Not_login");
+		reg2.addPathPatterns("/user/Mypage", "/user/Mypage_change", "/user/Password_change_confirm", "/user/delete_account", "/user/logout");
 		
-		//비로그인 이용불가 사이트 : "/user/Mypage", "/user/Mypage_change"
-		//비로그인 이용불가 사이트 포괄 : "/user/*"
-		//비로그인 이용불가 사이트 포괄 중 예외 사이트 : "/user/Login"
+		//비로그인 시 이용불가 사이트 : "/user/Mypage", "/user/Mypage_change"
+		//비로그인 시 이용불가 사이트 포괄 : "/user/*"
+		//비로그인 시 이용불가 사이트 포괄 중 예외 사이트 : "/user/Login", "/user/Not_login"
 	}
 
 }
