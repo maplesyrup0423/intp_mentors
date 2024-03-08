@@ -222,7 +222,11 @@ public class TeacherController {
 		else {
 			return "user/delete_account_fail";
 		}
-		
+	}
+	
+	@GetMapping("/Not_login") 
+	public String Not_login() {
+		return "user/Not_login";
 	}
 	
 }

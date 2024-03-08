@@ -20,6 +20,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import kr.co.softsoldesk.beans.TeacherBean;
 import kr.co.softsoldesk.beans.WTBean;
+import kr.co.softsoldesk.interceptor.CheckLoginInterceptor;
 import kr.co.softsoldesk.interceptor.MainHeaderInterceptor;
 import kr.co.softsoldesk.mapper.BookMapper;
 import kr.co.softsoldesk.mapper.CartMapper;
@@ -175,6 +176,10 @@ public class ServletAppContext implements WebMvcConfigurer {
 		MainHeaderInterceptor mainHeaderInterceptor = new MainHeaderInterceptor(loginTeacherBean);
 		InterceptorRegistration reg1 = registry.addInterceptor(mainHeaderInterceptor);
 		reg1.addPathPatterns("/**");
+		
+		CheckLoginInterceptor checkLoginInterceptor = new CheckLoginInterceptor(loginTeacherBean);
+		InterceptorRegistration reg2 = registry.addInterceptor(checkLoginInterceptor);
+		reg2.addPathPatterns("/user//Mypage", "/user/Mypage_change", "/user/Password_change_confirm", "/user/delete_account", "/user/logout");
 
 	}
 
