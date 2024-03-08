@@ -1,0 +1,85 @@
+@charset "EUC-KR";
+
+.top_all{
+    /* text-align: center; */
+    width: 1280px;
+    margin: auto;
+}
+
+.table_all{
+    width: 1280px;
+    border: 1px solid;
+}
+
+a{
+    text-decoration-line: none;
+    font-size: 25px;
+}
+
+a:link, a:visited{
+    color: black;
+}
+
+/* a :hover{
+    width: auto;
+    height: 45px;
+} */
+
+.td_cen{
+    /* text-align: center; */
+    /* width: 150px; */
+    width: 120pxpx;
+}
+
+.td_cen_img1{
+    width: 300px;
+}
+
+.td_cen_img1 img{
+    height: 100px;
+}
+
+.td_cen_img2, .td_cen_img3{
+    text-align: center;
+    width: 80px;
+}
+
+.td_cen :hover{
+    width: auto;
+    height: 45px;
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.td_cen1{
+    width: 30px;
+}
+
+.td_cen1-1{
+    width: 50px;
+}
+
+.td_cen2{
+    width: 15px;
+}
+
+.loginicon{
+    width: 50px;
+    height: 50px;
+}
+
+.fa-cart-shopping{
+    width: 40px;
+    height: 40px;
+    color: black;
+    margin-top: 8px;
+}
+
+.icon_text1 , .icon_text2{
+    font-size: 15px;
+}
+
+.icon_text1{
+    margin-top: 4px;
+}
+
