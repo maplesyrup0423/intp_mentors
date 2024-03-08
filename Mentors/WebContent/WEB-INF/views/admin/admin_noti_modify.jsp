@@ -46,35 +46,31 @@
 						<div class="div_card-body">
 							<div>
 								<table class="list_tb">
-								
 									<tr>
 										<th>연수명</th>
-										<td colspan="3">${adminnotiDetail.wt_title }</td>
-									</tr>
-									
-									<tr>
-										<th>번호</th>
-										<td>${adminnotiDetail.noti_key }</td>
-																				
-										<th>작성일</th>
-										<td>${adminnotiDetail.noti_date }</td>
+										<td colspan="2">${adminnotiModify.wt_title }</td>
 									</tr>
 									
 									<tr>
 										<th>제목</th>
-										<td colspan="3">${adminnotiDetail.noti_title }</td>
+										<td colspan="2">
+										<textarea class="noti-insert-titletext_box" cols="30" rows="10">${adminnotiModify.noti_title }</textarea>
+										</td>
 									</tr>
 									
 									<tr>
 										<th>내용</th>
-										<td colspan="3">${adminnotiDetail.noti_content }</td>
+										<td colspan="2">
+										<textarea class="answertext_box" cols="30" rows="10">${adminnotiModify.noti_content }</textarea>
+										</td>
 									</tr>
+									
 								</table>
 							</div>
 							
 							<div class="noti_detail-bottom_btn">
 								<input class="noti_detail-modify_btn" type="button" value="수정"
-									onclick="location.href='${root}admin/admin_noti_modify?noti_key=${adminnotiDetail.noti_key }'"/>
+									onclick="location.href='${root}admin/admin_noti'"/>
 								<input class="noti_detail-list_btn" type="button" value="목록으로"
 									onclick="location.href='${root}admin/admin_noti'"/>
 							</div>

@@ -65,52 +65,24 @@
 								<th>관리</th>
 							</tr>
 						</thead>
+						
 						<tbody>
-							<tr class="noti-table-list" onclick="location.href='${root}admin/admin_noti_detail'">
-								<td>1</td>
-								<td>이것만 알자! 평가문항 출제 길잡이1</td>
-								<td>휴가는 언제 사용할 수 있을까요?</td>
-								<td>2024-02-18</td>
+						<c:forEach var='adn' items="${adminnoti }">
+							<tr class="noti-table-list" >
+					
+								<td onclick="location.href='${root}admin/admin_noti_detail?noti_key=${adn.noti_key }'">${adn.noti_key }</td>
+								<td onclick="location.href='${root}admin/admin_noti_detail?noti_key=${adn.noti_key }'">${adn.wt_title }</td>
+								<td onclick="location.href='${root}admin/admin_noti_detail?noti_key=${adn.noti_key }'">${adn.noti_title }</td>
+								<td onclick="location.href='${root}admin/admin_noti_detail?noti_key=${adn.noti_key }'">${adn.noti_date }</td>
+				
+								
 								<td>
-									<button class="modify-btn">수정</button>
+									<button class="modify-btn"
+									onclick="location.href='${root}admin/admin_noti_modify?noti_key=${adn.noti_key }'">수정</button>
 									<button class="delete-btn">삭제</button>
 								</td>
 							</tr>
-							<tr>
-								<td>2</td>
-								<td>이것만 알자! 평가문항 출제 길잡이2</td>
-								<td>제목</td>
-								<td>등록일</td>
-								<td>상태</td>
-							</tr>
-							<tr>
-                                <td>3</td>
-                                <td>연수명</td>
-                                <td>제목</td>
-                                <td>등록일</td>
-                                <td>상태</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>연수명</td>
-                                <td>제목</td>
-                                <td>등록일</td>
-                                <td>상태</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>연수명</td>
-                                <td>제목</td>
-                                <td>등록일</td>
-                                <td>상태</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>연수명</td>
-                                <td>제목</td>
-                                <td>등록일</td>
-                                <td>상태</td>
-                            </tr>
+							</c:forEach>
 						</tbody>
 					</table>
 				</div>
