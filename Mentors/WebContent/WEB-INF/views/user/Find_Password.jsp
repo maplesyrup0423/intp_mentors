@@ -11,8 +11,10 @@
 <link rel="stylesheet" href="${root }resources/style/Find_Password.css" />
 </head>
 <body>
+	<div class = "Mentors_header">
 	<!-- header --> 
-<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+	</div>
 	
 	<div class="container">
 		<div class="find_password_space">
@@ -43,7 +45,7 @@
 			</div>
 			<center>
 				<input class="cancel" type="button" value="취소"
-				onClick="location.href='Login.jsp'" /> 
+				onClick="location.href='${root}user/Login'" /> 
 				<form:button class = "submit">확인</form:button>
 			</center>
 		</form:form>

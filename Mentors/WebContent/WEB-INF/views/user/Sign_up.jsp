@@ -11,8 +11,10 @@
 <link rel="stylesheet" href="${root }resources/style/Sign_up.css" />
 </head>
 <body>
+	<div class = "Mentors_header">
 	<!-- header --> 
-	<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+	</div>
 	<div class="container">
 		<div class="sign">회원가입</div>
 		<hr />

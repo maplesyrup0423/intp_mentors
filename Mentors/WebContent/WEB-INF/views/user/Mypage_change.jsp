@@ -11,8 +11,10 @@
 <link rel="stylesheet" href="${root }resources/style/Mypage_change.css" />
 </head>
 <body>
-	<!-- header -->
-	<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+	<div class = "Mentors_header">
+	<!-- header --> 
+		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+	</div>
 	<div class="title_mypage">마이페이지 수정</div>
 
 	<div class="main_div">
@@ -97,6 +99,9 @@
 							
 						</table>
 						<div class="Mypage_button">
+							<input class="cancle" type="button" value="취소"
+							onClick="location.href='${root }user/Mypage'" /> 
+							
 							<form:button class = "Mypage_change_button">변경하기</form:button>
 						</div>
 					</div>

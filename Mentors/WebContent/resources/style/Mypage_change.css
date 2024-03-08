@@ -1,7 +1,12 @@
+div.Mentors_header {
+	width : 1280px;
+	margin : auto;
+}
+
 /* 마이페이지 틀 */
 div.main_div {
 	width: 1280px;
-	max-height: 2400px;
+	height: 1400px;
 	margin : 30px auto;
 	border : none;
 	border-radius : 20px;
@@ -83,41 +88,20 @@ input.td_right {
 	padding-left : 10px;
 }
 
-/* 버튼들 */
+/* 버튼들 틀*/
 .Mypage_button {
 	display : flex;
 	width : 100%;
-	height : 100px;
-	margin : 60px auto;
+	height : 50px;
+	margin : auto;
+	margin-top : 30px;
+	margin-bottom : 10px;
 	text-align : right;
 }
 
-input.change_account {
-	width : 500px;
-	height : 50px;
-	border-radius : 7px;
-	font-size : 25px;
-	color : white;
-	background-color : #00457E;
-	border-width : 0px 0px 1px;
-	border : 1px solid gray;
-	box-shadow : 0px 1px 5px rgb(0, 69, 126, 60%);
-	margin-right : auto;
-}
 
-input.change_password {
-	width : 500px;
-	height : 50px;
-	border-radius : 7px;
-	font-size : 25px;
-	color : white;
-	background-color : #00457E;
-	border-width : 0px 0px 1px;
-	border : 1px solid gray;
-	box-shadow : 0px 1px 5px rgb(0, 69, 126, 60%);
-}
-
-input.delete_account{
+/* 버튼 css */
+input.cancle{
 	width: 150px;
     height: 50px;
 	border: none;
@@ -127,39 +111,25 @@ input.delete_account{
     margin-right : auto;
 }
 
-a.logout {
-	display: inline-block;
-	width : 150px;
-	height : 50px;
-	border : none;
-	border-radius : 8px;
-	font-size : 20px;
-	color : black;
-	text-align : center;
-	text-decoration: none;
-	vertical-align: middle;
-	line-height: 50px;
-	background-color: #b6b6b6;
+button.Mypage_change_button{
+	width: 150px;
+    height: 50px;
+	border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    background-color: #b6b6b6;
 }
 
 /* 버튼 효과 */
-input.change_account:hover, input.change_password:hover {
-	font-size : 26px;
-	cursor : pointer;
-}
-
-input.change_account:focus, input.change_password:focus {
-	font-size : 24px;
-}
-
-input.delete_account:hover {
+button.Mypage_change_button:hover, input.cancle:hover {
 	background-color: #ff5345;
 	cursor : pointer;
 }
 
-a.logout:hover {
-	background-color: #ff5345;
+button.Mypage_change_button:focus, input.cancle:hover {
+	font-size : 21px;
 }
+
 /* ------------------------------------------------------- */
 .div_card {
 	/*position: relative;
