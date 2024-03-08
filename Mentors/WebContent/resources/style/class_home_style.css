@@ -333,7 +333,7 @@ table, td, th, ul, li, div, button {
 }
 
 .progress-bar .progress {
-	width: 72%;
+	/*width: 72%;*/
 	/*나타내고자 하는 퍼센트 값을 넣으면 됩니다.*/
 	height: 30px;
 	padding: 0;

@@ -98,6 +98,7 @@ public class TeacherService {
 	}
 	
 	public void changeTeacherPw(TeacherBean changePwBean) {
+		changePwBean.setTeacher_id(loginTeacherBean.getTeacher_id());
 		teacherDao.changeTeacherPw(changePwBean);
 	}
 }

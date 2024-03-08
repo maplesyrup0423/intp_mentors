@@ -57,8 +57,8 @@ public interface TeacherMapper {
 	void deleteAccount(TeacherBean deleteBean);
 	
 	@Update("update teacher_info "
-			+ "set teacher_password = #{teacher_Password} "
-			+ "where teacher_password = #{current_password}")
+			+ "set teacher_password = #{new_Password} "
+			+ "where teacher_id = #{teacher_id}")
 	void changeTeacherPw(TeacherBean changePwBean);
 	
 }
