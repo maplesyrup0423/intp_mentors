@@ -11,6 +11,9 @@
 	href="${root }resources/style/class_home_style.css" />
 
 </head>
+
+
+
 <body>
 	<table width="1280" class="class_d_table">
 		<tr height="80">
@@ -18,19 +21,20 @@
 					url="/WEB-INF/views/class/class_include/class_header.jsp" /></td>
 		</tr>
 		<tr>
-			<td rowspan="2" width="200" align="center" valign="top" height="100%"><div class="sidebar div_shadow">
-		<div class="sidebar_list">
-			<button class="CH_list list_home active"
-				onclick="location.href='${root}class/class_home_center_home?wtt_Key=${wttBean.wtt_Key }'">강의
-				홈</button>
-			<button class="list_test CH_list "
-				onclick="location.href='${root}class/class_home_center_test?wtt_Key=${wttBean.wtt_Key }'">시험</button>
-			<button class="list_QnA CH_list "
-				onclick="location.href='${root}class/QnAlist?wtt_Key=${wttBean.wtt_Key }'">Q&A</button>
-			<button class="list_notification CH_list "
-				onclick="location.href='${root}class/Notification?wtt_Key=${wttBean.wtt_Key }'">공지사항</button>
-		</div>
-	</div></td>
+			<td rowspan="2" width="200" align="center" valign="top" height="100%"><div
+					class="sidebar div_shadow">
+					<div class="sidebar_list">
+						<button class="CH_list list_home active"
+							onclick="location.href='${root}class/class_home_center_home?wtt_Key=${wttBean.wtt_Key }'">강의
+							홈</button>
+						<button class="list_test CH_list "
+							onclick="location.href='${root}class/class_home_center_test?wtt_Key=${wttBean.wtt_Key }'">시험</button>
+						<button class="list_QnA CH_list "
+							onclick="location.href='${root}class/QnAlist?wtt_Key=${wttBean.wtt_Key }'">Q&A</button>
+						<button class="list_notification CH_list "
+							onclick="location.href='${root}class/Notification?wtt_Key=${wttBean.wtt_Key }'">공지사항</button>
+					</div>
+				</div></td>
 			<td height="80"><c:import
 					url="/WEB-INF/views/class/class_include/class_home_center_home_top.jsp" /></td>
 		</tr>
@@ -92,7 +96,8 @@
 											<!--수료/미수료 표기-->
 											<div class="grade_status">
 												<span>수료여부</span>
-												<div class="WTT_Completion_div ${wttBean.wtt_Completion_div_color_class }">${wttBean.str_wtt_Completion }
+												<div
+													class="WTT_Completion_div ${wttBean.wtt_Completion_div_color_class }">${wttBean.str_wtt_Completion }
 												</div>
 											</div>
 										</td>
@@ -111,14 +116,16 @@
 									<tr>
 										<td rowspan="2">${wttBean.wt_Title }</td>
 										<td><span>진도율(%) ${video_progressRound }%</span></td>
-										<td rowspan="2"><button <c:if test="${wttBean.d_Day ==0}">disabled </c:if> class="blue_btn <c:if test="${wttBean.d_Day ==0}"> endBtnColor </c:if>"
+										<td rowspan="2"><button
+												<c:if test="${wttBean.d_Day ==0}">disabled </c:if>
+												class="blue_btn <c:if test="${wttBean.d_Day ==0}"> endBtnColor </c:if>"
 												onclick="location.href='${root}class/class_video?wtt_Key=${wttBean.wtt_Key}'">학습하기</button></td>
 									</tr>
 									<tr>
 
 										<td><div class="progress-bar_div">
 												<div class="progress-bar">
-													<div class="progress"></div>
+													<div class="progress" style="width: ${video_progressRound}%;"></div>
 												</div>
 											</div>
 									</tr>
@@ -136,6 +143,33 @@
 	<!-- ------------------------------------------------------------------------------------------------------- -->
 	<!-- ------------------------------------------------------------------------------------------------------- -->
 
-	<script src="${root }resources/script/donut_chart.js"></script>
+	<%-- <script src="${root }resources/script/donut_chart.js"></script> --%>
+<script>
+const chart1 = document.querySelector('.donut_chart1');
+
+
+const makeChart = (percent, classname, color) => {
+  let i = 1;
+  let chartFn = setInterval(function() {
+    if (i < percent) {
+      colorFn(i, classname, color);
+      i++;
+    } else {
+      clearInterval(chartFn);
+    }
+  }, 10);
+}
+
+const colorFn = (i, classname, color) => {
+  classname.style.background = "conic-gradient(" + color + " 0% " + i + "%, #dedede " + i + "% 100%)";
+}
+
+const replay = () => {
+  makeChart(${progressRound }, chart1, '#ffcd19');
+
+}
+
+makeChart(${progressRound }, chart1, '#ffcd19');
+</script>
 </body>
 </html>
