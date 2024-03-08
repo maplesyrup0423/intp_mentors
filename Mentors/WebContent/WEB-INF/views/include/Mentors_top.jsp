@@ -15,8 +15,9 @@
 </head>
 
 <body>
-
+<h1>로그인 값 확인 ${loginTeacherBean.teacherLogin}</h1>
     <table class="top_all">
+    <!-- 헤더 -->
         <tr>
             <td>
                 <table class="table_all">
@@ -68,6 +69,35 @@
                                 <div class="icon_text2">로그인</div>
                             </a>
                         </td>
+                        
+                        
+                        
+                        
+                        
+                        <c:choose>
+							<c:when test="${loginTeacherBean.teacherLogin == true}">
+								<td class="td_cen_img2">
+									<a href="${root }WT/WT_cart?teacher_id=${loginTeacherBean.teacher_id}">
+										<img class="fas fa-cart-shopping" src="${root}/resources/image/cart.png"></img>
+									</a>
+								</td>
+								
+								<td class="td_cen_img3">
+									<a href="${root }user/Mypage">
+										<img src="${root}/resources/image/login.png" alt="마이페이지" class="loginicon">
+									</a>
+								</td>
+
+							</c:when>
+							<c:otherwise>
+								<td class="td_cen_img3">
+									<a href="${root }user/Login">
+										<img src="${root}/resources/image/login.png" alt="로그인" class="loginicon">
+									</a>
+								</td>
+							</c:otherwise>
+						</c:choose>
+                        
                     </tr>
 
                 </table>
