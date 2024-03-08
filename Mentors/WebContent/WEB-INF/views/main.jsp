@@ -98,145 +98,212 @@
 			</div>
 			</header>
 
-			<div class="main_list"> 
-        <!-- 카테고리 전체 -->
-            <div class="user_teb_list">
-            <!-- 학년별 카테고리 -->
-                <ul class="teb_list">
-                <!-- 학년별 카테고리 창 -->
-                    <li class="teb_item ">
-                        <a href=""class="tab_link ">
-                            <span class="teb_text">전체메뉴</span>
+			<!-- <div class="main_list"> -->
+            <!-- 카테고리 전체 -->
+            <!-- <div class="user_teb_list">
+                    학년별 카테고리
+                        <ul class="teb_list">
+                        학년별 카테고리 창
+                            <li class="teb_item ">
+                                <a href=""class="tab_link ">
+                                    전체메뉴
+                                </a>
+                            </li>
+                            <li class="teb_item ">
+                                <a href="" class="tab_link ">
+                                    초등학생
+                                </a>
+                            </li>
+                            <li class="teb_item ">
+                                <a href="" class="tab_link ">
+                                    중학생
+                                </a>
+                            </li>
+                            <li class="teb_item ">
+                                <a href="" class="tab_link ">
+                                    고등학생
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <br>
+                    <br>
+        
+                    <div class="item_list">
+        
+                        <div class="item">
+                            <a href="">
+                                <img src="../img/event1-1.jpg" alt="">
+                                <br>
+                                제목이자 설명
+                            </a>
+                        </div>
+        
+                        <div class="item">
+                            <a href="">
+                                <img src="../img/event1-1.jpg" alt="">
+                                <br>
+                                제목이자 설명
+                            </a>
+                        </div>
+        
+                        <div class="item">
+                            <a href="">
+                                <img src="../img/event1-1.jpg" alt="">
+                                <br>
+                                제목이자 설명
+                            </a>
+                        </div>
+        
+                        <div class="item">
+                            <a href="">
+                                <img src="../img/event1-1.jpg" alt="">
+                                <br>
+                                제목이자 설명
+                            </a>
+                        </div>
+        
+                    </div>
+        
+                </div> -->
+        
+            <!-- <div class="main_list"> 
+                    카테고리 전체
+                        <div class="user_teb_list">
+                        학년별 카테고리
+                            <ul class="teb_list">
+                            학년별 카테고리 창
+                                <li class="teb_item_button ">
+                                    <button class="tab_link_button ">
+                                        전체메뉴
+                                    </button>
+                                </li>
+                                <li class="teb_item_button ">
+                                    <button  class="tab_link_button">
+                                        교과지도
+                                    </button>
+                                </li>
+                                <li class="teb_item_button ">
+                                    <button  class="tab_link_button">
+                                        학습지도
+                                    </button>
+                                </li>
+                                <li class="teb_item_button ">
+                                    <button  class="tab_link_button ">
+                                        생활지도
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+            
+                        <br>
+                        <br>
+            
+                        <div class="item_list">
+            
+                            <div class="item">
+                                <a href="">
+                                    <img src="../img/event1-1.jpg" alt="">
+                                    <br>
+                                    제목이자 설명
+                                </a>
+                            </div>
+            
+                            <div class="item">
+                                <a href="">
+                                    <img src="../img/event1-1.jpg" alt="">
+                                    <br>
+                                    제목이자 설명
+                                </a>
+                            </div>
+            
+                            <div class="item">
+                                <a href="">
+                                    <img src="../img/event1-1.jpg" alt="">
+                                    <br>
+                                    제목이자 설명
+                                </a>
+                            </div>
+            
+                            <div class="item">
+                                <a href="">
+                                    <img src="../img/event1-1.jpg" alt="">
+                                    <br>
+                                    제목이자 설명
+                                </a>
+                            </div>
+            
+                        </div> -->
+        
+        <!-- </div> -->
+
+        <div class="teb">
+            <ul class="teb_list">
+                <li><a href="#teb00">전체</a></li>
+                <li><a href="#teb01">초등학생</a></li>
+                <li><a href="#teb02">중학생</a></li>
+                <li><a href="#teb03">고등학생</a></li>
+            </ul>
+
+            <div class="teb_item">
+                <div id="teb00" class="item_list"> 
+                    <!-- 전체메뉴 4개 -->
+                    <div class="item">
+                        <a href="">
+                            <img src="../img/event1-1.jpg" alt="">
+                            <br>
+                            제목이자 설명
                         </a>
-                    </li>
-                    <li class="teb_item ">
-                        <a href="" class="tab_link ">
-                            <span class="teb_text">초등학생</span>
+                    </div>
+
+                    <div class="item">
+                        <a href="">
+                            <img src="../img/event1-1.jpg" alt="">
+                            <br>
+                            제목이자 설명
                         </a>
-                    </li>
-                    <li class="teb_item ">
-                        <a href="" class="tab_link ">
-                            <span class="teb_text">중학생</span>
+                    </div>
+
+                    <div class="item">
+                        <a href="">
+                            <img src="../img/event1-1.jpg" alt="">
+                            <br>
+                            제목이자 설명
                         </a>
-                    </li>
-                    <li class="teb_item ">
-                        <a href="" class="tab_link ">
-                            <span class="teb_text">고등학생</span>
+                    </div>
+
+                    <div class="item">
+                        <a href="">
+                            <img src="../img/event1-1.jpg" alt="">
+                            <br>
+                            제목이자 설명
                         </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+
+                <div id="teb01" class="item_list">
+                    <!-- 초등학생 4개 -->
+                </div>
+
+                <div id="teb02" class="item_list">
+                    <!-- 중학생 4개 -->
+                </div>
+
+                <div id="teb03" class="item_list">
+                    <!-- 고등학생 4개 -->
+                </div>
             </div>
 
-            <br>
-            <br>
-
-				<div class="item_list">
-
-					<div class="item">
-						<a href=""> <img
-							src="${root}resources/image/event_img/event_Thumb/event1-1.jpg"
-							alt=""> <br> 제목이자 설명
-						</a>
-					</div>
-
-					<div class="item">
-						<a href=""> <img
-							src="${root}resources/image/event_img/event_Thumb/event1-1.jpg"
-							alt=""> <br> 제목이자 설명
-						</a>
-					</div>
-
-					<div class="item">
-						<a href=""> <img
-							src="${root}resources/image/event_img/event_Thumb/event1-1.jpg"
-							alt=""> <br> 제목이자 설명
-						</a>
-					</div>
-
-					<div class="item">
-						<a href=""> <img
-							src="${root}resources/image/event_img/event_Thumb/event1-1.jpg"
-							alt=""> <br> 제목이자 설명
-						</a>
-					</div>
-
-				</div>
-
-			</div>
-
-			<div class="main_list"> 
-            <!-- 카테고리 전체 -->
-                <div class="user_teb_list">
-                <!-- 학년별 카테고리 -->
-                    <ul class="teb_list">
-                    <!-- 학년별 카테고리 창 -->
-                        <li class="teb_item_button ">
-                            <button class="tab_link_button ">
-                                <span class="teb_text">전체메뉴</span>
-                            </button>
-                        </li>
-                        <li class="teb_item_button ">
-                            <button  class="tab_link_button">
-                                <span class="teb_text">교과지도</span>
-                            </button>
-                        </li>
-                        <li class="teb_item_button ">
-                            <button  class="tab_link_button">
-                                <span class="teb_text">학습지도</span>
-                            </button>
-                        </li>
-                        <li class="teb_item_button ">
-                            <button  class="tab_link_button ">
-                                <span class="teb_text">생활지도</span>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-    
-                <br>
-                <br>
-
-				<div class="item_list">
-
-					<div class="item">
-						<a href=""> <img
-							src="${root}resources/image/event_img/event_Thumb/event1-1.jpg"
-							alt=""> <br> 제목이자 설명
-						</a>
-					</div>
-
-					<div class="item">
-						<a href=""> <img
-							src="${root}resources/image/event_img/event_Thumb/event1-1.jpg"
-							alt=""> <br> 제목이자 설명
-						</a>
-					</div>
-
-					<div class="item">
-						<a href=""> <img
-							src="${root}resources/image/event_img/event_Thumb/event1-1.jpg"
-							alt=""> <br> 제목이자 설명
-						</a>
-					</div>
-
-					<div class="item">
-						<a href=""> <img
-							src="${root}resources/image/event_img/event_Thumb/event1-1.jpg"
-							alt=""> <br> 제목이자 설명
-						</a>
-					</div>
-
-				</div>
-
-			</div>
+        </div>
 
 
 			<br>
 
 			<footer>
-				<div style="text-align: center; width: 1280px;">
-					<h1>현재 신청 가능한 강의</h1>
-				</div>
+				 <div class="title_text">
+                <h1>현재 신청 가능한 강의</h1>
+            </div>
 
 				<div class="C-classlist">
 
