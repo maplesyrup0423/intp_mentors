@@ -43,8 +43,9 @@ public class ClassController {
 		String wttCompletion = classService.getWttCompletion(wtt_Key);
 		model.addAttribute("wttCompletion", wttCompletion); //강의 상태
 		
-		double a = Math.round(wttBean.getVideo_progress());
+		double a = Math.round(wttBean.getTimeVprogressFinal()* 10)/10.0;
 		model.addAttribute("a",a);
+	
 		
 		return "class/class_home_center_home";
 	}
