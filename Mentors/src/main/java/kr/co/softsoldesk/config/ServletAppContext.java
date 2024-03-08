@@ -181,9 +181,12 @@ public class ServletAppContext implements WebMvcConfigurer {
 		InterceptorRegistration reg2 = registry.addInterceptor(checkLoginInterceptor);
 		reg2.addPathPatterns("/user/Mypage", "/user/Mypage_change", "/user/Password_change_confirm", "/user/delete_account", "/user/logout");
 		
-		//비로그인 시 이용불가 사이트 : "/user/Mypage", "/user/Mypage_change"
-		//비로그인 시 이용불가 사이트 포괄 : "/user/*"
-		//비로그인 시 이용불가 사이트 포괄 중 예외 사이트 : "/user/Login", "/user/Not_login"
+		//특정 사이트들만 비로그인 진입 불가를 걸고 싶은 경우
+		//비로그인 시 이용불가 사이트 : "/user/Mypage", "/user/Mypage_change" ("/user/Mypage" 로 임의로 진입 시 차단이란 의미)
+		
+		//포괄로 막아놓고 몇몇 웹만 열고 싶은 경우
+		//비로그인 시 이용불가 사이트 포괄 : "/user/*"  ("/user/ 폴더 안에 들어있는 모든 파일 비활성화의 의미)
+		//비로그인 시 이용불가 사이트 포괄 중 예외 사이트 : "/user/Login", "/user/Not_login" ("/user 폴더 안에 있는 파일 중 "/Login", "Not_login"은 예외적으로 사용가능의 의미)
 	}
 
 }
