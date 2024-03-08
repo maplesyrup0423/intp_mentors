@@ -38,7 +38,7 @@ CREATE TABLE  event (
         event_content_img VARCHAR2(500) NOT NULL,
         event_s_date date NOT NULL, 
         event_e_date date NOT NULL, 
-        event_title VARCHAR2(40) NOT NULL,
+        event_title VARCHAR2(400) NOT NULL,
         event_text VARCHAR2(500) NOT NULL 
 );
 
