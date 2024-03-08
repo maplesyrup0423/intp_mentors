@@ -186,8 +186,14 @@ public class TeacherController {
 		
 		
 		if(pwChangeBean.getTeacher_Password().equals(loginTeacherBean.getTeacher_Password()) ) {
-			teacherService.changeTeacherPw(pwChangeBean);
-			return "user/password_change_success";
+			if(pwChangeBean.getNew_Password().equals(pwChangeBean.getNew_Password2())) {
+				
+				teacherService.changeTeacherPw(pwChangeBean);
+				return "user/password_change_success";
+			}else {
+				return "user/password_change_fail";
+			}
+			
 		}
 		else {
 			return "user/password_change_fail";

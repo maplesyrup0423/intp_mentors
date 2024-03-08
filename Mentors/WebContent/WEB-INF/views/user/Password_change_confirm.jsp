@@ -26,8 +26,8 @@
 						</div>
 						<center>
 							<form:input type = "password" class = "password_change_input" path = "teacher_Password" placeholder = "현재 비밀번호를 입력하세요." autocomplete = "off"/> <br />
-							<form:input type = "password" class = "password_change_input" path = "teacher_Password" placeholder = "새로운 비밀번호를 입력하세요." autocomplete = "off"/> <br />
-							<form:input type = "password" class = "password_change_input" path = "teacher_Password2" placeholder = "새로운 비밀번호를 다시 입력하세요." autocomplete = "off"/>
+							<form:input type = "password" class = "password_change_input" path = "new_Password" placeholder = "새로운 비밀번호를 입력하세요." autocomplete = "off"/> <br />
+							<form:input type = "password" class = "password_change_input" path = "new_Password2" placeholder = "새로운 비밀번호를 다시 입력하세요." autocomplete = "off"/>
 						</center>
 							
 						<center>
