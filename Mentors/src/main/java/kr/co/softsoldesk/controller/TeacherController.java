@@ -99,16 +99,23 @@ public class TeacherController {
 						  TeacherBean tempFindIdBean, BindingResult result, Model model) {
 		
 		if(result.hasErrors()) {
-			return "Find_ID";
+			return "user/Find_ID_fail";
 		}
 		String getTeacher_Name = tempFindIdBean.getTeacher_Name();
 		String getTeacher_Tel = tempFindIdBean.getTeacher_Tel();
 		
 		String getTeacher_Id = teacherService.getTeacherId(getTeacher_Name, getTeacher_Tel);
 		
+		if(getTeacher_Id==null) {
+			return "user/Find_ID_fail";
+		}
+		
 		model.addAttribute("getTeacher_Id", getTeacher_Id);
+		
 		System.out.println("안녕하세요.");
 		System.out.println(getTeacher_Id);
+		
+		
 		return "user/Find_ID_success";
 	}
 	
@@ -128,13 +135,17 @@ public class TeacherController {
 									TeacherBean tempFindPwBean, BindingResult result, Model model) {
 		
 		if(result.hasErrors()) {
-			return "Find_Password";
+			return "user/Find_Password";
 		}
 		String getTeacher_Id = tempFindPwBean.getTeacher_id();
 		String getTeacher_Name = tempFindPwBean.getTeacher_Name();
 		String getTeacher_Tel = tempFindPwBean.getTeacher_Tel();
 		
 		String getTeacher_Password = teacherService.getTeacherPw(getTeacher_Id, getTeacher_Name, getTeacher_Tel);
+		
+		if(getTeacher_Password==null) {
+			return "user/Find_Password_fail";
+		}
 		
 		model.addAttribute("getTeacher_Password", getTeacher_Password);
 		System.out.println("안녕하세요.");
