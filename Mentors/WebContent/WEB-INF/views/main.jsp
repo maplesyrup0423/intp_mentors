@@ -11,7 +11,8 @@
 <link rel="stylesheet" href="${root}resources/style/slidestest.css">
 <link rel="stylesheet" href="${root}resources/style/slick.css" />
 <%-- <link rel="stylesheet" href="${root}resources/style/xeicon.min.css"> --%>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<link rel="stylesheet"
+	href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <script src="${root}/resources/script/jquery-3.3.1.min.js"></script>
 <script src="${root}/resources/script/slick.min.js"></script>
 <meta charset="UTF-8">
@@ -21,7 +22,7 @@
 	<div class="all_center">
 		<!-- header -->
 		<%-- <c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" /> --%>
-	<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
 		<!-- center -->
 		<div class="C-main">
 
@@ -57,253 +58,156 @@
 				</div>
 
 
-				
-					
-						<c:choose>
-							<c:when test="${loginTeacherBean.teacherLogin == true}">
-							<div class="login-circle2">
-								<div class="circle-login2">
 
-									<span id="My">내 정보
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										<button style="border-radius: 25px;">로그아웃</button>
-									</span>
-									<h1>사용자 이름</h1>
-									<br>
 
-									<button class="loginbutton">뭐든 가는
-										버튼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 〉</button>
-								</div>
+				<c:choose>
+					<c:when test="${loginTeacherBean.teacherLogin == true}">
+						<div class="login-circle2">
+							<div class="circle-login2">
+
+								<span id="My">내 정보
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<button style="border-radius: 25px;">로그아웃</button>
+								</span>
+								<h1>사용자 이름</h1>
+								<br>
+
+								<button class="loginbutton">뭐든 가는
+									버튼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 〉</button>
 							</div>
+						</div>
 
 					</c:when>
 
 					<c:otherwise>
-					<div class="login-circle">
-						<div class="circle-login">
+						<div class="login-circle">
+							<div class="circle-login">
 
-							<h1>
-								로그인 이후 <br>이용해주세요!
-							</h1>
-							<button class="login blue_btn">로그인</button>
-							<br> <span>아이디 </span> · <span>비밀번호</span> <span
-								id="newUser">회원가입</span>
+								<h1>
+									로그인 이후 <br>이용해주세요!
+								</h1>
+								<button class="login blue_btn">로그인</button>
+								<br> <span>아이디 </span> · <span>비밀번호</span> <span
+									id="newUser">회원가입</span>
+							</div>
 						</div>
-					</div>
 					</c:otherwise>
-					</c:choose>
+				</c:choose>
 
-				
+
 
 			</div>
 			</header>
 
-			<!-- <div class="main_list"> -->
-            <!-- 카테고리 전체 -->
-            <!-- <div class="user_teb_list">
-                    학년별 카테고리
-                        <ul class="teb_list">
-                        학년별 카테고리 창
-                            <li class="teb_item ">
-                                <a href=""class="tab_link ">
-                                    전체메뉴
-                                </a>
-                            </li>
-                            <li class="teb_item ">
-                                <a href="" class="tab_link ">
-                                    초등학생
-                                </a>
-                            </li>
-                            <li class="teb_item ">
-                                <a href="" class="tab_link ">
-                                    중학생
-                                </a>
-                            </li>
-                            <li class="teb_item ">
-                                <a href="" class="tab_link ">
-                                    고등학생
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-        
-                    <br>
-                    <br>
-        
-                    <div class="item_list">
-        
-                        <div class="item">
-                            <a href="">
-                                <img src="../img/event1-1.jpg" alt="">
-                                <br>
-                                제목이자 설명
-                            </a>
-                        </div>
-        
-                        <div class="item">
-                            <a href="">
-                                <img src="../img/event1-1.jpg" alt="">
-                                <br>
-                                제목이자 설명
-                            </a>
-                        </div>
-        
-                        <div class="item">
-                            <a href="">
-                                <img src="../img/event1-1.jpg" alt="">
-                                <br>
-                                제목이자 설명
-                            </a>
-                        </div>
-        
-                        <div class="item">
-                            <a href="">
-                                <img src="../img/event1-1.jpg" alt="">
-                                <br>
-                                제목이자 설명
-                            </a>
-                        </div>
-        
-                    </div>
-        
-                </div> -->
-        
-            <!-- <div class="main_list"> 
-                    카테고리 전체
-                        <div class="user_teb_list">
-                        학년별 카테고리
-                            <ul class="teb_list">
-                            학년별 카테고리 창
-                                <li class="teb_item_button ">
-                                    <button class="tab_link_button ">
-                                        전체메뉴
-                                    </button>
-                                </li>
-                                <li class="teb_item_button ">
-                                    <button  class="tab_link_button">
-                                        교과지도
-                                    </button>
-                                </li>
-                                <li class="teb_item_button ">
-                                    <button  class="tab_link_button">
-                                        학습지도
-                                    </button>
-                                </li>
-                                <li class="teb_item_button ">
-                                    <button  class="tab_link_button ">
-                                        생활지도
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-            
-                        <br>
-                        <br>
-            
-                        <div class="item_list">
-            
-                            <div class="item">
-                                <a href="">
-                                    <img src="../img/event1-1.jpg" alt="">
-                                    <br>
-                                    제목이자 설명
-                                </a>
-                            </div>
-            
-                            <div class="item">
-                                <a href="">
-                                    <img src="../img/event1-1.jpg" alt="">
-                                    <br>
-                                    제목이자 설명
-                                </a>
-                            </div>
-            
-                            <div class="item">
-                                <a href="">
-                                    <img src="../img/event1-1.jpg" alt="">
-                                    <br>
-                                    제목이자 설명
-                                </a>
-                            </div>
-            
-                            <div class="item">
-                                <a href="">
-                                    <img src="../img/event1-1.jpg" alt="">
-                                    <br>
-                                    제목이자 설명
-                                </a>
-                            </div>
-            
-                        </div> -->
-        
-        <!-- </div> -->
+			<div class="teb">
+				<ul class="teb_list">
+					<li><a href="#teb00">전체</a></li>
+					<li><a href="#teb01">초등학생</a></li>
+					<li><a href="#teb02">중학생</a></li>
+					<li><a href="#teb03">고등학생</a></li>
+				</ul>
 
-        <div class="teb">
-            <ul class="teb_list">
-                <li><a href="#teb00">전체</a></li>
-                <li><a href="#teb01">초등학생</a></li>
-                <li><a href="#teb02">중학생</a></li>
-                <li><a href="#teb03">고등학생</a></li>
-            </ul>
+				<div class="teb_item">
+					<div id="teb00" class="item_list">
+						<!-- 전체메뉴 4개 -->
+						<div class="item">
+							<a href=""> <img src="${root }resources/image/event2-2.png"
+								alt=""> <br> 제목이자 설명
+							</a>
+						</div>
 
-            <div class="teb_item">
-                <div id="teb00" class="item_list"> 
-                    <!-- 전체메뉴 4개 -->
-                    <div class="item">
-                        <a href="">
-                            <img src="../img/event1-1.jpg" alt="">
-                            <br>
-                            제목이자 설명
-                        </a>
-                    </div>
+						<div class="item">
+							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
+								제목이자 설명
+							</a>
+						</div>
 
-                    <div class="item">
-                        <a href="">
-                            <img src="../img/event1-1.jpg" alt="">
-                            <br>
-                            제목이자 설명
-                        </a>
-                    </div>
+						<div class="item">
+							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
+								제목이자 설명
+							</a>
+						</div>
 
-                    <div class="item">
-                        <a href="">
-                            <img src="../img/event1-1.jpg" alt="">
-                            <br>
-                            제목이자 설명
-                        </a>
-                    </div>
+						<div class="item">
+							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
+								제목이자 설명
+							</a>
+						</div>
+					</div>
 
-                    <div class="item">
-                        <a href="">
-                            <img src="../img/event1-1.jpg" alt="">
-                            <br>
-                            제목이자 설명
-                        </a>
-                    </div>
-                </div>
+					<div id="teb01" class="item_list">
+						<!-- 초등학생 4개 -->
+					</div>
 
-                <div id="teb01" class="item_list">
-                    <!-- 초등학생 4개 -->
-                </div>
+					<div id="teb02" class="item_list">
+						<!-- 중학생 4개 -->
+					</div>
 
-                <div id="teb02" class="item_list">
-                    <!-- 중학생 4개 -->
-                </div>
+					<div id="teb03" class="item_list">
+						<!-- 고등학생 4개 -->
+					</div>
+				</div>
 
-                <div id="teb03" class="item_list">
-                    <!-- 고등학생 4개 -->
-                </div>
-            </div>
+			</div>
+			
+			<div class="teb">
+				<ul class="teb_list">
+					<li><a href="#teb04">전체</a></li>
+					<li><a href="#teb05">교과지도</a></li>
+					<li><a href="#teb06">학습지도</a></li>
+					<li><a href="#teb07">생활지도</a></li>
+				</ul>
 
-        </div>
+				<div class="teb_item">
+					<div id="teb04" class="item_list">
+						<!-- 전체메뉴 4개 -->
+						<div class="item">
+							<a href=""> <img src="${root }resources/image/event2-2.png"
+								alt=""> <br> 제목이자 설명
+							</a>
+						</div>
+
+						<div class="item">
+							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
+								제목이자 설명
+							</a>
+						</div>
+
+						<div class="item">
+							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
+								제목이자 설명
+							</a>
+						</div>
+
+						<div class="item">
+							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
+								제목이자 설명
+							</a>
+						</div>
+					</div>
+
+					<div id="teb05" class="item_list">
+						<!-- 교과지도 4개 -->
+					</div>
+
+					<div id="teb06" class="item_list">
+						<!-- 학습지도 4개 -->
+					</div>
+
+					<div id="teb07" class="item_list">
+						<!-- 생활지도 4개 -->
+					</div>
+				</div>
+
+			</div>
 
 
 			<br>
 
 			<footer>
-				 <div class="title_text">
-                <h1>현재 신청 가능한 강의</h1>
-            </div>
+				<div class="title_text">
+					<h1>현재 신청 가능한 강의</h1>
+				</div>
 
 				<div class="C-classlist">
 
