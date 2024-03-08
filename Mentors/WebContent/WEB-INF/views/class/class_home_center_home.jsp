@@ -79,8 +79,13 @@
 													</tr>
 													<tr>
 														<th>점수</th>
-														<td>${wttBean.timeVprogressFinal }</td>
+														<td>${a }</td>
 														<td>${wttBean.testResultFinal }</td>
+													</tr>
+													<tr>
+														<th>원점수</th>
+														<td>${video_progressRound }</td>
+														<td>${wttBean.wtt_test_result }</td>
 													</tr>
 													<tr>
 														<th>수료조건</th>
