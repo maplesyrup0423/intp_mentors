@@ -24,4 +24,7 @@ public class QnAqService {
 	    qnAqDao.updateResponseStatus(q_key, status);
 	}
 	
+	public void writeQnA(QnAqBean qna) {
+        qnAqDao.writeQnA(qna);
+    }
 }
