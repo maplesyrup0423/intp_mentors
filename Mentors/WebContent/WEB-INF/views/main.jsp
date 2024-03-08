@@ -20,8 +20,8 @@
 <body>
 	<div class="all_center">
 		<!-- header -->
-		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
-
+		<%-- <c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" /> --%>
+	<c:import url="/WEB-INF/views/include/Mentors_top.jsp" />
 		<!-- center -->
 		<div class="C-main">
 

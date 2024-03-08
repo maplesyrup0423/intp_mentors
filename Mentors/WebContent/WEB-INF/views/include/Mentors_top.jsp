@@ -54,21 +54,21 @@
 
                         <td class="td_cen1"></td>
 
-                        <td class="td_cen_img2">
+                       <!--  <td class="td_cen_img2">
                             <a href="Mentors_Main.jsp?mainNum=6">
                                 <img class="fas fa-cart-shopping" src="../img/cart.png"></img>
                                 <div class="icon_text1">장바구니</div>
                             </a>
                         </td>
 
-                        <!-- <td class="td_cen2"></td> -->
+                        <td class="td_cen2"></td>
 
                         <td class="td_cen_img3">
                             <a href="Login.jsp">
                                 <img src="../img/login.png" alt="로그인" class="loginicon"></img>
                                 <div class="icon_text2">로그인</div>
                             </a>
-                        </td>
+                        </td> -->
                         
                         
                         
@@ -78,13 +78,15 @@
 							<c:when test="${loginTeacherBean.teacherLogin == true}">
 								<td class="td_cen_img2">
 									<a href="${root }WT/WT_cart?teacher_id=${loginTeacherBean.teacher_id}">
-										<img class="fas fa-cart-shopping" src="${root}/resources/image/cart.png"></img>
+										<img class="fas fa-cart-shopping" src="${root}resources/image/header_img/cart.png"></img>
+										<div class="icon_text1">장바구니</div>
 									</a>
 								</td>
 								
 								<td class="td_cen_img3">
 									<a href="${root }user/Mypage">
-										<img src="${root}/resources/image/login.png" alt="마이페이지" class="loginicon">
+										<img src="${root}resources/image/header_img/my_page.png" alt="마이페이지" class="loginicon">
+										<div class="icon_text2">마이페이지</div>
 									</a>
 								</td>
 
@@ -92,7 +94,8 @@
 							<c:otherwise>
 								<td class="td_cen_img3">
 									<a href="${root }user/Login">
-										<img src="${root}/resources/image/login.png" alt="로그인" class="loginicon">
+										<img src="${root}resources/image/header_img/login_icon.png" alt="로그인" class="loginicon">
+										<div class="icon_text2">로그인</div>
 									</a>
 								</td>
 							</c:otherwise>
