@@ -172,7 +172,26 @@ public class TeacherController {
 	
 	@GetMapping("/Password_change_confirm")
 	public String Password_change_confirm(@ModelAttribute("pwChangeBean") TeacherBean pwChangeBean) {
+		
 		return "user/Password_change_confirm";
+	}
+	
+	@PostMapping("password_change_pro")
+	public String password_change_pro(@Valid @ModelAttribute("pwChangeBean") TeacherBean pwChangeBean,
+									  BindingResult result) {
+		
+		if(result.hasErrors()) {
+			return "user/Password_change_confirm";
+		}
+		
+		
+		if(pwChangeBean.getTeacher_Password().equals(loginTeacherBean.getTeacher_Password()) ) {
+			teacherService.changeTeacherPw(pwChangeBean);
+			return "user/password_change_success";
+		}
+		else {
+			return "user/password_change_fail";
+		}
 	}
 	
 	@GetMapping("/delete_account")

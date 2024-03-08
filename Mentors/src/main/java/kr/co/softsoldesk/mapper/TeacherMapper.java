@@ -58,7 +58,7 @@ public interface TeacherMapper {
 	
 	@Update("update teacher_info "
 			+ "set teacher_password = #{teacher_Password} "
-			+ "where teacher_password = #{current_password}")
+			+ "where teacher_id = #{teacher_id}")
 	void changeTeacherPw(TeacherBean changePwBean);
 	
 }
