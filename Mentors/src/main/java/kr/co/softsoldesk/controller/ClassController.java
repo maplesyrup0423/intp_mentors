@@ -139,24 +139,43 @@ public class ClassController {
 		
 		if(tcb.getTeat_q1() == teat_a1) {
 			tcb.setCnt(tcb.getCnt()+1);
-		}else if(tcb.getTeat_q2() == teat_a2) {
+			System.out.println("01 정답 : "+tcb.getCnt());
+		}
+		if(tcb.getTeat_q2() == teat_a2) {
 			tcb.setCnt(tcb.getCnt()+1);
-		}else if(tcb.getTeat_q3() == teat_a3) {
+			System.out.println("02 정답 : "+tcb.getCnt());
+		}
+		if(tcb.getTeat_q3() == teat_a3) {
 			tcb.setCnt(tcb.getCnt()+1);
-		}else if(tcb.getTeat_q4() == teat_a4) {
+			System.out.println("03 정답 : "+tcb.getCnt());
+		}
+		if(tcb.getTeat_q4() == teat_a4) {
 			tcb.setCnt(tcb.getCnt()+1);
-		}else if(tcb.getTeat_q5() == teat_a5) {
+			System.out.println("04 정답 : "+tcb.getCnt());
+		}
+		if(tcb.getTeat_q5() == teat_a5) {
 			tcb.setCnt(tcb.getCnt()+1);
-		}else if(tcb.getTeat_q6() == teat_a6) {
+			System.out.println("05 정답 : "+tcb.getCnt());
+		}
+		if(tcb.getTeat_q6() == teat_a6) {
 			tcb.setCnt(tcb.getCnt()+1);
-		}else if(tcb.getTeat_q7() == teat_a7) {
+			System.out.println("06 정답 : "+tcb.getCnt());
+		}
+		if(tcb.getTeat_q7() == teat_a7) {
 			tcb.setCnt(tcb.getCnt()+1);
-		}else if(tcb.getTeat_q8() == teat_a8) {
+			System.out.println("07 정답 : "+tcb.getCnt());
+		}
+		if(tcb.getTeat_q8() == teat_a8) {
 			tcb.setCnt(tcb.getCnt()+1);
-		}else if(tcb.getTeat_q9() == teat_a9) {
+			System.out.println("08 정답 : "+tcb.getCnt());
+		}
+		if(tcb.getTeat_q9() == teat_a9) {
 			tcb.setCnt(tcb.getCnt()+1);
-		}else if(tcb.getTeat_q10() == teat_a10) {
+			System.out.println("09 정답 : "+tcb.getCnt());
+		}
+		if(tcb.getTeat_q10() == teat_a10) {
 			tcb.setCnt(tcb.getCnt()+1);
+			System.out.println("10 정답 : "+tcb.getCnt());
 		}
 		
 		classService.updateScore((tcb.getCnt()*10),wtt_Key); //채점
