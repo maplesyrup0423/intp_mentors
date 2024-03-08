@@ -91,19 +91,16 @@
 				$('input[name="rad1"]').change(function() {
 					value1 = $(this).val();
 					var checked = $(this).prop('checked');
-					alert(value1);
 				});
 				
 				$('input[name="rad2"]').change(function() {
 					value2 = $(this).val();
 					var checked = $(this).prop('checked');
-					alert(value2);
 				});
 				
 				$('input[name="rad3"]').change(function() {
 					value3 = $(this).val();
 					var checked = $(this).prop('checked');
-					alert(value3);
 				});
 				
 			function page_move(){
