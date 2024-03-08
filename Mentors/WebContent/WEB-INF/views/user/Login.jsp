@@ -11,8 +11,10 @@
 <link rel="stylesheet" href="${root }resources/style/Login.css" />
 </head>
 <body>
-<!-- header --> 
-<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+	<div class = "Mentors_header">
+	<!-- header --> 
+		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+	</div>
 	<div class="background">
 		<div class="container">
 			<div class="log_in_letter">로그인<br /></div>

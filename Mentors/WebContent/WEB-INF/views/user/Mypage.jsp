@@ -11,10 +11,12 @@
 <link rel="stylesheet" href="${root }resources/style/Mypage.css" />
 </head>
 <body>
+	<div class = "Mentors_header">
 	<!-- header --> 
-	<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
-		<div class="title_mypage">마이페이지</div>
-		<div class="main_div">
+		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
+	</div>
+			<div class="title_mypage">마이페이지</div>
+				<div class="main_div">
 				<div class="div_box">
 					<div class="account_space">
 						<a href="${root }user/Mypage_change" class="Mypage_change">정보수정</a>

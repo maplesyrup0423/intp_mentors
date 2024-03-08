@@ -25,12 +25,12 @@
 							회원탈퇴 후 모든 정보는 소멸됩니다.
 						</div>
 						<center>
-							<form:input class = "delete_account_input" path = "teacher_Password" placeholder = "비밀번호를 입력하세요." autocomplete = "off"/> <br />
+							<form:input class = "delete_account_input" type = "password" path = "teacher_Password" placeholder = "비밀번호를 입력하세요." autocomplete = "off"/> <br />
 						</center>
 							
 						<center>
 							<input class = "delete_account_cancel" type="button" value = "취소" 
-							onClick="location.href='Mypage.jsp'"/>
+							onClick="location.href='${root}user/Mypage'"/>
 							<form:button class = "delete_account_submit">확인</form:button>
 						</center>
 					</td>
