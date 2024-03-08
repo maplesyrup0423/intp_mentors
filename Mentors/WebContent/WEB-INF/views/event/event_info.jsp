@@ -31,7 +31,7 @@
 
     <hr>
 
-      <img src="${root }resources/image/event_img/event_info/${eBean.event_content_img }.jpg" 
+      <img src="${root }resources/image/event_img/event_info/${eBean.event_content_img }" 
       style="width: 100%; height: auto;">
 
         <div>

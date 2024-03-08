@@ -30,7 +30,7 @@
 				
 				<div class="event" >
                 <a href="${root }event/event_return">
-                    <img src="${root }resources/image/event_img/event_Thumb/${obj.event_thumbnail }.jpg" >
+                    <img src="${root }resources/image/event_img/event_Thumb/${obj.event_thumbnail }" >
                     <br>
                     <div id="title"><h3>${obj.event_title  }</h3></div>
                     <br>
