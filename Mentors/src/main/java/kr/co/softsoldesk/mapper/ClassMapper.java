@@ -31,7 +31,7 @@ public interface ClassMapper {
 	@Update("update wtt set wtt_Completion=#{param1} where wtt_key = #{param2}")
 	void updateWttCompletion(int param1, String param2);
 	
-	@Update("update wtt_test_a set test_aa=#{param1} where where wtt_key = #{param2}")
+	@Update("update wtt_test_a set test_aa=#{param1} where wtt_key = #{param2}")
 	void updateTestAA(int param1, String param2);
 	
 	@Select("select test_aa from wtt_test_a where WTT_Key=#{wtt_Key}")

@@ -72,6 +72,19 @@ wt.wt_TrainingTime, wt.wt_Tag_School, wt.wt_Tag_TypeCategory from workplace_t wt
 select test_aa from wtt_test_a where WTT_Key='wtt161'; 
 
 
+--시험 테스트
+
+update wtt set wtt_viewing_time=700 where wtt_key='WTT169';
+update wtt set wtt_completion=0 where wtt_key='WTT169';
+insert into wt_test_q values ('WT29','',1,2,3,4,1,2,3,4,1,2);
+UPDATE wtt_test_a set test_aa=0 where wtt_key='WTT169';
+
+
+
+
+
+
+
 
 
 
