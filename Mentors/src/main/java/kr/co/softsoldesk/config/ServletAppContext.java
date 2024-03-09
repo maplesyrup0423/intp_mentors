@@ -187,6 +187,7 @@ public class ServletAppContext implements WebMvcConfigurer {
 		CheckLoginInterceptor checkLoginInterceptor = new CheckLoginInterceptor(loginTeacherBean);
 		InterceptorRegistration reg2 = registry.addInterceptor(checkLoginInterceptor);
 		reg2.addPathPatterns("/user/Mypage", "/user/Mypage_change", "/user/Password_change_confirm", "/user/delete_account", "/user/logout");
+		reg2.addPathPatterns("/WT/WT_my_room", "/WT/WT_payment3", "/WT/WT_cart_add");
 		
 		//특정 사이트들만 비로그인 진입 불가를 걸고 싶은 경우
 		//비로그인 시 이용불가 사이트 : "/user/Mypage", "/user/Mypage_change" ("/user/Mypage" 로 임의로 진입 시 차단이란 의미)
