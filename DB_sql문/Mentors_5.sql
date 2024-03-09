@@ -95,6 +95,7 @@ select q.q_key, q.WTT_Key, q.q_Title, q.q_content, q.q_a_check, q.q_date,ti.teac
 from qna_q q INNER join wtt w on w.wtt_key=q.wtt_key INNER join teacher_info ti on ti.teacher_id=w.teacher_id ;
 
 select q.q_key, q.WTT_Key, q.q_Title, q.q_content, q.q_a_check, q.q_date,ti.teacher_name 
-from qna_q q INNER join wtt w on w.wtt_key=q.wtt_key INNER join teacher_info ti on ti.teacher_id=w.teacher_id ;
+from wtt w inner join workplace_t wt on w.wt_key=wt.wt_key and wt.wt_key='WT21' INNER JOIN qna_q q on q.wtt_key=w.wtt_key
+inner join teacher_info ti on ti.teacher_id=w.teacher_id;
 
 COMMIT;
