@@ -9,7 +9,7 @@
 <title></title>
 <link rel="stylesheet"
 	href="${root }resources/style/class_home_style.css" />
-<link rel="stylesheet" href="${root }resources/style/Notification.css" />
+<link rel="stylesheet" href="${root}resources/style/Notification_Detail.css" />
 </head>
 <body>
 	<table width="1280" class="class_d_table">
