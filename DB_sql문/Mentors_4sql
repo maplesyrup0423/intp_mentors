@@ -24,7 +24,7 @@ insert into wt_test_q values('WT2','wt2_test',2,2,2,2,2,2,2,2,2,2);
 insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT21','id1',sysdate);
 insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT3','id1',sysdate);
 insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT2','id1',sysdate);
-insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT1','id2',sysdate,sysdate+30);
+insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT21','id2',sysdate);
 --wtt_test_a
 insert into wtt_test_a (WTT_Key)values('WTT41');
 insert into wtt_test_a (WTT_Key)values('WTT42');
@@ -105,6 +105,6 @@ insert into Notification values('noti' || TO_CHAR(noti_seqid.nextval), 'WT22', '
 insert into Notification values('noti' || TO_CHAR(noti_seqid.nextval), 'WT22', '공지사항3', '공지내용', sysdate);
 
 
-insert into qna_q values('qk' || TO_CHAR(qk_seqid.nextval),'WTT6','수료기준 문의','수료기준이 궁금합니다.',0,sysdate);
+insert into qna_q values('qk' || TO_CHAR(qk_seqid.nextval),'WTT201','수료기준 문의5','수료기준이 궁금합니다.5',0,sysdate);
 
 commit;

@@ -34,11 +34,7 @@ public class NotificationDao {
 	public List<NotificationBean> getNotiList(String wt_key){
 		return notificationMapper.getNotiList(wt_key);
 	}
-	
-	public String getwtKey(String wtt_key) {
-		return notificationMapper.getwtKey(wtt_key);
-	}
-	
+
 
 	public NotificationBean getNoti(String noti_key) {
 		return notificationMapper.getNoti(noti_key);

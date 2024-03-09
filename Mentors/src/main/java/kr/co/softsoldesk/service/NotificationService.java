@@ -36,10 +36,6 @@ public class NotificationService {
 	public List<NotificationBean> getNotiList(String wt_key){
 		return notificationDao.getNotiList(wt_key);
 	}
-	public String getwtKey(String wtt_key) {
-		return notificationDao.getwtKey(wtt_key);
-	}
-	
 
 	public NotificationBean getNoti(String noti_key) {
 		return notificationDao.getNoti(noti_key);

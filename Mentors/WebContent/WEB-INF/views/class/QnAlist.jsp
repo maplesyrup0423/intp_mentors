@@ -87,16 +87,16 @@
 				</tr>
 				<thead>
 				<tbody>
-				<c:forEach var="item" items="${qnaList}">
+				<c:forEach var='obj' items="${qnAqBeanList }">
 					<tr class="number1">
-						<td class="num">${item.q_key}</td>
-      				  	<td class="tit">${item.q_Title}</td>
-       					<td class="wt">${item.q_writer}</td>
-       					<td class="dt">${item.q_date}</td>
+						<td class="num">${obj.q_key}</td>
+      				  	<td class="tit">${obj.q_Title}</td>
+       					<td class="wt">${obj.teacher_name}</td>
+       					<td class="dt">${obj.q_date}</td>
         				<td class="st">
             		<c:choose>
-                		<c:when test="${item.response_status == 0}">답변 대기</c:when>
-              			<c:when test="${item.response_status == 1}">답변 완료</c:when>
+                		<c:when test="${obj.q_a_check == 0}">답변 대기</c:when>
+              			<c:when test="${obj.q_a_check == 1}">답변 완료</c:when>
           		    </c:choose>
        			 </td>
    				 </tr>

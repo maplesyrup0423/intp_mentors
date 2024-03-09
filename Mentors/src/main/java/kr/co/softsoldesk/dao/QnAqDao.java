@@ -25,4 +25,10 @@ public class QnAqDao {
 	public void writeQnA(QnAqBean qna) {
         qnAqMapper.writeQnA(qna);
     }
+	
+	//-----------------------------------------------------------
+	
+	public List<QnAqBean> getQList(String wt_key){
+		return qnAqMapper.getQList(wt_key);
+	}
 }

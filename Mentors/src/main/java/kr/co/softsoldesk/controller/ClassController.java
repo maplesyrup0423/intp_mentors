@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softsoldesk.beans.ClassBean;
 import kr.co.softsoldesk.beans.NotificationBean;
+import kr.co.softsoldesk.beans.QnAqBean;
 import kr.co.softsoldesk.beans.WTT_Bean;
 import kr.co.softsoldesk.service.ClassService;
 import kr.co.softsoldesk.service.NotificationService;
+import kr.co.softsoldesk.service.QnAqService;
 import kr.co.softsoldesk.service.WTT_Service;
 
 @Controller
@@ -28,6 +30,9 @@ public class ClassController {
 
 	@Autowired
 	private NotificationService notificationService;
+	
+	@Autowired
+	private QnAqService qnAqService;
 
 	@GetMapping("/class_home_center_home")
 	public String class_home_center_home(@RequestParam("wtt_Key") String wtt_Key, Model model) {
@@ -195,6 +200,10 @@ public class ClassController {
 	public String QnAlist(@RequestParam("wtt_Key") String wtt_Key, Model model) {
 		WTT_Bean wttBean = wtt_Service.getWTT_Bean(wtt_Key);
 		model.addAttribute("wttBean", wttBean);
+		String wttK=wttBean.getWt_Key();
+		List<QnAqBean> qnAqBeanList = qnAqService.getQList(wttK);
+		model.addAttribute("qnAqBeanList",qnAqBeanList);
+		
 		return "class/QnAlist";
 	}
 
@@ -202,7 +211,7 @@ public class ClassController {
 	public String Notification(@RequestParam("wtt_Key") String wtt_Key, Model model) {
 		WTT_Bean wttBean = wtt_Service.getWTT_Bean(wtt_Key);
 		model.addAttribute("wttBean", wttBean);
-		String wttK=notificationService.getwtKey(wtt_Key);
+		String wttK=wttBean.getWt_Key();
 		List<NotificationBean> notificationBeanList = notificationService.getNotiList(wttK);
 		model.addAttribute("notificationBeanList",notificationBeanList);
 		return "class/Notification";
