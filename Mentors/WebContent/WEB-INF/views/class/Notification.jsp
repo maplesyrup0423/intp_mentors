@@ -92,7 +92,7 @@
 									<tr class="number1">
 										<td id="num">${obj.noti_key}</td>
 										<td id="tit"><a
-											href="${root}class/Notification_Detail?noti_Key=${obj.noti_key}">${obj.noti_Title}</a></td>
+											href="${root}class/Notification_D?noti_Key=${obj.noti_key}&wtt_Key=${wttBean.wtt_Key }">${obj.noti_Title}</a></td>
 										<td id="dt">${obj.noti_date}</td>
 									</tr>
 								</c:forEach>

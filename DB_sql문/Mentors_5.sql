@@ -85,7 +85,9 @@ UPDATE wtt_test_a set test_aa=0 where wtt_key='WTT169';
 
 
 
-
-
+--noti
+SELECT noti_key, WT_Key, noti_Title, noti_content, noti_date FROM Notification where wt_key='WT21';
+select WT_Key from wtt where wtt_key='WTT161';
+SELECT noti_key, WT_Key, noti_Title, noti_content, noti_date FROM Notification where noti_key='noti3';
 
 COMMIT;

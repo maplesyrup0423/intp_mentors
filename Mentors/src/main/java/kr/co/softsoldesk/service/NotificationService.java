@@ -19,9 +19,9 @@ public class NotificationService {
 		return notification;
 	}*/
 	
-	public NotificationBean getNotificationInfo(int noti_key) {
+	/*public NotificationBean getNotificationInfo(int noti_key) {
 		return notificationDao.getNotificationInfo(noti_key);
-	}
+	}*/
 	
 	public void addNotificationInfo(NotificationBean notificationBean ) {
 		notificationDao.addNotificationInfo(notificationBean);
@@ -38,5 +38,10 @@ public class NotificationService {
 	}
 	public String getwtKey(String wtt_key) {
 		return notificationDao.getwtKey(wtt_key);
+	}
+	
+
+	public NotificationBean getNoti(String noti_key) {
+		return notificationDao.getNoti(noti_key);
 	}
 }

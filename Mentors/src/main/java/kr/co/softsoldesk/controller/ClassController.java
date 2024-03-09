@@ -207,4 +207,17 @@ public class ClassController {
 		model.addAttribute("notificationBeanList",notificationBeanList);
 		return "class/Notification";
 	}
+	
+	
+	@GetMapping("/Notification_D")
+	public String Notification_D(@RequestParam("wtt_Key") String wtt_Key, @RequestParam("noti_Key") String noti_Key, Model model) {
+		WTT_Bean wttBean = wtt_Service.getWTT_Bean(wtt_Key);
+		model.addAttribute("wttBean", wttBean);
+		
+		NotificationBean notificationBean=notificationService.getNoti(noti_Key);
+		model.addAttribute("notificationBean",notificationBean);
+		
+		
+		return "class/Notification_D";
+	}
 }
