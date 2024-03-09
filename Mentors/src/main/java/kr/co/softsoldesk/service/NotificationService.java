@@ -14,10 +14,10 @@ public class NotificationService {
 	@Autowired
 	private NotificationDao notificationDao;
 	
-	public List<NotificationBean> getNotification() {
+	/*public List<NotificationBean> getNotification() {
 		List<NotificationBean> notification = notificationDao.getNotification();
 		return notification;
-	}
+	}*/
 	
 	public NotificationBean getNotificationInfo(int noti_key) {
 		return notificationDao.getNotificationInfo(noti_key);
@@ -29,5 +29,14 @@ public class NotificationService {
 	
 	public NotificationBean getNotificationdetail(int noti_key) {
 		return notificationDao.getNotificationdetail(noti_key);
+	}
+	
+	
+	 //-----------------------------------------------------
+	public List<NotificationBean> getNotiList(String wt_key){
+		return notificationDao.getNotiList(wt_key);
+	}
+	public String getwtKey(String wtt_key) {
+		return notificationDao.getwtKey(wtt_key);
 	}
 }

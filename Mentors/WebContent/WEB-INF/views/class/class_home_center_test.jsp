@@ -17,19 +17,20 @@
 					url="/WEB-INF/views/class/class_include/class_header.jsp" /></td>
 		</tr>
 		<tr>
-			<td rowspan="2" width="200" align="center" valign="top" height="100%"><div class="sidebar div_shadow">
-				<div class="sidebar_list">
-			<button class="CH_list list_home"
-				onclick="location.href='${root}class/class_home_center_home?wtt_Key=${wttBean.wtt_Key }'">강의
-				홈</button>
-			<button class="list_test CH_list active"
-				onclick="location.href='${root}class/class_home_center_test?wtt_Key=${wttBean.wtt_Key }'">시험</button>
-			<button class="list_QnA CH_list "
-				onclick="location.href='${root}class/QnAlist?wtt_Key=${wttBean.wtt_Key }'">Q&A</button>
-			<button class="list_notification CH_list "
-				onclick="location.href='${root}class/Notification?wtt_Key=${wttBean.wtt_Key }'">공지사항</button>
-		</div>
-	</div></td>
+			<td rowspan="2" width="200" align="center" valign="top" height="100%"><div
+					class="sidebar div_shadow">
+					<div class="sidebar_list">
+						<button class="CH_list list_home"
+							onclick="location.href='${root}class/class_home_center_home?wtt_Key=${wttBean.wtt_Key }'">강의
+							홈</button>
+						<button class="list_test CH_list active"
+							onclick="location.href='${root}class/class_home_center_test?wtt_Key=${wttBean.wtt_Key }'">시험</button>
+						<button class="list_QnA CH_list "
+							onclick="location.href='${root}class/QnAlist?wtt_Key=${wttBean.wtt_Key }'">Q&A</button>
+						<button class="list_notification CH_list "
+							onclick="location.href='${root}class/Notification?wtt_Key=${wttBean.wtt_Key }'">공지사항</button>
+					</div>
+				</div></td>
 			<td height="80"><c:import
 					url="/WEB-INF/views/class/class_include/class_home_center_home_top.jsp" /></td>
 		</tr>
@@ -54,13 +55,14 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td>${wttBean.wt_Title} 시험</td>
+											<td>${wttBean.wt_Title}시험</td>
 											<td>20%</td>
 											<td>${wttBean.start_date}~${wttBean.end_date}</td>
 											<td>-</td>
-											<td><button class="blue_btn <c:if test="${aa !=1}"> endBtnColor </c:if>" <c:if test="${aa !=1}">disabled </c:if>
-											
-											onclick="location.href='${root}class/class_test?wtt_Key=${wttBean.wtt_Key }'">응시</button></td>
+											<td><button
+													class="blue_btn <c:if test="${aa !=1}"> endBtnColor </c:if>"
+													<c:if test="${aa !=1}">disabled </c:if>
+													onclick="location.href='${root}class/class_test?wtt_Key=${wttBean.wtt_Key }'">응시</button></td>
 										</tr>
 									</tbody>
 								</table>

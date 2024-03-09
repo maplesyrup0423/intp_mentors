@@ -23,14 +23,14 @@
 					class="sidebar div_shadow">
 					<div class="sidebar_list">
 						<button class="CH_list list_home"
-							onclick="location.href='${root}class/class_home_center_home'">강의
+							onclick="location.href='${root}class/class_home_center_home?wtt_Key=${wttBean.wtt_Key }'">강의
 							홈</button>
 						<button class="list_test CH_list "
-							onclick="location.href='${root}class/class_home_center_test'">시험</button>
+							onclick="location.href='${root}class/class_home_center_test?wtt_Key=${wttBean.wtt_Key }'">시험</button>
 						<button class="list_QnA CH_list active"
-							onclick="location.href='${root}class/QnAlist'">Q&A</button>
+							onclick="location.href='${root}class/QnAlist?wtt_Key=${wttBean.wtt_Key }'">Q&A</button>
 						<button class="list_notification CH_list "
-							onclick="location.href='${root}class/Notification'">공지사항</button>
+							onclick="location.href='${root}class/Notification?wtt_Key=${wttBean.wtt_Key }'">공지사항</button>
 					</div>
 				</div></td>
 			<td height="80"><c:import
@@ -104,7 +104,7 @@
 				</tbody>
 		</table>
 	</div>
-	<div style="text-decoration: none"><button class="blue_btn" onclick="location.href='class_home_Include.jsp?CHnum=3.2';"id="w_btn">글쓰기</button></div>
+	<div style="text-decoration: none"><button class="blue_btn" onclick=""id="w_btn">글쓰기</button></div>
 		<div class="bottom_move_btn">
 			<input class="m_btn" type="button" value="<"/>
 			<input class="m_btn" type="button" value="1"/>
