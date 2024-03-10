@@ -119,10 +119,15 @@
 	margin: 2px;
 }
 
+.a_login, .aa_login :active{
+	color: white;
+}
+
 /* ================================= */
 
-a {
+a , a ac:active{
 	text-decoration-line: none;
+	color:black;
 }
 
 /* .main_list{
@@ -250,7 +255,8 @@ z-index: 1;
 }
 
 .teb_list li a.active:before{
-	background:#7ea21e;
+	/* background:#7ea21e; */
+	background:#00457E;
 }
 
 .teb_list li a.active{
@@ -271,7 +277,8 @@ z-index: 1;
 .teb_list li a:hover,
 .teb_list li a.active{
 	background:#fff; 
-	color:#7ea21e; 
+	/* color:#7ea21e; */ 
+	color:#00457E; 
 }
 
 .teb_item{

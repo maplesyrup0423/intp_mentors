@@ -72,8 +72,8 @@
 								<h1>사용자 이름</h1>
 								<br>
 
-								<button class="loginbutton">뭐든 가는
-									버튼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 〉</button>
+								<button class="loginbutton"><a href="${root }user/Mypage"  class="loginbutton">마이페이지</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 〉</button>
 							</div>
 						</div>
 
@@ -86,9 +86,10 @@
 								<h1>
 									로그인 이후 <br>이용해주세요!
 								</h1>
-								<button class="login blue_btn">로그인</button>
-								<br> <span>아이디 </span> · <span>비밀번호</span> <span
-									id="newUser">회원가입</span>
+								<button class="login blue_btn" ><a href="${root }user/Login" class="a_login">로그인</a></button>
+								<br> <span>아이디 </span> · <span>비밀번호</span> 
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<span id="newUser">회원가입</span>
 							</div>
 						</div>
 					</c:otherwise>
