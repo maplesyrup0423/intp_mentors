@@ -67,7 +67,7 @@
 
 								<span id="My">내 정보
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<button style="border-radius: 25px;">로그아웃</button>
+									<button style="border-radius: 25px;"><a href="${root }user/logout"">로그아웃</a></button>
 								</span>
 								<h1>사용자 이름</h1>
 								<br>
