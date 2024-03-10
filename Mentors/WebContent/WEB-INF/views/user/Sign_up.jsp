@@ -38,7 +38,6 @@ function resetTeacherIdExist(){
 	$("#teacherIdExist").val('false')
 }
 </script>
-
 <body>
 	<div class = "Mentors_header">
 	<!-- header --> 
