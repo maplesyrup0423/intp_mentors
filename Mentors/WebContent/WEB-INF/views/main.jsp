@@ -151,51 +151,51 @@
 
 			</div>
 			
-			<div class="teb">
-				<ul class="teb_list">
+			<div class="teb2">
+				<ul class="teb_list2">
 					<li><a href="#teb04">전체</a></li>
 					<li><a href="#teb05">교과지도</a></li>
 					<li><a href="#teb06">학습지도</a></li>
 					<li><a href="#teb07">생활지도</a></li>
 				</ul>
 
-				<div class="teb_item">
-					<div id="teb04" class="item_list">
+				<div class="teb_item2">
+					<div id="teb04" class="item_list2">
 						<!-- 전체메뉴 4개 -->
-						<div class="item">
+						<div class="item2">
 							<a href=""> <img src="${root }resources/image/event2-2.png"
 								alt=""> <br> 제목이자 설명
 							</a>
 						</div>
 
-						<div class="item">
-							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
+						<div class="item2">
+							<a href=""> <img src="${root }resources/image/event2-2.png" alt=""> <br>
 								제목이자 설명
 							</a>
 						</div>
 
-						<div class="item">
-							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
+						<div class="item2">
+							<a href=""> <img src="${root }resources/image/event2-2.png" alt=""> <br>
 								제목이자 설명
 							</a>
 						</div>
 
-						<div class="item">
-							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
+						<div class="item2">
+							<a href=""> <img src="${root }resources/image/event2-2.png" alt=""> <br>
 								제목이자 설명
 							</a>
 						</div>
 					</div>
 
-					<div id="teb05" class="item_list">
+					<div id="teb05" class="item_list2">
 						<!-- 교과지도 4개 -->
 					</div>
 
-					<div id="teb06" class="item_list">
+					<div id="teb06" class="item_list2">
 						<!-- 학습지도 4개 -->
 					</div>
 
-					<div id="teb07" class="item_list">
+					<div id="teb07" class="item_list2">
 						<!-- 생활지도 4개 -->
 					</div>
 				</div>
