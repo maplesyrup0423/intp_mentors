@@ -9,6 +9,12 @@
 <meta charset="UTF-8">
 <title>Sign Up</title>
 <link rel="stylesheet" href="${root }resources/style/Sign_up.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 <script>
 //사용자가 중복 확인 버튼 클릭했을 때
@@ -48,6 +54,8 @@ function resetTeacherIdExist(){
 		<hr />
 		<form:form action="${root }user/Sign_up_pro" method = "post"
 				   modelAttribute="Sign_upTeacherBean">
+			<!-- 유효성 검사 여부 보내기 -->
+			<form:hidden path="teacherIdExist"/>
 			<div class="body">
 				<div class="letter_personal_information">개인정보 입력</div>
 				<!-- 개인정보 입력 -->
