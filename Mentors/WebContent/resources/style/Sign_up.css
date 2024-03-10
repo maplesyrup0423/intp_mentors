@@ -31,21 +31,26 @@ div.sign {
 }
 
 /*중복 확인 버튼*/
-p button {
+button.checkIdExistButton {
 	position: absolute;
+	width: 130px;
+	height: 40px;
 	right: 20px;
 	border-radius: 30px;
 	background-color: rgb(0, 69, 126, 80%);
 	transform: translateY(20%);
-	width: 130px;
-	height: 40px;
 	font-size: 17px;
 	font-weight: bold;
 	color: white;
 }
 
-p button:focus, p button:hover {
+button.checkIdExistButton:hover {
+	font-size : 18px;
 	cursor: pointer;
+}
+
+button.checkIdExistButton:focus {
+	font-size : 17px;
 }
 
 /*카테고리 묶음 글자 영역&글씨*/
@@ -93,7 +98,7 @@ div.gender_choice select, div.school_type select {
 }
 
 /*비밀번호 재확인 문구 설정*/
-div.password_check_message {
+div.error_message {
 	width: 100%;
 	height: 25px;
 	font-size: 17px;
@@ -114,16 +119,6 @@ div.password_check_message {
 	padding-bottom: 0px;
 }
 
-/*닉네임 중복 확인 문구 설정*/
-.nickname_check_message {
-	width: 100%;
-	height: 25px;
-	font-size: 17px;
-	color: orangered;
-	margin-top: 3px;
-	margin-bottom: 0px;
-	padding-bottom: 0px;
-}
 
 /*input 박스 속 라벨 애니메이션*/
 p {

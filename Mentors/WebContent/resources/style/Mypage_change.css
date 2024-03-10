@@ -88,6 +88,16 @@ input.td_right {
 	padding-left : 10px;
 }
 
+input.td_right_readonly {
+	width: 450px;
+	height: 55px;
+	border: 1px solid black;
+	border-radius : 8px;
+	font-size : 17px;
+	padding-left : 10px;
+	background-color : #C3C1C1;
+}
+
 /* 버튼들 틀*/
 .Mypage_button {
 	display : flex;

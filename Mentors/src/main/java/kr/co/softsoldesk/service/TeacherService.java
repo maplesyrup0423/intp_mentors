@@ -20,11 +20,16 @@ public class TeacherService {
 	private TeacherBean loginTeacherBean;
 	
 	public boolean checkTeacherIdExist(String teacher_id) {
-		String teacher_name= teacherDao.checkTeacherIdExist(teacher_id);
+		String teacher_ID = teacherDao.checkTeacherIdExist(teacher_id);
 		
-		if(teacher_name==null) {
+		if(teacher_id.equals("system1004")) {
+			return false; //입력된 값이 관리자아이디라면 사용할 수 없는 아이디
+		}
+		
+		if(teacher_ID==null) {
 			return true; //디비에 없다=사용가능한 아이디 
-		}else {
+		}
+		else{
 			return false; //디비에 있다=사용 할 수 없는 아이디
 		}
 	}
@@ -99,6 +104,7 @@ public class TeacherService {
 	
 	public void changeTeacherPw(TeacherBean changePwBean) {
 		changePwBean.setTeacher_id(loginTeacherBean.getTeacher_id());
+		loginTeacherBean.setTeacher_Password(changePwBean.getNew_Password());
 		teacherDao.changeTeacherPw(changePwBean);
 	}
 }

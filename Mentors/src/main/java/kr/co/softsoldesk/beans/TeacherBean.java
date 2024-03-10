@@ -1,5 +1,8 @@
 package kr.co.softsoldesk.beans;
 
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,7 +15,10 @@ public class TeacherBean {
       this.teacherIdExist = false;
    }
    
+   @Size(min=1, max=5)
+   @Pattern(regexp = "[가-힣]*") //한글 문자
    private String teacher_Name;
+   
    private String teacher_Birth;
    private String teacher_Gender;
    private String teacher_Email;

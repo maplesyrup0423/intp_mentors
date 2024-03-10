@@ -11,12 +11,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 import kr.co.softsoldesk.beans.TeacherBean;
 import kr.co.softsoldesk.beans.WTBean;
@@ -176,6 +179,15 @@ public class ServletAppContext implements WebMvcConfigurer {
 		return factoryBean;
 	}
 
+	@Bean
+	public ReloadableResourceBundleMessageSource messageSource() {
+		ReloadableResourceBundleMessageSource res = new ReloadableResourceBundleMessageSource();
+		res.setDefaultEncoding("UTF-8");
+		res.setBasenames("/WEB-INF/properties/error_message");
+		return res;
+	}
+
+	
 	// interceptor 처리
 	public void addInterceptors(InterceptorRegistry registry) {
 		WebMvcConfigurer.super.addInterceptors(registry);
@@ -197,4 +209,17 @@ public class ServletAppContext implements WebMvcConfigurer {
 		//비로그인 시 이용불가 사이트 포괄 중 예외 사이트 : "/user/Login", "/user/Not_login" ("/user 폴더 안에 있는 파일 중 "/Login", "Not_login"은 예외적으로 사용가능의 의미)
 	}
 
+	//메세지와 proterty 충돌을 막기 위함.
+		//소스와 메시지 별도 관리 하도록 proterty를 Bean으로 등록
+		@Bean
+		public static PropertySourcesPlaceholderConfigurer PropertySourcesPlaceholderConfigurer() {
+			return new PropertySourcesPlaceholderConfigurer();
+		}
+		
+		@Bean
+		public StandardServletMultipartResolver multipartResolver() {
+			return new StandardServletMultipartResolver();
+		}
+
+	
 }
