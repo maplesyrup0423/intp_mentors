@@ -60,7 +60,7 @@ function resetTeacherIdExist(){
 							<span>성명을 입력하세요. ex) 제갈김씨</span>
 						</form:label>
 					</p>
-					<div class="error_message">
+					<div class="error_message_name">
 						<form:errors path="teacher_Name" style='color:red' />
 					</div>
 					<!-- 생일 -->
