@@ -235,7 +235,7 @@
 						</div>
 					</c:forEach>
 
-					<%-- <div class="list-img">
+					<div class="list-img">
 						<a href=""><img
 							src="${root}resources/image/event_img/event_Thumb/best-lecture1 (1).png"
 							alt="봇치더락">
@@ -277,9 +277,9 @@
 							src="${root}resources/image/event_img/event_Thumb/best-lecture6 (1).png"
 							alt="qwer">
 							<p>내일은 나도 직무 연수 강사</p> </a>
-					</div> --%>
+					</div>
 
-					<!-- <img src="../img/arrow-left.png" alt="">
+						<!-- <img src="../img/arrow-left.png" alt="">
                         <img src="../img/arrow-right.png" alt=""> -->
 
 
