@@ -65,11 +65,11 @@
 						<div class="login-circle2">
 							<div class="circle-login2">
 
-								<span id="My">환영합니다!
+								<span id="My">내 정보
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<button style="border-radius: 25px;"><a href="${root }user/logout"">로그아웃</a></button>
 								</span>
-								<h1>${loginTeacherBean.teacher_Name}</h1>
+								<h1>${loginTeacherBean.teacher_Name}&nbsp;&nbsp;님! </h1>
 								<br>
 
 								<button class="loginbutton"><a href="${root }user/Mypage"  class="loginbutton">마이페이지</a>
