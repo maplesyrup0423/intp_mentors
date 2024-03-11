@@ -23,13 +23,12 @@ public class TeacherValidator implements Validator{
 		System.out.println(beanName);
 		
 		
-		//회원가입 시 비밀번호 확인 또는 수정할 때
-		if(beanName.equals("Sign_upTeacherBean")) {
+		//회원가입 및 비밀번호 변경 할 때 비밀번호 확인 또는 수정할 때
+		if(beanName.equals("Sign_upTeacherBean") || beanName.equals("pwChangeBean")) {
 		if(teacherBean.getTeacher_Password().equals(teacherBean.getTeacher_Password2()) == false) {
 			errors.rejectValue("teacher_Password", "NotEquals");
 			errors.rejectValue("teacher_Password2", "NotEquals");
 		}
-		
 		
 		//회원가입 할 때
 		if(beanName.equals("Sign_upTeacherBean")) {
