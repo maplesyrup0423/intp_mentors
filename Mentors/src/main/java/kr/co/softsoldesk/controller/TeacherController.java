@@ -42,25 +42,27 @@ public class TeacherController {
 	public String Login_pro(@Valid @ModelAttribute("tempLoginTeacherBean") 
 							TeacherBean tempLoginTeacherBean, BindingResult result) {
 		
+		String admin_id = tempLoginTeacherBean.getTeacher_id();
+		String admin_pw = tempLoginTeacherBean.getTeacher_Password();
+		
+		System.out.println("관리자로그인2");
+		
+		if(admin_id.equals("system1004")&&admin_pw.equals("1004!")) {
+			System.out.println("관리자로그인3");
+			return "admin/admin_welcome";
+		}
+		
 		if(result.hasErrors()) {
+			System.out.println("관리자로그인1");
 			return "user/Login";
 		}
 		
 		teacherService.getLoginTeacherInfo(tempLoginTeacherBean);
 		
-		String admin_id = tempLoginTeacherBean.getTeacher_id();
-		String admin_pw = tempLoginTeacherBean.getTeacher_Password();
-		
-		if(admin_id.equals("system1004")&&admin_pw.equals("1004!")) {
-			return "admin/admin_welcome";
-		}
-		
-		else {
 		if(loginTeacherBean.isTeacherLogin() == true) {
 			return "user/Login_success";
 		}else {			
 			return "user/Login_fail";
-		}
 		}
 	}
 	
@@ -109,7 +111,7 @@ public class TeacherController {
 		String getTeacher_Tel = tempFindIdBean.getTeacher_Tel();
 		
 		String getTeacher_Id = teacherService.getTeacherId(getTeacher_Name, getTeacher_Tel);
-		
+			
 		if(getTeacher_Id==null) {
 			return "user/Find_ID_fail";
 		}
@@ -199,18 +201,20 @@ public class TeacherController {
 			return "user/Password_change_confirm";
 		}
 		
+		System.out.println(loginTeacherBean.getTeacher_Password());
+		
 		if(pwChangeBean.getTeacher_Password().equals(loginTeacherBean.getTeacher_Password()) ) {
 			if(pwChangeBean.getNew_Password().equals(pwChangeBean.getNew_Password2())) {
 				
 				teacherService.changeTeacherPw(pwChangeBean);
+				loginTeacherBean.setTeacher_Password(pwChangeBean.getNew_Password());
 				return "user/password_change_success";
 			}else {
 				return "user/password_change_fail";
 			}
-			
 		}
 		else {
-			return "user/password_change_fail_current";
+			return "user/password_change_fail";
 		}
 	}
 	

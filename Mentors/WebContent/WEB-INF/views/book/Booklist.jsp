@@ -21,13 +21,13 @@
 		<tr>
 			<td><section id="blist_view">
 
-					<h2 class="blist_top_title">도서관</h2>
-					<p class="blist_top_text">테크빌교육 출판은 교사, 학생, 부모가 함께 만드는 교육 전문 출판사입니다.</p>
+					<!-- <h2 class="blist_top_title">도서관</h2>
+					<p class="blist_top_text">테크빌교육 출판은 교사, 학생, 부모가 함께 만드는 교육 전문 출판사입니다.</p> -->
 					<div class="A_view">
 						<div class="list_tab">
 							<input class="blist-home" type="button" value="도서목록" />
 						</div>
-						<div class="book_search">
+						<%-- <div class="book_search">
 							<img src="${root }resources/image/icon/search_input_left.png"
 								class="left" /> <input type="text" id="s_bar" size="35" />
 							<button class="d_btn">
@@ -36,7 +36,7 @@
 							<button class="s_btn">
 								<img src="${root }resources/image/icon/search_input_right.png" />
 							</button>
-						</div>
+						</div> --%>
 						<div class="book_cate">
 							<input class="${BCB.bk_category_class_0 }" type="button" onclick="location.href='${root }book/Booklist_btn?bk_category=0'" value="전체" />
 							<input class="${BCB.bk_category_class_1 }"  type="button" onclick="location.href='${root }book/Booklist_btn?bk_category=1'" value="교육과정/교육정책" />

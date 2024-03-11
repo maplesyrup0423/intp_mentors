@@ -1,5 +1,8 @@
 package kr.co.softsoldesk.service;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +28,13 @@ public class TeacherService {
 		if(teacher_id.equals("system1004")) {
 			return false; //입력된 값이 관리자아이디라면 사용할 수 없는 아이디
 		}
+		
+		Pattern pattern = Pattern.compile("[ㄱ-ㅎㅏ-ㅣ가-힣]");
+        Matcher matcher = pattern.matcher(teacher_id);
+        
+        if(matcher.find()) {
+        	return false;
+        }
 		
 		if(teacher_ID==null) {
 			return true; //디비에 없다=사용가능한 아이디 
@@ -104,7 +114,6 @@ public class TeacherService {
 	
 	public void changeTeacherPw(TeacherBean changePwBean) {
 		changePwBean.setTeacher_id(loginTeacherBean.getTeacher_id());
-		loginTeacherBean.setTeacher_Password(changePwBean.getNew_Password());
 		teacherDao.changeTeacherPw(changePwBean);
 	}
 }
