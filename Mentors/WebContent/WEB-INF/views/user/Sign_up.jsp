@@ -67,7 +67,7 @@ function resetTeacherIdExist(){
 							<span>성명을 입력하세요. ex) 제갈김씨</span>
 						</form:label>
 					</p>
-					<div class="error_message_name">
+					<div class="error_message">
 						<form:errors path="teacher_Name" style='color:red' />
 					</div>
 					<!-- 생일 -->
@@ -78,7 +78,7 @@ function resetTeacherIdExist(){
 						</form:label>
 					</p>
 					<div class="error_message">
-					
+						<form:errors path="teacher_Birth" style='color:red' />
 					</div>
 					<!-- 성별 -->
 					<div class="gender_choice">
@@ -95,7 +95,7 @@ function resetTeacherIdExist(){
 						</form:label>
 					</p>
 					<div class="error_message">
-					
+						<form:errors path="teacher_Email" style='color:red' />
 					</div>
 					<!-- 전화번호 -->
 					<p>
@@ -107,7 +107,7 @@ function resetTeacherIdExist(){
 						</form:label>
 					</p>
 					<div class="error_message">
-					
+						<form:errors path="teacher_Tel" style='color:red' />
 					</div>
 				</div>
 
@@ -122,7 +122,7 @@ function resetTeacherIdExist(){
 						</form:label>
 						<button class = "checkIdExistButton" type="button" onclick="checkTeacherIdExist()">중복확인</button>
 					</p>
-					<div class="error_message">
+					<div class="error_message_id">
 						<form:errors path="teacher_id" style='color:red' />
 					</div>
 
@@ -133,6 +133,9 @@ function resetTeacherIdExist(){
 							<span>비밀번호를 입력하세요</span>
 						</form:label>
 					</p>
+					<div class="error_message">
+						<form:errors path="teacher_Password" style='color:red' />
+					</div>
 					<!-- 비밀번호 확인 -->
 					<p>
 						<form:input type = "password" path = "teacher_Password2" autocomplete="off" />
@@ -141,17 +144,17 @@ function resetTeacherIdExist(){
 						</form:label> 
 					</p>
 					<div class="error_message">
-					
+						<form:errors path="teacher_Password2" style='color:red' />
 					</div>
 					<!-- 닉네임 -->
 					<p class="absolute">
 						<form:input path = "teacher_Nickname"  /> 
 						<form:label path = "teacher_Nickname"> 
-							<span>닉네임을 입력해주세요. </span>
+							<span>닉네임을 입력하세요. </span>
 						</form:label>
 					</p>
 					<div class="error_message">
-					
+						<form:errors path="teacher_Nickname" style='color:red' />
 					</div>
 				</div>
 
@@ -162,11 +165,11 @@ function resetTeacherIdExist(){
 					<p>
 						<form:input path = "teacher_Work_In" /> 
 						<form:label path = "teacher_Work_In"> 
-							<span>솔데스크 대학원</span>
+							<span>직장명을 입력하세요. ex)솔데스크 대학원</span>
 						</form:label>
 					</p>
 					<div class="error_message">
-					
+						<form:errors path="teacher_Work_In" style='color:red' />
 					</div>
 
 					<!-- 교직타입 -->
@@ -185,7 +188,7 @@ function resetTeacherIdExist(){
 						</form:label>
 					</p>
 					<div class="error_message">
-					
+						<form:errors path="teacher_Neis" style='color:red' />
 					</div>
 				</div>
 				<div class = "sign_up_button_space">

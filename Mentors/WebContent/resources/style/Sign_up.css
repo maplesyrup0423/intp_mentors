@@ -100,7 +100,7 @@ div.gender_choice select, div.school_type select {
 /*에러 메시지 공간 할당 설정*/
 div.error_message {
 	width: 100%;
-	height: 25px;
+	height: 50px;
 	font-size: 17px;
 	color: orangered;
 	margin-top: 3px;
@@ -108,9 +108,9 @@ div.error_message {
 	padding-bottom: 0px;
 }
 
-div.error_message_name {
+div.error_message_id {
 	width: 100%;
-	height: 50px;
+	height: 75px;
 	font-size: 17px;
 	color: orangered;
 	margin-top: 3px;
