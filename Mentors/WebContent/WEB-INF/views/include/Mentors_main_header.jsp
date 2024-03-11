@@ -53,26 +53,6 @@
                         </td>
 
                         <td class="td_cen1"></td>
-
-                       <!--  <td class="td_cen_img2">
-                            <a href="Mentors_Main.jsp?mainNum=6">
-                                <img class="fas fa-cart-shopping" src="../img/cart.png"></img>
-                                <div class="icon_text1">장바구니</div>
-                            </a>
-                        </td>
-
-                        <td class="td_cen2"></td>
-
-                        <td class="td_cen_img3">
-                            <a href="Login.jsp">
-                                <img src="../img/login.png" alt="로그인" class="loginicon"></img>
-                                <div class="icon_text2">로그인</div>
-                            </a>
-                        </td> -->
-                        
-                        
-                        
-                        
                         
                         <c:choose>
 							<c:when test="${loginTeacherBean.teacherLogin == true}">

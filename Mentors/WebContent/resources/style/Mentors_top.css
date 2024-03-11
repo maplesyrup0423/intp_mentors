@@ -83,3 +83,7 @@ a{
     margin-top: 4px;
 }
 
+.td a, .td a:active {
+	color: black;
+}
+

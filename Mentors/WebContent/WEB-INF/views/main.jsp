@@ -69,7 +69,7 @@
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<button style="border-radius: 25px;"><a href="${root }user/logout"">로그아웃</a></button>
 								</span>
-								<h1>사용자 이름</h1>
+								<h1>${loginTeacherBean.teacher_Name}&nbsp;&nbsp;님! </h1>
 								<br>
 
 								<button class="loginbutton"><a href="${root }user/Mypage"  class="loginbutton">마이페이지</a>
@@ -111,41 +111,47 @@
 				<div class="teb_item">
 					<div id="teb00" class="item_list">
 						<!-- 전체메뉴 4개 -->
-						<div class="item">
-							<a href=""> <img src="${root }resources/image/event2-2.png"
-								alt=""> <br> 제목이자 설명
+						<c:forEach var="obj" items="${wtList}" begin="0" end="3" step="1" varStatus="status">
+						<div class="item2">
+							<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key} }"> <img src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg"
+								alt=""> <br> ${obj.WT_Title }
 							</a>
 						</div>
+						</c:forEach>
 
-						<div class="item">
-							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
-								제목이자 설명
-							</a>
-						</div>
-
-						<div class="item">
-							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
-								제목이자 설명
-							</a>
-						</div>
-
-						<div class="item">
-							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
-								제목이자 설명
-							</a>
-						</div>
 					</div>
 
 					<div id="teb01" class="item_list">
 						<!-- 초등학생 4개 -->
+						<c:forEach var="obj" items="${wt1}" begin="0" end="3" step="1" varStatus="status">
+						<div class="item2">
+							<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key}"> <img src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg"
+								alt=""> <br> ${obj.WT_Title }
+							</a>
+						</div>
+						</c:forEach>
 					</div>
 
 					<div id="teb02" class="item_list">
 						<!-- 중학생 4개 -->
+						<c:forEach var="obj" items="${wt2}" begin="0" end="3" step="1" varStatus="status">
+						<div class="item2">
+							<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key}"> <img src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg"
+								alt=""> <br> ${obj.WT_Title }
+							</a>
+						</div>
+						</c:forEach>
 					</div>
 
 					<div id="teb03" class="item_list">
 						<!-- 고등학생 4개 -->
+						<c:forEach var="obj" items="${wt3}" begin="0" end="3" step="1" varStatus="status">
+						<div class="item2">
+							<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key}"> <img src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg"
+								alt=""> <br> ${obj.WT_Title }
+							</a>
+						</div>
+						</c:forEach>
 					</div>
 				</div>
 
@@ -162,41 +168,47 @@
 				<div class="teb_item2">
 					<div id="teb04" class="item_list2">
 						<!-- 전체메뉴 4개 -->
+						<c:forEach var="obj" items="${wtList}" begin="5" end="8" step="1" varStatus="status">
 						<div class="item2">
-							<a href=""> <img src="${root }resources/image/event2-2.png"
-								alt=""> <br> 제목이자 설명
+							<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key}"> <img src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg"
+								alt=""> <br> ${obj.WT_Title }
 							</a>
 						</div>
-
-						<div class="item2">
-							<a href=""> <img src="${root }resources/image/event2-2.png" alt=""> <br>
-								제목이자 설명
-							</a>
-						</div>
-
-						<div class="item2">
-							<a href=""> <img src="${root }resources/image/event2-2.png" alt=""> <br>
-								제목이자 설명
-							</a>
-						</div>
-
-						<div class="item2">
-							<a href=""> <img src="${root }resources/image/event2-2.png" alt=""> <br>
-								제목이자 설명
-							</a>
-						</div>
+						</c:forEach>
+						
 					</div>
 
 					<div id="teb05" class="item_list2">
 						<!-- 교과지도 4개 -->
+						<c:forEach var="obj" items="${wt4}" begin="0" end="3" step="1" varStatus="status">
+						<div class="item2">
+							<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key}"> <img src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg"
+								alt=""> <br> ${obj.WT_Title }
+							</a>
+						</div>
+						</c:forEach>
 					</div>
 
 					<div id="teb06" class="item_list2">
 						<!-- 학습지도 4개 -->
+						<c:forEach var="obj" items="${wt5}" begin="0" end="3" step="1" varStatus="status">
+						<div class="item2">
+							<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key}"> <img src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg"
+								alt=""> <br> ${obj.WT_Title }
+							</a>
+						</div>
+						</c:forEach>
 					</div>
 
 					<div id="teb07" class="item_list2">
 						<!-- 생활지도 4개 -->
+						<c:forEach var="obj" items="${wt6}" begin="0" end="3" step="1" varStatus="status">
+						<div class="item2">
+							<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key}"> <img src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg"
+								alt=""> <br> ${obj.WT_Title }
+							</a>
+						</div>
+						</c:forEach>
 					</div>
 				</div>
 
@@ -211,6 +223,17 @@
 				</div>
 
 				<div class="C-classlist">
+
+
+					<c:forEach var="obj" items="${wtList}" begin="8" end="14" step="1"
+						varStatus="status">
+						<div class="list-img">
+							<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key}"> <img
+								src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg"
+								alt=""> <br> ${obj.WT_Title }
+							</a>
+						</div>
+					</c:forEach>
 
 					<div class="list-img">
 						<a href=""><img
@@ -256,7 +279,7 @@
 							<p>내일은 나도 직무 연수 강사</p> </a>
 					</div>
 
-					<!-- <img src="../img/arrow-left.png" alt="">
+						<!-- <img src="../img/arrow-left.png" alt="">
                         <img src="../img/arrow-right.png" alt=""> -->
 
 
