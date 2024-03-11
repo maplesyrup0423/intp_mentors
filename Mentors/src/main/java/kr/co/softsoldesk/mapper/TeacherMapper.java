@@ -64,12 +64,22 @@ public interface TeacherMapper {
 			+ "where teacher_id = #{teacher_id}")
 	void changeTeacherPw(TeacherBean changePwBean);
 	
-	@Select("select wt.WT_title, wt.WT_price, "
-			+ "to_char(w.wtt_payment_date, 'YYYY-MM-DD') as wtt_payment_date "
-			+ "from workplace_T wt "
-			+ "inner join WTT w on wt.wt_key = w.wt_key "
-			+ "where w.teacher_id = #{teacher_id}")
-	List<WTT_Bean> getPayment(String teacher_id);
+	/*
+	 @Select("SELECT wt.WT_title, wt_price, "
+	 		+ "       TO_CHAR(w.wtt_payment_date, 'YYYY-MM-DD') AS wtt_payment_date "
+	 		+ "FROM workplace_T wt "
+	 		+ "INNER JOIN WTT w ON wt.wt_key = w.wt_key "
+	 		+ "WHERE w.teacher_id = #{teacher_id}") 
+	 List<WTT_Bean> getPayment(String teacher_id);
+	*/
 	
+	 @Select("SELECT wt.WT_title, "
+	 		+ "TO_CHAR(wt.WT_price, 'FM999,999,999') || '원' AS WT_price, "
+	 		+ "TO_CHAR(w.wtt_payment_date, 'YYYY-MM-DD') AS wtt_payment_date "
+	 		+ "FROM workplace_T wt "
+	 		+ "INNER JOIN WTT w ON wt.wt_key = w.wt_key "
+	 		+ "WHERE w.teacher_id = #{teacher_id}") 
+		 List<WTT_Bean> getPayment(String teacher_id);
+	 
 }
 

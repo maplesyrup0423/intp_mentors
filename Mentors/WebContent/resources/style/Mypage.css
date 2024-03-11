@@ -91,7 +91,6 @@ input.td_right {
 /* 결제내역 테이블 가장자리 설정 */
 table.payment_table {
 	width : 100%;
-	border: 1px solid rgb(0,69,126);
 	border-radius: 8px;
 }
 
@@ -122,14 +121,17 @@ div h2.category_payment {
 
 /* 결제내역 테이블 각 너비 설정 */
 th.payment_date {
+	border-bottom : 2px solid black;
 	width: 20%;
 }
 
 th.payment_title {
+	border-bottom : 2px solid black;
 	width: 60%;
 }
 
 th.payment_price {
+	border-bottom : 2px solid black;
 	width: 20%;
 }
 
