@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -235,14 +236,25 @@ public class ClassController {
 	}
 	
 	@GetMapping("/QnAlist_insert")
-	public String QnAlist_insert() {
-		
+	public String QnAlist_insert(@Valid @ModelAttribute("qList")QnAqBean qList, @RequestParam("wtt_Key")String wtt_Key, Model model) {
+		WTT_Bean wttBean = wtt_Service.getWTT_Bean(wtt_Key);
+		model.addAttribute("wttBean", wttBean);
 		return "class/QnAlist_insert";
 	}
 	@PostMapping("/QnAlist_insert_pro")
-	public String QnAlist_insert_pro(@Valid @ModelAttribute("qList")QnAqBean qList) {
+	public String QnAlist_insert_pro(@Valid @ModelAttribute("qList")QnAqBean qList,
+			BindingResult result,@RequestParam("wtt_Key")String wtt_Key, Model model) {
+		WTT_Bean wttBean = wtt_Service.getWTT_Bean(wtt_Key);
+		model.addAttribute("wttBean", wttBean);
+		if(result.hasErrors()) {
+		 return  "class/QnAlist";
+		}
+		System.out.println(qList.getQ_Title());
+		System.out.println(qList.getQ_content());
 		
-		
+		qnAqService.insertQ(wtt_Key, qList.getQ_Title(), qList.getQ_content());
+		String qk= qnAqService.getAK(qList.getQ_Title(), qList.getQ_content());
+		qnAqService.insertA(qk);
 		return "class/QnAlist";
 	}
 }

@@ -42,18 +42,18 @@
 				<!-- 내용 삽입 -->
 				<div class="container">
 					<h1>QnA 작성</h1>
-					<form:form action="${root}class/QnAlist_insert_pro" method="post"
+					<form:form action="${root}class/QnAlist_insert_pro?wtt_Key=${wttBean.wtt_Key }" method="post"
 						modelAttribute="qList">
 						<div class="form-group">
 							<label for="title">제목:</label> 
-							<form:input type="text" path="Qinsert" ></form:input>
+							<form:input type="text" path="q_Title" />
 						</div>
 						<div class="form-group">
 							<label for="content">내용:</label>
-							<form:input path="q_content" ></form:input>
+							<form:input path="q_content" />
 						</div>
-						<button type="submit" class="btn"
-							>작성하기</button>
+						<form:button class="btn"
+							>작성하기</form:button>
 					</form:form>
 				</div>
 </body>

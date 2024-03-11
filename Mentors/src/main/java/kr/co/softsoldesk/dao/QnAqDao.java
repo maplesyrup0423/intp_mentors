@@ -2,6 +2,7 @@ package kr.co.softsoldesk.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -30,5 +31,17 @@ public class QnAqDao {
 	
 	public List<QnAqBean> getQList(String wt_key){
 		return qnAqMapper.getQList(wt_key);
+	}
+	
+	public void insertQ(String WTT_Key, String q_Title, String q_content) {
+		qnAqMapper.insertQ(WTT_Key, q_Title, q_content);
+	}
+	
+	public void insertA(String q_key) {
+		qnAqMapper.insertA(q_key);
+	}
+	
+	public String getAK(String q_Title, String q_content) {
+		return qnAqMapper.getAK(q_Title, q_content);
 	}
 }

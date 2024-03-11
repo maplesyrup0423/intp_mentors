@@ -33,4 +33,15 @@ public class QnAqService {
 	public List<QnAqBean> getQList(String wt_key){
 		return qnAqDao.getQList(wt_key);
 	}
+	public void insertQ(String WTT_Key, String q_Title, String q_content) {
+		qnAqDao.insertQ(WTT_Key, q_Title, q_content);
+	}
+	
+	public void insertA(String q_key) {
+		qnAqDao.insertA(q_key);
+	}
+	
+	public String getAK(String q_Title, String q_content) {
+		return qnAqDao.getAK(q_Title, q_content);
+	}
 }
