@@ -118,29 +118,7 @@
 							</a>
 						</div>
 						</c:forEach>
-<%-- 						<div class="item">
-							<a href=""> <img src="${root }resources/image/event2-2.png"
-								alt=""> <br> 제목이자 설명
-							</a>
-						</div>
 
-						<div class="item">
-							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
-								제목이자 설명
-							</a>
-						</div>
-
-						<div class="item">
-							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
-								제목이자 설명
-							</a>
-						</div>
-
-						<div class="item">
-							<a href=""> <img src="../img/event1-1.jpg" alt=""> <br>
-								제목이자 설명
-							</a>
-						</div> --%>
 					</div>
 
 					<div id="teb01" class="item_list">
@@ -197,29 +175,7 @@
 							</a>
 						</div>
 						</c:forEach>
-						<%-- <div class="item2">
-							<a href=""> <img src="${root }resources/image/event2-2.png"
-								alt=""> <br> 제목이자 설명
-							</a>
-						</div>
-
-						<div class="item2">
-							<a href=""> <img src="${root }resources/image/event2-2.png" alt=""> <br>
-								제목이자 설명
-							</a>
-						</div>
-
-						<div class="item2">
-							<a href=""> <img src="${root }resources/image/event2-2.png" alt=""> <br>
-								제목이자 설명
-							</a>
-						</div>
-
-						<div class="item2">
-							<a href=""> <img src="${root }resources/image/event2-2.png" alt=""> <br>
-								제목이자 설명
-							</a>
-						</div> --%>
+						
 					</div>
 
 					<div id="teb05" class="item_list2">
