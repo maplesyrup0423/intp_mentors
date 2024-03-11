@@ -207,10 +207,9 @@ public class TeacherController {
 			}else {
 				return "user/password_change_fail";
 			}
-			
 		}
 		else {
-			return "user/password_change_fail_current";
+			return "user/password_change_fail";
 		}
 	}
 	
