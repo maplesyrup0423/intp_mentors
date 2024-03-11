@@ -225,7 +225,7 @@
 				<div class="C-classlist">
 
 
-					<c:forEach var="obj" items="${wtList}" begin="4" end="10" step="1"
+					<c:forEach var="obj" items="${wtList}" begin="8" end="14" step="1"
 						varStatus="status">
 						<div class="list-img">
 							<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key}"> <img
