@@ -35,7 +35,24 @@
 							onclick="location.href='${root}admin/admin_user'">회원</button>
 					</div>
 				</div></td>
-			<td width="1080" align="center" valign="top"><h1>관리자 - 홈 페이지</h1></td>
+			<td width="1080" align="center" valign="top">
+			
+			<div class="all_view">
+		<div class="div_card div_shadow">
+			<div class="div_card-header">
+				<h2 class="font-weight-bold text-primary">Dash Board</h2>
+			</div>
+			<div class="div_card-body">
+			
+				<div class="dash-title">
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+			
+			</td>
 		</tr>
 
 	</table>
