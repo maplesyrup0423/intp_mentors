@@ -16,13 +16,13 @@
 	<!-- header -->
 		<c:import url="/WEB-INF/views/include/Mentors_main_header.jsp" />
 	
-		<h2 class="blist_top_title">도서관</h2>
-		<p class="blist_top_text">테크빌교육 출판은 교사, 학생, 부모가 함께 만드는 교육 전문 출판사입니다.</p>
+		<!-- <h2 class="blist_top_title">도서관</h2>
+		<p class="blist_top_text">테크빌교육 출판은 교사, 학생, 부모가 함께 만드는 교육 전문 출판사입니다.</p> -->
 		<div class="A_view">
 		<div class="list_tab">
 			<input class="blist-home" type="button" value="도서목록" />
 		</div>
-		<div class="book_search">
+		<%-- <div class="book_search">
 			<img src="${root }resources/image/icon/search_input_left.png" class="left" /> <input
 				type="text" id="s_bar" size="35" />
 			<button class="d_btn">
@@ -31,7 +31,7 @@
 			<button class="s_btn">
 				<img src="${root }resources/image/icon/search_input_right.png" />
 			</button>
-		</div>
+		</div> --%>
 		<div class="bookdetail_box">
 			<div class="bd_img">
 				<div class="img_box"><img src="${root }resources/image/book_img/${bookInfo.bk_img}.jpg"/></div>

@@ -43,7 +43,7 @@
 				<h2 class="font-weight-bold text-primary">공지사항</h2>
 			</div>
 			<div class="div_card-body">
-			<div class="all_select">
+			<%-- <div class="all_select">
 					<select class="admin_select">
 						<option value="all">전체</option>
 						<option value="1">이것만 알자! 평가문항 출제 길잡이1</option>
@@ -53,7 +53,7 @@
 				<div class="searchbar">
 					<input type="text" class="searchbar_text" placeholder="검색어를 입력하세요">
 					<img class="search_btn" src="${root }resources/image/icon/admin_search_btn.png"></img>
-				</div>
+				</div> --%>
 				<div>
 					<table class="list_tb">
 						<thead>
