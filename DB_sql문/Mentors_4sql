@@ -24,7 +24,7 @@ insert into wt_test_q values('WT2','wt2_test',2,2,2,2,2,2,2,2,2,2);
 insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT21','id1',sysdate);
 insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT3','id1',sysdate);
 insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT2','id1',sysdate);
-insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT21','id2',sysdate);
+insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT1','id2',sysdate,sysdate+30);
 --wtt_test_a
 insert into wtt_test_a (WTT_Key)values('WTT41');
 insert into wtt_test_a (WTT_Key)values('WTT42');
@@ -86,25 +86,13 @@ insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb3.jpg'
 insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb2.jpg','eventinfo2.jpg','2024-01-15','2024-04-26','2024 신규교사 임용 이벤트!','a');
 insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb4.jpg','eventinfo4.jpeg','2024-02-29','2024-05-16','2024 연간 멤버십 수강원 혜택!','a');
 insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb5.jpg','eventinfo5.jpg','2024-03-14','2024-05-25','카카오톡 친구추가 이벤트!','a');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb6.jpg','eventinfo6.jpg','2024-03-15','2024-05-27','AI 개인화 맞춤 서비스 쌤아이★!','a');
 
-
---insert into event values('EV' || TO_CHAR(event_seqid.nextval),'썸네일','내용이미지','2024-01-01','2024-03-12','제목','');
---insert into event values('EV' || TO_CHAR(event_seqid.nextval),'썸네일','내용이미지','2024-01-01','2024-12-31','제목','');
---insert into event values('EV' || TO_CHAR(event_seqid.nextval),'썸네일','내용이미지','2024-01-01','2024-12-31','제목','');
---insert into event values('EV' || TO_CHAR(event_seqid.nextval),'썸네일','내용이미지','2024-01-01','2024-12-31','제목','');
---insert into event values('EV' || TO_CHAR(event_seqid.nextval),'썸네일','내용이미지','2024-01-01','2024-12-31','제목','');
-
-
-
-
-insert into Notification values('noti' || TO_CHAR(noti_seqid.nextval), 'WT21', '공지사항', '공지내용', sysdate);
-insert into Notification values('noti' || TO_CHAR(noti_seqid.nextval), 'WT21', '공지사항2', '공지내용', sysdate);
-insert into Notification values('noti' || TO_CHAR(noti_seqid.nextval), 'WT21', '공지사항3', '공지내용', sysdate);
-insert into Notification values('noti' || TO_CHAR(noti_seqid.nextval), 'WT22', '공지사항', '공지내용', sysdate);
-insert into Notification values('noti' || TO_CHAR(noti_seqid.nextval), 'WT22', '공지사항2', '공지내용', sysdate);
-insert into Notification values('noti' || TO_CHAR(noti_seqid.nextval), 'WT22', '공지사항3', '공지내용', sysdate);
-
-
-insert into qna_q values('qk' || TO_CHAR(qk_seqid.nextval),'WTT201','수료기준 문의5','수료기준이 궁금합니다.5',0,sysdate);
+--insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event1.jpg','내용이미지','2024-01-01','2024-03-12','제목','');
+--insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event2.png','내용이미지','2024-01-01','2024-12-31','제목','');
+--insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event3.jpg','내용이미지','2024-01-01','2024-12-31','제목','');
+--insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event4.png','내용이미지','2024-01-01','2024-12-31','제목','');
+--insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event5.png','내용이미지','2024-01-01','2024-12-31','제목','');
+--insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event6.jpg','내용이미지','2024-01-01','2024-12-31','제목','');
 
 commit;

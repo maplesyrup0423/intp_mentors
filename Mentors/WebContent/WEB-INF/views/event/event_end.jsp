@@ -23,6 +23,7 @@
             <button class="blue_btn"><a href="${root }event/event3">진행중인 이벤트</a></button>
             <button class="blue_btn">종료된 이벤트</button>
         </div>
+        <hr />
         <div class="E_list">
 
 			<c:forEach var='obj' items="${eventList }">
