@@ -109,6 +109,7 @@
 				</ul>
 
 				<div class="teb_item">
+				
 					<div id="teb00" class="item_list">
 						<!-- 전체메뉴 4개 -->
 						<c:forEach var="obj" items="${wtList}" begin="0" end="3" step="1" varStatus="status">
