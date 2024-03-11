@@ -215,8 +215,6 @@
 			</div>
 
 
-			<br>
-
 			<footer>
 				<div class="title_text">
 					<h1>현재 신청 가능한 강의</h1>
