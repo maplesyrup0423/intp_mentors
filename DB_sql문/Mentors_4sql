@@ -88,11 +88,11 @@ insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb4.jpg'
 insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb5.jpg','eventinfo5.jpg','2024-03-14','2024-05-25','카카오톡 친구추가 이벤트!','a');
 insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb6.jpg','eventinfo6.jpg','2024-03-15','2024-05-27','AI 개인화 맞춤 서비스 쌤아이★!','a');
 
---insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event1.jpg','내용이미지','2024-01-01','2024-03-12','제목','');
---insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event2.png','내용이미지','2024-01-01','2024-12-31','제목','');
---insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event3.jpg','내용이미지','2024-01-01','2024-12-31','제목','');
---insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event4.png','내용이미지','2024-01-01','2024-12-31','제목','');
---insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event5.png','내용이미지','2024-01-01','2024-12-31','제목','');
---insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event6.jpg','내용이미지','2024-01-01','2024-12-31','제목','');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event1.jpg','eventinfo1.jpg','2024-01-01','2024-02-16','기간내 쇼핑하면 15% 할인!','ㅁ');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event2.png','eventinfo1.jpg','2023-11-08','2023-11-21','2023 행복상점 OPEN!','ㅁ');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event3.jpg','eventinfo1.jpg','2023-08-21','2023-09-22','2023 건전한 복권생활 만들기','ㅁ');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event4.png','eventinfo1.jpg','2023-07-07','2023-07-31','멘토스, 이월드 콜라보!','ㅁ');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event5.png','eventinfo1.jpg','2023-03-12','2023-09-12','강사진들의 진실한 리뷰를 작성해주세요!','ㅁ');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event6.jpg','eventinfo1.jpg','2023-05-16','2023-09-04','추운 겨울을 따뜻하게 해줄 이벤트!','ㅁ');
 
 commit;
