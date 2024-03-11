@@ -12,7 +12,7 @@
 	width: 1280px;
 }
 
-.top_title {
+.blist_top_title {
 	text-align: left;
 	display: block;
 	top: 5px;
@@ -22,7 +22,7 @@
 	font-weight: bold;
 }
 
-.top_text {
+.blist_top_text {
 	text-align: left;
 	margin-top: 10px;
 	font-size: 15px;

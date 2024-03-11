@@ -21,8 +21,8 @@
 		<tr>
 			<td><section id="blist_view">
 
-					<h2 class="top_title">도서관</h2>
-					<p class="top_text">테크빌교육 출판은 교사, 학생, 부모가 함께 만드는 교육 전문 출판사입니다.</p>
+					<h2 class="blist_top_title">도서관</h2>
+					<p class="blist_top_text">테크빌교육 출판은 교사, 학생, 부모가 함께 만드는 교육 전문 출판사입니다.</p>
 					<div class="A_view">
 						<div class="list_tab">
 							<input class="blist-home" type="button" value="도서목록" />
