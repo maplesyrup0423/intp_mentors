@@ -111,7 +111,7 @@ public class TeacherController {
 		String getTeacher_Tel = tempFindIdBean.getTeacher_Tel();
 		
 		String getTeacher_Id = teacherService.getTeacherId(getTeacher_Name, getTeacher_Tel);
-		
+			
 		if(getTeacher_Id==null) {
 			return "user/Find_ID_fail";
 		}
@@ -201,10 +201,13 @@ public class TeacherController {
 			return "user/Password_change_confirm";
 		}
 		
+		System.out.println(loginTeacherBean.getTeacher_Password());
+		
 		if(pwChangeBean.getTeacher_Password().equals(loginTeacherBean.getTeacher_Password()) ) {
 			if(pwChangeBean.getNew_Password().equals(pwChangeBean.getNew_Password2())) {
 				
 				teacherService.changeTeacherPw(pwChangeBean);
+				loginTeacherBean.setTeacher_Password(pwChangeBean.getNew_Password());
 				return "user/password_change_success";
 			}else {
 				return "user/password_change_fail";

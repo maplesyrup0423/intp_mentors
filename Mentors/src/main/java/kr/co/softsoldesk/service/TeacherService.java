@@ -114,7 +114,6 @@ public class TeacherService {
 	
 	public void changeTeacherPw(TeacherBean changePwBean) {
 		changePwBean.setTeacher_id(loginTeacherBean.getTeacher_id());
-		loginTeacherBean.setTeacher_Password(changePwBean.getNew_Password());
 		teacherDao.changeTeacherPw(changePwBean);
 	}
 }
