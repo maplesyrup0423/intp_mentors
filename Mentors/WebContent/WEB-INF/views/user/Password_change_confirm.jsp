@@ -28,7 +28,7 @@
 							<form:input type = "password" class = "password_change_input" path = "teacher_Password" placeholder = "현재 비밀번호를 입력하세요." autocomplete = "off"/> <br />
 							<form:input type = "password" class = "password_change_input" path = "new_Password" placeholder = "새로운 비밀번호를 입력하세요." autocomplete = "off"/> <br />
 							<div class="error_message">
-								<form:errors path="new_Password" style='color:red' />
+								사용자 비밀번호는 영문, 숫자로 1-15글자여야합니다. <br />
 							</div>
 							<form:input type = "password" class = "password_change_input" path = "new_Password2" placeholder = "새로운 비밀번호를 다시 입력하세요." autocomplete = "off"/>
 						</center>
