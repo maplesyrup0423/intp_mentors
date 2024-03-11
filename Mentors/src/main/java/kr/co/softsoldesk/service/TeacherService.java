@@ -1,5 +1,6 @@
 package kr.co.softsoldesk.service;
 
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.co.softsoldesk.beans.TeacherBean;
+import kr.co.softsoldesk.beans.WTT_Bean;
 import kr.co.softsoldesk.dao.TeacherDao;
 
 @Service
@@ -115,5 +117,9 @@ public class TeacherService {
 	public void changeTeacherPw(TeacherBean changePwBean) {
 		changePwBean.setTeacher_id(loginTeacherBean.getTeacher_id());
 		teacherDao.changeTeacherPw(changePwBean);
+	}
+	
+	public List<WTT_Bean> getPayment(String teacher_id) {
+		return teacherDao.getPayment(teacher_id);
 	}
 }

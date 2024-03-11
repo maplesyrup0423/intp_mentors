@@ -29,6 +29,15 @@ select * from teacher_info;
 select teacher_name,teacher_gender from teacher_info where teacher_id='id1';
 update teacher_info set teacher_password = 'pw4' where teacher_password='pw3';
 update teacher_info set teacher_password = 'pw3' where teacher_password='pw4';
+select wt.WT_title, wt.WT_price, w.WTT_payment_date from workplace_T wt 
+inner join WTT w on wt.wt_key = w.wt_key
+where w.teacher_id='id6';
+
+select wt.WT_title, wt.WT_price,
+to_char(w.wtt_payment_date, 'YYYY-MM-DD') as wtt_payment_date 
+from workplace_T wt 
+inner join WTT w on wt.wt_key = w.wt_key
+where w.teacher_id='id1';
 -------------------------------------------------------------------------
 DROP TABLE  event ;
 

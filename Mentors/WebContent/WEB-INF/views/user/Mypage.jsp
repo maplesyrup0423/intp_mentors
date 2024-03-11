@@ -108,34 +108,17 @@
 							<table class="payment_table">
 								<tr>
 									<th class="payment_date">결제 일자</th>
-									<th class="payment_details">결제 내용</th>
-									<th class="payment_amount">결제 금액</th>
+									<th class="payment_title">결제 내용</th>
+									<th class="payment_price">결제 금액</th>
 								</tr>
-
+								
+								<c:forEach var='obj' items="${getpayment }">
 								<tr>
-									<td>2024-12-31</td>
-									<td>[강의]너도 할 수 있다. 결제이론!이 책만 읽으면 하루 5000만원씩 결제하는 습관이 금방!
-										지금 시작하세요!</td>
-									<td>332,100,000,000</td>
+									<td>${obj.wtt_payment_date }</td>
+									<td>${obj.wt_Title }</td>
+									<td>${obj.wt_price }</td>
 								</tr>
-
-								<tr>
-									<td>1282-04-21</td>
-									<td>[역사]고조선은 어떤 나라였을까</td>
-									<td>쌀 6포대</td>
-								</tr>
-
-								<tr>
-									<td>2832-01-01</td>
-									<td>2024년의 대한민국, 그때 왜 하늘을 나는 코끼리가 없었을까</td>
-									<td>2022년산 와인 7병</td>
-								</tr>
-
-								<tr>
-									<td>2008-01-30</td>
-									<td>비트코인 당신도 시작할 수 있다. 흙이 금이 되는 연금술이 따로 없다</td>
-									<td>비트코인 3코인</td>
-								</tr>
+								</c:forEach>
 							</table>
 						</div>
 					</div>

@@ -1,9 +1,12 @@
 package kr.co.softsoldesk.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import kr.co.softsoldesk.beans.TeacherBean;
+import kr.co.softsoldesk.beans.WTT_Bean;
 import kr.co.softsoldesk.mapper.TeacherMapper;
 
 @Repository
@@ -48,4 +51,7 @@ public class TeacherDao {
 		teachermapper.changeTeacherPw(changePwBean);
 	}
 	
+	public List<WTT_Bean> getPayment(String teacher_id) {
+		return teachermapper.getPayment(teacher_id);
+	}
 }

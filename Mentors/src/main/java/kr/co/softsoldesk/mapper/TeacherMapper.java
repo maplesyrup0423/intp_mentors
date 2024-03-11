@@ -1,11 +1,14 @@
 package kr.co.softsoldesk.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import kr.co.softsoldesk.beans.TeacherBean;
+import kr.co.softsoldesk.beans.WTT_Bean;
 
 public interface TeacherMapper {
 	//로그인시 유저 정보 받기
@@ -60,6 +63,13 @@ public interface TeacherMapper {
 			+ "set teacher_password = #{new_Password} "
 			+ "where teacher_id = #{teacher_id}")
 	void changeTeacherPw(TeacherBean changePwBean);
+	
+	@Select("select wt.WT_title, wt.WT_price, "
+			+ "to_char(w.wtt_payment_date, 'YYYY-MM-DD') as wtt_payment_date "
+			+ "from workplace_T wt "
+			+ "inner join WTT w on wt.wt_key = w.wt_key "
+			+ "where w.teacher_id = #{teacher_id}")
+	List<WTT_Bean> getPayment(String teacher_id);
 	
 }
 

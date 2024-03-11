@@ -23,7 +23,7 @@ public class WTT_Bean {
 	private int wt_Tag_School;// 학급 코드
 	private int wt_Tag_TypeCategory;// 분야 코드
 	private String wt_Video; //비디오 url
-
+	private String wt_price;
 	// -----------------------------------------------------
 	private String str_wtt_Completion; //강의 수료여부 문자열
 	private String str_WT_Tag_School; // 학급 문자열

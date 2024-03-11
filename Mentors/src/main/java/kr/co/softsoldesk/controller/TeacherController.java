@@ -1,5 +1,9 @@
 package kr.co.softsoldesk.controller;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 import javax.annotation.Resource;
 import javax.validation.Valid;
 
@@ -16,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softsoldesk.beans.TeacherBean;
+import kr.co.softsoldesk.beans.WTT_Bean;
 import kr.co.softsoldesk.service.TeacherService;
 import kr.co.softsoldesk.validator.TeacherValidator;
 
@@ -161,7 +166,13 @@ public class TeacherController {
 	}
 	
 	@GetMapping("/Mypage")
-	public String Mypage() {
+	public String Mypage(Model model) {
+		
+		List<WTT_Bean> getpayment = teacherService.getPayment(loginTeacherBean.getTeacher_id());
+		
+		Collections.sort(getpayment, Comparator.comparing(WTT_Bean::getWtt_payment_date));
+		
+		model.addAttribute("getpayment",getpayment);
 		
 		return "user/Mypage";
 	}

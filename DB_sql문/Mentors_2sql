@@ -42,6 +42,7 @@ commit;
 
 
 
+
 ------------------------------테이블 내 모든 컬럼 삭제-------------------------------------------
 TRUNCATE TABLE teacher_info;
 TRUNCATE TABLE event;
