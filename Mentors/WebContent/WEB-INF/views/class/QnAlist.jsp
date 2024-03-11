@@ -104,7 +104,7 @@
 				</tbody>
 		</table>
 	</div>
-	<div style="text-decoration: none"><button class="blue_btn" onclick=""id="w_btn">글쓰기</button></div>
+	<div style="text-decoration: none"><button class="blue_btn" onclick="location.href='${root}class/QnAlist_insert'" id="w_btn">글쓰기</button></div>
 		<div class="bottom_move_btn">
 			<input class="m_btn" type="button" value="<"/>
 			<input class="m_btn" type="button" value="1"/>

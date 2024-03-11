@@ -7,7 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="${root }resources/style/admin_detail_style.css" />
+<link rel="stylesheet"
+	href="${root }resources/style/admin_detail_style.css" />
 </head>
 <body>
 	<table id="admin_table" width="1280">
@@ -61,62 +62,29 @@
 											<th>연수코드</th>
 											<th>썸네일</th>
 											<th>연수명</th>
-											<th>관리</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>1</td>
-											<td class="wt_img_td"><img
-												src="${root }resources/image/WT_img/WT_Thumb/교원을_위한_인공지능(AI)_첫걸음_Thumb.jpg" />
-											</td>
-											<td>이것만 알자! 평가문항 출제 길잡이1</td>
-											<td>
-												<button class="modify-btn">수정</button>
-												<button class="delete-btn">삭제</button>
-											</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>YO_Uli</td>
-											<td>이것만 알자! 평가문항 출제 길잡이2</td>
-											<td>2024-02-18</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>신청자</td>
-											<td>과정명</td>
-											<td>신청일</td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>신청자</td>
-											<td>과정명</td>
-											<td>신청일</td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>신청자</td>
-											<td>과정명</td>
-											<td>신청일</td>
-										</tr>
-										<tr>
-											<td>6</td>
-											<td>신청자</td>
-											<td>과정명</td>
-											<td>신청일</td>
-										</tr>
+										<c:forEach var='awt' items="${awtlist }">
+											<tr>
+												<td>${awt.WT_Key }</td>
+												<td class="wt_img_td"><img
+													src="${root }resources/image/WT_img/WT_Thumb/${awt.WT_Thumbnail}.jpg" />
+												</td>
+												<td>${awt.WT_Title }</td>
+											</tr>
+										</c:forEach>
+											
 									</tbody>
 								</table>
 							</div>
 							<div class="bottom_move_btn">
-								<span class="admin_span">
-									<input class="m_btn" type="button" value="<">
-									<input class="m_btn" type="button" value="1">
-									<input class="m_btn" type="button" value=">">
-								</span>
-									<input class="new_wt_btn" type="button" value="연수등록"
-									onclick="location.href='${root}admin/admin_wt_insert'"/>
+								<span class="admin_span"> <input class="m_btn"
+									type="button" value="<"> <input class="m_btn"
+									type="button" value="1"> <input class="m_btn"
+									type="button" value=">">
+								</span> <input class="new_wt_btn" type="button" value="연수등록"
+									onclick="location.href='${root}admin/admin_wt_insert'" />
 							</div>
 						</div>
 					</div>

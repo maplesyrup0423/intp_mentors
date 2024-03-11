@@ -77,7 +77,7 @@ SELECT *
   FROM wtt WHERE TO_CHAR(wtt_payment_date+30, 'yyyy-mm-dd hh24:mi:ss') < TO_CHAR(SYSDATE, 'yyyy-mm-dd hh24:mi:ss') and wtt_Completion=0;
 
 
-
+insert into qna_q values('qk' || TO_CHAR(qk_seqid.nextval),'WTT5','바보는 항상','나였고',1,sysdate);
 
 
 -----------------------------------

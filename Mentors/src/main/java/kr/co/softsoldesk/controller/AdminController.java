@@ -2,15 +2,21 @@ package kr.co.softsoldesk.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softsoldesk.beans.AdminBean;
+import kr.co.softsoldesk.beans.WTBean;
 import kr.co.softsoldesk.service.AdminService;
+import lombok.val;
 
 @Controller
 @RequestMapping("/admin")
@@ -25,8 +31,17 @@ public class AdminController {
    }
    
    @GetMapping("/admin_wt")
-   public String admin_wt() {
+   public String admin_wt(Model model) {
+	   List<WTBean> awtlist = adminService.getAdminWTBeanList();
+	   model.addAttribute("awtlist", awtlist);
       return "admin/admin_wt";
+   }
+   
+   @GetMapping("/wt_delete")
+   public String wt_delete(@RequestParam("WT_Key") String WT_Key) {
+	   System.out.println(WT_Key);
+	   adminService.deleteWT(WT_Key);
+	   return "admin/WT_delete_s";
    }
    
    @GetMapping("/admin_wt_insert")
@@ -42,9 +57,24 @@ public class AdminController {
    }
    
    @GetMapping("/admin_qna_detail")
-   public String admin_qna_detail() {
+   public String admin_qna_detail(@ModelAttribute("answertext")AdminBean answertext, @RequestParam("q_key") String q_key,
+		   							Model model) {
+	   AdminBean adminqnaqbean = adminService.getAdminQnAQ(q_key);
+	   model.addAttribute("adminqnaqbean", adminqnaqbean);
+	   String adminqnaa = adminService.getAdminQnAA(q_key);
+	   model.addAttribute("adminqnaa", adminqnaa);
+	   
+	   model.addAttribute("answertext", answertext);
 	   return "admin/admin_qna_detail";
    }
+   
+  /* @PostMapping("/a_insert")
+   public String a_insert(@Valid @RequestParam("q_key")String q_key, @ModelAttribute("answertext")AdminBean answertext,@RequestParam(value="fail", defaultValue = "false") boolean fail, Model model) {
+	   adminService.insertA(q_key);
+	   
+	   model.addAttribute("answertext", answertext);
+	   return "admin/admin_qna_detail?q_key="+q_key;
+   }*/
    
    @GetMapping("/admin_noti")
    public String admin_noti(Model model) {

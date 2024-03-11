@@ -9,6 +9,7 @@ public class AdminBean {
 	
 	//teacher_info 테이블 변수
 	private String teacher_id;
+	private String teacher_name;
 	
 	//Notification 테이블 변수
 	private String noti_key;
@@ -28,5 +29,6 @@ public class AdminBean {
 	private String q_content;
 	private int q_a_check;
 	private String q_date;
+	private String a_content;
 
 }

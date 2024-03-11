@@ -44,7 +44,7 @@
 			</div>
 			<div class="div_card-body">
 			
-				<div class="dash-title">
+				<div class="board-title">
 					
 				</div>
 				

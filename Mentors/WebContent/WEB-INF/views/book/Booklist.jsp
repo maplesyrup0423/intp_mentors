@@ -54,6 +54,7 @@
 							<div class="book_list" id="b_list"
 								onclick="location.href='${root }book/Booklist_Detail';">
 								<a href="${root }book/Booklist_Detail?bk_Key=${obj.bk_Key}">
+								
 									<div class="book_info">
 										<div class="book_img">
 											<img class="b_img"
@@ -88,7 +89,7 @@
 										</div>
 									</div>
 								</a>
-
+								
 							</div>
 						</c:forEach>
 					</div>

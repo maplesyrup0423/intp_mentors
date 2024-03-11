@@ -70,12 +70,13 @@
 							</tr>
 							<tr>
 								<th>판매처</th>
-								<td><button id="sales" onclick="location.href='${bookInfo.bk_kobo}'">교보문고<img src="../img/expand_btn.png" /></button></td>
+								<td>
+								<button id="sales1" onclick="location.href='${bookInfo.bk_ald}'">알라딘<img src="${root }resources/image/expand_btn.png" /></button>
+								<button id="sales2" onclick="location.href='${bookInfo.bk_kobo}'">교보문고<img src="${root }resources/image/expand_btn.png" /></button>
+								<button id="sales3" onclick="location.href='${bookInfo.bk_yes24}'">YES24<img src="${root }resources/image/expand_btn.png" /></button>
+								</td>
 							</tr>
-							<tr>
-								<th>링크복사</th>
-								<td class="booklist-info-font"></td>
-							</tr>
+							
 						</table>
 					</div>
 					<div class="icon"></div>

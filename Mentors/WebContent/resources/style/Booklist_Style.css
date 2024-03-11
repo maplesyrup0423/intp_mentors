@@ -148,6 +148,13 @@ body {
 	margin: auto;
 }
 
+a:link {
+  color : black;
+}
+a:visited {
+  color : black;
+}
+
 .book_list {
 	width: 400px;
 	height: 300px;

@@ -106,6 +106,7 @@ body{
 }
 
 .bookdetail_box{
+	margin-top: 20px;
 	width: 1275px;
 	height: 515px;
 	border: 1px solid #888;
@@ -202,10 +203,24 @@ body{
 }
 */
 
-#sales {
-	position: absolute;
-	left: 250px;
-	bottom: 30px;
+#sales1 {
+	margin-left: 20px;
+	width: 150px;
+	height: 30px;
+	border-radius: 20px;
+	font-size: 15px;
+}
+
+#sales2 {
+	margin-left: 20px;
+	width: 150px;
+	height: 30px;
+	border-radius: 20px;
+	font-size: 15px;
+}
+
+#sales3 {
+	margin-left: 20px;
 	width: 150px;
 	height: 30px;
 	border-radius: 20px;

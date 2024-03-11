@@ -98,4 +98,10 @@ select q.q_key, q.WTT_Key, q.q_Title, q.q_content, q.q_a_check, q.q_date,ti.teac
 from wtt w inner join workplace_t wt on w.wt_key=wt.wt_key and wt.wt_key='WT21' INNER JOIN qna_q q on q.wtt_key=w.wtt_key
 inner join teacher_info ti on ti.teacher_id=w.teacher_id;
 
+select q.q_key, q.q_date, q.q_title, q.q_content, t.teacher_name, a.a_content, wt.wt_title
+from qna_q q inner join qna_a a on a.q_key=q.q_key
+inner join WTT w on w.WTT_Key=q.WTT_Key
+inner join workplace_T wt on w.WT_Key = wt.WT_Key
+inner join teacher_info t on t.teacher_id=w. teacher_id and q.q_key='qk2';
+
 COMMIT;

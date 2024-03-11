@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var='root' value="${pageContext.request.contextPath }/" />
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,33 +48,28 @@
 								<table class="list_tb">
 									<tr>
 										<th>연수명</th>
-										<td colspan="5">과목명이 있었는데요? 없었습니다!</td>
+										<td colspan="5">${adminqnaqbean.wt_title }</td>
 									</tr>
 										
 									<tr>
 										<th>번호</th>
-										<td>1</td>
+										<td>${adminqnaqbean.q_key }</td>
 										
 										<th>작성자</th>
-										<td>YO_Uli</td>
+										<td>${adminqnaqbean.teacher_name }</td>
 										
 										<th>작성일</th>
-										<td>2024-02-18</td>
+										<td>${adminqnaqbean.q_date }</td>
 									</tr>
 									
 									<tr>
 										<th>제목</th>
-										<td colspan="5">그런거 모르겠고 졸려죽겠습니다.</td>
+										<td colspan="5">${adminqnaqbean.q_title }</td>
 									</tr>
 									
 									<tr>
 										<th>내용</th>
-										<td colspan="5">
-										진짜 장난안치고 뷰단 작성하는일 정말 미춰버리겠어여 깔깔.. <br />
-										점심나가서 머글거 가테! 점심나가 버릴거 가테! 그냥 점심 나가! <br />
-										이게 맞나.. 라는 생각 정말 많이 들고있사옵니다. <br />
-										장난이고요. 밤을 새기 직전까지 코딩을 하다보니 별의 별 말들 다 해버리는 것같군요!
-										</td>
+										<td colspan="5">${adminqnaqbean.q_content }</td>
 									</tr>
 									
 								</table>
@@ -84,7 +80,10 @@
 								<tr>
 									<th>답변내용</th>
 									<td>
-										<textarea class="answertext_box" cols="30" rows="10"></textarea>
+									<form:form action="${root }admin/a_insert" method="post" modelAttribute="answertext">
+										<form:input class="answertext_box" path="a_content" ></form:input>
+										
+									</form:form>
 									</td>
 								</tr>
 							</table>
@@ -93,6 +92,7 @@
 							<div class="qna_detail-bottom_btn">
 								<input class="qna_detail-answer_btn" type="button" value="답변작성"
 									onclick="location.href='${root}admin/admin_qna'"/>
+									
 								<input class="qna_detail-list_btn" type="button" value="목록으로"
 									onclick="location.href='${root}admin/admin_qna'"/>
 							</div>

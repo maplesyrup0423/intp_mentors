@@ -21,7 +21,7 @@
                 <label for="content">내용:</label>
                 <textarea id="content" name="content" required></textarea>
             </div>
-            <button type="submit" class="btn">작성하기</button>
+            <button type="submit" class="btn" >작성하기</button>
         </form>
     </div>
 </body>

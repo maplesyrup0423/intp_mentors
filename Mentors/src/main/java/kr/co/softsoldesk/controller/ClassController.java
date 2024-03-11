@@ -2,10 +2,14 @@ package kr.co.softsoldesk.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -228,5 +232,17 @@ public class ClassController {
 		
 		
 		return "class/Notification_D";
+	}
+	
+	@GetMapping("/QnAlist_insert")
+	public String QnAlist_insert() {
+		
+		return "class/QnAlist_insert";
+	}
+	@PostMapping("/QnAlist_insert_pro")
+	public String QnAlist_insert_pro(@Valid @ModelAttribute("qList")QnAqBean qList) {
+		
+		
+		return "class/QnAlist";
 	}
 }
