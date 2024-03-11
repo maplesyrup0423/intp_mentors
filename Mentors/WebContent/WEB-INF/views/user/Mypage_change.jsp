@@ -46,7 +46,12 @@
 								<td class="td_left"><form:label path="teacher_Tel">전화번호</form:label></td>
 								<td class="td_right"><form:input class = "td_right" path="teacher_Tel" /></td>
 							</tr>
-
+							
+							<tr class="error_message">
+								<td class="td_left"></td>
+								<td class="td_right"><form:errors path="teacher_Tel" style='color:red' /></td>
+							</tr>
+							
 							<tr>
 								<td class="td_left"><form:label path="teacher_Gender">성별</form:label></td>
 								<td class="td_right"><form:input class = "td_right_readonly" path="teacher_Gender" readonly="true" /></td>
@@ -69,6 +74,10 @@
 								<td class="td_left"><form:label path="teacher_Nickname">닉네임</form:label></td>
 								<td class="td_right"><form:input class = "td_right" path="teacher_Nickname" /></td>
 							</tr>
+							<tr class="error_message">
+								<td class="td_left"></td>
+								<td class="td_right"><form:errors path="teacher_Nickname" style='color:red' /></td>
+							</tr>
 						</table>
 					</div>
 				</div>
@@ -83,6 +92,10 @@
 								<td class="td_left"><form:label path="teacher_Work_In">직장명</form:label></td>
 								<td class="td_right"><form:input class = "td_right" path="teacher_Work_In"/></td>
 							</tr>
+							<tr class="error_message">
+								<td class="td_left"></td>
+								<td class="td_right"><form:errors path="teacher_Work_In" style='color:red' /></td>
+							</tr>
 
 							<tr>
 								<td class="td_left">교직타입</td>
@@ -95,6 +108,10 @@
 							<tr>
 								<td class="td_left"><form:label path="teacher_Neis">Neis</form:label></td>
 								<td class="td_right"><form:input class = "td_right" path="teacher_Neis"/></td>
+							</tr>
+							<tr class="error_message">
+								<td class="td_left"></td>
+								<td class="td_right"><form:errors path="teacher_Neis" style='color:red' /></td>
 							</tr>
 							
 						</table>
