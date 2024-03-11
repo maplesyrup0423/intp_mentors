@@ -10,6 +10,9 @@ public class AdminBean {
 	//teacher_info 테이블 변수
 	private String teacher_id;
 	private String teacher_name;
+	private String teacher_password;
+	private String teacher_nickname;
+	private String teacher_neis;
 	
 	//Notification 테이블 변수
 	private String noti_key;

@@ -9,6 +9,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import kr.co.softsoldesk.beans.AdminBean;
+import kr.co.softsoldesk.beans.EventBean;
 import kr.co.softsoldesk.beans.WTBean;
 
 public interface AdminMapper {
@@ -68,4 +69,21 @@ public interface AdminMapper {
 	//관리자 QnA 답변 업데이트
 	@Update("update qna_a set a_content = #{a_content}" )
 	String getUpdateA(String a_content);
+	
+
+	@Update("update qna_a set a_content=#{a_content} where q_key=#{q_key}")
+	void updateA(@Param("a_content")String a_content, @Param("q_key")String q_key); 
+	
+	@Update("update qna_q set q_a_check=1 where q_key=#{q_key}")
+	void updateQCheck(String q_key);
+	
+	@Select("select teacher_id, teacher_name, teacher_password, teacher_nickname, teacher_neis "
+			+ "from teacher_info")
+	List<AdminBean> getTInfoList();
+	
+	@Select("select event_key, event_thumbnail, event_title from event")
+	List<EventBean> getAeventList();
+	
+	@Delete("delete from event where event_key=#{event_key}")
+	void deleteEvent(String event_key);
 }

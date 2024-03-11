@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softsoldesk.beans.AdminBean;
+import kr.co.softsoldesk.beans.EventBean;
 import kr.co.softsoldesk.beans.WTBean;
 import kr.co.softsoldesk.service.AdminService;
 import lombok.val;
@@ -68,13 +70,19 @@ public class AdminController {
 	   return "admin/admin_qna_detail";
    }
    
-  /* @PostMapping("/a_insert")
-   public String a_insert(@Valid @RequestParam("q_key")String q_key, @ModelAttribute("answertext")AdminBean answertext,@RequestParam(value="fail", defaultValue = "false") boolean fail, Model model) {
-	   adminService.insertA(q_key);
+   @PostMapping("/a_update")
+   public String a_update(@Valid @RequestParam("q_key")String q_key, @ModelAttribute("answertext")AdminBean answertext,BindingResult result, Model model) {
+	   //adminService.insertA(q_key);
 	   
+	   if(result.hasErrors()) {
+			 return  "admin/admin_qna";
+			}
+	   System.out.println(answertext.getA_content());
+	   adminService.updateA(answertext.getA_content(), q_key);
+	   adminService.updateQCheck(q_key);
 	   model.addAttribute("answertext", answertext);
-	   return "admin/admin_qna_detail?q_key="+q_key;
-   }*/
+	   return "admin/admin_qna_detail_s";
+   }
    
    @GetMapping("/admin_noti")
    public String admin_noti(Model model) {
@@ -112,16 +120,29 @@ public class AdminController {
    }
    
    @GetMapping("/admin_user")
-   public String admin_user() {
+   public String admin_user(Model model) {
+	   List<AdminBean> tList = adminService.getTInfoList();
+	   model.addAttribute("tList",tList);
       return "admin/admin_user";
    }
    @GetMapping("/admin_event")
-   public String admin_event() {
+   public String admin_event(Model model) {
+	   List<EventBean> evList = adminService.getAeventList();
+	   model.addAttribute("evList",evList);
       return "admin/admin_event";
+   }
+   
+   @GetMapping("/event_delete")
+   public String event_delete(Model model, @RequestParam("event_key")String event_key) {
+	   adminService.deleteEvent(event_key);
+	   
+	   return "admin/admin_event";
    }
    
    @GetMapping("/admin_event_insert")
    public String admin_event_insert() {
 	   return "admin/admin_event_insert";
    }
+
+   
 }

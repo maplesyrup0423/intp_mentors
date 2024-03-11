@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.co.softsoldesk.beans.AdminBean;
+import kr.co.softsoldesk.beans.EventBean;
 import kr.co.softsoldesk.beans.WTBean;
 import kr.co.softsoldesk.dao.AdminDao;
 
@@ -50,5 +51,21 @@ public class AdminService {
 	public void insertA(String q_key) {
 		adminDao.insertA(q_key);
 	}
+	public void updateA(String a_content, String q_key) {
+		adminDao.updateA(a_content, q_key);
+	}
+	public void updateQCheck(String q_key) {
+		adminDao.updateQCheck(q_key);
+	}
 
+	public List<AdminBean> getTInfoList(){
+		return adminDao.getTInfoList();
+	}
+	
+	public List<EventBean> getAeventList(){
+		return adminDao.getAeventList();
+	}
+	public void deleteEvent(String event_key) {
+		adminDao.deleteEvent(event_key);
+	}
 }

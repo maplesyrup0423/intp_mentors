@@ -46,75 +46,26 @@
 				<table class="list_tb">
 					<thead>
 						<tr>
-							<th>회원번호</th>
-							<th>아이디</th>
 							<th>이름</th>
+							<th>아이디</th>
 							<th>비밀번호</th>
-							<th>생성일</th>
-							<th>계정탈퇴</th>
+							<th>닉네임</th>
+							<th>NEIS 번호</th>
+							
 						</tr>
 					</thead>
 					<tbody>
+						<c:forEach var='obj' items="${tList }">
 						<tr>
-							<td>1</td>
-							<td>YO_Uli</td>
-							<td>이용대</td>
-							<td>뚫어보시지</td>
-							<td>2024-02-18</td>
-							<td>
-								<button class="user-delete_btn">계정삭제</button>
-							</td>
+							<td>${obj.teacher_name }</td>
+							<td>${obj.teacher_id }</td>
+							<td>${obj.teacher_password }</td>
+							<td>${obj.teacher_nickname }</td>
+							<td>${obj.teacher_neis }</td>
+							
 						</tr>
-						<tr>
-							<td>2</td>
-							<td>아이디</td>
-							<td>이름</td>
-							<td>비밀번호</td>
-							<td>생성일</td>
-							<td>
-								<button class="user-delete_btn">계정삭제</button>
-							</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>아이디</td>
-							<td>이름</td>
-							<td>비밀번호</td>
-							<td>생성일</td>
-							<td>
-								<button class="user-delete_btn">계정삭제</button>
-							</td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>아이디</td>
-							<td>이름</td>
-							<td>비밀번호</td>
-							<td>생성일</td>
-							<td>
-								<button class="user-delete_btn">계정삭제</button>
-							</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>아이디</td>
-							<td>이름</td>
-							<td>비밀번호</td>
-							<td>생성일</td>
-							<td>
-								<button class="user-delete_btn">계정삭제</button>
-							</td>
-						</tr>
-						<tr>
-							<td>6</td>
-							<td>아이디</td>
-							<td>이름</td>
-							<td>비밀번호</td>
-							<td>생성일</td>
-							<td>
-								<button class="user-delete_btn">계정삭제</button>
-							</td>
-						</tr>
+						</c:forEach>
+						
 					</tbody>
 				</table>
 				<div class="bottom_move_btn">

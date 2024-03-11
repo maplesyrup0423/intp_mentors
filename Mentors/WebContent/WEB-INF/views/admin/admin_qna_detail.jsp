@@ -8,7 +8,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="${root }resources/style/admin_detail_style.css" />
+<link rel="stylesheet"
+	href="${root }resources/style/admin_detail_style.css" />
 </head>
 <body>
 	<table id="admin_table" width="1280">
@@ -50,53 +51,58 @@
 										<th>연수명</th>
 										<td colspan="5">${adminqnaqbean.wt_title }</td>
 									</tr>
-										
+
 									<tr>
 										<th>번호</th>
 										<td>${adminqnaqbean.q_key }</td>
-										
+
 										<th>작성자</th>
 										<td>${adminqnaqbean.teacher_name }</td>
-										
+
 										<th>작성일</th>
 										<td>${adminqnaqbean.q_date }</td>
 									</tr>
-									
+
 									<tr>
 										<th>제목</th>
 										<td colspan="5">${adminqnaqbean.q_title }</td>
 									</tr>
-									
+
 									<tr>
 										<th>내용</th>
 										<td colspan="5">${adminqnaqbean.q_content }</td>
 									</tr>
-									
+
 								</table>
+
 							</div>
-							<div class="qna-answertext_box">
-							<h2>답변작성</h2>
-							<table class="list_tb">
-								<tr>
-									<th>답변내용</th>
-									<td>
-									<form:form action="${root }admin/a_insert" method="post" modelAttribute="answertext">
-										<form:textarea class="answertext_box" path="a_content" ></form:textarea>
-									</form:form>
-									</td>
-								</tr>
-							</table>
-							</div>
+							<form:form
+								action="${root }admin/a_update?q_key=${adminqnaqbean.q_key }"
+								method="post" modelAttribute="answertext">
+
+								<div class="qna-answertext_box">
+									<h2>답변작성</h2>
+									<table class="list_tb">
+										<tr>
+											<th>답변내용</th>
+											<td><form:input class="answertext_box" path="a_content"
+													value="${adminqnaa }"></form:input></td>
+										</tr>
+									</table>
+								</div>
+
+								<div class="qna_detail-bottom_btn">
+									<form:button class="qna_detail-answer_btn"> 답변작성</form:button>
+									<%-- <input class="qna_detail-answer_btn" type="button" value="답변작성"
+									onclick="location.href='${root}admin/admin_qna'"/> --%>
 							
-							<div class="qna_detail-bottom_btn">
-								<input class="qna_detail-answer_btn" type="button" value="답변작성"
-									onclick="location.href='${root}admin/admin_qna'"/>
-									
-								<input class="qna_detail-list_btn" type="button" value="목록으로"
-									onclick="location.href='${root}admin/admin_qna'"/>
-							</div>
+							
 						</div>
+						</form:form>
+						<input class="qna_detail-list_btn" type="button" value="목록으로"
+								onclick="location.href='${root}admin/admin_qna'" />
 					</div>
+				</div>
 				</div>
 
 			</td>

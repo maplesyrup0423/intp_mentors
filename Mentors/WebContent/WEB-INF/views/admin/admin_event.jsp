@@ -54,47 +54,19 @@
 										</tr>
 									</thead>
 									<tbody>
+									<c:forEach var='obj' items="${evList }">
 										<tr>
-											<td>1</td>
+											<td>${obj.event_key }</td>
 											<td class="event_img_td">
-											<img src="${root }resources/image/event_img/event_Thumb/best-lecture1 (1).png" />
+											<img src="${root }resources/image/event_img/event_Thumb/${obj.event_thumbnail }" />
 											</td>
-											<td>이것만 알자! 평가문항 출제 길잡이1</td>
+											<td>${obj.event_title }</td>
 											<td>
-												<button class="modify-btn">수정</button>
-												<button class="delete-btn">삭제</button>
+												<button class="delete-btn" onclick="location.href='${root}admin/event_delete?event_key=${obj.event_key }'">삭제</button>
 											</td>
 										</tr>
-										<tr>
-											<td>2</td>
-											<td>YO_Uli</td>
-											<td>이것만 알자! 평가문항 출제 길잡이2</td>
-											<td>2024-02-18</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>신청자</td>
-											<td>과정명</td>
-											<td>신청일</td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>신청자</td>
-											<td>과정명</td>
-											<td>신청일</td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>신청자</td>
-											<td>과정명</td>
-											<td>신청일</td>
-										</tr>
-										<tr>
-											<td>6</td>
-											<td>신청자</td>
-											<td>과정명</td>
-											<td>신청일</td>
-										</tr>
+										</c:forEach>
+										
 									</tbody>
 								</table>
 							</div>
@@ -104,8 +76,8 @@
 									<input class="m_btn" type="button" value="1">
 									<input class="m_btn" type="button" value=">">
 								</span>
-									<input class="new_wt_btn" type="button" value="이벤트등록"
-									onclick="location.href='${root}admin/admin_event_insert'"/>
+									<%-- <input class="new_wt_btn" type="button" value="이벤트등록"
+									onclick="location.href='${root}admin/admin_event_insert'"/> --%>
 							</div>
 						</div>
 					</div>
