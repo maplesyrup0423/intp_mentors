@@ -65,11 +65,11 @@
 						<div class="login-circle2">
 							<div class="circle-login2">
 
-								<span id="My">내 정보
+								<span id="My">
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<button style="border-radius: 25px;"><a href="${root }user/logout"">로그아웃</a></button>
 								</span>
-								<h1>사용자 이름</h1>
+								<h1>${loginTeacherBean.teacher_Name}&nbsp;&nbsp;님!</h1>
 								<br>
 
 								<button class="loginbutton"><a href="${root }user/Mypage"  class="loginbutton">마이페이지</a>
@@ -87,9 +87,13 @@
 									로그인 이후 <br>이용해주세요!
 								</h1>
 								<button class="login blue_btn" ><a href="${root }user/Login" class="a_login">로그인</a></button>
-								<br> <span>아이디 </span> · <span>비밀번호</span> 
+								<br> 
+								<span><a href="${root }user/Find_ID">아이디</a> </span> · 
+								<span><a href="${root }user/Find_Password"s>비밀번호</a></span> 
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<span id="newUser">회원가입</span>
+								<span id="newUser">
+								<a href="${root }user/Sign_up">회원가입</a>
+								</span>
 							</div>
 						</div>
 					</c:otherwise>
