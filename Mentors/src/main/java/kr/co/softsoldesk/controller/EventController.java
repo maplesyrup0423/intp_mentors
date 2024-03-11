@@ -25,7 +25,7 @@ public class EventController {
 		
 		List<EventBean> eventCList = eventService.getConEventList();
 		
-		//TODO 영열영열아 db에 값 넣어놔라
+		//TODO �쁺�뿴�쁺�뿴�븘 db�뿉 媛� �꽔�뼱�넄�씪
 		for(EventBean eb : eventCList) {
 			int d = (int)Math.ceil(eventService.setDday(eb.getEvent_key()));
 			String sdate = eb.getEvent_s_date().substring(0,11);
@@ -46,6 +46,16 @@ public class EventController {
 	public String event_end(Model model) {
 		List<EventBean> eventEList = eventService.getEndEventList();
 
+		for(EventBean eb : eventEList) {
+			int d = (int)Math.ceil(eventService.setDday(eb.getEvent_key()));
+			String sdate = eb.getEvent_s_date().substring(0,11);
+			String edate = eb.getEvent_e_date().substring(0,11);
+			eb.setEvent_s_date(sdate);
+			eb.setEvent_e_date(edate);
+			eb.setD_day(d);
+			System.out.println(eb.getD_day());
+		}
+		
 		model.addAttribute("eventList", eventEList);
 		
 		return "event/event_end";
@@ -54,6 +64,10 @@ public class EventController {
 	@GetMapping("/event_info")
 	public String event_info(@RequestParam("event_key") String event_key, Model model) {
 		EventBean eBean = eventService.getEventInfo(event_key);
+		String sdate = eBean.getEvent_s_date().substring(0,11);
+		String edate = eBean.getEvent_e_date().substring(0,11);
+		eBean.setEvent_s_date(sdate);
+		eBean.setEvent_e_date(edate);
 		model.addAttribute("eBean", eBean);
 		return "event/event_info";
 	}
