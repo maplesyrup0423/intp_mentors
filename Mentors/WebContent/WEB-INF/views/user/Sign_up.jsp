@@ -9,7 +9,41 @@
 <meta charset="UTF-8">
 <title>Sign Up</title>
 <link rel="stylesheet" href="${root }resources/style/Sign_up.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
+<script>
+//사용자가 중복 확인 버튼 클릭했을 때
+function checkTeacherIdExist() {
+	var teacher_id = $("#teacher_id").val()
+	if(teacher_id.length == 0){
+		alert('아이디를 입력해주세요.')
+		return
+	}
+	$.ajax({
+		url : '${root}user/checkTeacherIdExist/' + teacher_id,
+		type : 'get',
+		dataType : 'text',
+		success : function(result){
+			if(result.trim() == 'true'){
+				alert('사용할 수 있는 아이디 입니다')
+				$("#teacherIdExist").val('true')
+			}else{
+				alert('사용할 수 없는 아이디 입니다')
+				$("#teacherIdExist").val('false')
+			}
+		}
+	})
+}
+//사용자 아이디란에 입력하면 무조건 false
+function resetTeacherIdExist(){
+	$("#teacherIdExist").val('false')
+}
+</script>
 <body>
 	<div class = "Mentors_header">
 	<!-- header --> 
@@ -20,6 +54,8 @@
 		<hr />
 		<form:form action="${root }user/Sign_up_pro" method = "post"
 				   modelAttribute="Sign_upTeacherBean">
+			<!-- 유효성 검사 여부 보내기 -->
+			<form:hidden path="teacherIdExist"/>
 			<div class="body">
 				<div class="letter_personal_information">개인정보 입력</div>
 				<!-- 개인정보 입력 -->
@@ -30,8 +66,10 @@
 						<form:label path = "teacher_Name">
 							<span>성명을 입력하세요. ex) 제갈김씨</span>
 						</form:label>
-						
 					</p>
+					<div class="error_message_name">
+						<form:errors path="teacher_Name" style='color:red' />
+					</div>
 					<!-- 생일 -->
 					<p>
 						<form:input path = "teacher_Birth" /> 
@@ -39,6 +77,9 @@
 							<span>생년월일을 입력하세요. ex)15600231</span>
 						</form:label>
 					</p>
+					<div class="error_message">
+					
+					</div>
 					<!-- 성별 -->
 					<div class="gender_choice">
 						<form:select path = "teacher_Gender">
@@ -53,6 +94,9 @@
 							<span>이메일을 입력하세요. ex)Ahjipga@naver.com</span>
 						</form:label>
 					</p>
+					<div class="error_message">
+					
+					</div>
 					<!-- 전화번호 -->
 					<p>
 						<form:input path = "teacher_Tel" /> 
@@ -62,6 +106,9 @@
 							</span>
 						</form:label>
 					</p>
+					<div class="error_message">
+					
+					</div>
 				</div>
 
 				<!-- 계정생성 -->
@@ -69,30 +116,32 @@
 				<div class="create_account">
 					<!-- 아이디  -->
 					<p class="absolute">
-						<form:input path = "teacher_id" /> 
+						<form:input path = "teacher_id" onkeypress="resetTeacherIdExist()"/> 
 						<form:label path = "teacher_id">
 							<span>아이디를 입력하세요.</span>
 						</form:label>
-						<button type="button" onclick="checkTeacherIdExist()">중복확인</button>
+						<button class = "checkIdExistButton" type="button" onclick="checkTeacherIdExist()">중복확인</button>
 					</p>
-					<div class="id_check_message">사용가능할지도 모르는 아이디입니다.</div>
+					<div class="error_message">
+						<form:errors path="teacher_id" style='color:red' />
+					</div>
 
 					<!-- 비밀번호 -->
 					<p>
-						<form:input path = "teacher_Password" autocomplete="off"/>
+						<form:input type = "password" path = "teacher_Password" autocomplete="off"/>
 						<form:label path = "teacher_Password"> 
 							<span>비밀번호를 입력하세요</span>
 						</form:label>
 					</p>
 					<!-- 비밀번호 확인 -->
 					<p>
-						<form:input path = "teacher_Password2" autocomplete="off" />
+						<form:input type = "password" path = "teacher_Password2" autocomplete="off" />
 						<form:label path = "teacher_Password2"> 
 							<span>비밀번호 확인</span>
 						</form:label> 
 					</p>
-					<div class="password_check_message">
-						제대로 다시 작성한게 맞나요? 아닌거같은데? 확인안해요?
+					<div class="error_message">
+					
 					</div>
 					<!-- 닉네임 -->
 					<p class="absolute">
@@ -101,6 +150,9 @@
 							<span>닉네임을 입력해주세요. </span>
 						</form:label>
 					</p>
+					<div class="error_message">
+					
+					</div>
 				</div>
 
 				<!-- 직장정보 -->
@@ -113,6 +165,9 @@
 							<span>솔데스크 대학원</span>
 						</form:label>
 					</p>
+					<div class="error_message">
+					
+					</div>
 
 					<!-- 교직타입 -->
 					<div class="school_type">
@@ -129,6 +184,9 @@
 							<span>neis 정보를 입력하세요.</span>
 						</form:label>
 					</p>
+					<div class="error_message">
+					
+					</div>
 				</div>
 				<div class = "sign_up_button_space">
 					<button type="button" class = "cancle" onclick="location.href='${root}user/Login'">돌아가기</button>

@@ -50,58 +50,49 @@
 			<div class="bottom_btn_right">
 				<button type="button"
 					onclick="location.href='class_home_Include.jsp?CHnum=3';">목록</button>
-					<br />
+				<br />
 			</div>
-			
+
 		</div>
 		<div>
-		<br />
-		<hr />
-			<p>답변</p>
-		</div>
-		<div class="qna_a">
 			<br />
-			<p>안녕하세요 멘토스입니다</p>
-			<p><br></p>
-			<p>문의주신것에 대하여 답변 드립니다</p>
-			
+			<hr />
 		</div>
+		<div class="outer">
+		<div class="wrap">
+			<div class="notice_area">
+				<div class="notice_title">
+					<h2>댓글</h2>
+				</div>
+				<div class="notice_content">
+					<form action="${contextPath }/notice/insert" method="post">
+						<div class="content1">
+							<h4>
+								<span class="title_span">&nbsp;</span> 제목
+							</h4>
+							<span class="input_area"> <input type="text" name="title"
+								required>
+							</span>
 
+							<h4>
+								<span class="title_span">&nbsp;</span> 내용
+							</h4>
+							<textarea class="textarea" rows="20" cols="100" name="content"
+								required></textarea>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
-	
-	
-	
-	<script>
-	
-		// 검색을 수행하는 함수
-		function search() {
-			// 검색어 입력 상자에서 검색어를 가져옴
-			var searchText = document.getElementById('searchInput').value
-					.toLowerCase();
-
-			// 결과를 초기화
-			searchResultsElement.innerHTML = '';
-
-			// 검색어와 일치하는 항목을 찾아 결과에 추가
-			for (var i = 0; i < data.length; i++) {
-				if (data[i].toLowerCase().includes(searchText)) {
-					var li = document.createElement('li');
-					li.textContent = data[i];
-					searchResultsElement.appendChild(li);
-				}
-			}
-		}
-
-		// 검색어 입력 상자에서 Enter 키가 눌렸을 때 검색 함수 호출
-		document.getElementById('searchInput').addEventListener('keyup',
-				function(event) {
-					if (event.key === 'Enter') {
-						search();
-					}
-				});
-	</script>
 
 
+
+		
+
+
+
+		
 		
 </body>
 </html>

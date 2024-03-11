@@ -46,3 +46,7 @@ a{
     margin-top: 150px;
     float: left;
 }
+
+.t_1 a, .t_1 a :active{
+	color:white;
+}

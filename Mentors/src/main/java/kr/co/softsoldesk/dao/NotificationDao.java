@@ -14,18 +14,29 @@ public class NotificationDao {
 	@Autowired
 	private NotificationMapper notificationMapper;
 	
-	public List<NotificationBean> getNotification() {
+	/*public List<NotificationBean> getNotification() {
 		return notificationMapper.getNotification();
-	}
+	}*/
 	
-	public NotificationBean getNotificationInfo(int noti_key) {
+	/*public NotificationBean getNotificationInfo(int noti_key) {
 		return notificationMapper.getNotificationInfo(noti_key);
-	}
+	}*/
 	public void addNotificationInfo(NotificationBean notificationBean) {
 		notificationMapper.addNotificationInfo(notificationBean);
 	}
 	
 	public NotificationBean getNotificationdetail(int noti_key) {
 		return notificationMapper.getNotificationdetail(noti_key);
+	}
+	
+	
+	//---------------------------------------------------------
+	public List<NotificationBean> getNotiList(String wt_key){
+		return notificationMapper.getNotiList(wt_key);
+	}
+
+
+	public NotificationBean getNoti(String noti_key) {
+		return notificationMapper.getNoti(noti_key);
 	}
 }

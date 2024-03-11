@@ -11,17 +11,21 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 import kr.co.softsoldesk.beans.TeacherBean;
 import kr.co.softsoldesk.beans.WTBean;
 import kr.co.softsoldesk.interceptor.CheckLoginInterceptor;
 import kr.co.softsoldesk.interceptor.MainHeaderInterceptor;
+import kr.co.softsoldesk.mapper.AdminMapper;
 import kr.co.softsoldesk.mapper.BookMapper;
 import kr.co.softsoldesk.mapper.CartMapper;
 import kr.co.softsoldesk.mapper.ClassMapper;
@@ -168,7 +172,22 @@ public class ServletAppContext implements WebMvcConfigurer {
 		factoryBean.setSqlSessionFactory(factory);
 		return factoryBean;
 	}
+	@Bean
+	public MapperFactoryBean<AdminMapper> adminMapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<AdminMapper> factoryBean = new MapperFactoryBean<AdminMapper>(AdminMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
 
+	@Bean
+	public ReloadableResourceBundleMessageSource messageSource() {
+		ReloadableResourceBundleMessageSource res = new ReloadableResourceBundleMessageSource();
+		res.setDefaultEncoding("UTF-8");
+		res.setBasenames("/WEB-INF/properties/error_message");
+		return res;
+	}
+
+	
 	// interceptor 처리
 	public void addInterceptors(InterceptorRegistry registry) {
 		WebMvcConfigurer.super.addInterceptors(registry);
@@ -180,6 +199,7 @@ public class ServletAppContext implements WebMvcConfigurer {
 		CheckLoginInterceptor checkLoginInterceptor = new CheckLoginInterceptor(loginTeacherBean);
 		InterceptorRegistration reg2 = registry.addInterceptor(checkLoginInterceptor);
 		reg2.addPathPatterns("/user/Mypage", "/user/Mypage_change", "/user/Password_change_confirm", "/user/delete_account", "/user/logout");
+		reg2.addPathPatterns("/WT/WT_my_room", "/WT/WT_payment3", "/WT/WT_cart_add");
 		
 		//특정 사이트들만 비로그인 진입 불가를 걸고 싶은 경우
 		//비로그인 시 이용불가 사이트 : "/user/Mypage", "/user/Mypage_change" ("/user/Mypage" 로 임의로 진입 시 차단이란 의미)
@@ -189,4 +209,17 @@ public class ServletAppContext implements WebMvcConfigurer {
 		//비로그인 시 이용불가 사이트 포괄 중 예외 사이트 : "/user/Login", "/user/Not_login" ("/user 폴더 안에 있는 파일 중 "/Login", "Not_login"은 예외적으로 사용가능의 의미)
 	}
 
+	//메세지와 proterty 충돌을 막기 위함.
+		//소스와 메시지 별도 관리 하도록 proterty를 Bean으로 등록
+		@Bean
+		public static PropertySourcesPlaceholderConfigurer PropertySourcesPlaceholderConfigurer() {
+			return new PropertySourcesPlaceholderConfigurer();
+		}
+		
+		@Bean
+		public StandardServletMultipartResolver multipartResolver() {
+			return new StandardServletMultipartResolver();
+		}
+
+	
 }

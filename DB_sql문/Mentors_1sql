@@ -131,9 +131,6 @@ ALTER TABLE Notification ADD PRIMARY KEY ( noti_key );
 ALTER TABLE Notification ADD FOREIGN KEY ( WT_Key ) REFERENCES workplace_T ( WT_Key );
 select * from Notification;
 
-insert into Notification values('qk' || TO_CHAR(noti_seqid.nextval), 'WT1', '공지사항', '공지내용', sysdate);
-insert into Notification values('qk' || TO_CHAR(noti_seqid.nextval), 'WT1', '공지사항2', '공지내용', sysdate);
-insert into Notification values('qk' || TO_CHAR(noti_seqid.nextval), 'WT1', '공지사항3', '공지내용', sysdate);
 -------------------------------------------------------------------------
 drop table cart;
 create table cart(

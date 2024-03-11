@@ -30,16 +30,16 @@
 						<table class="personal_info_table">
 							<tr>
 								<td class="td_left"><form:label path="teacher_Name">성명</form:label></td>
-								<td class="td_right"><form:input class = "td_right" path="teacher_Name" readonly="true" /></td>
+								<td class="td_right"><form:input class = "td_right_readonly" path="teacher_Name" readonly="true" /></td>
 							</tr>
 							<tr>
 								<td class="td_left"><form:label path="teacher_Birth">생년월일</form:label></td>
-								<td class="td_right"><form:input class = "td_right" path="teacher_Birth" readonly="true" /></td>
+								<td class="td_right"><form:input class = "td_right_readonly" path="teacher_Birth" readonly="true" /></td>
 							</tr>
 
 							<tr>
 								<td class="td_left"><form:label path="teacher_Email">이메일</form:label></td>
-								<td class="td_right"><form:input class = "td_right" path="teacher_Email" readonly="true"/></td>
+								<td class="td_right"><form:input class = "td_right_readonly" path="teacher_Email" readonly="true"/></td>
 							</tr>
 
 							<tr>
@@ -49,7 +49,7 @@
 
 							<tr>
 								<td class="td_left"><form:label path="teacher_Gender">성별</form:label></td>
-								<td class="td_right"><form:input class = "td_right" path="teacher_Gender" readonly="true" /></td>
+								<td class="td_right"><form:input class = "td_right_readonly" path="teacher_Gender" readonly="true" /></td>
 							</tr>
 						</table>
 					</div>
@@ -63,7 +63,7 @@
 						<table class="account_info_table">
 							<tr>
 								<td class="td_left"><form:label path="teacher_id">아이디</form:label></td>
-								<td class="td_right"><form:input class = "td_right" path="teacher_id" readonly="true" /></td>
+								<td class="td_right"><form:input class = "td_right_readonly" path="teacher_id" readonly="true" /></td>
 							</tr>
 							<tr>
 								<td class="td_left"><form:label path="teacher_Nickname">닉네임</form:label></td>

@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softsoldesk.beans.TeacherBean;
 import kr.co.softsoldesk.service.TeacherService;
+import kr.co.softsoldesk.validator.TeacherValidator;
 
 @Controller
 @RequestMapping("/user")
@@ -78,7 +81,8 @@ public class TeacherController {
 			BindingResult result) {
 		
 		if(result.hasErrors()) {
-			return "user/sign_up";
+			System.out.println("회원가입 오류");
+			return "user/Sign_up";
 		}
 		
 		//데이터베이스에 저장 및 회원가입 완료
@@ -195,7 +199,6 @@ public class TeacherController {
 			return "user/Password_change_confirm";
 		}
 		
-		
 		if(pwChangeBean.getTeacher_Password().equals(loginTeacherBean.getTeacher_Password()) ) {
 			if(pwChangeBean.getNew_Password().equals(pwChangeBean.getNew_Password2())) {
 				
@@ -207,7 +210,7 @@ public class TeacherController {
 			
 		}
 		else {
-			return "user/password_change_fail";
+			return "user/password_change_fail_current";
 		}
 	}
 	
@@ -240,4 +243,9 @@ public class TeacherController {
 		return "user/Not_login";
 	}
 	
+	@InitBinder
+	public void initBinder(WebDataBinder binder) {
+		TeacherValidator validator1 = new TeacherValidator();
+		binder.addValidators(validator1);
+	}
 }

@@ -49,7 +49,7 @@ public interface CartMapper {
 	
 	//WTT_Key 값 받아오기
 	@Select("select wtt_key from wtt where teacher_id=#{teacher_id} and wt_key=#{wt_key}")
-	String getWttKey(@Param("teacher_id") String teacher_id,@Param("WT_Key")String WT_Key);
+	String getWttKey(@Param("teacher_id") String teacher_id,@Param("wt_key")String wt_key);
 	
 	//wtt_test_a insert
 	@Insert("insert into wtt_test_a (WTT_Key)values(#{wtt_key})")

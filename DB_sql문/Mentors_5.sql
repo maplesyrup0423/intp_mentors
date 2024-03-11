@@ -85,7 +85,17 @@ UPDATE wtt_test_a set test_aa=0 where wtt_key='WTT169';
 
 
 
+--noti
+SELECT noti_key, WT_Key, noti_Title, noti_content, noti_date FROM Notification where wt_key='WT21';
+select WT_Key from wtt where wtt_key='WTT161';
+SELECT noti_key, WT_Key, noti_Title, noti_content, noti_date FROM Notification where noti_key='noti3';
 
+--q
+select q.q_key, q.WTT_Key, q.q_Title, q.q_content, q.q_a_check, q.q_date,ti.teacher_name 
+from qna_q q INNER join wtt w on w.wtt_key=q.wtt_key INNER join teacher_info ti on ti.teacher_id=w.teacher_id ;
 
+select q.q_key, q.WTT_Key, q.q_Title, q.q_content, q.q_a_check, q.q_date,ti.teacher_name 
+from wtt w inner join workplace_t wt on w.wt_key=wt.wt_key and wt.wt_key='WT21' INNER JOIN qna_q q on q.wtt_key=w.wtt_key
+inner join teacher_info ti on ti.teacher_id=w.teacher_id;
 
 COMMIT;

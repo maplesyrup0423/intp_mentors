@@ -16,7 +16,7 @@ public interface TeacherMapper {
 	TeacherBean getLoginTeacherInfo(TeacherBean teacherBean);
 
 	//아이디 중복체크
-	@Select("select teacher_name from teacher_info where teacher_id = #{teacher_id}")
+	@Select("select teacher_id from teacher_info where teacher_id = #{teacher_id}")
 	String checkTeacherIdExist(String teacher_id);
 	
 	@Insert("insert into teacher_info values(#{teacher_id}, #{teacher_Name}, #{teacher_Birth}, "

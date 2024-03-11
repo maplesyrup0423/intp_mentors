@@ -13,22 +13,22 @@
 
 a{
     text-decoration-line: none;
-    font-size: 25px;
+    /* font-size: 25px; */
 }
 
-a:link, a:visited{
+.top_text:link, .top_text:visited{
     color: black;
 }
 
-/* a :hover{
-    width: auto;
-    height: 45px;
-} */
+.top_text{
+	font-size: 25px;
+	color: black;
+}
 
 .td_cen{
     /* text-align: center; */
     /* width: 150px; */
-    width: 120pxpx;
+    width: 120px;
 }
 
 .td_cen_img1{

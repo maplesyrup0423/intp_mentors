@@ -6,7 +6,8 @@
 
 #up_icon{
     position: fixed;
-    right: 60%;
+    /* right: 60%; */
+    right: 900px;
     top: 650px;
     bottom: 50px;
     margin-right: -600px;

@@ -26,8 +26,8 @@ public class NotificationController {
 		model.addAttribute("noti_Key", noti_Key);
 		model.addAttribute("page", page);
 		//임시로 3으로 대체
-		NotificationBean tempNotificationBean = notificationService.getNotificationInfo(3);
-	    model.addAttribute("notificationBean", tempNotificationBean);
+		//NotificationBean tempNotificationBean = notificationService.getNotificationInfo(3);
+	    //model.addAttribute("notificationBean", tempNotificationBean);
 
 	    return "notification/Notification";
 	}

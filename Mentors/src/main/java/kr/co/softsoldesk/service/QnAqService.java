@@ -24,4 +24,13 @@ public class QnAqService {
 	    qnAqDao.updateResponseStatus(q_key, status);
 	}
 	
+	public void writeQnA(QnAqBean qna) {
+        qnAqDao.writeQnA(qna);
+    }
+	
+	//-----------------------------------------
+	
+	public List<QnAqBean> getQList(String wt_key){
+		return qnAqDao.getQList(wt_key);
+	}
 }

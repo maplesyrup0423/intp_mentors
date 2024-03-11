@@ -21,4 +21,14 @@ public class QnAqDao {
 	public void updateResponseStatus(int q_key, String status) {
 	    qnAqMapper.updateResponseStatus(q_key, status);
 	}
+	
+	public void writeQnA(QnAqBean qna) {
+        qnAqMapper.writeQnA(qna);
+    }
+	
+	//-----------------------------------------------------------
+	
+	public List<QnAqBean> getQList(String wt_key){
+		return qnAqMapper.getQList(wt_key);
+	}
 }

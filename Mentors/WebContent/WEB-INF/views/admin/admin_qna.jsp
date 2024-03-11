@@ -73,58 +73,19 @@
 							</tr>
 						</thead>
 						<tbody>
+						<c:forEach var='qnaq' items="${adminqnaq }">
 							<tr class="qna-table-list" onclick="location.href='${root}admin/admin_qna_detail'">
-								<td>1</td>
-								<td>이것만 알자! 평가문항 출제 길잡이1</td>
-								<td>세상에..이게 머선일이고?</td>
-								<td>YO_Uli</td>
-								<td>2024-02-18</td>
+								<td>${qnaq.q_key }</td>
+								<td>${qnaq.wt_title }</td>
+								<td>${qnaq.q_title }</td>
+								<td>${qnaq.teacher_id }</td>
+								<td>${qnaq.q_date }</td>
 								<td>
 									<button class="finish_answer">답변완료</button>
+									<!-- <button class="waitiong_answer">답변대기</button> -->
 								</td>
 							</tr>
-							<tr>
-								<td>2</td>
-								<td>이것만 알자! 평가문항 출제 길잡이2</td>
-								<td>저희좀 살려주세요..</td>
-								<td>작성자</td>
-								<td>등록일</td>
-								<td>
-									<button class="waitiong_answer">답변대기</button>
-								</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>과목명</td>
-								<td>궁금한게 참 많답니다?!</td>
-								<td>작성자</td>
-								<td>등록일</td>
-								<td>상태</td>
-							</tr>
-							<tr>
-								<td>4</td>
-								<td>과목명</td>
-								<td>시간을 조금만 더 내주실수는 없을까요?</td>
-								<td>작성자</td>
-								<td>등록일</td>
-								<td>상태</td>
-							</tr>
-							<tr>
-								<td>5</td>
-								<td>과목명</td>
-								<td>빠따는 때리지 말아주세요..</td>
-								<td>작성자</td>
-								<td>등록일</td>
-								<td>상태</td>
-							</tr>
-							<tr>
-								<td>6</td>
-								<td>과목명</td>
-								<td>맞아야하나..?</td>
-								<td>작성자</td>
-								<td>등록일</td>
-								<td>상태</td>
-							</tr>
+							</c:forEach>
 						</tbody>
 					</table>
 				</div>

@@ -9,8 +9,7 @@
 <title></title>
 <link rel="stylesheet"
 	href="${root }resources/style/class_home_style.css" />
-<link rel="stylesheet"	
-	href="${root }resources/style/QnAlist.css" />
+<link rel="stylesheet" href="${root}resources/style/Notification_Detail.css" />
 </head>
 <body>
 	<table width="1280" class="class_d_table">
@@ -27,9 +26,9 @@
 							홈</button>
 						<button class="list_test CH_list "
 							onclick="location.href='${root}class/class_home_center_test?wtt_Key=${wttBean.wtt_Key }'">시험</button>
-						<button class="list_QnA CH_list active"
+						<button class="list_QnA CH_list "
 							onclick="location.href='${root}class/QnAlist?wtt_Key=${wttBean.wtt_Key }'">Q&A</button>
-						<button class="list_notification CH_list "
+						<button class="list_notification CH_list active"
 							onclick="location.href='${root}class/Notification?wtt_Key=${wttBean.wtt_Key }'">공지사항</button>
 					</div>
 				</div></td>
@@ -39,20 +38,50 @@
 		<tr>
 			<td width="1080" align="center" valign="top">
 				<!-- 내용 삽입 -->
-				<div class="qna_dody">
-	<h2 class="title">Q&A</h2>
-	<div id="searchInput">
-		<input type="text" class="sc" placeholder="검색어를 입력하세요">
-		<button class="search"><image src="${root }/resources/image/icon/search_input_right.png"></image></button>
-	</div>
-	<br />
-	<hr class="hr"/>
+		<div class="box">
 
+		<table class="Notification_Detailedpage_table" >
+			<tr>
+				<td class="Notification_Detailedpage_table_td2">
+
+					<h2 class="title">공지사항</h2>
+
+
+				</td>
+				
+			</tr>
+		</table>
+		<br />
+		<hr class="hr" />
+		<div class="tbl">
+			<table class="tbl_view">
+				<tbody>
+					<tr>
+						<th class="th1">제목</th>
+						<th>${notificationBean.noti_Title }</th>
+					</tr>
+					<tr>
+						<th class="th2">내용</th>
+						<th>${notificationBean.noti_content }</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<div class="bottom_btn_right">
+				<button type="button"
+					onclick="location.href='${root}class/Notification?wtt_Key=${wttBean.wtt_Key }'">목록</button>
+			</div>
+		</div>
+
+
+	</div>
 	<script>
 		// 검색을 수행하는 함수
 		function search() {
 			// 검색어 입력 상자에서 검색어를 가져옴
-			var searchText = document.getElementById('searchInput').value.toLowerCase();
+			var searchText = document.getElementById('searchInput').value
+					.toLowerCase();
 
 			// 결과를 초기화
 			searchResultsElement.innerHTML = '';
@@ -68,49 +97,13 @@
 		}
 
 		// 검색어 입력 상자에서 Enter 키가 눌렸을 때 검색 함수 호출
-		document.getElementById('searchInput').addEventListener('keyup', function (event) {
-			if (event.key === 'Enter') {
-				search();
-			}
-		});
-
+		document.getElementById('searchInput').addEventListener('keyup',
+				function(event) {
+					if (event.key === 'Enter') {
+						search();
+					}
+				});
 	</script>
-	<div class="list">
-		<table class="list_tbl">
-			<thead>
-				<tr class="view">
-					<th id="number">번호</th>
-					<th id="title">제목</th>
-					<th id="writer">작성자</th>
-					<th id="date">작성일</th>
-					<th id="state">상태</th>
-				</tr>
-				<thead>
-				<tbody>
-				<c:forEach var='obj' items="${qnAqBeanList }">
-					<tr class="number1">
-						<td class="num">${obj.q_key}</td>
-      				  	<td class="tit">${obj.q_Title}</td>
-       					<td class="wt">${obj.teacher_name}</td>
-       					<td class="dt">${obj.q_date}</td>
-        				<td class="st">
-            		<c:choose>
-                		<c:when test="${obj.q_a_check == 0}">답변 대기</c:when>
-              			<c:when test="${obj.q_a_check == 1}">답변 완료</c:when>
-          		    </c:choose>
-       			 </td>
-   				 </tr>
-			</c:forEach>
-				</tbody>
-		</table>
-	</div>
-	<div style="text-decoration: none"><button class="blue_btn" onclick=""id="w_btn">글쓰기</button></div>
-		<div class="bottom_move_btn">
-			<input class="m_btn" type="button" value="<"/>
-			<input class="m_btn" type="button" value="1"/>
-			<input class="m_btn" type="button" value=">"/>
-		</div>
-	</div>
 
 </body>
 </html>

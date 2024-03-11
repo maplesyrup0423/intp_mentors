@@ -17,3 +17,23 @@ autoplaySpeed: 2000, //슬라이드 자동 넘기기 시간(1000ms = 1초)
 arrows: true //이전 다음 버튼 표시 여부
 });
 } );
+
+$(function(){
+    $('.teb_item > div').hide();
+    $('.teb_list a').click(function () {
+      $('.teb_item > div').hide().filter(this.hash).fadeIn();
+      $('.teb_list a').removeClass('active');
+      $(this).addClass('active');
+      return false;
+    }).filter(':eq(0)').click();
+    });
+    
+$(function(){
+    $('.teb_item2 > div').hide();
+    $('.teb_list2 a').click(function () {
+      $('.teb_item2 > div').hide().filter(this.hash).fadeIn();
+      $('.teb_list2 a').removeClass('active');
+      $(this).addClass('active');
+      return false;
+    }).filter(':eq(0)').click();
+    });

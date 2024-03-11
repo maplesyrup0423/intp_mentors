@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import kr.co.softsoldesk.beans.QnAqBean;
 import kr.co.softsoldesk.service.QnAqService;
 
 @Controller
@@ -18,7 +19,7 @@ public class QnAqController {
 	private QnAqService qnAqService;
 	
 	@GetMapping("/QnAq")
-	public String QnAq(@RequestParam("q_key")int q_key,String q_keyString,
+	public String QnAq(@RequestParam("q_key")int q_key,String WTT_Key,
 			Model model) {
 		model.addAttribute("q_key", q_key);
 		
@@ -35,5 +36,17 @@ public class QnAqController {
 
 	    return "redirect:/qna";
 	}
+	
+	 @GetMapping("/write")
+	    public String writeQnA(Model model) {
+	        model.addAttribute("qna", new QnAqBean());
+	        return "qna/write";
+	    }
+	    
+	    @PostMapping("/write")
+	    public String postQnA(QnAqBean qna) {
+	        qnAqService.writeQnA(qna);
+	        return "redirect:/qna/list";
+	    }
 	
 }
