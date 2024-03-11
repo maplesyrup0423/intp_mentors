@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import kr.co.softsoldesk.beans.AdminBean;
 import kr.co.softsoldesk.beans.WTBean;
@@ -63,4 +64,8 @@ public interface AdminMapper {
 	//관리자 QnA 답변등록
 	@Insert("insert into qna_a values('ak' || TO_CHAR(ak_seqid.nextval),'#{q_key}',null,sysdate")
 	void insertA(@Param("q_key")String q_key);
+	
+	//관리자 QnA 답변 업데이트
+	@Update("update qna_a set a_content = #{a_content}" )
+	String getUpdateA(String a_content);
 }

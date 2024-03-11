@@ -81,8 +81,7 @@
 									<th>답변내용</th>
 									<td>
 									<form:form action="${root }admin/a_insert" method="post" modelAttribute="answertext">
-										<form:input class="answertext_box" path="a_content" ></form:input>
-										
+										<form:textarea class="answertext_box" path="a_content" ></form:textarea>
 									</form:form>
 									</td>
 								</tr>
