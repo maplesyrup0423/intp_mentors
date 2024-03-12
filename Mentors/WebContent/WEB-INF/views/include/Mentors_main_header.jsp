@@ -15,7 +15,6 @@
 </head>
 
 <body>
-<h1>로그인 값 확인 ${loginTeacherBean.teacherLogin}</h1>
     <table class="top_all">
     <!-- 헤더 -->
         <tr>
