@@ -122,4 +122,11 @@ select teacher_id, teacher_name, teacher_password, teacher_nickname, teacher_nei
 from teacher_info;
 
 delete from teacher_info where teacher_id='';
+
+select t.teacher_id, t.teacher_neis, wt.wt_key, wt.wt_title, wt.wt_price, wtt.wtt_payment_date
+from wtt wtt
+inner join workplace_t wt on wtt.wt_key = wt.wt_key
+inner join teacher_info t on wtt.teacher_id = t.teacher_id;
+
+
 COMMIT;

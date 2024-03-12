@@ -23,8 +23,10 @@ public class AdminBean {
 	//workplace_T 테이블 변수
 	private String wt_key;
 	private String wt_title;
+	private String wt_price;
 	//WTT 테이블a
 	private String wtt_key;
+	private String wtt_payment_date;
 	
 	//qna_q 테이블 변수
 	private String q_key;

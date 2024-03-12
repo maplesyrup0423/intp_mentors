@@ -86,4 +86,10 @@ public interface AdminMapper {
 	
 	@Delete("delete from event where event_key=#{event_key}")
 	void deleteEvent(String event_key);
+	
+	@Select("select t.teacher_id, t.teacher_neis, wt.wt_key, wt.wt_title, wt.wt_price, wtt.wtt_payment_date " +
+			"from wtt wtt " +
+			"inner join workplace_t wt on wtt.wt_key = wt.wt_key " +
+			"inner join teacher_info t on wtt.teacher_id = t.teacher_id")
+	List<AdminBean> getApayList();
 }

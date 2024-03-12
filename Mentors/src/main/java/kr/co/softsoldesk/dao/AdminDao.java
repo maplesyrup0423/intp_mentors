@@ -71,4 +71,8 @@ public class AdminDao {
 	public void deleteEvent(String event_key) {
 		adminMapper.deleteEvent(event_key);
 	}
+	
+	public List<AdminBean> getApayList() {
+		return adminMapper.getApayList();
+	}
 }

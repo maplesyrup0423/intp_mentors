@@ -68,4 +68,8 @@ public class AdminService {
 	public void deleteEvent(String event_key) {
 		adminDao.deleteEvent(event_key);
 	}
+	
+	public List<AdminBean> getApayList(){
+		return adminDao.getApayList();
+	}
 }

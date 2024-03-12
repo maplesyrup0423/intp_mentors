@@ -115,7 +115,9 @@ public class AdminController {
    }
    
    @GetMapping("/admin_pay")
-   public String admin_pay() {
+   public String admin_pay(Model model) {
+	  List<AdminBean> apaylist = adminService.getApayList();
+	  model.addAttribute("apaylist", apaylist);
       return "admin/admin_pay";
    }
    

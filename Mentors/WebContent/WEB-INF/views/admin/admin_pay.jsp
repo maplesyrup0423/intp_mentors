@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="${root}/resources/script/jquery-3.3.1.min.js"></script>
-<style>
+<!-- <style>
 html,body {width:100%;  }
 body,div,ul,li{margin:0; padding:0;}
 ul,li {list-style:none;}
@@ -26,8 +26,10 @@ ul,li {list-style:none;}
 .tabcontent{padding: 20px; height:auto; border:1px solid #ddd; border-top:none;}
 
 </style>
+ -->
 
-<link rel="stylesheet" href="${root }resources/style/admin_pay_style.css" />
+<link rel="stylesheet"
+	href="${root }resources/style/admin_pay_style.css" />
 </head>
 <body>
 	<table id="admin_table" width="1280">
@@ -65,7 +67,7 @@ ul,li {list-style:none;}
 						<div class="div_card-body">
 
 
-							<div class="tab">
+							<%-- <div class="tab">
 								<ul class="tabnav">
 									<li><a href="#tab01">bar chart</a></li> <!-- 탭 이름 추가 가능 a태그의 id가 해당하는 아래 콘텐츠 아이디랑 같아야함 -->
 									<li><a href="#tab02">line chart</a></li>
@@ -175,12 +177,36 @@ new Chart(document.getElementById("doughnut-chart"), {
     }
 });
 
-</script>
+</script> --%>
+							<div>
+								<table class="list_tb">
+									<thead>
+										<tr>
+											<th>아이디</th>
+											<th>NEIS번호</th>
+											<th>연수코드</th>
+											<th>결제내용</th>
+											<th>결제금액</th>
+											<th>결제일</th>
+										</tr>
+									</thead>
+									<tbody>
+										<c:forEach var='apl' items="${apaylist }">
+											<tr>
+												<td>${apl.teacher_id }</td>
+												<td>${apl.teacher_neis }</td>
+												<td>${apl.wt_key }</td>
+												<td>${apl.wt_title }</td>
+												<td>${apl.wt_price }</td>
+												<td>${apl.wtt_payment_date }</td>
+											</tr>
+										</c:forEach>
 
-
-
+									</tbody>
+								</table>
 							</div>
 						</div>
+					</div>
 				</div>
 			</td>
 		</tr>
