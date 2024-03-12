@@ -114,7 +114,7 @@
 						<!-- 전체메뉴 4개 -->
 						<c:forEach var="obj" items="${wtList}" begin="0" end="3" step="1" varStatus="status">
 						<div class="item2">
-							<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key} }"> <img src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg"
+							<a href="${root }WT/WT_info?WT_Key=${obj.WT_Key}"> <img src="${root }resources/image/WT_img/WT_Thumb/${obj.WT_Thumbnail}.jpg"
 								alt=""> <br> ${obj.WT_Title }
 							</a>
 						</div>
