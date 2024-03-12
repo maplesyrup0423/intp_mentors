@@ -227,6 +227,12 @@ table, td, th, ul, li, div, button {
 	background-color: rgb(255, 83, 69, 15%);
 }
 
+.WTT_Completion_bc3 {
+	border-color: #000;
+	color: #FFf;
+	background-color: #000;
+}
+
 .class_home_center_home_Table {
 	width: 800px;
 	padding: 5px;
