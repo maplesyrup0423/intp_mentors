@@ -76,8 +76,8 @@
 									<input class="m_btn" type="button" value="1">
 									<input class="m_btn" type="button" value=">">
 								</span>
-									<%-- <input class="new_wt_btn" type="button" value="이벤트등록"
-									onclick="location.href='${root}admin/admin_event_insert'"/> --%>
+									<input class="new_wt_btn" type="button" value="이벤트등록"
+									onclick="location.href='${root}admin/admin_event_insert'"/>
 							</div>
 						</div>
 					</div>

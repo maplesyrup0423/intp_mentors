@@ -138,7 +138,7 @@ public class AdminController {
    public String event_delete(Model model, @RequestParam("event_key")String event_key) {
 	   adminService.deleteEvent(event_key);
 	   
-	   return "admin/admin_event";
+	   return "admin/admin_event_s";
    }
    
    @GetMapping("/admin_event_insert")
