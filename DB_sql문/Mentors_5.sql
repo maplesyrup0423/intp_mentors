@@ -105,6 +105,14 @@ inner join workplace_T wt on w.WT_Key = wt.WT_Key;
 --inner join teacher_info t on t.teacher_id=w. teacher_id and q.q_key='qk2';
 
 
+select q.q_key, q.q_date, q.q_title, q.q_content, t.teacher_name, wt.wt_title
+from qna_q q inner join WTT w on w.WTT_Key=q.WTT_Key
+inner join workplace_T wt on w.WT_Key = wt.WT_Key
+inner join teacher_info t on t.teacher_id=w. teacher_id and q.q_key='qk2';
+
+select a_content from qna_a where q_key='qk2';
+
+
 
 update qna_a set a_content='aaa' where q_key='qk45'; 
 update qna_q set q_a_check=1 where q_key='qk45';
