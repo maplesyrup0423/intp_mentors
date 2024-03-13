@@ -232,4 +232,11 @@ values('BOOK' || TO_CHAR(BK_key_seqid.nextval),'학교미래교육을디자인하다','학교,
 '김현섭','2023년 5월 15일','9791198307798','수업디자인연구소',18000,
 null,null,null,null,null,null,7);
 
+insert into booklist
+values('BOOK' || TO_CHAR(BK_key_seqid.nextval),'교사교육과정을디자인하다실천편','교사 교육과정을 디자인하다-실천편',
+'박수원','2022년 7월 20일','9791163461531','테크빌교육',18000,
+null,null,null,null,null,null,1);
+
 commit;
+
+delete from booklist where bk_key = 'BOOK21';
