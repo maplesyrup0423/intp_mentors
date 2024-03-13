@@ -80,10 +80,7 @@ public class CartController {
 		System.out.println("결제 WT_Key = " + WT_Key);
 
 		CartBean cBean = cartService.getOneCartInfo(teacher_id, WT_Key);
-		// WTT키 추가
-		cartService.addWTT(WT_Key);
-		// 장바구니 삭제
-		cartService.deleteCart(WT_Key);
+
 		model.addAttribute("cBean", cBean);
 
 		return "WT/WT_payment2";
@@ -93,10 +90,7 @@ public class CartController {
 	public String WT_payment3(@RequestParam("WT_Key") String WT_Key, Model model) {
 
 		CartBean cBean = cartService.directPay(WT_Key);
-		// WTT키 추가
-		cartService.addWTT(WT_Key);
-		// 장바구니 삭제
-		cartService.deleteCart(WT_Key);
+
 		model.addAttribute("cBean", cBean);
 
 		return "WT/WT_payment3";
