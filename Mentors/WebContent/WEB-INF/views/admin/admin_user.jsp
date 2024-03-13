@@ -68,11 +68,11 @@
 						
 					</tbody>
 				</table>
-				<div class="bottom_move_btn">
+				<%-- <div class="bottom_move_btn">
 					<input class="m_btn" type="button" value="<">
 					<input class="m_btn" type="button" value="1">
 					<input class="m_btn" type="button" value=">">
-				</div>
+				</div> --%>
 			</div>
 		</div>
 	</div>

@@ -55,11 +55,11 @@
 					<img class="search_btn" src="${root }resources/image/icon/admin_search_btn.png"></img>
 				</div> --%>
 
-							<div class="answer_btn-box">
+							<!-- <div class="answer_btn-box">
 
 								<button class="top-finish_answer">답변완료</button>
 								<button class="top-waitiong_answer">답변대기</button>
-							</div>
+							</div> -->
 
 							<div>
 								<table class="list_tb">
@@ -92,11 +92,11 @@
 									</tbody>
 								</table>
 							</div>
-							<div class="bottom_move_btn">
+							<%-- <div class="bottom_move_btn">
 								<input class="m_btn" type="button" value="<"> <input
 									class="m_btn" type="button" value="1"> <input
 									class="m_btn" type="button" value=">">
-							</div>
+							</div> --%>
 						</div>
 					</div>
 				</div>

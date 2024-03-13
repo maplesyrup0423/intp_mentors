@@ -88,11 +88,11 @@
 				</div>
 				
 				<div class="bottom_move_btn">
-					<span class="admin_span">
+					<%-- <span class="admin_span">
 						<input class="m_btn" type="button" value="<">
 						<input class="m_btn" type="button" value="1">
 						<input class="m_btn" type="button" value=">">
-					</span>
+					</span> --%>
 					<input class="new_write_btn" type="button" value="글쓰기"
 					onclick="location.href='${root}admin/admin_noti_insert'"/>
 				</div>

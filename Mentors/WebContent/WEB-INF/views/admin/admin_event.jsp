@@ -71,11 +71,11 @@
 								</table>
 							</div>
 							<div class="bottom_move_btn">
-								<span class="admin_span">
+								<%-- <span class="admin_span">
 									<input class="m_btn" type="button" value="<">
 									<input class="m_btn" type="button" value="1">
 									<input class="m_btn" type="button" value=">">
-								</span>
+								</span> --%>
 									<input class="new_wt_btn" type="button" value="이벤트등록"
 									onclick="location.href='${root}admin/admin_event_insert'"/>
 							</div>

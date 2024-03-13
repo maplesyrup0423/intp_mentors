@@ -8,13 +8,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="${root}/resources/script/jquery-3.3.1.min.js"></script>
-<style>
+<!-- <style>
 html,body {width:100%;  }
 body,div,ul,li{margin:0; padding:0;}
 ul,li {list-style:none;}
 
 /*tab css*/
-.tab{float:none; width:980px; height:auto; margin-bottom: 30px;}
+.tab{float:none; width:980px; height:auto; margin-top: 30px; margin-bottom: 30px;}
 .tabnav{font-size:0; width:980px; border:1px solid #ddd;}
 .tabnav li{display: inline-block;  height:46px; text-align:center; border-right:1px solid #ddd;}
 .tabnav li a:before{content:""; position:absolute; left:0; top:0px; width:100%; height:3px; }
@@ -25,7 +25,7 @@ ul,li {list-style:none;}
 .tabnav li a.active{background:#fff; color:#7ea21e; }
 .tabcontent{padding: 20px; height:auto; border:1px solid #ddd; border-top:none;}
 
-</style>
+</style> -->
 
 <link rel="stylesheet"
 	href="${root }resources/style/admin_pay_style.css" />
@@ -64,16 +64,17 @@ ul,li {list-style:none;}
 							<h2 class="font-weight-bold text-primary">수익관리</h2>
 						</div>
 						
-							<div class="tab">
+						<div class="div_card-body">
+							<%-- <div class="tab">
 								<ul class="tabnav">
 									<li><a href="#tab01">bar chart</a></li> <!-- 탭 이름 추가 가능 a태그의 id가 해당하는 아래 콘텐츠 아이디랑 같아야함 -->
-									<li><a href="#tab02">line chart</a></li>
-									<li><a href="#tab03">pie chart</a></li>
+									<li><a href="#tab02">pie chart</a></li>
+									<!-- <li><a href="#tab03">pie chart</a></li> -->
 								</ul>
 								<div class="tabcontent">
 									<div id="tab01"><canvas id="bar-chart" width="300" height="230"></canvas></div>
-									<div id="tab02"><canvas id="line-chart" width="300" height="250"></canvas></div>
-									<div id="tab03"><canvas id="doughnut-chart" width="300" height="250"></canvas></div>
+									<div id="tab02"><canvas id="doughnut-chart" width="300" height="250"></canvas></div>
+									<div id="tab03"><canvas id="line-chart" width="300" height="250"></canvas></div>
 								</div>
 							</div>
 							<!--tab-->
@@ -94,12 +95,12 @@ $(function(){
 new Chart(document.getElementById("bar-chart"), {
     type: 'bar',
     data: {
-      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"], //아마 날짜 들어갈 부분
+      labels: ["Africa", "Asia", "Europe", "Latin America", "North America", "WT1"], //아마 날짜 들어갈 부분
       datasets: [
         {
           label: "Population (millions)", //바에 마우스 올리면 나오는 이름
-          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"], //차트 색들
-          data: [2478,5267,734,784,433] //값들
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#a09bff"], //차트 색들
+          data: [2478,5267,734,784,433,6785] //값들
         }
       ]
     },
@@ -112,7 +113,7 @@ new Chart(document.getElementById("bar-chart"), {
     }
 });
 
-new Chart(document.getElementById("line-chart"), {
+/* new Chart(document.getElementById("line-chart"), {
 	  type: 'line',
 	  data: {
 	    labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050], //x축 값들
@@ -150,7 +151,7 @@ new Chart(document.getElementById("line-chart"), {
 	      text: '제목2'
 	    }
 	  }
-	});
+	}); */
 	
 	
 	
@@ -169,15 +170,15 @@ new Chart(document.getElementById("doughnut-chart"), {
     options: {
       title: {
         display: true,
-        text: '제목3'
+        text: '제목2'
       }
     }
 });
 
 </script>
+ --%>
 
-
-							<%-- <div>
+							<div>
 								<table class="list_tb">
 									<thead>
 										<tr>
@@ -203,10 +204,8 @@ new Chart(document.getElementById("doughnut-chart"), {
 
 									</tbody>
 								</table>
-							</div> --%>
-							
-							
-						
+							</div>
+						</div>
 					</div>
 				</div>
 			</td>

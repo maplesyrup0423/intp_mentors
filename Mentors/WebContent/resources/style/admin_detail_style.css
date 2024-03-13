@@ -164,9 +164,9 @@
 	text-align: center;
 }
 
-.admin_span{
+/* .admin_span{
 	margin-right: -200px;
-}
+} */
 
 .m_btn{
 	width: 30px;
@@ -205,8 +205,6 @@
 	border-radius: 20px;
 	background-color: #00457E;
 	cursor: pointer;
-	margin-right: 80px;
-	float: right;
 }
 
 .wt-select{
