@@ -8,13 +8,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="${root}/resources/script/jquery-3.3.1.min.js"></script>
-<!-- <style>
+<style>
 html,body {width:100%;  }
 body,div,ul,li{margin:0; padding:0;}
 ul,li {list-style:none;}
 
 /*tab css*/
-.tab{float:left; width:980px; height:auto;}
+.tab{float:none; width:980px; height:auto; margin-bottom: 30px;}
 .tabnav{font-size:0; width:980px; border:1px solid #ddd;}
 .tabnav li{display: inline-block;  height:46px; text-align:center; border-right:1px solid #ddd;}
 .tabnav li a:before{content:""; position:absolute; left:0; top:0px; width:100%; height:3px; }
@@ -26,7 +26,6 @@ ul,li {list-style:none;}
 .tabcontent{padding: 20px; height:auto; border:1px solid #ddd; border-top:none;}
 
 </style>
- -->
 
 <link rel="stylesheet"
 	href="${root }resources/style/admin_pay_style.css" />
@@ -41,8 +40,8 @@ ul,li {list-style:none;}
 			<td width="200" align="center" valign="top" height="100%"><div
 					class="sidebar div_shadow">
 					<div class="sidebar_list">
-						<button class="list_home CH_list"
-							onclick="location.href='${root}admin/admin_home'">관리자 홈</button>
+						<%-- <button class="list_home CH_list"
+							onclick="location.href='${root}admin/admin_home'">관리자 홈</button> --%>
 						<button class="list_test CH_list "
 							onclick="location.href='${root}admin/admin_wt'">연수</button>
 						<button class="list_QnA CH_list "
@@ -64,10 +63,8 @@ ul,li {list-style:none;}
 						<div class="div_card-header">
 							<h2 class="font-weight-bold text-primary">수익관리</h2>
 						</div>
-						<div class="div_card-body">
-
-
-							<%-- <div class="tab">
+						
+							<div class="tab">
 								<ul class="tabnav">
 									<li><a href="#tab01">bar chart</a></li> <!-- 탭 이름 추가 가능 a태그의 id가 해당하는 아래 콘텐츠 아이디랑 같아야함 -->
 									<li><a href="#tab02">line chart</a></li>
@@ -81,7 +78,7 @@ ul,li {list-style:none;}
 							</div>
 							<!--tab-->
 							<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-<script>
+<script type="text/javascript">
 $(function(){
 	  $('.tabcontent > div').hide();
 	  $('.tabnav a').click(function () {
@@ -177,8 +174,10 @@ new Chart(document.getElementById("doughnut-chart"), {
     }
 });
 
-</script> --%>
-							<div>
+</script>
+
+
+							<%-- <div>
 								<table class="list_tb">
 									<thead>
 										<tr>
@@ -204,8 +203,10 @@ new Chart(document.getElementById("doughnut-chart"), {
 
 									</tbody>
 								</table>
-							</div>
-						</div>
+							</div> --%>
+							
+							
+						
 					</div>
 				</div>
 			</td>

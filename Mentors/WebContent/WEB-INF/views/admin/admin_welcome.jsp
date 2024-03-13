@@ -4,5 +4,5 @@
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <script>
 	alert('관리자님 환영합니다.')
-	location.href="${root}admin/admin_home"
+	location.href="${root}admin/admin_wt"
 </script>
