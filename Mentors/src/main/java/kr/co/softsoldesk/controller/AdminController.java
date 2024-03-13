@@ -54,6 +54,12 @@ public class AdminController {
    @GetMapping("/admin_qna")
    public String admin_qna(Model model) {
 	   List<AdminBean> adminqnaq = adminService.getAdminQnAqList();
+	   
+	   for(AdminBean ab : adminqnaq) {
+			String abdate = ab.getQ_date().substring(0,11);
+			ab.setQ_date(abdate);
+		}
+	   
 	   model.addAttribute("adminqnaq", adminqnaq);
       return "admin/admin_qna";
    }
@@ -87,6 +93,12 @@ public class AdminController {
    @GetMapping("/admin_noti")
    public String admin_noti(Model model) {
 	  List<AdminBean> adminnoti = adminService.getAdminNotiList();
+	  
+	  for(AdminBean ab : adminnoti) {
+			String abdate = ab.getNoti_date().substring(0,11);
+			ab.setNoti_date(abdate);
+		}
+	  
 	  model.addAttribute("adminnoti", adminnoti);
       return "admin/admin_noti";
    }
@@ -117,6 +129,12 @@ public class AdminController {
    @GetMapping("/admin_pay")
    public String admin_pay(Model model) {
 	  List<AdminBean> apaylist = adminService.getApayList();
+	  
+	  for(AdminBean ab : apaylist) {
+			String abdate = ab.getWtt_payment_date().substring(0,11);
+			ab.setWtt_payment_date(abdate);
+		}
+	  
 	  model.addAttribute("apaylist", apaylist);
       return "admin/admin_pay";
    }
