@@ -44,12 +44,12 @@ a{
     width: 80px;
 }
 
-.td_cen :hover{
+/* .td_cen :hover{
     width: auto;
     height: 45px;
     background-color: gray;
     border-radius: 20px;
-}
+} */
 
 .td_cen1{
     width: 30px;
