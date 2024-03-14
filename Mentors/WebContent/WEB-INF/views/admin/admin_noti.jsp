@@ -62,7 +62,7 @@
 								<th>연수명</th>
 								<th>제목</th>
 								<th>등록일</th>
-								<th>관리</th>
+								<!-- <th>관리</th> -->
 							</tr>
 						</thead>
 						
@@ -76,11 +76,11 @@
 								<td onclick="location.href='${root}admin/admin_noti_detail?noti_key=${adn.noti_key }'">${adn.noti_date }</td>
 				
 								
-								<td>
+								<%-- <td>
 									<button class="modify-btn"
 									onclick="location.href='${root}admin/admin_noti_modify?noti_key=${adn.noti_key }'">수정</button>
 									<button class="delete-btn">삭제</button>
-								</td>
+								</td> --%>
 							</tr>
 							</c:forEach>
 						</tbody>
