@@ -50,11 +50,7 @@
 									<tr>
 										<th>연수명</th>
 										<td colspan="2">
-											<select class="admin_select">
-												<option value="all">전체</option>
-												<option value="1">이것만 알자! 평가문항 출제 길잡이1</option>
-												<option value="2">이것만 알자! 평가문항 출제 길잡이2</option>
-											</select>
+											<input type="text" class="noti-insert-titletext_box" value="연수명을 입력하세요."/>
 										</td>
 									</tr>
 									

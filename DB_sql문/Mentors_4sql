@@ -42,8 +42,9 @@ insert into cart values('id1','WT2');
 insert into cart values('id1','WT3');
 insert into cart values('id2','WT21');
 
-
-
+--noti
+insert into notification values('noti' || TO_CHAR(noti_seqid.nextval),'WT34','공지사항1','공지내용1',sysdate);
+delete from notification where wt_key='wt34';
 
 --Q
 insert into qna_q values('qk' || TO_CHAR(qk_seqid.nextval),'WTT63','수료기준 문의','수료기준이 궁금합니다.',0,sysdate);

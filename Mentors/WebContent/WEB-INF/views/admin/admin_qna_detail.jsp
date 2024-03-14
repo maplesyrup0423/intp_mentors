@@ -92,15 +92,15 @@
 								</div>
 
 								<div class="qna_detail-bottom_btn">
-									<form:button class="qna_detail-answer_btn"> 답변작성</form:button>
+									<form:button class="qna_detail-answer_btn">답변작성</form:button>
 									<%-- <input class="qna_detail-answer_btn" type="button" value="답변작성"
 									onclick="location.href='${root}admin/admin_qna'"/> --%>
-							
+									<input class="qna_detail-list_btn" type="button" value="목록으로"
+								onclick="location.href='${root}admin/admin_qna'" />
 							
 						</div>
 						</form:form>
-						<input class="qna_detail-list_btn" type="button" value="목록으로"
-								onclick="location.href='${root}admin/admin_qna'" />
+						
 					</div>
 				</div>
 				</div>

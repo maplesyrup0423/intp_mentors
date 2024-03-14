@@ -104,8 +104,8 @@ drop table qna_q;
 create table qna_q(
     q_key VARCHAR2(20) NOT NULL,
     WTT_Key VARCHAR2(20) NOT NULL,
-    q_Title VARCHAR2(50) NOT NULL,
-    q_content VARCHAR2(50) NOT NULL,
+    q_Title VARCHAR2(200) NOT NULL,
+    q_content VARCHAR2(2000) NOT NULL,
     q_a_check number(1), --0: 답변미등록   //   1 : 답변등록
     q_date date
 );
@@ -120,7 +120,7 @@ drop table qna_a;
 create table qna_a(
     a_key VARCHAR2(20) NOT NULL,
     q_key VARCHAR2(20) NOT NULL,
-    a_content VARCHAR2(50) NOT NULL,
+    a_content VARCHAR2(2000) NOT NULL,
     a_date date
 );
 ALTER TABLE qna_a ADD PRIMARY KEY ( a_key );
@@ -132,8 +132,8 @@ drop table Notification;
 create table Notification(
     noti_key VARCHAR2(20) NOT NULL,
     WT_Key VARCHAR2(20) NOT NULL,
-    noti_Title VARCHAR2(50) NOT NULL,
-    noti_content VARCHAR2(50) NOT NULL,
+    noti_Title VARCHAR2(200) NOT NULL,
+    noti_content VARCHAR2(2000) NOT NULL,
     noti_date date
 );
 ALTER TABLE Notification ADD PRIMARY KEY ( noti_key );
