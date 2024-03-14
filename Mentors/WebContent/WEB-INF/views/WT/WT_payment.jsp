@@ -258,7 +258,7 @@ $(function() {
 					<!-- imp47465174 : 되는거 -->
 					<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
 					<script>
- 					IMP.init("imp47465174");
+ 					IMP.init("imp17650002");
 					 
 					const button = document.querySelector("button");
 					 
